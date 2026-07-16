@@ -1,0 +1,70 @@
+---
+title: "POS Platform Recommendation: Shopify POS vs. Loyverse"
+description: "Comparison of Shopify POS and Loyverse for unifying the Sixthgear online store with in-person retail, and a recommendation."
+icon: "scale"
+---
+
+<Note>
+  This page is a business recommendation, not a completed technical decision. Pricing and feature details change over time — verify current numbers directly with each vendor before making a final call.
+</Note>
+
+## The question being answered
+
+Sixthgear's online store runs on a Next.js storefront built against the Shopify Storefront API. The business is evaluating whether to bring in-person point-of-sale (POS) onto **Loyverse** or **Shopify POS**, and specifically whether Loyverse could serve as the backend commerce engine for the whole business (online \+ in-store), or only as a standalone POS.
+
+## Can Loyverse be a backend commerce engine?
+
+**Short answer: no, not on its own.** Loyverse is built as a point-of-sale and inventory management system, not a headless commerce platform. It has a REST API, but that API is designed for syncing sales, inventory, and customer data with other systems — it does not include a storefront, cart, or checkout layer that a website can be built against the way our storefront is built against Shopify's Storefront API.
+
+To run an online store with Loyverse as the backend, Loyverse itself has to be paired with a separate storefront platform (Shopify, WooCommerce, BigCommerce, etc.) and a third-party middleware connector (examples: Kosmos eSync, Octopus, SKUPlugs) that syncs products, inventory, and orders between the two. Loyverse becomes the POS and inventory system of record; the actual online store, cart, and checkout still live somewhere else.
+
+In other words: **Loyverse is POS-and-inventory-first.** It is not a replacement for the Shopify Storefront API that our website is currently built on.
+
+## Shopify POS vs. Loyverse
+
+|  | Shopify POS | Loyverse |
+| --- | --- | --- |
+| Core purpose | In-person POS, natively unified with the same Shopify backend that powers our online store | In-person POS and inventory management, standalone |
+| Online store | Included — same platform our storefront already uses | Not included — needs a separate platform plus middleware to sell online |
+| Inventory sync with our site | Native, real-time, single source of truth (same Shopify Admin API our Next.js app already reads from) | Requires a third-party sync app; adds a moving part and potential lag/failure point |
+| Pricing | POS Lite is free with any Shopify plan; POS Pro is around \$89/month per location for advanced features | Free core plan; paid add-ons (employee management, advanced inventory) around \$25–29/month per store |
+| Ease of setup/use | Straightforward, but assumes you're already on Shopify | Very quick to set up; frequently cited as the easiest POS to learn |
+| Best fit | Retailers who already sell online through Shopify and want one unified system | Very small, in-person-first businesses (single counter, no online store, or online store is an afterthought) |
+| Limitations | Pro tier cost per location adds up across many stores; iOS-only devices | Lacks advanced reporting/warehouse features at scale; online selling always depends on a third-party bridge |
+
+### Loyverse — pros
+
+- Free core POS, low-cost add-ons
+- Very easy to set up and train staff on
+- Solid basics: inventory, employee management, loyalty, offline sales mode
+- Has a REST API and app marketplace for connecting to accounting, ecommerce, and marketing tools
+
+### Loyverse — cons
+
+- No native online store or checkout — always requires bridging to a separate ecommerce platform through paid middleware
+- Selling online through Loyverse means introducing a sync layer (extra cost, extra point of failure, sync delay risk) between POS and the actual storefront
+- Would sit alongside our Shopify Storefront API integration rather than replace it — doesn't reduce our stack, it adds to it
+- Lacks advanced features for scale (warehouse management, deep reporting)
+
+### Shopify POS — pros
+
+- Native, real-time sync with the exact same Shopify backend our Next.js storefront already reads from — one source of truth for products, inventory, and orders
+- No middleware or third-party sync required to unify online and in-store selling
+- POS Lite is free; included with any Shopify plan we're likely already paying for
+- Built-in omnichannel features (buy-online-pickup-in-store, local delivery, unified customer profiles) that work directly with our existing storefront
+
+### Shopify POS — cons
+
+- POS Pro's per-location cost can add up for many physical locations
+- iOS-only hardware requirement (no native Android support)
+- Feature gaps for specialized retail/restaurant workflows may need extra apps
+
+## Recommendation
+
+Given that Sixthgear's online store is already built on Shopify's Storefront API, **Shopify POS is the stronger fit**. It shares the same backend our website already integrates with, so in-store and online inventory, orders, and customers stay unified without adding a middleware layer. Migrating to Loyverse would not replace or simplify our Shopify integration — since Loyverse isn't a headless commerce engine, our Storefront API-based website would still need Shopify (or another full ecommerce platform) behind it. Loyverse would only be added on the physical POS side, connected back to Shopify through a paid third-party sync app, which introduces cost and complexity without removing anything from our current stack.
+
+Loyverse is a strong, affordable POS on its own — for a business that sells in person only, or treats online as secondary, it's a great choice. That isn't Sixthgear's situation: online is the primary channel and the storefront is already invested in Shopify's platform.
+
+<Warning>
+  Pricing above is approximate and sourced from public vendor and review sites as of mid-2026. Confirm current plan pricing directly with Shopify and Loyverse before presenting final numbers to leadership.
+</Warning>
