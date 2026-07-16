@@ -25,6 +25,7 @@
     "options": ["copy", "view"]
   },
   "navigation": {
+<<<<<<< HEAD
     "tabs": [
       {
         "tab": "Start Here",
@@ -182,6 +183,24 @@
           }
         ]
       }
+=======
+    "pages": [
+      "index",
+      "introduction",
+      "initial-setup/overview",
+      "sixthgear-cms/overview",
+      "shopify/overview",
+      "shopify/pos-platform-recommendation",
+      "storefront-development/overview",
+      "seo/overview",
+      "deployment/overview",
+      "accounts-and-access/overview",
+      "operations/overview",
+      "troubleshooting/overview",
+      "turnover-and-maintenance/overview",
+      "reference/overview",
+      "sixthgear-guide"
+>>>>>>> 5662cd52d851bdee752b8d179fc4a7fd3e01dbd3
     ]
   },
   "redirects": [
