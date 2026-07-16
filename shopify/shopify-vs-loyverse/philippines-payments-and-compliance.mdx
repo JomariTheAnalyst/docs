@@ -1,0 +1,82 @@
+---
+title: "Philippines Payments and Compliance"
+description: "External card and QR payment workflow, reconciliation controls, and Philippine invoice and BIR review requirements."
+icon: "receipt-text"
+---
+
+Application compatibility does not prove that Sixthgear can accept, reconcile, and document payments correctly. Payment and invoice review must be completed before Shopify POS becomes the live store system.
+
+## Current payment limitation
+
+Shopify's list of countries where Shopify Payments supports both online and in-person processing does not include the Philippines as of **July 16, 2026**. Sixthgear should therefore plan for a separate local card or QR terminal unless the selected provider and Shopify confirm an approved integration.
+
+<Warning>
+Do not purchase a Shopify card reader from another country. Availability, activation, currency, settlement, and support are country-specific, and no Shopify reader was verified for Philippine use in this research.
+</Warning>
+
+## External-terminal workflow
+
+<Steps>
+  <Step title="Create the sale in Shopify POS">
+    Add the correct products, variants, quantities, discounts, taxes, and customer information.
+  </Step>
+  <Step title="Confirm the amount on the external terminal">
+    Enter the final amount and verify the currency and payment type before presenting the terminal.
+  </Step>
+  <Step title="Receive payment">
+    Wait for the terminal's approved confirmation. A customer screenshot or message is not payment confirmation.
+  </Step>
+  <Step title="Record the payment type in Shopify POS">
+    Select the approved custom card or QR payment type and complete the Shopify sale only after the terminal succeeds.
+  </Step>
+  <Step title="Match both records">
+    Confirm that the Shopify order amount, terminal transaction, settlement report, and required invoice reference agree.
+  </Step>
+</Steps>
+
+## Payment types to test
+
+<AccordionGroup>
+  <Accordion title="Cash">
+    Test tendered amount, change, opening float, drawer movement, cash count, refund handling, and end-of-day differences.
+  </Accordion>
+  <Accordion title="Card">
+    Test approved, declined, interrupted, duplicated, reversed, refunded, and partially refunded transactions. Confirm settlement timing and fees with the selected Philippine provider.
+  </Accordion>
+  <Accordion title="QR payment">
+    Test the provider's generated code or terminal flow, confirmation screen, duplicate prevention, refund path, settlement report, and the Shopify custom payment type.
+  </Accordion>
+  <Accordion title="Split or partial payment">
+    Enable only when Sixthgear needs it and both the POS and external-terminal procedure can be reconciled without ambiguous balances.
+  </Accordion>
+</AccordionGroup>
+
+## Daily reconciliation
+
+*Reconciliation* is the process of matching the POS, payment-provider, settlement, bank, and cash records.
+
+| Record | Required check |
+| --- | --- |
+| Shopify POS sales | Completed orders match approved store transactions |
+| Cash count | Physical cash matches expected drawer movement |
+| Card and QR totals | POS payment types match terminal and settlement reports |
+| Refunds and voids | Each has approval and the original transaction reference |
+| Inventory movement | Completed sales and returns produced the expected stock change |
+| Invoice sequence | Required documents are complete, traceable, and issued through the approved procedure |
+
+Management must name the person who performs daily reconciliation, the person who investigates differences, and the person who approves adjustments.
+
+## Philippine invoice and BIR review
+
+Obtain qualified confirmation for required invoice details, sequential numbering, VAT and tax treatment, discounts, senior-citizen or PWD handling where applicable, refunds and credit documents, end-of-day reports, record retention, registration, and electronic invoicing.
+
+<Note>
+This page is operational planning, not legal, accounting, or tax advice. An accountant or BIR-qualified adviser must confirm the current requirements and the exact document Sixthgear will issue.
+</Note>
+
+## Sources
+
+- [Shopify Payments for POS supported countries](https://help.shopify.com/en/manual/sell-in-person/getting-started/setup-payment-method/shopify-payments-pos)
+- [Shopify custom payment methods](https://help.shopify.com/en/manual/sell-in-person/getting-started/setup-payment-method/custom-payment-methods)
+- [BIR Revenue Regulations No. 7-2024](https://bir-cdn.bir.gov.ph/BIR/pdf/RR%207-2024%20%28final%29.pdf)
+- [BIR Revenue Regulations No. 11-2024](https://bir-cdn.bir.gov.ph/BIR/pdf/RR%2011-2024.pdf)

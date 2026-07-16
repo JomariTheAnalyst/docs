@@ -1,0 +1,116 @@
+---
+title: "Final Recommendation"
+description: "Direct Sixthgear decision on Shopify, Loyverse, reusable equipment, purchases, business rationale, and implementation order."
+icon: "badge-check"
+---
+
+<Badge color="green" icon="badge-check">Preferred direction: Shopify POS</Badge>
+
+## Recommended decision
+
+Sixthgear should keep Shopify as its primary commerce platform and move physical-store selling to Shopify POS.
+
+Loyverse should be retired after the replacement in-store workflow is working and its required historical data has been preserved.
+
+<Check>
+Keep Shopify, introduce Shopify POS for the physical store, and treat Loyverse as a temporary transition system rather than the long-term POS platform.
+</Check>
+
+## What Sixthgear should keep
+
+<CardGroup cols={2}>
+  <Card title="Shopify commerce backend" icon="shopping-bag">Keep Shopify products, variants, collections, prices, inventory, customers, orders, checkout, and required integrations.</Card>
+  <Card title="Existing Next.js storefront" icon="code-2">Keep the customer-facing application and its existing Shopify API and hosted-checkout architecture.</Card>
+</CardGroup>
+
+## What Sixthgear should retire
+
+<CardGroup cols={2}>
+  <Card title="Loyverse as the long-term POS" icon="archive">Keep it only during transition, then stop new transactions after Shopify POS is working.</Card>
+  <Card title="Duplicate maintenance" icon="unlink">Remove duplicate product and inventory entry and any integration used only to synchronize Shopify and Loyverse.</Card>
+</CardGroup>
+
+Export required Loyverse items, inventory, customers, receipts, reports, staff configuration, and settings before access or subscriptions are removed. Record the export date, scope, protected storage location, retention owner, and known restore limitations.
+
+## What Sixthgear should reuse
+
+<CardGroup cols={2}>
+  <Card title="Existing iMin terminal" icon="monitor-smartphone">Reuse only when the exact model, supported Android version, Shopify POS application, built-in printer, and complete store workflow pass testing.</Card>
+  <Card title="Existing peripherals" icon="plug">Reuse the payment terminal, scanner, or cash drawer only when the approved workflow and exact compatibility are confirmed.</Card>
+</CardGroup>
+
+Do not promise that the built-in iMin printer will work with Shopify. Installation of the POS application is not proof of printer integration.
+
+## What Sixthgear should buy
+
+1. **Apple iPad 11-inch (A16), Wi-Fi, 128GB** — ₱32,990 from Apple Store Philippines
+2. **Epson TM-m30III `C31CK50342`** — ₱20,600 from Grand Tech, order basis and subject to written warranty and lead-time confirmation
+3. **Secure tablet stand** — current researched candidate ₱3,788, subject to exact iPad fit, counter anchoring, and seller support confirmation
+4. **Compatible cash drawer** — only when cash is accepted and the exact Epson cable and voltage are verified
+5. **Dedicated barcode scanner** — only when store volume shows the iPad camera is insufficient
+6. **External payment terminal** — from the selected Philippine card or QR provider
+
+The currently priced essential tablet, printer, and stand total **₱57,378**, excluding delivery, payment terminal, subscriptions, installation, training, and optional peripherals.
+
+## Why this is the best fit
+
+- Shopify already supports the online store.
+- The Next.js storefront already depends on Shopify.
+- One platform reduces duplicate product and inventory work.
+- Products, inventory, customers, and orders remain in one environment.
+- Fewer integrations need monitoring and recovery.
+- Long-term storefront and POS development is simpler.
+- Removing Loyverse changes the in-store workflow without replacing online commerce.
+- Removing Shopify would replace the ecommerce backend and rebuild important parts of the online store.
+
+## Implementation order
+
+<Steps>
+  <Step title="Export and preserve Loyverse information">
+    Export required products, inventory, customers, receipts, reports, staff configuration, and settings to protected business storage.
+  </Step>
+  <Step title="Confirm the exact iMin model">
+    Record the model, official Android version, available update, Google services, and built-in printer details without publishing serial numbers.
+  </Step>
+  <Step title="Test Shopify POS on the iMin">
+    Test installation, sign-in, products, location inventory, printer, external payments, offline recovery, and a full store shift.
+  </Step>
+  <Step title="Purchase modular hardware when required">
+    If the iMin or printer fails, procure the verified iPad, exact Epson printer, and secure stand after written quotations are approved.
+  </Step>
+  <Step title="Configure payment types">
+    Create the approved cash, card, and QR methods and document the separate Philippine terminal process.
+  </Step>
+  <Step title="Test complete store transactions">
+    Cover sales, discounts, cash, card, QR, refunds, returns, receipts, inventory movement, interruption, and reconnection.
+  </Step>
+  <Step title="Train personnel">
+    Train store staff, administrators, and the person responsible for daily payment reconciliation.
+  </Step>
+  <Step title="Confirm operational results">
+    Verify inventory, receipts or invoices, refunds, payment settlements, permissions, and daily totals.
+  </Step>
+  <Step title="Stop new Loyverse transactions">
+    Cut over only after the Shopify POS workflow is working and management approves the store date and support coverage.
+  </Step>
+  <Step title="Preserve the Loyverse export">
+    Retain the approved export and access record for reference, audit, accounting, and support needs.
+  </Step>
+</Steps>
+
+## Management summary
+
+| Decision area | Recommendation |
+| --- | --- |
+| Online commerce platform | Keep Shopify |
+| Main source of commerce information | Shopify |
+| Long-term in-store POS | Shopify POS |
+| Loyverse | Retire after transition |
+| Existing iMin | Reuse only when fully compatible |
+| Primary POS device | Use the verified recommended tablet |
+| Receipt printer | Use the verified Shopify-supported model |
+| Barcode scanner | Optional initially |
+| Payment handling | External local terminal recorded in Shopify POS |
+| Main reason | One unified commerce environment |
+
+Management remains the final decision-maker. The recommended direction is clear; the remaining work is to approve the budget and provider, test the store workflow, and authorize the transition date.

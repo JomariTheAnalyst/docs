@@ -1,13 +1,102 @@
 ---
 title: "Introduction"
-description: "How to use the private Sixthgear documentation and interpret its current completion status."
+description: "Why the Sixthgear documentation exists, what it covers, and how to use it as a reliable shared handbook."
 icon: "book-open"
 ---
 
-Use this portal as the maintained reference for Sixthgear operational and technical work. Start with the [Overview](/), then open the section that matches the task you need to complete.
+Sixthgear depends on several connected systems and repeatable processes to run ecommerce, manage website content, maintain products and inventory, fulfill orders, publish the website, improve search visibility, and support in-store sales. This documentation brings that knowledge into one organized guide so the team can work from a consistent reference.
+
+Use it to understand how the platform works, complete a specific task, evaluate an operational decision, or identify when an authorized administrator or developer needs to help.
+
+## Why this documentation exists
+
+Important operational knowledge should not remain only in chat messages, personal notes, verbal instructions, one employee's memory, or the original developer's knowledge. Those sources are difficult to review, easy to lose, and can produce different answers to the same question.
+
+This portal gives current and future team members a maintained reference. It is intended to help Sixthgear:
+
+- Reduce repeated questions and inconsistent processes
+- Train new personnel without relying on one individual
+- Improve project turnover and long-term maintenance
+- Make informed platform and operational decisions
+- Maintain the website and its connected systems consistently
+- Resolve common problems more quickly
+
+## What the documentation covers
+
+The complete documentation is planned to cover the following areas. A section may still be under review even when its page already exists.
+
+| Area | What readers will learn |
+| --- | --- |
+| Initial project setup | Required accounts, local tools, repository access, and configuration prerequisites |
+| Sixthgear CMS | How approved website content is edited, published, and verified |
+| Shopify administration | Products, collections, variants, inventory, orders, discounts, and connected commerce features |
+| Shopify versus Loyverse | The in-store POS options, hardware constraints, pilot requirements, and management decision |
+| Storefront development | How the Next.js storefront is organized, tested, and maintained |
+| Search visibility | Metadata, redirects, structured content, and search-engine review practices |
+| Deployment | How approved website changes are built, published, verified, and rolled back |
+| Accounts and access | Ownership, permissions, recovery, and safe credential handling |
+| Daily operations | Repeatable checks and procedures for normal website and store activity |
+| Troubleshooting | How to investigate common website, commerce, content, and access problems |
+| Turnover and maintenance | How knowledge, access, responsibilities, and recurring work are transferred |
+
+## How the Sixthgear systems work together
+
+Each system supports a different part of Sixthgear's operation:
+
+| System | Role in Sixthgear |
+| --- | --- |
+| Shopify | Manages ecommerce information such as products, variants, prices, inventory, customers, orders, and checkout. |
+| Sixthgear CMS | Manages selected website content that authorized editors can publish without changing storefront code. |
+| Next.js storefront | Presents the customer-facing website and connects it to Shopify and the Sixthgear CMS. |
+| GitHub | Stores the approved website and documentation source code, including its version history. |
+| Vercel | Builds and publishes the storefront from approved source-code changes. External project settings still require administrator verification. |
+| Mintlify | Publishes this documentation as a searchable internal portal. |
+| In-store POS platform | Records physical-store sales. Shopify POS and Loyverse are being evaluated for Sixthgear's long-term workflow. |
+| iMin terminal | The existing all-in-one POS device. Its exact model and application, printer, and payment compatibility still require verification. |
+
+For a more technical view of these connections, see [System architecture](/website/system-architecture).
+
+## How to use this documentation
+
+You do not need to read every page from beginning to end. Use the handbook according to the work in front of you:
+
+1. Use navigation or search to find the relevant subject.
+2. Read the purpose and prerequisites before changing an active system.
+3. Follow sequential instructions in order.
+4. Stop and review warnings before actions that can affect customers, orders, inventory, access, or production.
+5. Complete the verification steps after the task.
+6. Open related guidance when you need more context.
+
+This is one shared handbook for management, staff, developers, and future maintainers. Some pages are operational and others are technical, but unfamiliar terms should be defined where they first become necessary.
+
+## How instructions are written
+
+Task guides are designed to provide:
+
+1. The purpose of the task
+2. Why it matters
+3. Requirements before starting
+4. Important terms
+5. Step-by-step instructions
+6. The expected result
+7. Verification checks
+8. Common problems
+9. Related guidance
+
+Technical information is included when it affects a decision or helps someone verify behavior. It should not require every reader to become a developer.
+
+## Sources of information
+
+Different systems control different information. Shopify is the source for ecommerce data; the Sixthgear CMS stores selected editorial content; GitHub stores approved source code; Vercel builds and publishes the storefront; and Mintlify publishes this handbook.
+
+Repository evidence can confirm how the storefront is designed to behave. Account ownership, billing, production settings, device compatibility, and permissions must be checked in the relevant external system by an authorized person. Never copy passwords, tokens, customer records, payment details, or other secrets into this documentation.
+
+## Documentation development status
 
 <Note>
-This section is planned. Its full guidance will explain documentation conventions, evidence standards, ownership, review, and safe handling of incomplete information.
+The documentation is being completed and reviewed section by section. The current focus is the Introduction and Shopify versus Loyverse evaluation. Additional sections will be developed gradually and should not be treated as complete until their instructions and evidence have been reviewed.
 </Note>
 
-Until that guidance is reviewed, treat repository-backed statements as confirmed and dashboard-specific statements as unverified unless an authorized administrator has checked them.
+## What this handbook should help you do
+
+The goal is not to make every reader an expert in every system. It is to help you understand how Sixthgear works, complete your responsibilities correctly, make informed decisions, find reliable guidance, and recognize when technical or administrative assistance is required.

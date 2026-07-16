@@ -1,0 +1,64 @@
+---
+title: "Platform Capabilities"
+description: "Shopify, Shopify POS, Loyverse POS, and Loyverse Back Office capabilities in the context of Sixthgear's existing storefront."
+icon: "panels-top-left"
+mode: "wide"
+---
+
+This page separates vendor capabilities from Sixthgear-specific compatibility. Platform research was reviewed on **July 16, 2026**.
+
+<Tabs>
+  <Tab title="Shopify and Shopify POS" icon="shopping-bag">
+    Shopify is Sixthgear's *commerce backend*: the system behind the website that manages products, variants, collections, prices, inventory, customers, carts, orders, and checkout.
+
+    The customer-facing Next.js site is a <Tooltip tip="A storefront built separately from the commerce backend while using its APIs and hosted services.">headless storefront</Tooltip>. Shopify POS adds in-person carts, customers, discounts, staff, locations, inventory, orders, refunds, reporting, and supported retail hardware to the same Shopify environment.
+
+    Shopify POS runs only on supported iOS and Android devices. It is not available as the standard POS application on Windows or macOS computers.
+  </Tab>
+  <Tab title="Loyverse POS and Back Office" icon="store">
+    Loyverse is designed for physical-store selling. It supports items, modifiers, discounts, customers, loyalty, employees, shifts, receipts, store inventory, reports, multiple stores, and offline transactions with limits.
+
+    Loyverse Back Office provides administration and reporting. Paid features add advanced inventory, purchase orders, transfers, counts, valuation, and selected employee capabilities. Its API and webhooks can participate in an integration.
+  </Tab>
+</Tabs>
+
+## Feature comparison
+
+| Capability | Shopify | Loyverse | Sixthgear meaning |
+| --- | --- | --- | --- |
+| Online storefront and cart | Native commerce services and APIs | No comparable native ecommerce storefront | Shopify already supports the Next.js website |
+| Hosted online checkout | Yes | No comparable hosted ecommerce checkout | Removing Shopify requires a replacement checkout and payment architecture |
+| Physical-store POS | Shopify POS | Loyverse POS | Both require store workflow testing |
+| Shared online and store records | Native inside Shopify | Requires integration with Shopify | Shopify POS avoids a permanent synchronization boundary |
+| Inventory by location | Supported | Supported | The authoritative system must be explicit |
+| Customers and orders | Shared Shopify environment | Separate Loyverse records | Two platforms create duplicate identity and reconciliation work |
+| Offline selling | Supported with limits | Supported with limits | Test actual interruption and reconnection behavior |
+| API and webhooks | Shopify APIs and events | Loyverse API and selected webhooks | A two-platform design needs mapping, monitoring, and support |
+| Retail hardware | Supported-device and model lists | Broader mobile-POS use | Exact iMin and peripheral behavior still require testing |
+
+## Can Loyverse replace Shopify for the current website?
+
+No. Loyverse can expose retail information through an API, but it does not provide the complete storefront, cart, hosted checkout, online payment flow, customer accounts, and ecommerce order-management integration that Sixthgear currently receives from Shopify.
+
+Replacing Shopify would require custom commerce development, data migration, payment integration, security review, monitoring, support, and long-term maintenance. Loyverse is a possible in-store companion, not a native replacement for the current ecommerce backend.
+
+<AccordionGroup>
+  <Accordion title="Offline behavior">
+    Both POS applications have offline limits. Cash or configured manual payments may continue, while customer lookup, discounts, returns, exchanges, synchronization, and supported card-payment behavior can require connectivity. Sixthgear must test reconnection without duplicate orders or inventory movements.
+  </Accordion>
+  <Accordion title="Shopify POS device requirements">
+    Shopify documents support for iPad generation 5 or later on iPadOS 15.1 or later and Android phones or tablets on official Android 10 or later with Google Play Services and Google Mobile Services. Rooted, jailbroken, modified, or beta operating systems are unsupported.
+  </Accordion>
+  <Accordion title="Integration if Loyverse remains">
+    A connector needs field ownership, synchronization direction, acceptable delay, duplicate handling, monitoring, failure recovery, reconciliation, subscription ownership, and technical support.
+  </Accordion>
+</AccordionGroup>
+
+## Sources
+
+- [Shopify POS FAQ and device requirements](https://help.shopify.com/en/manual/sell-in-person/shopify-pos/faq)
+- [Shopify POS offline behavior](https://help.shopify.com/en/manual/sell-in-person/shopify-pos/selling-offline/offline-features)
+- [Shopify supported POS hardware](https://help.shopify.com/en/manual/sell-in-person/hardware/supported-hardware)
+- [Loyverse offline behavior](https://help.loyverse.com/help/offline-work-of-pos)
+- [Loyverse API reference](https://developer.loyverse.com/docs/)
+- [Loyverse advanced inventory](https://help.loyverse.com/help/advanced-inventory-management)

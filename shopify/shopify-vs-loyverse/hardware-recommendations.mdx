@@ -1,0 +1,175 @@
+---
+title: "Hardware Recommendations"
+description: "Researched Shopify POS tablet, receipt printer, stand, iMin reuse test, optional peripherals, Philippine prices, and setup estimates."
+icon: "tablet-smartphone"
+mode: "wide"
+---
+
+Research was completed on **July 16, 2026**. Prices and stock can change; obtain a written quotation before purchase.
+
+## Preferred setup
+
+Shopify POS runs on a supported iOS or Android phone or tablet. The standard application does not run on Windows or macOS computers.
+
+Use a modular setup:
+
+```text
+iPad or supported Android tablet
++ Shopify-supported receipt printer
++ secure tablet stand
++ optional barcode scanner
++ optional compatible cash drawer
++ external Philippine payment terminal
+```
+
+Modular equipment is easier to verify, replace, upgrade, and support than an all-in-one terminal whose printer and peripherals depend on manufacturer-specific software.
+
+<CardGroup cols={2}>
+  <Card title="Required for the proposed counter" icon="badge-check">
+    Supported tablet, Shopify-supported receipt printer, secure stand, reliable network, and an external local terminal when non-cash payments are accepted.
+  </Card>
+  <Card title="Optional after observing store use" icon="list-plus">
+    Dedicated barcode scanner and compatible cash drawer. Start with the tablet camera and add equipment only when volume or cash handling requires it.
+  </Card>
+</CardGroup>
+
+## Recommended products
+
+| Hardware category | Recommended product | Important specifications | Shopify compatibility | Philippine price | Philippine seller | Availability |
+| ----------------- | ------------------- | ------------------------ | --------------------- | ---------------: | ----------------- | ------------ |
+| Primary POS device | Apple iPad 11-inch (A16), Wi-Fi, 128GB | 11-inch Liquid Retina display; A16 chip; 128GB; USB-C; Wi-Fi 6; Bluetooth 5.3; current iPadOS support; researched 2026-07-16 | Meets Shopify's supported iPad generation and operating-system requirements | ₱32,990 | Apple Store Philippines | Available to order from the official Philippine store at research time |
+| Receipt printer | Epson TM-m30III Wi-Fi + Bluetooth, black, `C31CK50342` | Thermal line; 80mm paper for Shopify; 300mm/s; 203dpi; automatic cutter; USB, Ethernet, Wi-Fi, Bluetooth; researched 2026-07-16 | Exact printer family documented by Shopify POS | ₱20,600 | Grand Tech International Enterprise Corp. | Order basis; confirm lead time and written warranty before payment |
+| Secure tablet stand | Mount-It! anti-theft tablet kiosk countertop stand | Locking holder; countertop base; listing covers tablets up to 11 inches; cable access; researched 2026-07-16 | Passive stand; no Shopify software integration required | ₱3,788 | Philippine Shopee marketplace listing | Listed for local delivery; confirm iPad A16 fit, bolting hardware, seller warranty, and return terms |
+
+### Product images
+
+<Frame caption="Apple iPad 11-inch (A16), the recommended Shopify POS device.">
+  <img src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/ipad-finish-select-202503-silver-wifi?wid=1200&amp;hei=630&amp;fmt=jpeg&amp;qlt=95&amp;.v=1739318919290" alt="Silver Apple iPad 11-inch with A16 chip" />
+</Frame>
+
+<Frame caption="Epson TM-m30III, the recommended receipt-printer family. Purchase exact model C31CK50342 only after the supplier confirms the quotation.">
+  <img src="https://mediaserver.goepson.com/adaptivemedia/rendition?id=17f08946ba0e72cc5a4b2c2158fcdc4bea441cb7&amp;vid=17f08946ba0e72cc5a4b2c2158fcdc4bea441cb7&amp;prid=300Wx300H&amp;clid=SAPDAM&amp;prclid=productpictures&amp;assetDescr=03_TM-M30III_front%28Top%29_B" alt="Black Epson TM-m30III thermal receipt printer" />
+</Frame>
+
+## Tablet recommendation
+
+The iPad A16 is the practical choice because it meets Shopify POS requirements without the cost of an iPad Pro. The 128GB Wi-Fi configuration is sufficient for a dedicated POS device, and its USB-C port, current operating-system support, Wi-Fi, and Bluetooth provide flexible peripheral options.
+
+Apple lists a one-year limited warranty and 90 days of complimentary technical support. Keep the device on a currently supported production iPadOS release and enable automatic Shopify POS updates.
+
+## Receipt-printer recommendation
+
+The exact recommended model is **Epson TM-m30III `C31CK50342`**, which includes Ethernet, Wi-Fi, and Bluetooth in addition to USB interfaces. Shopify documents the TM-m30III as supported and supports 80mm paper for this printer.
+
+For the selected iPad:
+
+- Prefer **Ethernet** when the counter has a stable wired router connection. The printer joins the local network and avoids a one-device Bluetooth limit.
+- Use **Bluetooth** for one iPad and one printer when wired networking is unavailable.
+- Use **USB through the Shopify POS Hub** only if Sixthgear can source the supported hub; the hub was not verified from a Philippine seller.
+- Do not select Wi-Fi for this iPad configuration because Shopify documents TM-m30III Wi-Fi setup for Android devices and POS Go, not iPad.
+- Do not use direct USB-C with the iPad; Shopify documents direct USB-C for Android only.
+
+The same exact model is listed by a second Philippine seller with a 24-month carry-in warranty, but that listing was out of stock. Require Grand Tech to confirm the applicable warranty, Epson Philippines supply, return terms, and order lead time in writing.
+
+## Existing iMin terminal
+
+<Tabs>
+  <Tab title="Existing iMin reuse" icon="monitor-smartphone">
+    Sixthgear currently owns an iMin all-in-one POS terminal.
+
+    Reuse it only when all of the following are confirmed:
+
+    - Exact commercial model and model code
+    - Official Android 10 or later and an available supported update
+    - Google Play Store, Google Play Services, and Google Mobile Services
+    - Shopify POS installation from Google Play
+    - Locked, unchanged bootloader with no rooting or unsupported operating system
+    - Correct Shopify store and location sign-in
+    - Stable product, inventory, external-payment, offline, reconnection, and full-shift operation
+    - Correct receipt formatting from the built-in printer
+    - Required scanner and cash-drawer behavior where those functions are used
+
+    <Warning>
+    The ability to install Shopify POS does not guarantee that the built-in iMin receipt printer will work with Shopify.
+    </Warning>
+  </Tab>
+  <Tab title="Modular Shopify POS" icon="tablet-smartphone">
+    Purchase the verified iPad, Epson printer, and secure stand when the iMin application, printer, operating-system, or full-shift test fails. Separate components reduce dependence on one all-in-one manufacturer and allow a failed device or printer to be replaced independently.
+  </Tab>
+</Tabs>
+
+<Check>Confirm the exact iMin model without publishing its serial number.</Check>
+<Check>Test installation, sign-in, products, the correct Shopify location, and inventory movement.</Check>
+<Check>Print a complete receipt and verify paper width, layout, cutting, and repeated-print stability.</Check>
+<Check>Test external payments, offline transactions, reconnection, and a complete store shift.</Check>
+
+## Barcode scanner
+
+Start with the iPad camera. Shopify POS can scan 1D and 2D product, receipt, and gift-card barcodes using the device camera, so a dedicated scanner is not required for initial use.
+
+Add a scanner only when checkout volume is high, personnel scan many products continuously, or camera positioning slows service. Shopify supports the Bluetooth **Zebra DS2278**, but the Philippine listing reviewed at ₱18,900 was out of stock and another local supplier required an enquiry. Do not purchase it until a Philippine seller confirms stock, the exact kit, three-year scanner warranty, and Shopify POS pairing.
+
+## Cash drawer
+
+A cash drawer is needed only when Sixthgear accepts and stores cash at the counter. A connected drawer normally plugs into the receipt printer's drawer-kick port and opens after the approved cash transaction.
+
+Do not purchase a generic drawer until the seller confirms compatibility with `C31CK50342`, the included cable wiring, the required 24V trigger, warranty, and return rights. A local generic drawer listing at ₱3,800 with an RJ11 cable and nine-month supplier warranty is a **budget reference only**, not an approved Shopify-supported model.
+
+## External payment terminal
+
+A separate Philippine card or QR terminal is required when Sixthgear accepts those payment methods and no approved Shopify integration is available.
+
+1. Create the sale in Shopify POS.
+2. Enter or confirm the amount on the external terminal.
+3. Receive an approved payment result.
+4. Mark the correct custom payment type in Shopify POS.
+5. Confirm that the POS and terminal totals match.
+
+The provider, terminal, acquisition or rental cost, transaction fees, settlement schedule, refund process, warranty, and support remain **To verify**.
+
+## Purchase priority
+
+| Hardware | Required or optional | When it is needed | Recommendation |
+| -------- | -------------------- | ----------------- | -------------- |
+| Supported tablet | Required if iMin reuse fails | Runs Shopify POS at the counter | Buy the iPad A16 128GB Wi-Fi after management approves the budget |
+| Receipt printer | Required when Sixthgear must print paper receipts or invoices | Produces the approved store document | Order exact Epson `C31CK50342` after warranty and lead time are confirmed |
+| Secure tablet stand | Required for a fixed counter | Protects and positions the iPad while keeping cable access | Confirm exact fit and counter anchoring, then purchase |
+| External payment terminal | Required for card or QR payments | Processes local non-cash payment separately from Shopify | Obtain from the approved Philippine payment provider |
+| Cash drawer | Optional | Needed only when cash is stored at the counter | Select only after Epson cable and voltage compatibility are confirmed |
+| Barcode scanner | Optional initially | Add when continuous scanning volume justifies it | Use the iPad camera first; source a supported scanner later |
+
+## Estimated setup costs
+
+| Setup | Included equipment | Estimated hardware cost |
+| --- | --- | ---: |
+| Essential Shopify POS setup | iPad A16 + Epson TM-m30III + secure stand | **₱57,378**, plus the selected external payment terminal and delivery |
+| Cash-enabled setup | Essential setup + local ₱3,800 drawer budget reference | **₱61,178**, plus payment terminal and delivery; drawer is not approved until compatibility is verified |
+| Higher-volume setup | Cash-enabled setup + ₱18,900 Zebra DS2278 price reference | **₱80,078**, plus payment terminal and delivery; scanner stock and drawer compatibility must be confirmed |
+
+Prices can change. The cash-enabled and higher-volume totals are planning figures, not purchase approval, because the exact cash drawer and currently stocked scanner remain unresolved.
+
+## Do not purchase
+
+- An iPad Pro when the standard iPad satisfies the POS requirement
+- A Windows or macOS computer to run the standard Shopify POS application
+- A Shopify card reader intended for an unsupported country
+- A receipt printer based only on brand name rather than exact supported model
+- A generic cash drawer before cable and voltage compatibility are confirmed
+- A replacement all-in-one POS before the existing iMin test is complete
+- Overseas-only or discontinued hardware without Philippine warranty and support
+
+## Sources
+
+- [Shopify POS device requirements](https://help.shopify.com/en/manual/sell-in-person/shopify-pos/faq)
+- [Shopify Epson TM-m30III setup and connection guidance](https://help.shopify.com/en/manual/sell-in-person/hardware/receipt-printers/epsontmm30iii/setting-up)
+- [Shopify TM-m30III troubleshooting and 80mm paper requirement](https://help.shopify.com/en/manual/sell-in-person/hardware/receipt-printers/epsontmm30iii/troubleshooting)
+- [Shopify barcode-scanner guidance](https://help.shopify.com/en/manual/sell-in-person/hardware/barcode-scanners)
+- [Apple Philippines iPad A16 store listing](https://www.apple.com/ph/shop/buy-ipad/ipad/128gb-silver-wifi)
+- [Apple iPad A16 technical specifications](https://www.apple.com/ph/ipad-11/specs/)
+- [AppleCare and iPad warranty information](https://www.apple.com/ph/support/products/ipad/)
+- [Epson Philippines TM-m30III specifications](https://www.epson.com.ph/For-Work/Printers/POS-Printers/Epson-TM-m30III-Thermal-Receipt-POS-Printer/p/C31CK50302)
+- [Grand Tech Philippine Epson `C31CK50342` listing](https://www.grandtechintlonline.com/products/epson/pos-thermal-printer/epson-tm-m30iii-thermal-receipt-pos-printer-ebck-black-c31ck50342/)
+- [ELN Philippine Epson `C31CK50342` listing and warranty](https://elnstore.com/products/epson-tm-m30iii-wi-fi-bluetooth-model-black-c31ck50342)
+- [Philippine Mount-It! countertop stand listing](https://shopee.ph/Mount-It%21-Anti-Theft-Tablet-Kiosk-Countertop-Stand-Imported-from-USA-i.2150387.57653389874)
+- [Shopify-supported Zebra scanner guidance](https://help.shopify.com/en/manual/sell-in-person/hardware/barcode-scanners/choosing-a-barcode-scanner)
+- [Philippine Zebra DS2278 product information](https://allid.com.ph/product/zebra-ds2278-cordless-2d-barcode-scanner/)

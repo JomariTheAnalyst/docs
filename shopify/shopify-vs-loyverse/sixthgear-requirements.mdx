@@ -1,0 +1,48 @@
+---
+title: "Sixthgear Requirements"
+description: "Prioritized business, commerce, store, hardware, payment, compliance, migration, and support requirements for Sixthgear's POS direction."
+icon: "list-checks"
+---
+
+The decision must satisfy Sixthgear's operating needs, not a general feature list. An *acceptance criterion* is a testable condition that must pass before the new workflow is accepted.
+
+<CardGroup cols={3}>
+  <Card title="Commerce" icon="shopping-bag">One reliable catalog, inventory model, customer record, and order history.</Card>
+  <Card title="Store operations" icon="store">Fast selling, receipts, refunds, staff permissions, and recovery from interruptions.</Card>
+  <Card title="Payments and compliance" icon="receipt-text">Traceable cash, card, QR, settlement, invoice, and reconciliation procedures.</Card>
+  <Card title="Hardware" icon="tablet-smartphone">Supported, replaceable equipment with local purchasing and support.</Card>
+  <Card title="People" icon="users">Clear ownership, training, access, support, and escalation.</Card>
+  <Card title="Transition" icon="route">Preserved Loyverse records, controlled cutover, and a recovery plan.</Card>
+</CardGroup>
+
+## Priority table
+
+| Priority | Requirement | Evidence of completion |
+| --- | --- | --- |
+| Mandatory | Keep the existing online storefront and Shopify commerce records operating | Online products, cart, checkout, customer, and order flows pass before and after the POS change |
+| Mandatory | Use one authority for products, prices, inventory, customers, and orders | Staff know where each record is edited and a store sale updates the correct Shopify location |
+| Mandatory | Complete cash, card, QR, refund, and reconciliation workflows | Test transactions match the POS, terminal, settlement, cash, and inventory records |
+| Mandatory | Produce the required Philippine sales document | An accountant or BIR-qualified adviser approves the invoice, numbering, tax, and retention procedure |
+| Mandatory | Use supported and stable hardware | The POS device, receipt printer, network, and required peripherals pass a complete store shift |
+| Mandatory | Preserve required Loyverse information | Exports are complete, readable, securely stored, and assigned a retention owner |
+| High | Continue selling during a realistic internet interruption | Approved offline transactions and reconnection complete without duplicates |
+| High | Limit staff permissions | Named users can complete their duties without owner, billing, or unrelated administrative access |
+| High | Keep support and recovery practical | Staff know who to contact and how to recover from app, printer, device, network, or payment failure |
+| Preferred | Avoid a permanent Shopify-to-Loyverse connector | Store sales enter Shopify directly after the transition |
+
+## Mandatory operating checks
+
+<Check>Products and variants load with the approved names, prices, and barcodes.</Check>
+<Check>A store sale updates the correct Shopify location and online availability.</Check>
+<Check>Cash, card, QR, refund, void, return, and exchange records remain traceable.</Check>
+<Check>Staff can print the approved receipt or invoice and reconcile the end-of-day totals.</Check>
+<Check>The device and printer recover after a network or application interruption.</Check>
+<Check>Store personnel can complete the workflow after training.</Check>
+
+## Cost and support requirements
+
+Management needs dated estimates for the Shopify plan and POS tier, hardware, payment-terminal charges, implementation, data export, training, supplies, warranty, replacement equipment, and staff reconciliation time. The lowest purchase price is not the lowest long-term cost when it creates duplicate maintenance or unsupported workarounds.
+
+<Warning>
+The exact iMin model, local payment provider, approved invoice workflow, cash-drawer model, scanner availability, and final implementation budget remain unresolved. Do not let an unresolved mandatory requirement become an undocumented manual workaround.
+</Warning>

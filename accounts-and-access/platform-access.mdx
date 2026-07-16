@@ -1,0 +1,34 @@
+---
+title: "Website Platform Access"
+description: "Confirmed accounts used to operate the Sixthgear website and the access facts that still require administrator verification."
+icon: "network"
+mode: "wide"
+---
+
+This directory covers services confirmed by storefront source or this Mintlify project. A code integration confirms that Sixthgear is designed to use a platform; it does not prove the current account owner, subscription, login, or production configuration.
+
+<CardGroup cols={3}>
+  <Card title="Shopify" icon="shopping-bag">Commerce data, checkout, customers, inventory, and orders.</Card>
+  <Card title="Sixthgear CMS" icon="panels-top-left">Sanity content and the embedded editing Studio.</Card>
+  <Card title="Delivery systems" icon="cloud">GitHub, Vercel, and Mintlify source, hosting, and documentation.</Card>
+</CardGroup>
+
+| Platform | Login email | Password handled by | MFA required? | Access granted by | Signed-in devices | Purpose |
+| -------- | ----------- | ------------------- | ------------- | ----------------- | ----------------- | ------- |
+| Shopify | To verify | To verify | Yes | To verify | To verify | Manages Sixthgear products, collections, prices, inventory, customers, orders, checkout, and related ecommerce information. |
+| Sixthgear CMS (Sanity) | To verify | To verify | Yes | To verify | To verify | Manages structured website content and the Studio available at `/studio`. |
+| GitHub | To verify | To verify | Yes | To verify | To verify | Stores storefront and documentation source, version history, reviews, and repository automation. |
+| Vercel | To verify | To verify | Yes | To verify | To verify | Builds and hosts the storefront using the repository-supported deployment configuration. |
+| Mintlify | To verify | To verify | Yes | To verify | To verify | Builds and hosts this internal documentation portal. |
+| Resend | To verify | To verify | Yes | To verify | To verify | Sends contact-form messages when the production email configuration is enabled. |
+| Upstash Redis | To verify | To verify | Yes | To verify | To verify | Provides cache and rate-limit storage used by storefront server code. |
+| Judge.me | To verify | To verify | To verify | To verify | To verify | Supports product-review data when the configured integration is active. |
+| Tidio | To verify | To verify | To verify | To verify | To verify | Provides the conditional customer-chat widget when a public workspace key is configured. |
+
+<Warning>
+The domain or DNS provider, Google Search Console, Google Analytics, payment provider, Loyverse account, and iMin device account are not confirmed by the repository. Add them only after an authorized administrator identifies the exact service and account.
+</Warning>
+
+<Note>
+The source contains active Strapi-named integrations. Do not remove Strapi access until source usage and the production content migration are both verified complete.
+</Note>

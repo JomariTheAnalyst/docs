@@ -1,0 +1,32 @@
+---
+title: "Social Media Accounts"
+description: "Storefront-confirmed Sixthgear social handles and the access, monitoring, recovery, MFA, and device details requiring verification."
+icon: "messages-square"
+mode: "wide"
+---
+
+This directory lists social destinations configured in active storefront source. The handle is confirmed as a website link; the external account's current owner, login, recovery method, and active status must still be confirmed in the platform.
+
+<Note>
+Use the platform dashboard to verify login and ownership. Never place a password, MFA code, device PIN, or complete personal recovery number in this table.
+</Note>
+
+| Platform | Account or handle | Login email | Password handled by | Recovery number | Monitored by | MFA required? | Access granted by | Signed-in devices |
+| -------- | ----------------- | ----------- | ------------------- | --------------- | ------------ | ------------- | ----------------- | ----------------- |
+| Facebook | `camille.sixthgear` | To verify | To verify | To verify | To verify | To verify | To verify | To verify |
+| Instagram | `sixthgear.moto` | To verify | To verify | To verify | To verify | To verify | To verify | To verify |
+| TikTok | `sixthgear.moto.su` | To verify | To verify | To verify | To verify | To verify | To verify | To verify |
+| X, formerly Twitter | `sixthgear` | To verify | To verify | To verify | To verify | To verify | To verify | To verify |
+
+<Warning>
+The storefront contains conflicting Facebook and Instagram destinations outside the central business configuration. Confirm the approved public account before changing links or granting access.
+</Warning>
+
+<AccordionGroup>
+  <Accordion title="Where the handles were found">
+    The central links are configured in `src/lib/business.ts`. Other components reference `facebook.com/sixthgear.moto`, `instagram.com/sixthgear_moto_supply`, and `instagram.com/6thgearmotosupply`; those conflicts require an authorized social-account review.
+  </Accordion>
+  <Accordion title="How to record a recovery number">
+    Record a complete number only when it is a company-owned business number. For a personal number, record the responsible person's name or only the final four digits.
+  </Accordion>
+</AccordionGroup>

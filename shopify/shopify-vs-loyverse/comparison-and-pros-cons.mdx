@@ -1,0 +1,101 @@
+---
+title: "Comparison and Pros and Cons"
+description: "Direct comparison of Shopify POS and Loyverse, including the operational impact of removing either platform."
+icon: "columns-3"
+mode: "wide"
+---
+
+## Quick comparison
+
+| Decision area | Shopify and Shopify POS | Shopify plus Loyverse | Sixthgear impact |
+| --- | --- | --- | --- |
+| Online commerce | Keeps the existing Shopify backend and Next.js integration | Keeps the same Shopify backend | Shopify remains necessary in both practical options |
+| In-store selling | Store transactions enter Shopify directly | Store transactions enter Loyverse | Loyverse requires a second data environment |
+| Products and prices | One Shopify catalog | Shopify catalog plus Loyverse item records | Two catalogs need ownership and correction rules |
+| Inventory | Shopify locations and online stock | Shopify and Loyverse stock synchronized externally | Connector delays can oversell or hide available stock |
+| Customers and orders | One Shopify environment | Customer and transaction records split | Reporting, privacy, and support become more complex |
+| Hardware | Supported iOS or Android device and listed peripherals | Loyverse-compatible device and peripherals | Existing iMin compatibility must be tested either way |
+| Payments | External Philippine terminal may remain separate | External or Loyverse-linked workflow | Reconciliation remains a local operational requirement |
+| Integration | Existing storefront plus POS configuration | Connector or custom synchronization | Two platforms add monitoring and failure recovery |
+| Long-term maintenance | Fewer systems and mappings | Two subscriptions, data models, and support paths | Shopify POS has the lower maintenance burden |
+| Transition | Export Loyverse, configure POS, train, and cut over | Keep existing store platform and build integration controls | Consolidation has short-term change but lower long-term risk |
+
+<Tabs>
+  <Tab title="Shopify advantages">
+    - Already supplies the online store and hosted checkout
+    - Keeps products, variants, collections, prices, inventory, customers, and orders together
+    - Uses Shopify locations for online and physical-store stock
+    - Removes the need for a permanent Shopify-to-Loyverse synchronization process
+    - Gives management a clearer source of truth and fewer failure points
+    - Simplifies long-term storefront development and support
+  </Tab>
+  <Tab title="Shopify disadvantages">
+    - Philippine in-person payments may require a separate terminal and manual confirmation
+    - The existing iMin and its built-in printer may not be compatible
+    - A supported tablet, printer, and stand require an upfront budget
+    - Staff need Shopify POS and reconciliation training
+    - Offline features have limits that must be tested and documented
+  </Tab>
+  <Tab title="Loyverse advantages">
+    - Designed around physical-store POS and Back Office work
+    - May already be familiar to store personnel
+    - Supports retail customers, loyalty, employees, reporting, stores, and offline sales with limits
+    - Can participate in an integration through APIs and webhooks
+  </Tab>
+  <Tab title="Loyverse disadvantages">
+    - Does not replace the current Shopify storefront, cart, checkout, or customer-account architecture
+    - Creates a second product, inventory, customer, and transaction environment
+    - Requires a connector, mappings, alerts, support ownership, and regular reconciliation
+    - Synchronization delays and failures can create stock and transaction differences
+    - Paid features, integration, monitoring, and correction work add recurring cost
+  </Tab>
+</Tabs>
+
+## Cost and risk comparison
+
+*Total cost of ownership* means the purchase, subscription, implementation, support, maintenance, and staff effort across the expected life of the solution.
+
+| Cost or risk | Shopify POS direction | Shopify plus Loyverse direction |
+| --- | --- | --- |
+| One-time work | Hardware, POS configuration, Loyverse export, training, and cutover | Connector selection, mapping, setup, testing, and exception procedures |
+| Recurring software | Shopify plan, selected POS tier, and required apps | Shopify, Loyverse features, connector, and monitoring tools |
+| Staff time | One commerce environment and external-payment reconciliation | Two platforms, connector exceptions, and cross-system reconciliation |
+| Primary hardware risk | iMin or replacement-device compatibility | Existing-device support and future replacement |
+| Primary data risk | Migration and cutover mistakes | Ongoing synchronization, duplicates, and divided ownership |
+| Recovery burden | POS, network, printer, and payment recovery | The same issues plus connector and mapping recovery |
+
+<Tip>
+Include staff reconciliation time, integration monitoring, replacement hardware, warranty support, data preservation, training, and professional compliance review in the budget. They are real costs even when they do not appear on one vendor invoice.
+</Tip>
+
+## What happens if Sixthgear removes Shopify?
+
+<Card title="High-risk ecommerce replacement" icon="triangle-alert">
+  Products, variants, collections, prices, inventory, customers, orders, online checkout, online payments, and the existing Next.js integration would need a new authoritative backend and migration plan.
+</Card>
+
+The work would include rebuilding catalog and inventory services, customer and order handling, cart and checkout, payment processing, refunds, security controls, data migration, monitoring, recovery, and ongoing development. Loyverse alone is not a complete native replacement for the current ecommerce architecture.
+
+Removing Shopify is not only a POS change. It would require replacing the ecommerce system that currently supports the Sixthgear online store.
+
+## What happens if Sixthgear removes Loyverse?
+
+<Card title="Lower-risk commerce consolidation" icon="badge-check">
+  Shopify remains the ecommerce platform, while physical-store selling moves to Shopify POS after testing and training.
+</Card>
+
+Products, prices, inventory, customers, and orders remain in one Shopify environment. The separate Shopify-to-Loyverse synchronization process is no longer needed. Store personnel need Shopify POS training, compatible hardware, and the approved external-payment procedure. Required Loyverse sales and configuration records must be exported before access or subscriptions are removed.
+
+Removing Loyverse is the lower-risk consolidation option because it does not require replacing the existing online commerce backend.
+
+<Warning>
+Do not stop Loyverse transactions until Shopify POS hardware, payments, receipts, refunds, inventory, offline recovery, reconciliation, and staff training work in the store.
+</Warning>
+
+## Conclusion
+
+**Keep Shopify.**
+
+**Move physical-store selling to Shopify POS.**
+
+**Retire Loyverse after the replacement workflow and hardware are working.**

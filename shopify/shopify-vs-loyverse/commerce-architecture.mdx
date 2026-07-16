@@ -1,0 +1,79 @@
+---
+title: "Commerce Architecture"
+description: "How Sixthgear products, inventory, customers, orders, and payments flow under the recommended and alternative POS structures."
+icon: "network"
+---
+
+*Commerce architecture* describes which systems store each business record and how those systems exchange information.
+
+<Info>
+A *source of truth* is the system treated as authoritative for a specific type of information. The recommended design uses Shopify as the source of truth for products, prices, inventory, customers, and orders.
+</Info>
+
+<Tabs>
+  <Tab title="Shopify online and in-store" icon="badge-check">
+    ```mermaid
+    flowchart LR
+      Customer[Online customer] --> Web[Next.js storefront]
+      Web --> Shopify[Shopify commerce]
+      Staff[Store personnel] --> POS[Shopify POS]
+      POS --> Shopify
+      Shopify --> Catalog[Products and prices]
+      Shopify --> Stock[Location inventory]
+      Shopify --> Records[Customers and orders]
+    ```
+
+    Store transactions enter the same Shopify environment used by the website. This removes separate catalog mapping and Shopify-to-Loyverse synchronization.
+
+    **Use this option.** It has the lowest long-term integration and data-ownership risk.
+  </Tab>
+  <Tab title="Shopify online and Loyverse in-store" icon="split">
+    ```mermaid
+    flowchart LR
+      Customer[Online customer] --> Web[Next.js storefront]
+      Web --> Shopify[Shopify]
+      Staff[Store personnel] --> Loyverse[Loyverse POS]
+      Shopify <--> Sync[Connector or custom integration]
+      Sync <--> Loyverse
+    ```
+
+    A *synchronization layer* is software that copies and translates records between systems. It needs field ownership, schedules, monitoring, duplicate handling, correction procedures, and support.
+
+    **Use only as a fallback** when a mandatory store requirement cannot be met by Shopify POS.
+  </Tab>
+  <Tab title="Loyverse as the main backend" icon="circle-x">
+    ```mermaid
+    flowchart LR
+      Customer[Online customer] --> NewWeb[Rebuilt storefront]
+      NewWeb --> Custom[Custom commerce services]
+      Custom --> Loyverse[Loyverse API]
+      Custom --> Checkout[New checkout and payments]
+      Staff[Store personnel] --> Loyverse
+    ```
+
+    This requires replacing Shopify products, variants, collections, cart, checkout, payments, customer accounts, orders, refunds, security controls, monitoring, and the existing Next.js integration.
+
+    **Do not choose this option.** Loyverse does not provide a complete native replacement for the current Shopify commerce backend.
+  </Tab>
+</Tabs>
+
+## Record ownership
+
+| Record | Recommended Shopify POS design | Two-platform fallback |
+| --- | --- | --- |
+| Product identity and variants | Shopify | Shopify; prevent independent Loyverse edits |
+| Online and store prices | Shopify with approved location rules | Shopify unless a documented store-price rule says otherwise |
+| Inventory | Shopify locations | One named authority; synchronization direction must be explicit |
+| Customers | Shopify | Shopify unless an approved loyalty design requires another owner |
+| Online orders | Shopify | Shopify |
+| Store orders | Shopify POS orders | Loyverse receipts plus an approved Shopify record or summary |
+| Refunds and returns | Shopify original order workflow | Original transaction system with synchronized stock correction |
+| Payment settlement | Local payment provider plus Shopify record | Local payment provider plus Loyverse record |
+
+<Warning>
+Do not let personnel edit the same price or inventory field independently in Shopify and Loyverse. Two editable authorities create conflicts that an integration cannot resolve reliably without a business rule.
+</Warning>
+
+## Recommended architecture
+
+Use Shopify online and in-store. Retain the two-platform architecture only during transition or when a documented mandatory requirement prevents Shopify POS adoption.

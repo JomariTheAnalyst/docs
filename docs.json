@@ -1,23 +1,19 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "luma",
-  "name": "Sixthgear Documentation",
+  "name": "Sixthgear",
   "description": "Private internal documentation for operating and maintaining the SixthGear website.",
   "colors": {
     "primary": "#92400E",
     "light": "#F16D34",
     "dark": "#F16D34"
   },
-  "logo": {
-    "light": "/images/brand/sixthgear-wordmark.png",
-    "dark": "/images/brand/sixthgear-mark.png"
-  },
   "favicon": "/images/brand/favicon.png",
   "appearance": {
     "default": "system"
   },
   "fonts": {
-    "family": "Inter"
+    "family": "Poppins"
   },
   "icons": {
     "library": "lucide"
@@ -29,21 +25,163 @@
     "options": ["copy", "view"]
   },
   "navigation": {
-    "pages": [
-      "index",
-      "introduction",
-      "initial-setup/overview",
-      "sixthgear-cms/overview",
-      "shopify/overview",
-      "shopify/pos-platform-recommendation",
-      "storefront-development/overview",
-      "seo/overview",
-      "deployment/overview",
-      "accounts-and-access/overview",
-      "operations/overview",
-      "troubleshooting/overview",
-      "turnover-and-maintenance/overview",
-      "reference/overview"
+    "tabs": [
+      {
+        "tab": "Start Here",
+        "icon": "play",
+        "pages": [
+          "index",
+          "introduction",
+          "initial-setup/overview",
+          "operations/overview"
+        ]
+      },
+      {
+        "tab": "Shopify",
+        "icon": "shopping-bag",
+        "groups": [
+          {
+            "group": "Shopify administration",
+            "root": "shopify/overview",
+            "pages": [
+              "shopify/add-edit-products",
+              "shopify/variants-inventory",
+              "shopify/collections",
+              "shopify/product-tags",
+              "shopify/metafields",
+              "shopify/bulk-import",
+              "shopify/discounts-campaigns",
+              "shopify/apps"
+            ]
+          },
+          {
+            "group": "Shopify vs Loyverse",
+            "root": "shopify/shopify-vs-loyverse/overview",
+            "expanded": false,
+            "pages": [
+              "shopify/shopify-vs-loyverse/sixthgear-requirements",
+              "shopify/shopify-vs-loyverse/platform-capabilities",
+              "shopify/shopify-vs-loyverse/comparison-and-pros-cons",
+              "shopify/shopify-vs-loyverse/commerce-architecture",
+              "shopify/shopify-vs-loyverse/philippines-payments-and-compliance",
+              "shopify/shopify-vs-loyverse/hardware-recommendations",
+              "shopify/shopify-vs-loyverse/final-recommendation"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Sixthgear CMS",
+        "icon": "panels-top-left",
+        "groups": [
+          {
+            "group": "Sixthgear CMS",
+            "root": "sixthgear-cms/overview",
+            "pages": [
+              "sanity/overview",
+              "sanity/open-cms",
+              "sanity/content-types",
+              "sanity/edit-publish-content",
+              "sanity/fields-validation",
+              "sanity/images-media"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Storefront",
+        "icon": "code-2",
+        "groups": [
+          {
+            "group": "Storefront development",
+            "root": "storefront-development/overview",
+            "pages": [
+              "website/system-architecture",
+              "website/source-code-overview",
+              "website/local-development",
+              "website/environment-variables",
+              "website/shopify-integration",
+              "website/sanity-integration",
+              "website/strapi-integration",
+              "website/caching-revalidation",
+              "website/testing"
+            ]
+          },
+          {
+            "group": "Deployment",
+            "root": "deployment/overview",
+            "pages": [
+              "deployment/deployment-overview",
+              "deployment/deploy-through-vercel",
+              "deployment/verify-deployment",
+              "deployment/roll-back-deployment"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "SEO & Growth",
+        "icon": "search-check",
+        "pages": [
+          "seo/overview"
+        ]
+      },
+      {
+        "tab": "Accounts & Access",
+        "icon": "key-round",
+        "groups": [
+          {
+            "group": "Accounts & Access",
+            "root": "accounts-and-access/overview",
+            "pages": [
+              "accounts-and-access/account-directory",
+              "accounts-and-access/social-media-accounts",
+              "accounts-and-access/email-directory",
+              "accounts-and-access/platform-access",
+              "accounts-and-access/device-directory"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Resources",
+        "icon": "library",
+        "menu": [
+          {
+            "item": "Troubleshooting",
+            "icon": "wrench",
+            "pages": [
+              "troubleshooting/overview",
+              "troubleshooting/website",
+              "troubleshooting/shopify",
+              "troubleshooting/sanity",
+              "troubleshooting/deployment",
+              "troubleshooting/emergency-recovery"
+            ]
+          },
+          {
+            "item": "Glossary",
+            "icon": "book-a",
+            "pages": [
+              "reference/overview"
+            ]
+          },
+          {
+            "item": "Turnover & Maintenance",
+            "icon": "repeat-2",
+            "pages": [
+              "turnover-and-maintenance/overview"
+            ]
+          },
+          {
+            "item": "Documentation Updates",
+            "icon": "history",
+            "pages": [
+              "resources/documentation-updates"
+            ]
+          }
+        ]
+      }
     ]
   },
   "redirects": [
@@ -62,6 +200,15 @@
     { "source": "/deployment/vercel-deployment", "destination": "/deployment/deploy-through-vercel" },
     { "source": "/deployment/rollback-overview", "destination": "/deployment/roll-back-deployment" },
     { "source": "/recovery/emergency-response", "destination": "/troubleshooting/emergency-recovery" },
-    { "source": "/recovery/access-recovery", "destination": "/troubleshooting/emergency-recovery" }
+    { "source": "/recovery/access-recovery", "destination": "/troubleshooting/emergency-recovery" },
+    { "source": "/shopify/pos-platform-recommendation", "destination": "/shopify/shopify-vs-loyverse/overview" },
+    { "source": "/accounts-and-access/credentials-and-password-manager", "destination": "/accounts-and-access/account-directory" },
+    { "source": "/accounts-and-access/access-request", "destination": "/accounts-and-access/account-directory" },
+    { "source": "/accounts-and-access/mfa-and-recovery", "destination": "/accounts-and-access/account-directory" },
+    { "source": "/accounts-and-access/access-review-and-offboarding", "destination": "/accounts-and-access/account-directory" },
+    { "source": "/shopify/shopify-vs-loyverse/imin-hardware-assessment", "destination": "/shopify/shopify-vs-loyverse/hardware-recommendations" },
+    { "source": "/shopify/shopify-vs-loyverse/cost-and-risk-analysis", "destination": "/shopify/shopify-vs-loyverse/comparison-and-pros-cons" },
+    { "source": "/shopify/shopify-vs-loyverse/pilot-and-migration-plan", "destination": "/shopify/shopify-vs-loyverse/final-recommendation" },
+    { "source": "/shopify/shopify-vs-loyverse/decision-record", "destination": "/shopify/shopify-vs-loyverse/final-recommendation" }
   ]
 }

@@ -1,0 +1,32 @@
+---
+title: "Email Directory"
+description: "Confirmed Sixthgear business email addresses, their purpose, password responsibility, access authority, MFA, and signed-in devices."
+icon: "mail-search"
+mode: "wide"
+---
+
+This directory contains only business addresses found in active storefront source. Mailbox existence, forwarding, ownership, monitoring, MFA, recovery, and signed-in devices require verification in the business-email provider.
+
+<Info>
+A <Tooltip tip="A mailbox used by several approved people to read and respond to messages.">shared inbox</Tooltip> receives messages for a team. An <Tooltip tip="An address that forwards to another mailbox and may not have its own sign-in.">email alias</Tooltip> redirects mail. A <Tooltip tip="An identity used by an application to send messages; replies may not be monitored.">sender-only email</Tooltip> sends automated messages. An individual company email belongs to one named worker, while a system or service email is used by an application or integration.
+</Info>
+
+| Email address | Display name | Password handled by | Purpose | MFA required? | Access granted by | Signed-in devices |
+| ------------- | ------------ | ------------------- | ------- | ------------- | ----------------- | ----------------- |
+| `support@sixthgearmoto.com` | Sixthgear Support | To verify | General support, account navigation, business contact, and order-receipt contact | To verify | To verify | To verify |
+| `customercare@sixthgearmoto.com` | Sixthgear Customer Care | To verify | Customer-support page contact | To verify | To verify | To verify |
+| `info@sixthgear.ph` | Sixthgear Information | To verify | Terms, privacy enquiries, returns, and warranty requests | To verify | To verify | To verify |
+| `noreply@sixthgearmoto.com` | Sixthgear No Reply | To verify | Example transactional sender and a current password-help text reference | To verify | To verify | To verify |
+
+<Warning>
+`noreply@sixthgearmoto.com` is intended as a sender-only address. It sends automated messages, and incoming replies are not known to be monitored. The password-help page currently presents it as a support contact and should be corrected after the approved support address is confirmed.
+</Warning>
+
+<AccordionGroup>
+  <Accordion title="Addresses that need reconciliation">
+    Sixthgear source exposes three incoming support addresses. Confirm which is the primary shared inbox and whether the others are aliases, forwarding addresses, or separate mailboxes.
+  </Accordion>
+  <Accordion title="Transactional email settings">
+    Confirm the deployed `CONTACT_EMAIL_FROM` and `CONTACT_EMAIL_TO` configuration in the authorized environment without copying their values or the Resend credential into this documentation.
+  </Accordion>
+</AccordionGroup>
