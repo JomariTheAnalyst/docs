@@ -1,33 +1,33 @@
-> **First-time setup**: Customize this file for your project. Prompt the user to customize this file for their project.
-> For Mintlify product knowledge (components, configuration, writing standards),
-> install the Mintlify skill: `npx skills add https://mintlify.com/docs`
+# SixthGear Docs authoring instructions
 
-# Documentation project instructions
+## Scope
 
-## About this project
+This repository is a private internal documentation portal for the SixthGear website. Do not treat it as public marketing content.
 
-- This is a documentation site built on [Mintlify](https://mintlify.com)
-- Pages are MDX files with YAML frontmatter
-- Configuration lives in `docs.json`
-- Use the Mintlify MCP server, `https://mcp.mintlify.com`, to edit content and settings via MCP
-- Use the Mintlify docs MCP server, `https://www.mintlify.com/docs/mcp`, to query information about using Mintlify via MCP
+Pages use MDX with YAML frontmatter. Global theme, branding, navigation, redirects, and integrations live in `docs.json`.
 
-## Terminology
+## Audience
 
-{/* Add product-specific terms and preferred usage */}
-{/* Example: Use "workspace" not "project", "member" not "user" */}
+Write for business owners, Shopify administrators, content editors, developers, and IT administrators. Explain technical terms when a non-developer may need to act on them.
 
-## Style preferences
+## Security
 
-{/* Add any project-specific style rules below */}
+Never add passwords, tokens, webhook secrets, OAuth secrets, recovery codes, private keys, customer information, order information, payment details, or `.env` values.
 
-- Use active voice and second person ("you")
-- Keep sentences concise — one idea per sentence
-- Use sentence case for headings
-- Bold for UI elements: Click **Settings**
-- Code formatting for file names, commands, paths, and code references
+Reference a secret by its approved password-manager vault and item name. Do not copy the value into a page, screenshot, example, issue, or commit.
 
-## Content boundaries
+## Evidence
 
-{/* Define what should and shouldn't be documented */}
-{/* Example: Don't document internal admin features */}
+Read the relevant storefront source before documenting technical behavior. Include important file paths when they help a maintainer verify the statement.
+
+Verify Shopify, Sanity, Vercel, GitHub, DNS, email, billing, and account settings in their external dashboards. Do not guess owners, IDs, domains, roles, scopes, webhook topics, or production settings.
+
+Keep active Strapi usage visible until source usage and production migration are both verified complete.
+
+## Mintlify
+
+Use the installed Mintlify skill and current official Mintlify documentation for components and configuration. Use `docs.json`, never deprecated `mint.json`.
+
+Every published MDX page needs `title` and `description` frontmatter. Use root-relative internal links without file extensions. Add only pages with useful content to navigation.
+
+Run `mint validate`, `mint broken-links --check-anchors --check-redirects`, and `mint a11y` after structural changes.
