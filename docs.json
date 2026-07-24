@@ -151,6 +151,7 @@
             "root": "accounts-and-access/overview",
             "pages": [
               "accounts-and-access/account-directory",
+              "accounts-and-access/business-owner-account",
               "accounts-and-access/social-media-accounts",
               "accounts-and-access/email-directory",
               "accounts-and-access/platform-access",

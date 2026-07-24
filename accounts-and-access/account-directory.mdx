@@ -1,72 +1,82 @@
 ---
 title: "Account Directory"
-description: "Main entry point and source of truth for Sixthgear account ownership, responsibility, access, recovery, and offboarding."
+description: "Main entry point for SixthGear account ownership, access responsibility, recovery, and offboarding."
 icon: "book-key"
 ---
 
-The Account Directory is Sixthgear's source of truth for who handles each business account and where the account is used. It links the detailed social, email, website-platform, and device records without publishing credentials.
+The Account Directory records who controls each SixthGear business account, where it is used, and who can approve access. Passwords and recovery secrets are kept outside Mintlify.
 
 <Note>
-This directory records who handles each account and where it is used.
-Actual passwords are not written in the documentation.
+  `first2sixthgear@gmail.com` is the documented business owner account for Shopify, SixthGear CMS, Loyverse, and GitHub. Jomari Roco currently manages MFA for that account.
 </Note>
 
-## What each directory records
+## Main account records
 
-- Account or platform name
-- Login email or account handle
+<CardGroup cols={2}>
+  <Card title="Business Owner Account" icon="shield-keyhole" href="/accounts-and-access/business-owner-account">
+    Sign in to approved owner-level platforms, request MFA, and review recovery responsibilities.
+  </Card>
+
+  <Card title="Website Platform Access" icon="network" href="/accounts-and-access/platform-access">
+    Review platform ownership, login email, access authority, MFA responsibility, and verification status.
+  </Card>
+
+  <Card title="Email Directory" icon="mail-search" href="/accounts-and-access/email-directory">
+    Review confirmed business email addresses, their purpose, and who monitors them.
+  </Card>
+
+  <Card title="Device Directory" icon="monitor-smartphone" href="/accounts-and-access/device-directory">
+    Review company devices used to access business accounts and operational platforms.
+  </Card>
+</CardGroup>
+
+## What each record must include
+
+- Platform or account name
+- Business login email or account handle
 - Business purpose
-- Who monitors messages or activity
-- **Password handled by**
-- Who can grant access
-- Whether <Tooltip tip="Multifactor authentication requires another proof of identity in addition to a password.">MFA</Tooltip> is required
-- Which company devices are signed in
+- Business owner or accountable role
+- Person responsible for the password
+- Person responsible for MFA
+- Who can grant or remove access
+- Recovery method and custodian
+- Signed-in company devices
+- Last verification status
 
 Use `To verify` when an external dashboard or authorized owner has not confirmed a fact. Do not infer ownership from the person who uses an account most often.
 
-<CardGroup cols={2}>
-  <Card title="Social Media Accounts" icon="messages-square" href="/accounts-and-access/social-media-accounts">Handles, monitoring, recovery, MFA, and signed-in devices.</Card>
-  <Card title="Email Directory" icon="mail" href="/accounts-and-access/email-directory">Business mailboxes, aliases, sender identities, responsibility, and devices.</Card>
-  <Card title="Website Platform Access" icon="network" href="/accounts-and-access/platform-access">Shopify, CMS, source control, hosting, documentation, and website services.</Card>
-  <Card title="Device Directory" icon="monitor-smartphone" href="/accounts-and-access/device-directory">Company equipment and the business accounts used on it.</Card>
-</CardGroup>
+## Grant access
 
-## Grant and protect access
+1. Record the person's business email, required task, platform, minimum role, and access duration.
+2. Obtain approval from the business owner or authorized platform administrator.
+3. Use a named account when the platform supports individual users.
+4. Use the Business Owner Account only for approved owner-level, recovery, billing, security, or emergency work.
+5. Confirm that the person can complete the approved task without reaching unrelated billing, security, customer, or owner functions.
 
-An *access request* is a recorded request that identifies who needs access, the business reason, the minimum role, the required duration, and the approver.
+## Handle passwords and recovery
 
-1. Record the person's business email, task, platform, minimum role, start date, and expiry date when access is temporary.
-2. Have the business approver confirm the need and an authorized platform administrator select the least-privileged role.
-3. Invite the person's named account when the platform supports individual users.
-4. Require MFA for privileged access and confirm a recovery route.
-5. Verify that the user can complete the approved task without reaching unrelated owner, billing, security, or customer functions.
-
-## Handle passwords and recovery safely
-
-The actual password, MFA seed, backup code, API token, and recovery key belong only in the approved password manager. Documentation may record a safe location such as:
+The password, MFA seed, backup code, API token, and recovery key belong in the approved password manager or platform recovery process. Mintlify may identify the custodian and vault item name, but it must not contain the secret itself.
 
 ```text
-Company Password Manager -> Sixthgear -> [Vault item name]
+Company Password Manager -> SixthGear -> [Verified vault item]
 ```
 
-The person or role in **Password handled by** is responsible for controlled retrieval, rotation, and recovery. It does not mean the password is copied into the directory or shared through chat.
-
 <Warning>
-Never create a masked-password field. It still encourages credentials to be tracked in the wrong place and does not identify who is responsible for the account.
+  Never add a masked password, authenticator QR code, one-time code, recovery code, private key, or API token to this directory.
 </Warning>
 
 ## Review and remove access
 
-Review owners, administrators, pending invitations, shared mailboxes, connected applications, service accounts, MFA methods, recovery contacts, active sessions, and signed-in devices after staffing changes or suspected exposure.
+Review account owners, administrators, pending invitations, shared mailboxes, connected applications, MFA methods, recovery contacts, active sessions, and signed-in devices after staffing changes or suspected exposure.
 
 During offboarding:
 
 1. Transfer approved business records and ownership.
-2. Revoke platform membership, email delegation, repository access, documentation access, active sessions, and device authorization.
+2. Revoke platform membership, repository access, email delegation, documentation access, active sessions, and device authorization.
 3. Rotate any shared credential the departing person could retrieve.
 4. Confirm that billing, MFA, recovery, and support responsibility remain with an approved person.
-5. Verify the person can no longer access Sixthgear systems.
+5. Verify that the person can no longer access SixthGear systems.
 
 <Check>
-An access change is complete when the approved person can perform the required work, unnecessary access is removed, and Sixthgear still has a tested owner and recovery route.
+  An access change is complete when the approved person can perform the required work, unnecessary access is removed, and SixthGear retains a tested owner and recovery route.
 </Check>
