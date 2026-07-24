@@ -1,0 +1,107 @@
+---
+title: "What you can manage in SixthGear CMS"
+description: "See which SixthGear website sections are ready for CMS editing, still under review, or managed in another platform."
+icon: "list-checks"
+---
+
+Check this page before editing website content. A section is marked **Ready** only when its CMS connection has been manually verified against the storefront.
+
+<Warning>
+  Visual Editing live updates and the canonical homepage document are not yet confirmed complete. Publish through the correct Studio document and verify the result on the storefront instead of relying only on live preview.
+</Warning>
+
+## Status meanings
+
+| Status | Meaning |
+| --- | --- |
+| **Ready** | The CMS section has been manually verified to update the intended storefront section. |
+| **Under review** | The schema or document exists, but the complete editing and storefront behavior has not been approved. |
+| **Managed elsewhere** | The information belongs in Shopify, application code, or another system. |
+| **Moved** | The content remains editable in the CMS, but it belongs to a different page or document. |
+
+## Homepage sections ready for editing
+
+Open **Homepage Settings** for the sections below. After publishing, verify the affected section on the storefront.
+
+| Homepage section | Status | Notes |
+| --- | --- | --- |
+| Hero | **Ready** | Main homepage hero content has been manually verified. |
+| About Us | **Ready** | Homepage About Us content has been manually verified. |
+| Product Categories | **Ready** | Category presentation content is editable here; product and collection records remain in Shopify. |
+| Services | **Ready** | Homepage services content has been manually verified. |
+| Coffee Showcase | **Ready** | Rewired to the current storefront component and manually verified. |
+| Marquee | **Ready** | Current marquee content has been manually verified. |
+| Brands We Support and Service | **Ready** | Rewired to the current storefront component and manually verified. |
+| Satisfied Customers | **Ready** | Statistics and related copy have been manually verified. |
+| Franchise | **Ready** | Homepage franchise content has been manually verified. |
+| Our Team | **Ready** | Section title and team-card content have been repaired and manually verified. |
+| Client Testimonials | **Ready** | Testimonial content has been manually verified. |
+| Rider Stories | **Ready** | Homepage Rider Stories section has been manually verified. Article creation is reviewed separately. |
+| Store Location | **Ready** | Homepage location content has been manually verified. |
+| CTA Banner | **Ready** | Homepage call-to-action banner has been manually verified. |
+
+<Info>
+  **What We Offer** replaced the former **Our Space & Experience** section. Manage it in the About page document, not in Homepage Settings.
+</Info>
+
+## Other CMS areas
+
+These areas exist in the CMS, but their full editing workflow has not yet been manually approved for this handoff.
+
+| CMS area | Status | Current guidance |
+| --- | --- | --- |
+| About page | **Under review** | Use the About page document for **What We Offer**. Verify other sections before making production changes. |
+| Services page | **Under review** | The page document exists, but each section still requires a live storefront check. |
+| Individual service pages | **Under review** | Confirm the service slug, visible fields, and published page before editing. |
+| Rider Story articles | **Under review** | The homepage section is ready, but creating and publishing individual articles still needs a verified workflow. |
+| Marketing content | **Under review** | Announcement bars, popups, featured collections, and promo banners require section-by-section verification. |
+| Collection hero content | **Under review** | Confirm the collection handle and storefront result before publishing. |
+| Images and media | **Under review** | Uploading is available, but final dimensions and crop rules must be verified by section. |
+
+Do not treat an **Under review** item as broken. It means the documentation does not yet have enough manual evidence to mark the complete workflow as safe for routine use.
+
+## Content managed outside SixthGear CMS
+
+| Information | System of record |
+| --- | --- |
+| Product titles, descriptions, variants, prices, and inventory | Shopify |
+| Product media and product metafields | Shopify |
+| Collections and product availability | Shopify |
+| Customers, orders, discounts, checkout, and payments | Shopify |
+| Website layout, animations, component behavior, and fallback logic | Storefront source code |
+| Passwords, MFA codes, recovery codes, and API secrets | Approved password manager or platform security settings |
+
+<Warning>
+  Do not copy Shopify product information into Sanity unless a documented CMS field is specifically intended for editorial presentation. Duplicating commerce data creates conflicting sources of truth.
+</Warning>
+
+## Before you edit
+
+<Steps>
+  <Step title="Check the status">
+    Continue only when the target section is marked **Ready**, or when an approved administrator has authorized an **Under review** change for testing.
+  </Step>
+  <Step title="Open the correct document">
+    Confirm the document title and section before changing any field. For homepage content, use the intended **Homepage Settings** document.
+  </Step>
+  <Step title="Make one approved change">
+    Change only the requested fields. Avoid unrelated cleanup during the same publish action.
+  </Step>
+  <Step title="Publish and verify">
+    Open the affected storefront page after publishing. Confirm the text, images, links, ordering, and mobile layout.
+  </Step>
+  <Step title="Report a mismatch">
+    Stop further edits when the wrong section changes, fallback content remains visible, or the update appears in a different document. Record the page, section, time, and screenshot for the website administrator.
+  </Step>
+</Steps>
+
+## Current completion blockers
+
+The CMS documentation should not claim full operational completion until both items below are manually confirmed:
+
+- Sanity Visual Editing reliably reflects draft and published changes in the intended preview workflow.
+- The storefront and Studio use one confirmed canonical homepage document, with duplicate homepage records resolved or safely excluded.
+
+<Check>
+  A CMS section is ready for routine use when its document is unambiguous, publishing updates the intended storefront section, fallback content does not hide the change, and the result has been verified on desktop and mobile.
+</Check>
