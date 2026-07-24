@@ -1,7 +1,9 @@
 ---
 title: "Content management overview"
-description: "Understand where to open SixthGear CMS, what it controls, and how to work safely with Sanity-managed content."
+description: "What SixthGear stores in Sanity, how Studio is embedded, and where the storefront reads CMS content."
 icon: "blocks"
+hidden: true
+sidebarTitle: "CMS Overview"
 ---
 
 SixthGear CMS is the Sanity Studio used to manage approved website content. Products, prices, inventory, customers, orders, checkout, and discounts remain in Shopify.
@@ -50,7 +52,7 @@ https://www.sixthgearmoto.com/studio
 SixthGear CMS manages editorial website content such as homepage sections, page copy, service content, Rider Stories, marketing content, and collection presentation content when those sections are confirmed as connected.
 
 <Warning>
-  A field appearing in Sanity does not automatically prove that it updates the storefront. Check [What you can manage in SixthGear CMS](/sanity/content-coverage) before editing.
+  Strapi still supplies content on active routes. Confirm a field's source before editing or migrating it.
 </Warning>
 
 ## What belongs in Shopify
@@ -113,6 +115,7 @@ The CMS remains usable for sections marked **Ready**, but the documentation does
 - The canonical homepage document and duplicate homepage records still require final confirmation.
 - Some page, marketing, article, media, and collection workflows remain under review.
 
-<Check>
-  The CMS is being used correctly when the editor opens the intended document, changes only approved Sanity-owned content, publishes successfully, and confirms the expected result on the storefront.
-</Check>
+- [Open SixthGear CMS](/sanity/open-cms)
+- [Edit and publish content](/sanity/edit-publish-content)
+- [Review content types](/sanity/content-types)
+- [Understand fields and validation](/sanity/fields-validation)
