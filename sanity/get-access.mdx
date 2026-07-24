@@ -1,13 +1,13 @@
 ---
 title: "Accept your SixthGear CMS invitation"
-description: "Accept the Sanity invitation, sign in with the correct account, and confirm access to SixthGear CMS."
-icon: "user-check"
+description: "Join the SixthGear Sanity project, sign in with the correct account, and confirm your CMS access."
+icon: "accessibility"
 ---
 
 A SixthGear administrator must invite you before you can open the CMS. The invitation is linked to one email address, so use the same account throughout the process.
 
 <Info>
-  Keep the invited email account open while you follow this guide. Do not forward the invitation or share your password with another person.
+  You need access to the exact email account that received the Sanity invitation. Keep that inbox open while completing this guide.
 </Info>
 
 ## Before you begin
@@ -20,29 +20,16 @@ You need:
 - Approval from the SixthGear administrator who requested your access
 
 <Warning>
-  Using a different Google account or a different sign-in method can create a separate Sanity identity without access to the SixthGear project. Check the displayed account before every confirmation step.
+  Using the wrong Google account or a different sign-in provider can create a separate Sanity identity that does not have SixthGear access. Use the sign-in method already connected to the invited Sanity identity.
 </Warning>
 
-## For the administrator: send the invitation
-
-<Steps>
-  <Step title="Open the SixthGear project in Sanity Manage">
-    Open the correct SixthGear project and go to **Members**.
-  </Step>
-  <Step title="Confirm the recipient">
-    Check the exact email address the person will use. Do not send the invitation to a shared inbox unless shared access has been approved.
-  </Step>
-  <Step title="Choose the approved role">
-    Assign only the access required for the person’s work. Available role names depend on the current Sanity plan and project configuration.
-  </Step>
-  <Step title="Send and verify the invitation">
-    Send the invitation, confirm that it appears as pending, and tell the recipient which email address and sign-in method to use.
-  </Step>
-</Steps>
+<Tip>
+  If you use several work and personal accounts in the same browser, compare the displayed email address at every account-selection screen. A private browser window can reduce account-switching confusion.
+</Tip>
 
 ## Accept the invitation
 
-<Steps titleSize="h2">
+<Steps>
   <Step title="Open the invited email account">
     Open the inbox for the email address that received the invitation. For Gmail, use the normal Gmail home page rather than a numbered account path such as `/u/1/` or `/u/3/`.
 
@@ -56,14 +43,18 @@ You need:
     Crop: The invitation row and limited surrounding inbox context
     */}
 
+    <Frame caption="Reserved screenshot: Inbox showing the Sanity project invitation">
+      ![Reserved screenshot location for an inbox with the Sanity project invitation highlighted](/images/placeholders/screenshot-reserved.svg)
+    </Frame>
+
     <Frame caption="Reserved screenshot: Inbox showing the Sanity invitation">
       ![Reserved screenshot for the inbox containing the SixthGear Sanity invitation](/images/placeholders/screenshot-reserved.svg)
     </Frame>
   </Step>
-  <Step title="Open and check the invitation">
-    Open the message from Sanity. Confirm that it refers to the expected SixthGear project and that the invitation was requested.
+  <Step title="Open and inspect the invitation">
+    Open the message sent by Sanity. Confirm that it refers to the SixthGear project and that you expected the invitation. Do not continue if the sender or project looks unfamiliar; contact the administrator through a known channel instead.
 
-    Do not continue if the sender or project looks unfamiliar. Contact the administrator through a known channel instead.
+    Do not forward the message. The invitation is intended for its original recipient.
 
     {/* REPLACE SCREENSHOT
     Final file: /images/sanity/access/02-open-invitation-email.png
@@ -72,6 +63,10 @@ You need:
     Hide: Personal inbox content, email addresses, unrelated messages, avatars, and private browser information
     Crop: The sender, invitation text, and Accept invitation button
     */}
+
+    <Frame caption="Reserved screenshot: Opened Sanity email with the SixthGear project invitation">
+      ![Reserved screenshot location for the opened Sanity invitation showing the project name and Accept invitation button](/images/placeholders/screenshot-reserved.svg)
+    </Frame>
 
     <Frame caption="Reserved screenshot: Opened Sanity invitation email">
       ![Reserved screenshot for the opened Sanity invitation email and Accept invitation button](/images/placeholders/screenshot-reserved.svg)
@@ -83,7 +78,7 @@ You need:
     Confirm that the address bar shows an official Sanity page before signing in.
 
     <Warning>
-      The invitation should not ask you to reply with a password or enter credentials inside the email. Stop if the link opens an unfamiliar website.
+      The invitation email should never ask you to reply with a password or enter a password directly inside the email. Stop and contact the administrator if the link opens an unfamiliar domain or asks for credentials outside the expected sign-in page.
     </Warning>
 
     {/* REPLACE SCREENSHOT
@@ -94,14 +89,18 @@ You need:
     Crop: The invitation text and button
     */}
 
+    <Frame caption="Reserved screenshot: Accept invitation button in the Sanity email">
+      ![Reserved screenshot location for the Accept invitation button inside the Sanity email](/images/placeholders/screenshot-reserved.svg)
+    </Frame>
+
     <Frame caption="Reserved screenshot: Accept invitation button in the email">
       ![Reserved screenshot for the Accept invitation button in the Sanity email](/images/placeholders/screenshot-reserved.svg)
     </Frame>
   </Step>
-  <Step title="Check the account shown by Sanity">
-    Continue when the displayed account matches the email address that received the invitation. Select **Switch accounts** only when Sanity shows the wrong account.
+  <Step title="Check the displayed account">
+    Read the account shown on the Sanity invitation screen. Continue if it matches the email address that received the invitation. Select **Switch accounts** only if Sanity shows the wrong account.
 
-    Do not accept the invitation using another employee’s account or an unapproved personal account.
+    Do not accept the invitation through another employee's account. If a business account was invited, do not substitute a personal account.
 
     {/* REPLACE SCREENSHOT
     Final file: /images/sanity/access/04-check-sanity-account.png
@@ -111,14 +110,18 @@ You need:
     Crop: The account summary and Switch accounts control
     */}
 
+    <Frame caption="Reserved screenshot: Sanity invitation screen showing the current account">
+      ![Reserved screenshot location for the Sanity invitation account check and Switch accounts option](/images/placeholders/screenshot-reserved.svg)
+    </Frame>
+
     <Frame caption="Reserved screenshot: Account shown on the Sanity invitation page">
       ![Reserved screenshot for checking the invited account and Switch accounts option](/images/placeholders/screenshot-reserved.svg)
     </Frame>
   </Step>
-  <Step title="Use the correct sign-in method">
-    Select **Continue with Google** when the invited Sanity identity uses Google. Use another sign-in option only when that is the established method for the invited account.
+  <Step title="Sign in using the correct method">
+    Select **Continue with Google** when the invited Sanity identity uses Google authentication. Use the email sign-in option only when that is the established login method for the invited identity.
 
-    Do not switch sign-in methods during the process.
+    Do not change providers during this process. The same email address used through another provider may be treated as a separate Sanity identity.
 
     {/* REPLACE SCREENSHOT
     Final file: /images/sanity/access/05-select-sign-in-method.png
@@ -129,7 +132,7 @@ You need:
     */}
 
     <Frame caption="Reserved screenshot: Sanity sign-in method selection">
-      ![Reserved screenshot for choosing the sign-in method connected to the invited account](/images/placeholders/screenshot-reserved.svg)
+      ![Reserved screenshot location for choosing the Google or established Sanity sign-in method](/images/placeholders/screenshot-reserved.svg)
     </Frame>
   </Step>
   <Step title="Select the invited account">
@@ -144,6 +147,10 @@ You need:
     Hide: Unrelated accounts, full personal email addresses where unnecessary, avatars, and private browser information
     Crop: The invited account and continuation control
     */}
+
+    <Frame caption="Reserved screenshot: Account chooser with the invited identity selected">
+      ![Reserved screenshot location for selecting the exact account that received the SixthGear invitation](/images/placeholders/screenshot-reserved.svg)
+    </Frame>
 
     <Frame caption="Reserved screenshot: Select the account that received the invitation">
       ![Reserved screenshot for selecting the invited Google or Sanity account](/images/placeholders/screenshot-reserved.svg)
@@ -162,14 +169,18 @@ You need:
     Crop: The account confirmation and approval control
     */}
 
+    <Frame caption="Reserved screenshot: Authentication approval for the invited account">
+      ![Reserved screenshot location for approving Sanity sign-in with the invited account](/images/placeholders/screenshot-reserved.svg)
+    </Frame>
+
     <Frame caption="Reserved screenshot: Approve sign-in with the invited account">
       ![Reserved screenshot for approving the Sanity sign-in request](/images/placeholders/screenshot-reserved.svg)
     </Frame>
   </Step>
-  <Step title="Accept the project invitation">
-    Confirm that the expected SixthGear project and correct account are displayed. Select **Accept invitation** once, then wait for Sanity to add the account.
+  <Step title="Accept the Sanity project invitation">
+    Confirm that the SixthGear project and correct account are displayed, then select **Accept invitation**. Wait while Sanity adds the account. Do not select the button repeatedly.
 
-    Access may take a few minutes to appear.
+    Membership may take a short time to appear after acceptance.
 
     {/* REPLACE SCREENSHOT
     Final file: /images/sanity/access/08-final-accept-invitation.png
@@ -178,6 +189,10 @@ You need:
     Hide: Full personal email where unnecessary, project ID, organization ID, avatar, and private browser information
     Crop: The project confirmation and final acceptance control
     */}
+
+    <Frame caption="Reserved screenshot: Final SixthGear project invitation confirmation">
+      ![Reserved screenshot location for the final Sanity project invitation acceptance screen](/images/placeholders/screenshot-reserved.svg)
+    </Frame>
 
     <Frame caption="Reserved screenshot: Final project invitation confirmation">
       ![Reserved screenshot for accepting the SixthGear Sanity project invitation](/images/placeholders/screenshot-reserved.svg)
@@ -199,7 +214,7 @@ You need:
     */}
 
     <Frame caption="Reserved screenshot: First successful view of SixthGear CMS">
-      ![Reserved screenshot for the first successful SixthGear CMS view](/images/placeholders/screenshot-reserved.svg)
+      ![Reserved screenshot location for the first successful SixthGear CMS view with content navigation visible](/images/placeholders/screenshot-reserved.svg)
     </Frame>
   </Step>
   <Step title="Confirm access">
@@ -270,4 +285,4 @@ You need:
 
 ## Protect your account
 
-Use your own named account. Never place passwords, API tokens, verification codes, recovery codes, private keys, customer information, or private project identifiers in this guide or its screenshots.
+Never place passwords, API tokens, recovery codes, private keys, full personal email addresses, customer information, billing details, project tokens, Sanity secrets, or private environment values in this guide, a screenshot, or an access request. Blur unrelated inbox messages, account choices, project identifiers, and browser details before a screenshot is approved for publication.

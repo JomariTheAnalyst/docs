@@ -1,34 +1,59 @@
 ---
 title: "Website Platform Access"
-description: "Confirmed accounts used to operate the Sixthgear website and the access facts that still require administrator verification."
+description: "Accounts used to operate SixthGear platforms, including owner email, MFA responsibility, access method, and remaining verification work."
 icon: "network"
 mode: "wide"
 ---
 
-This directory covers services confirmed by storefront source or this Mintlify project. A code integration confirms that Sixthgear is designed to use a platform; it does not prove the current account owner, subscription, login, or production configuration.
+This directory records the current business-owner login and the preferred access method for each platform. Dashboard-dependent roles, recovery settings, and signed-in devices remain marked for verification until an authorized administrator confirms them.
 
-<CardGroup cols={3}>
-  <Card title="Shopify" icon="shopping-bag">Commerce data, checkout, customers, inventory, and orders.</Card>
-  <Card title="Sixthgear CMS" icon="panels-top-left">Sanity content and the embedded editing Studio.</Card>
-  <Card title="Delivery systems" icon="cloud">GitHub, Vercel, and Mintlify source, hosting, and documentation.</Card>
+<CardGroup cols={2}>
+  <Card title="Business Owner Account" icon="shield-keyhole" href="/accounts-and-access/business-owner-account">
+    Use the company-controlled login for approved owner-level, recovery, billing, security, or emergency tasks.
+  </Card>
+
+  <Card title="Accept your CMS invitation" icon="user-check" href="/sanity/get-access">
+    Use a named Sanity account for routine CMS access when an individual invitation is available.
+  </Card>
 </CardGroup>
 
-| Platform | Login email | Password handled by | MFA required? | Access granted by | Signed-in devices | Purpose |
-| -------- | ----------- | ------------------- | ------------- | ----------------- | ----------------- | ------- |
-| Shopify | To verify | To verify | Yes | To verify | To verify | Manages Sixthgear products, collections, prices, inventory, customers, orders, checkout, and related ecommerce information. |
-| Sixthgear CMS (Sanity) | To verify | To verify | Yes | To verify | To verify | Manages structured website content and the Studio available at `/studio`. |
-| GitHub | To verify | To verify | Yes | To verify | To verify | Stores storefront and documentation source, version history, reviews, and repository automation. |
-| Vercel | To verify | To verify | Yes | To verify | To verify | Builds and hosts the storefront using the repository-supported deployment configuration. |
-| Mintlify | To verify | To verify | Yes | To verify | To verify | Builds and hosts this internal documentation portal. |
-| Resend | To verify | To verify | Yes | To verify | To verify | Sends contact-form messages when the production email configuration is enabled. |
-| Upstash Redis | To verify | To verify | Yes | To verify | To verify | Provides cache and rate-limit storage used by storefront server code. |
-| Judge.me | To verify | To verify | To verify | To verify | To verify | Supports product-review data when the configured integration is active. |
-| Tidio | To verify | To verify | To verify | To verify | To verify | Provides the conditional customer-chat widget when a public workspace key is configured. |
+## Confirmed business-owner access
+
+| Platform | Business login email | MFA handled by | Preferred routine access | Business-owner account purpose | Verification still required |
+| --- | --- | --- | --- | --- | --- |
+| Shopify | `first2sixthgear@gmail.com` | Jomari Roco | Named Shopify user with the required role when supported by the current plan | Store ownership, billing, users, security, recovery, and emergency administration | Current plan, owner status, assigned roles, recovery methods, and active sessions |
+| SixthGear CMS (Sanity) | `first2sixthgear@gmail.com` | Jomari Roco | Named Sanity member invited to the SixthGear project | Project administration, membership, recovery, and emergency access | Verified production Studio address, current role, recovery methods, and active sessions |
+| Loyverse | `first2sixthgear@gmail.com` | Jomari Roco | Named employee or administrator account when Employee Management is configured | Owner settings, Back Office administration, employee access, billing, and recovery | Owner status, subscription or add-on access, employee roles, recovery methods, and active sessions |
+| GitHub | `first2sixthgear@gmail.com` | Jomari Roco | The person's own GitHub account invited to the required repository or organization | Repository or organization ownership, recovery, and emergency administration | Organization ownership, repository permissions, recovery methods, and active sessions |
 
 <Warning>
-The domain or DNS provider, Google Search Console, Google Analytics, payment provider, Loyverse account, and iMin device account are not confirmed by the repository. Add them only after an authorized administrator identifies the exact service and account.
+  Do not treat the business owner account as the default shared login for daily work. Use individual accounts wherever the platform supports them so activity and permissions remain attributable.
 </Warning>
 
+## Other website platforms
+
+| Platform | Login email | Password handled by | MFA handled by | Access granted by | Purpose | Status |
+| --- | --- | --- | --- | --- | --- | --- |
+| Vercel | To verify | To verify | To verify | To verify | Builds and hosts the storefront through the configured Git integration. | Dashboard verification required |
+| Mintlify | To verify | To verify | To verify | To verify | Builds and hosts this internal documentation portal. | Dashboard verification required |
+| Resend | To verify | To verify | To verify | To verify | Sends contact-form messages when the production email configuration is active. | Dashboard verification required |
+| Upstash Redis | To verify | To verify | To verify | To verify | Provides cache and rate-limit storage used by storefront server code. | Dashboard verification required |
+| Judge.me | To verify | To verify | To verify | To verify | Supports product-review data when the configured integration is active. | Installation and ownership require verification |
+| Tidio | To verify | To verify | To verify | To verify | Provides customer chat when the configured workspace is active. | Installation and ownership require verification |
+
 <Note>
-The source contains active Strapi-named integrations. Do not remove Strapi access until source usage and the production content migration are both verified complete.
+  The domain and DNS provider, Google services, payment providers, iMin account, and other operational platforms must be added only after their exact account and owner are verified.
 </Note>
+
+## Access control rules
+
+1. Use `first2sixthgear@gmail.com` only for approved owner-level, recovery, billing, security, or emergency tasks.
+2. Use a named account for routine work where individual users or roles are available.
+3. Contact Jomari Roco only after the official platform asks for MFA.
+4. Verify the platform, person, and request time before approving MFA.
+5. Do not store passwords, MFA secrets, backup codes, or recovery keys in Mintlify.
+6. Assign a backup MFA custodian or recovery method before the executive handoff is considered complete.
+
+<Check>
+  A platform record is complete when its owner, role, password location, MFA custodian, recovery method, active sessions, and preferred user-access method have been verified in the platform dashboard.
+</Check>
