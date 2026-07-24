@@ -1,230 +1,219 @@
 ---
 title: "Accept your SixthGear CMS invitation"
-description: "Join the SixthGear Sanity project, sign in with the correct account, and confirm your CMS access."
+description: "Accept the Sanity invitation, sign in with the correct account, and confirm access to SixthGear CMS."
+icon: "user-check"
 ---
 
-A SixthGear administrator must invite you before you can open the CMS. The invitation is connected to one email address, so sign in with that address and the same identity provider used for its Sanity account. The process normally takes only a few minutes. Never share your password with another employee.
+A SixthGear administrator must invite you before you can open the CMS. The invitation is linked to one email address, so use the same account throughout the process.
 
 <Info>
-You need access to the exact email account that received the Sanity invitation. Keep that inbox open while completing this guide.
+  Keep the invited email account open while you follow this guide. Do not forward the invitation or share your password with another person.
 </Info>
 
 ## Before you begin
 
-Have these items ready:
+You need:
 
-- Access to the invited email account
+- Access to the email address that received the invitation
 - The Sanity invitation email
-- A supported, up-to-date browser
-- The correct Google or Sanity sign-in method for the invited identity
-- Approval from the responsible SixthGear administrator
+- The sign-in method normally used for that account
+- Approval from the SixthGear administrator who requested your access
 
 <Warning>
-Using the wrong Google account or a different sign-in provider can create a separate Sanity identity that does not have SixthGear access. Use the sign-in method already connected to the invited Sanity identity.
+  Using a different Google account or a different sign-in method can create a separate Sanity identity without access to the SixthGear project. Check the displayed account before every confirmation step.
 </Warning>
 
-<Tip>
-If you use several work and personal accounts in the same browser, compare the displayed email address at every account-selection screen. A private browser window can reduce account-switching confusion.
-</Tip>
+## For the administrator: send the invitation
+
+<Steps>
+  <Step title="Open the SixthGear project in Sanity Manage">
+    Open the correct SixthGear project and go to **Members**.
+  </Step>
+  <Step title="Confirm the recipient">
+    Check the exact email address the person will use. Do not send the invitation to a shared inbox unless shared access has been approved.
+  </Step>
+  <Step title="Choose the approved role">
+    Assign only the access required for the person’s work. Available role names depend on the current Sanity plan and project configuration.
+  </Step>
+  <Step title="Send and verify the invitation">
+    Send the invitation, confirm that it appears as pending, and tell the recipient which email address and sign-in method to use.
+  </Step>
+</Steps>
 
 ## Accept the invitation
 
 <Steps titleSize="h2">
   <Step title="Open the invited email account">
-    Open the inbox for the email address that received the invitation. If the account uses Gmail, start from [Gmail](https://mail.google.com/) rather than a URL containing `/u/1/`, `/u/2/`, or `/u/3/`; those numbered paths can open a different signed-in account.
+    Open the inbox for the email address that received the invitation. For Gmail, use the normal Gmail home page rather than a numbered account path such as `/u/1/` or `/u/3/`.
 
-    Check **Inbox**, **Spam**, **Junk**, **Promotions**, and **Updates**. Search for `Sanity`, `invited you`, or the SixthGear project name if the message is not immediately visible.
+    Check **Inbox**, **Spam**, **Junk**, **Promotions**, and **Updates**. Search for `Sanity` or `invited you` if the message is not visible.
 
     {/* REPLACE SCREENSHOT
     Final file: /images/sanity/access/01-invitation-inbox.png
     Capture: The inbox containing the Sanity invitation
     Show: The Sanity sender and invitation subject
     Hide: Personal email addresses, unrelated messages, avatars, labels, and notifications
-    Crop: The invitation row and enough inbox context to identify it
+    Crop: The invitation row and limited surrounding inbox context
     */}
-    <Frame caption="Reserved screenshot: Inbox showing the Sanity project invitation">
-      <img src="/images/placeholders/screenshot-reserved.svg" alt="Reserved screenshot location for an inbox with the Sanity project invitation highlighted" />
+
+    <Frame caption="Reserved screenshot: Inbox showing the Sanity invitation">
+      ![Reserved screenshot for the inbox containing the SixthGear Sanity invitation](/images/placeholders/screenshot-reserved.svg)
     </Frame>
-
-    The expected result is an invitation addressed to the account you currently control.
   </Step>
+  <Step title="Open and check the invitation">
+    Open the message from Sanity. Confirm that it refers to the expected SixthGear project and that the invitation was requested.
 
-  <Step title="Open and inspect the invitation">
-    Open the message sent by Sanity. Confirm that it refers to the SixthGear project and that you expected the invitation. Do not continue if the sender or project looks unfamiliar; contact the administrator through a known channel instead.
-
-    Do not forward the message. The invitation is intended for its original recipient.
+    Do not continue if the sender or project looks unfamiliar. Contact the administrator through a known channel instead.
 
     {/* REPLACE SCREENSHOT
     Final file: /images/sanity/access/02-open-invitation-email.png
     Capture: The opened Sanity invitation email
-    Show: The Sanity sender, SixthGear project name, and Accept invitation button
-    Hide: Personal inbox content, personal email addresses, other messages, avatars, and private browser information
-    Crop: The sender, project invitation text, and Accept invitation button
+    Show: The Sanity sender, project name, and Accept invitation button
+    Hide: Personal inbox content, email addresses, unrelated messages, avatars, and private browser information
+    Crop: The sender, invitation text, and Accept invitation button
     */}
-    <Frame caption="Reserved screenshot: Opened Sanity email with the SixthGear project invitation">
-      <img src="/images/placeholders/screenshot-reserved.svg" alt="Reserved screenshot location for the opened Sanity invitation showing the project name and Accept invitation button" />
+
+    <Frame caption="Reserved screenshot: Opened Sanity invitation email">
+      ![Reserved screenshot for the opened Sanity invitation email and Accept invitation button](/images/placeholders/screenshot-reserved.svg)
     </Frame>
-
-    The expected result is a recognizable Sanity invitation for the SixthGear project.
   </Step>
-
   <Step title="Select Accept invitation">
-    Select **Accept invitation** inside the email. Sanity should open in a new browser page. Before entering credentials, confirm that the address bar shows an official Sanity page and that the browser has not displayed a security warning.
+    Select **Accept invitation** in the email. A Sanity page should open in your browser.
+
+    Confirm that the address bar shows an official Sanity page before signing in.
 
     <Warning>
-    The invitation email should never ask you to reply with a password or enter a password directly inside the email. Stop and contact the administrator if the link opens an unfamiliar domain or asks for credentials outside the expected sign-in page.
+      The invitation should not ask you to reply with a password or enter credentials inside the email. Stop if the link opens an unfamiliar website.
     </Warning>
 
     {/* REPLACE SCREENSHOT
     Final file: /images/sanity/access/03-accept-invitation-email-button.png
-    Capture: The invitation email immediately before selecting Accept invitation
-    Show: The SixthGear project context and Accept invitation button
+    Capture: The invitation email before selecting Accept invitation
+    Show: The project context and Accept invitation button
     Hide: Personal email addresses, unrelated messages, avatars, notifications, and private browser information
-    Crop: The invitation text and Accept invitation control
+    Crop: The invitation text and button
     */}
-    <Frame caption="Reserved screenshot: Accept invitation button in the Sanity email">
-      <img src="/images/placeholders/screenshot-reserved.svg" alt="Reserved screenshot location for the Accept invitation button inside the Sanity email" />
+
+    <Frame caption="Reserved screenshot: Accept invitation button in the email">
+      ![Reserved screenshot for the Accept invitation button in the Sanity email](/images/placeholders/screenshot-reserved.svg)
     </Frame>
-
-    The expected result is a Sanity invitation page in your browser.
   </Step>
+  <Step title="Check the account shown by Sanity">
+    Continue when the displayed account matches the email address that received the invitation. Select **Switch accounts** only when Sanity shows the wrong account.
 
-  <Step title="Check the displayed account">
-    Read the account shown on the Sanity invitation screen. Continue if it matches the email address that received the invitation. Select **Switch accounts** only if Sanity shows the wrong account.
-
-    Do not accept the invitation through another employee's account. If a business account was invited, do not substitute a personal account.
+    Do not accept the invitation using another employee’s account or an unapproved personal account.
 
     {/* REPLACE SCREENSHOT
     Final file: /images/sanity/access/04-check-sanity-account.png
     Capture: The Sanity invitation page showing the current account
-    Show: The current account, SixthGear project name, and Switch accounts option
-    Hide: The full personal email where unnecessary, project ID, organization ID, account avatar, and private browser information
-    Crop: The account summary, project name, and Switch accounts control
+    Show: The current account, project name, and Switch accounts option
+    Hide: Full personal email where unnecessary, project ID, organization ID, avatar, and private browser information
+    Crop: The account summary and Switch accounts control
     */}
-    <Frame caption="Reserved screenshot: Sanity invitation screen showing the current account">
-      <img src="/images/placeholders/screenshot-reserved.svg" alt="Reserved screenshot location for the Sanity invitation account check and Switch accounts option" />
+
+    <Frame caption="Reserved screenshot: Account shown on the Sanity invitation page">
+      ![Reserved screenshot for checking the invited account and Switch accounts option](/images/placeholders/screenshot-reserved.svg)
     </Frame>
-
-    The expected result is the invited email identity displayed next to the SixthGear project.
   </Step>
+  <Step title="Use the correct sign-in method">
+    Select **Continue with Google** when the invited Sanity identity uses Google. Use another sign-in option only when that is the established method for the invited account.
 
-  <Step title="Sign in using the correct method">
-    Select **Continue with Google** when the invited Sanity identity uses Google authentication. Use the email sign-in option only when that is the established login method for the invited identity.
-
-    Do not change providers during this process. The same email address used through another provider may be treated as a separate Sanity identity.
+    Do not switch sign-in methods during the process.
 
     {/* REPLACE SCREENSHOT
     Final file: /images/sanity/access/05-select-sign-in-method.png
-    Capture: The Sanity sign-in method selection page
-    Show: The supported sign-in choices and the method used by the invited identity
-    Hide: Personal email addresses, account avatars, browser profiles, and private browser information
-    Crop: The sign-in method controls and enough Sanity branding to identify the page
+    Capture: The Sanity sign-in method page
+    Show: The available sign-in choices and the method used for the invited account
+    Hide: Email addresses, avatars, browser profiles, and private browser information
+    Crop: The sign-in controls and Sanity branding
     */}
+
     <Frame caption="Reserved screenshot: Sanity sign-in method selection">
-      <img src="/images/placeholders/screenshot-reserved.svg" alt="Reserved screenshot location for choosing the Google or established Sanity sign-in method" />
+      ![Reserved screenshot for choosing the sign-in method connected to the invited account](/images/placeholders/screenshot-reserved.svg)
     </Frame>
-
-    The expected result is the account-selection or provider approval screen for the correct sign-in method.
   </Step>
-
   <Step title="Select the invited account">
-    Select the exact account that received the invitation. Carefully compare similar personal and business addresses. Select **Use another account** only when the invited address is not listed.
+    Choose the exact account that received the invitation. Compare similar personal and business addresses carefully.
 
-    Stop and contact the administrator if you cannot access the invited account. Do not choose a different account to finish the process.
+    Select **Use another account** only when the invited account is not listed. Stop and contact the administrator if you cannot access it.
 
     {/* REPLACE SCREENSHOT
     Final file: /images/sanity/access/06-select-invited-account.png
-    Capture: The authentication provider's account chooser
-    Show: Only the invited account and the Use another account option when needed
-    Hide: Unrelated Google or provider accounts, full personal email addresses where unnecessary, avatars, and private browser information
-    Crop: The invited account choice and relevant continuation control
+    Capture: The account-selection screen
+    Show: The invited account and Use another account option when needed
+    Hide: Unrelated accounts, full personal email addresses where unnecessary, avatars, and private browser information
+    Crop: The invited account and continuation control
     */}
-    <Frame caption="Reserved screenshot: Account chooser with the invited identity selected">
-      <img src="/images/placeholders/screenshot-reserved.svg" alt="Reserved screenshot location for selecting the exact account that received the SixthGear invitation" />
+
+    <Frame caption="Reserved screenshot: Select the account that received the invitation">
+      ![Reserved screenshot for selecting the invited Google or Sanity account](/images/placeholders/screenshot-reserved.svg)
     </Frame>
-
-    The expected result is a sign-in approval screen for the invited account.
   </Step>
-
   <Step title="Approve the sign-in request">
-    Review the account shown by Google or the selected authentication provider. Select **Continue**, **Magpatuloy**, or the equivalent button. The button language may follow your account language.
+    Review the selected account, then select **Continue**, **Magpatuloy**, or the equivalent button shown by the sign-in provider.
 
-    Do not approve the request if the wrong account is displayed. Return to the account chooser and correct it first.
+    Return to account selection if the wrong account is displayed.
 
     {/* REPLACE SCREENSHOT
     Final file: /images/sanity/access/07-approve-google-sign-in.png
-    Capture: The Google or authentication-provider approval screen
-    Show: The selected invited identity, Sanity sign-in request, and Continue or equivalent button
+    Capture: The sign-in approval screen
+    Show: The invited account, Sanity sign-in request, and Continue button
     Hide: Full personal email where unnecessary, unrelated accounts, recovery details, avatars, and private browser information
     Crop: The account confirmation and approval control
     */}
-    <Frame caption="Reserved screenshot: Authentication approval for the invited account">
-      <img src="/images/placeholders/screenshot-reserved.svg" alt="Reserved screenshot location for approving Sanity sign-in with the invited account" />
+
+    <Frame caption="Reserved screenshot: Approve sign-in with the invited account">
+      ![Reserved screenshot for approving the Sanity sign-in request](/images/placeholders/screenshot-reserved.svg)
     </Frame>
-
-    The expected result is a return to the Sanity project invitation.
   </Step>
+  <Step title="Accept the project invitation">
+    Confirm that the expected SixthGear project and correct account are displayed. Select **Accept invitation** once, then wait for Sanity to add the account.
 
-  <Step title="Accept the Sanity project invitation">
-    Confirm that the SixthGear project and correct account are displayed, then select **Accept invitation**. Wait while Sanity adds the account. Do not select the button repeatedly.
-
-    Membership may take a short time to appear after acceptance.
+    Access may take a few minutes to appear.
 
     {/* REPLACE SCREENSHOT
     Final file: /images/sanity/access/08-final-accept-invitation.png
-    Capture: The final Sanity project invitation confirmation
-    Show: The SixthGear project name, correct account context, and Accept invitation button
-    Hide: Full personal email where unnecessary, project ID, organization ID, account avatar, and private browser information
-    Crop: The project confirmation, account context, and final acceptance control
+    Capture: The final Sanity invitation confirmation
+    Show: The project name, account context, and Accept invitation button
+    Hide: Full personal email where unnecessary, project ID, organization ID, avatar, and private browser information
+    Crop: The project confirmation and final acceptance control
     */}
-    <Frame caption="Reserved screenshot: Final SixthGear project invitation confirmation">
-      <img src="/images/placeholders/screenshot-reserved.svg" alt="Reserved screenshot location for the final Sanity project invitation acceptance screen" />
+
+    <Frame caption="Reserved screenshot: Final project invitation confirmation">
+      ![Reserved screenshot for accepting the SixthGear Sanity project invitation](/images/placeholders/screenshot-reserved.svg)
     </Frame>
-
-    The expected result is confirmation that the account joined the project or a redirect into Sanity.
   </Step>
-
   <Step title="Open SixthGear CMS">
-    SixthGear CMS is mounted at `/studio` on the selected storefront environment.
+    Open the verified SixthGear CMS address provided by the administrator. Sign in using the same account that accepted the invitation.
 
-    {/* VERIFY BEFORE PUBLISHING
-    Confirm the production SixthGear CMS URL.
-    Expected pattern: https://sixthgearmoto.com/studio
-    */}
+    The CMS is mounted at `/studio`, but this guide does not publish a full production URL until that address has been manually verified.
 
-    Open the verified storefront origin and add `/studio`. Sign in using the same identity that accepted the invitation. If access was accepted recently, wait a few minutes and refresh once.
-
-    Confirm that the page title identifies **Sixthgear CMS** and that the expected content sections are visible. Do not edit content during this first access check.
+    Confirm that the page title shows **Sixthgear CMS** and that the expected content navigation is visible. Do not edit content during this first access check.
 
     {/* REPLACE SCREENSHOT
     Final file: /images/sanity/access/09-first-studio-view.png
-    Capture: The first successful SixthGear CMS view after invitation acceptance
-    Show: The Sixthgear CMS title and expected content navigation
-    Hide: Personal email addresses, account avatar, project ID, dataset ID, unpublished content, and private browser information
-    Crop: The Studio title, navigation, and enough workspace context to confirm successful access
+    Capture: The first successful SixthGear CMS view
+    Show: The Sixthgear CMS title and expected navigation
+    Hide: Personal email addresses, avatar, project ID, dataset ID, unpublished content, and private browser information
+    Crop: The Studio title, navigation, and enough workspace context to confirm access
     */}
+
     <Frame caption="Reserved screenshot: First successful view of SixthGear CMS">
-      <img src="/images/placeholders/screenshot-reserved.svg" alt="Reserved screenshot location for the first successful SixthGear CMS view with content navigation visible" />
+      ![Reserved screenshot for the first successful SixthGear CMS view](/images/placeholders/screenshot-reserved.svg)
     </Frame>
-
-    The expected result is SixthGear CMS loading without an access or configuration error.
   </Step>
-
   <Step title="Confirm access">
-    Use the check that matches your responsibility.
-
     <Tabs>
       <Tab title="Invited user">
-        Confirm that SixthGear CMS opens with the invited account and shows the content types needed for your work. Check that the editing or publishing controls available to you match the role the administrator assigned. Do not make a test edit merely to prove access.
+        Confirm that SixthGear CMS opens with the invited account and shows the content sections needed for your work. Check that the available editing and publishing controls match the role approved for you.
       </Tab>
-
       <Tab title="Administrator">
-        [Open Sanity Manage](https://www.sanity.io/manage), select the SixthGear project, and open **Members**. Confirm that the invited user appears with the intended role. If the role is wrong, correct membership through the approved access process rather than sharing an administrator account.
+        Open Sanity Manage, select the SixthGear project, and open **Members**. Confirm that the person appears with the intended role.
       </Tab>
     </Tabs>
 
     <Check>
-    Access is complete when the invited user can open SixthGear CMS with the correct account and see the content allowed by the assigned role.
+      Access is complete when the invited user can open SixthGear CMS with the correct account and see the content allowed by the assigned role.
     </Check>
   </Step>
 </Steps>
@@ -234,71 +223,51 @@ If you use several work and personal accounts in the same browser, compare the d
 <AccordionGroup>
   <Accordion title="The invitation email did not arrive">
     - Check **Spam**, **Junk**, **Promotions**, and **Updates**.
-    - Search the inbox for `Sanity`.
-    - Confirm the invited email address with the administrator.
-    - Ask the administrator to review pending invitations and resend the invitation when appropriate.
+    - Search for `Sanity`.
+    - Ask the administrator to confirm the invited email address.
+    - Ask the administrator to review pending invitations and resend it if needed.
   </Accordion>
 
   <Accordion title="Sanity opens the wrong account">
     - Select **Switch accounts**.
     - Sign out of unrelated Sanity sessions.
-    - Use a private browser window when account sessions remain mixed.
+    - Use a private browser window if account sessions remain mixed.
     - Sign in with the exact account that received the invitation.
   </Accordion>
 
-  <Accordion title="The invitation was accepted using the wrong account">
-    - Stop before editing CMS content.
-    - Notify the SixthGear administrator.
-    - Ask the administrator to remove or revoke the incorrect membership.
+  <Accordion title="The invitation was accepted with the wrong account">
+    - Stop before editing content.
+    - Inform the SixthGear administrator.
+    - Ask the administrator to remove the incorrect membership.
     - Send a new invitation to the correct account.
-    - Do not share the incorrect account with the intended user.
   </Accordion>
 
   <Accordion title="The invitation expired">
     - Ask the administrator to review the pending invitation.
-    - Revoke the expired invitation if the administrator determines that it is required.
-    - Send a new invitation and use only the newest invitation email.
+    - Use only the newest invitation email after it is resent.
   </Accordion>
 
-  <Accordion title="The user can open the project but cannot edit">
-    - Confirm the assigned role. Some roles may be read-only.
-    - Ask the administrator to review the user's role and the current Sanity plan.
-    - Do not share an administrator account to bypass role limits.
-
-    Role names and availability depend on the verified Sanity project configuration and plan.
+  <Accordion title="The CMS opens, but editing is unavailable">
+    - Confirm the assigned role.
+    - Ask the administrator to review access in **Members**.
+    - Do not use a shared administrator account to bypass permission limits.
   </Accordion>
 
-  <Accordion title="The user can edit but cannot publish">
-    - Check the document for field validation errors.
+  <Accordion title="Editing works, but publishing is unavailable">
+    - Check the document for validation errors.
     - Confirm that all required fields are complete.
-    - Confirm that the assigned role permits publishing.
-    - Ask the administrator to review access if the document is valid but publishing remains unavailable.
+    - Ask the administrator to confirm that the assigned role allows publishing.
   </Accordion>
 
   <Accordion title="SixthGear CMS is blank or does not load">
-    - Refresh the browser once.
+    - Refresh the page once.
     - Wait a few minutes if the invitation was accepted recently.
     - Confirm that the correct account is signed in.
     - Try a private browser window.
-    - Temporarily disable browser extensions that may block the Studio.
-    - Record the browser, time, URL, and visible error before escalating.
-  </Accordion>
-
-  <Accordion title="The project appears, but SixthGear CMS does not">
-    - Confirm the production Studio URL with the SixthGear website administrator.
-    - Confirm that you opened the correct Sanity project.
-    - Confirm the expected dataset where it is visible and safe to review.
-    - Verify that the website deployment is online.
-    - Escalate the collected details to the SixthGear website administrator.
+    - Record the browser, time, address, and visible error before escalating.
   </Accordion>
 </AccordionGroup>
 
-## Understand your assigned role
+## Protect your account
 
-Access is based on the role the administrator assigns. A read-only role allows viewing but not editing. A broader role may allow editing, publishing, or project administration, depending on the verified project configuration and Sanity plan.
-
-Administrators should grant only the access required for a person's work. Staff must use named accounts; never share one administrator account among employees.
-
-## Protect account and project information
-
-Never place passwords, API tokens, recovery codes, private keys, full personal email addresses, customer information, billing details, project tokens, Sanity secrets, or private environment values in this guide, a screenshot, or an access request. Blur unrelated inbox messages, account choices, project identifiers, and browser details before a screenshot is approved for publication.
+Use your own named account. Never place passwords, API tokens, verification codes, recovery codes, private keys, customer information, or private project identifiers in this guide or its screenshots.
