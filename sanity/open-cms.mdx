@@ -1,51 +1,70 @@
 ---
 title: "Open SixthGear CMS"
-description: "Open the embedded Sanity Studio safely and confirm the project is ready for editing."
+description: "Return to SixthGear CMS with the account that accepted the Sanity invitation."
 icon: "panel-left-open"
 ---
 
-## Purpose
+Use this guide after your Sanity invitation has been accepted.
 
-Use the embedded Studio to edit SixthGear content in the configured Sanity project and dataset.
-
-## Prerequisites
-
-- An authorized Sanity account
-- Access to the correct SixthGear Sanity project
-- The correct storefront environment and dataset
-- MFA configured according to the account policy
-
-{/* IMAGE NEEDED
-File: /images/sanity/studio-navigation.png
-See: _internal/image-capture-guide.md
-*/}
-
-## Open Studio
+## Open the CMS
 
 <Steps>
-  <Step title="Choose the correct environment">
-    Use the verified local, preview, or production storefront origin. The production domain is not documented until dashboard verification is complete.
+  <Step title="Use the verified CMS address">
+    Open the SixthGear CMS address provided by the website administrator. The Studio route is `/studio`, but the full production address must be verified before it is published in this guide.
   </Step>
-  <Step title="Open the Studio path">
-    Add `/studio` to the selected storefront origin. For local development, use `http://sixthgearmoto.com/studio`.
+  <Step title="Sign in with the invited account">
+    Use the same account and sign-in method used to accept the invitation. Do not use another employee’s account or a shared administrator login.
   </Step>
-  <Step title="Sign in through Sanity">
-    Use your named Sanity account. Do not use a shared login.
+  <Step title="Confirm the workspace">
+    Check that the page title shows **Sixthgear CMS** and that the content navigation is visible.
+
+    {/* REPLACE SCREENSHOT
+    Final file: /images/sanity/studio-navigation.png
+    Capture: SixthGear CMS after a successful sign-in
+    Show: The Sixthgear CMS title and available content navigation
+    Hide: Personal email addresses, account avatar, project ID, dataset ID, unpublished content, and private browser information
+    Crop: The Studio title, navigation, and main workspace
+    */}
+
+    <Frame caption="Reserved screenshot: SixthGear CMS navigation after sign-in">
+      ![Reserved screenshot for the SixthGear CMS title and content navigation](/images/placeholders/screenshot-reserved.svg)
+    </Frame>
   </Step>
-  <Step title="Confirm the content tree">
-    Check that **Blog**, **Homepage Settings**, **Marketing**, **Services Page**, **About Page**, and **Services** appear as expected.
+  <Step title="Check your access">
+    Open one content section without changing it. Confirm that the sections required for your role are visible and that the available editing or publishing controls match your approved access.
   </Step>
 </Steps>
 
-## Verify the result
+<Check>
+  You are ready to use SixthGear CMS when the correct workspace opens and the content sections required for your role are available.
+</Check>
 
-You can open a document without configuration errors, and the content belongs to the intended SixthGear environment. Do not publish a test edit to confirm access.
+## If you have not accepted the invitation
 
-## Common problems
+<Card title="Accept your CMS invitation" icon="user-check" href="/sanity/get-access">
+  Follow the invitation process before trying to open the Studio.
+</Card>
 
-| Problem | Check |
-| --- | --- |
-| Project or dataset error | `NEXT_PUBLIC_SANITY_PROJECT_ID` and `NEXT_PUBLIC_SANITY_DATASET` through the secure configuration process |
-| Studio route returns storefront page | `src/app/studio/[[...tool]]/page.tsx` and middleware exclusions |
-| Content tree is unexpected | Sanity project, dataset, schema deployment and user role |
-| You cannot publish | Sanity member role and document validation |
+## Common access problems
+
+<AccordionGroup>
+  <Accordion title="Access denied">
+    Confirm that you signed in with the exact account that received the invitation. If the account is correct, ask the administrator to review your membership and assigned role.
+  </Accordion>
+
+  <Accordion title="The wrong Sanity project opens">
+    Sign out, then sign in again with the invited account. Ask the administrator to confirm the correct SixthGear project if more than one project is visible.
+  </Accordion>
+
+  <Accordion title="The expected content sections are missing">
+    Ask the administrator to confirm your role and the content sections currently available in SixthGear CMS. Some website sections are still under connection review and may not be ready for staff editing.
+  </Accordion>
+
+  <Accordion title="The page is blank or keeps loading">
+    Refresh once, try a private browser window, and confirm that browser extensions are not blocking the page. Record the browser, time, address, and visible error before asking for support.
+  </Accordion>
+</AccordionGroup>
+
+<Warning>
+  Do not publish a test edit only to confirm access. Open a document and review the available controls instead.
+</Warning>
