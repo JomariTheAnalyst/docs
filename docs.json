@@ -95,6 +95,7 @@
             "pages": [
               "sanity/get-access",
               "sanity/overview",
+              "sanity/content-coverage",
               "sanity/open-cms",
               "sanity/content-types",
               "sanity/edit-publish-content",
