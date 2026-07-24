@@ -1,8 +1,9 @@
 ---
-title: "Sanity overview"
+title: "Content management overview"
 description: "What SixthGear stores in Sanity, how Studio is embedded, and where the storefront reads CMS content."
 icon: "blocks"
 hidden: true
+sidebarTitle: "CMS Overview"
 ---
 
 Sanity manages structured website content that does not belong in Shopify. SixthGear embeds Sanity Studio at `/studio` and reads published content through `next-sanity`.
@@ -29,7 +30,7 @@ Sanity manages structured website content that does not belong in Shopify. Sixth
 | `src/app/api/revalidate-sanity/route.ts` | Webhook revalidation |
 
 <Warning>
-Strapi still supplies content on active routes. Confirm a field's source before editing or migrating it.
+  Strapi still supplies content on active routes. Confirm a field's source before editing or migrating it.
 </Warning>
 
 ## Common tasks
