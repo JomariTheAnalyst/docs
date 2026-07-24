@@ -1,19 +1,35 @@
 ---
 title: "Open SixthGear CMS"
-description: "Return to SixthGear CMS with the account that accepted the Sanity invitation."
+description: "Open the local or live SixthGear CMS, sign in with the approved account, and confirm the correct workspace."
 icon: "panel-left-open"
 ---
 
 Use this guide after your Sanity invitation has been accepted.
 
+## CMS addresses
+
+<CodeGroup>
+
+```text Local development
+http://localhost:7000/studio
+```
+
+```text Production (live)
+https://www.sixthgearmoto.com/studio
+```
+
+</CodeGroup>
+
+Use the local address only when the SixthGear storefront is already running on port `7000`. Use the production address for approved live content work.
+
 ## Open the CMS
 
 <Steps>
-  <Step title="Use the verified CMS address">
-    Open the SixthGear CMS address provided by the website administrator. The Studio route is `/studio`, but the full production address must be verified before it is published in this guide.
+  <Step title="Choose the correct environment">
+    Use local development for developer testing. Use production for approved live content changes.
   </Step>
-  <Step title="Sign in with the invited account">
-    Use the same account and sign-in method used to accept the invitation. Do not use another employee’s account or a shared administrator login.
+  <Step title="Sign in with the approved account">
+    Use the same account and sign-in method used to accept the invitation. Do not use another employee’s account.
   </Step>
   <Step title="Confirm the workspace">
     Check that the page title shows **Sixthgear CMS** and that the content navigation is visible.
@@ -33,21 +49,34 @@ Use this guide after your Sanity invitation has been accepted.
   <Step title="Check your access">
     Open one content section without changing it. Confirm that the sections required for your role are visible and that the available editing or publishing controls match your approved access.
   </Step>
+  <Step title="Check what is safe to edit">
+    Open [What you can manage in SixthGear CMS](/sanity/content-coverage) before making a production change.
+  </Step>
 </Steps>
 
 <Check>
-  You are ready to use SixthGear CMS when the correct workspace opens and the content sections required for your role are available.
+  You are ready to use SixthGear CMS when the correct workspace opens, your required sections are visible, and you have confirmed the section’s coverage status.
 </Check>
 
-<Card title="What you can manage in SixthGear CMS" icon="list-checks" href="/sanity/content-coverage">
-  Check which website sections are ready for routine editing before you make a production change.
-</Card>
+## Related guides
 
-## If you have not accepted the invitation
+<CardGroup cols={2}>
+  <Card title="Accept your CMS invitation" icon="user-check" href="/sanity/get-access">
+    Complete the invitation process before opening the Studio.
+  </Card>
 
-<Card title="Accept your CMS invitation" icon="user-check" href="/sanity/get-access">
-  Follow the invitation process before trying to open the Studio.
-</Card>
+  <Card title="Content management overview" icon="blocks" href="/sanity/overview">
+    Review CMS ownership, Studio areas, and operating limits.
+  </Card>
+
+  <Card title="What you can manage" icon="list-checks" href="/sanity/content-coverage">
+    Check which sections are ready, under review, or managed elsewhere.
+  </Card>
+
+  <Card title="Edit and publish content" icon="file-pen-line" href="/sanity/edit-publish-content">
+    Follow the approved publishing and storefront verification workflow.
+  </Card>
+</CardGroup>
 
 ## Common access problems
 
@@ -61,7 +90,11 @@ Use this guide after your Sanity invitation has been accepted.
   </Accordion>
 
   <Accordion title="The expected content sections are missing">
-    Ask the administrator to confirm your role and the content sections currently available in SixthGear CMS. Some website sections are still under connection review and may not be ready for staff editing.
+    Ask the administrator to confirm your role and the content sections currently available in SixthGear CMS. Some sections remain under review.
+  </Accordion>
+
+  <Accordion title="The local address does not open">
+    Confirm that `npm run dev` is running successfully and that the storefront is available on port `7000`. The local Studio also requires the approved Sanity environment variables.
   </Accordion>
 
   <Accordion title="The page is blank or keeps loading">

@@ -1,45 +1,134 @@
 ---
 title: "Edit and publish content"
-description: "Update a Sanity document, check its validation, publish it, and verify the storefront result."
+description: "Update approved SixthGear CMS content, publish it safely, and verify the result on the live storefront."
 icon: "file-pen-line"
-hidden: true
 ---
 
-## Prerequisites
+Use this workflow only for content that belongs in Sanity and is marked **Ready** in the coverage guide.
 
-- Authorized Studio access
-- Approved copy, dates, links, and media
-- Confirmation that Sanity owns the target content
-- A review plan for production-facing changes
+<Card title="Check CMS content coverage" icon="list-checks" href="/sanity/content-coverage">
+  Confirm that the target section is ready for routine editing before you change production content.
+</Card>
 
-{/* IMAGE NEEDED
-File: /images/sanity/edit-homepage-content.png
-See: _internal/image-capture-guide.md
-*/}
+## Before you begin
 
-## Edit a document
+You need:
 
-<Steps>
-  <Step title="Open the correct document type">
-    Use the Studio navigation to select the singleton or document. Confirm the title and current content before editing.
+- Approved access to SixthGear CMS
+- The exact page, section, and requested change
+- Approved copy, links, dates, and media
+- Confirmation that the content belongs in Sanity rather than Shopify
+- A way to verify the affected page after publishing
+
+<Warning>
+  Do not edit an **Under review** section unless the website administrator has approved the change and will verify the storefront result with you.
+</Warning>
+
+## Edit and publish
+
+<Steps titleSize="h2">
+  <Step title="Open the correct environment">
+    Use the production CMS for approved live content work.
+
+    <CodeGroup>
+
+    ```text Production (live)
+    https://www.sixthgearmoto.com/studio
+    ```
+
+    ```text Local development
+    http://localhost:7000/studio
+    ```
+
+    </CodeGroup>
+
+    Local development is for developer testing. Publishing from a local Studio can still affect the connected Sanity dataset, so confirm the intended environment and dataset before using it.
   </Step>
-  <Step title="Make the smallest approved change">
-    Update the intended fields. Keep links, dates, image alt text, and related references accurate.
+  <Step title="Open the correct document">
+    Select the expected Studio area and document. Confirm the document title, current content, and target section before editing.
+
+    For homepage work, use the intended **Homepage Settings** document. Stop if duplicate homepage records appear or the correct document is unclear.
   </Step>
-  <Step title="Resolve validation messages">
-    Review required fields, URL formats, array limits, date relationships, and image requirements defined by the schema.
+  <Step title="Make the approved change">
+    Update only the requested fields. Do not combine unrelated corrections in the same publishing action.
+
+    Keep links, dates, image alternative text, ordering, and references accurate.
   </Step>
-  <Step title="Review the complete document">
-    Check nearby fields for unintended changes. Use preview only when the environment's preview workflow is verified.
+  <Step title="Review validation messages">
+    Resolve required fields, invalid links, missing references, date conflicts, array limits, and image requirements before publishing.
+
+    A validation message means the document does not meet the current content rules. Do not bypass it by moving the information into an unrelated field.
   </Step>
-  <Step title="Publish">
-    Select **Publish** only after approval. Record the changed document, editor, date, and related campaign or request.
+  <Step title="Review the complete section">
+    Check the changed field and nearby fields for accidental edits. Confirm that the copy, links, media, and ordering match the approved request.
+
+    Use Visual Editing or preview only when that workflow has been confirmed for the section. The live storefront remains the final verification point.
   </Step>
-  <Step title="Verify the storefront">
-    Open the affected page. Confirm desktop and mobile content, images, links, ordering, and fallback behavior.
+  <Step title="Publish once">
+    Select **Publish** after review. Wait for Sanity to complete the action instead of selecting the button repeatedly.
+
+    Publishing makes the current document available to the storefront. It does not guarantee that the visible page will update immediately if caching, fallback content, or an incorrect document connection is involved.
+  </Step>
+  <Step title="Open the affected live page">
+    Visit the exact storefront page that uses the edited content. Confirm the changed text, image, link, order, and visibility.
+  </Step>
+  <Step title="Check desktop and mobile">
+    Review a representative desktop and mobile width. Confirm that text is not cropped, images use the intended crop, links work, and the section remains readable.
+  </Step>
+  <Step title="Record or report the result">
+    When the change is correct, record the completed request through the normal team process. When it is wrong or missing, stop further edits and collect the page, section, time, and a redacted screenshot.
   </Step>
 </Steps>
 
-## If the change does not appear
+## Draft and published states
 
-Wait for the page's configured revalidation interval, then check the Sanity webhook and Vercel logs through authorized accounts. Do not repeatedly republish the document or expose the webhook secret.
+| State | Meaning | What the storefront can use |
+| --- | --- | --- |
+| Draft | Unpublished work saved in Sanity | Normally not used by the public storefront unless a verified preview workflow reads drafts |
+| Published | Current approved document version | Available to storefront queries, subject to connection, caching, and fallback behavior |
+
+<Info>
+  Saving a draft and publishing are different actions. Do not assume that a saved draft is visible on the live website.
+</Info>
+
+## When the change does not appear
+
+<AccordionGroup>
+  <Accordion title="The old content is still visible">
+    Refresh once and allow the normal revalidation period. Confirm that the document is published and that the edited section is marked **Ready**.
+  </Accordion>
+
+  <Accordion title="Fallback content appears instead">
+    Stop editing. The component may still be using local fallback data or may not be receiving the expected Sanity field. Report the page and section to the website administrator.
+  </Accordion>
+
+  <Accordion title="A different section changed">
+    Stop further publishing. Confirm the document and field used, then report the mismatch. This can indicate an incorrect field mapping or document connection.
+  </Accordion>
+
+  <Accordion title="The wrong homepage document was edited">
+    Do not copy the change into another record without approval. Record the document title and visible identifier, then ask the administrator to confirm the canonical homepage document.
+  </Accordion>
+
+  <Accordion title="Publishing is unavailable">
+    Resolve document validation messages first. If the document is valid, ask the administrator to confirm that your assigned role permits publishing.
+  </Accordion>
+
+  <Accordion title="The image looks wrong">
+    Check the selected asset, crop, hotspot, mobile image field, and alternative text. Do not repeatedly upload duplicate versions while the cause is unclear.
+  </Accordion>
+</AccordionGroup>
+
+## Do not publish when
+
+- The target section is marked **Under review** and no administrator approved the test
+- The correct document is unclear
+- Duplicate homepage records create uncertainty
+- Required information or approval is missing
+- A validation error remains unresolved
+- The requested change belongs in Shopify or storefront code
+- You cannot verify the affected live page afterward
+
+<Check>
+  A content update is complete when the correct document is published, the intended live section shows the approved result, desktop and mobile checks pass, and no unrelated content changed.
+</Check>

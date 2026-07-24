@@ -95,10 +95,10 @@
             "pages": [
               "sanity/get-access",
               "sanity/overview",
-              "sanity/content-coverage",
               "sanity/open-cms",
-              "sanity/content-types",
+              "sanity/content-coverage",
               "sanity/edit-publish-content",
+              "sanity/content-types",
               "sanity/fields-validation",
               "sanity/images-media"
             ]

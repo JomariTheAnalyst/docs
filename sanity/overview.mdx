@@ -1,40 +1,118 @@
 ---
-title: "Sanity overview"
-description: "What SixthGear stores in Sanity, how Studio is embedded, and where the storefront reads CMS content."
+title: "Content management overview"
+description: "Understand where to open SixthGear CMS, what it controls, and how to work safely with Sanity-managed content."
 icon: "blocks"
-hidden: true
 ---
 
-Sanity manages structured website content that does not belong in Shopify. SixthGear embeds Sanity Studio at `/studio` and reads published content through `next-sanity`.
+SixthGear CMS is the Sanity Studio used to manage approved website content. Products, prices, inventory, customers, orders, checkout, and discounts remain in Shopify.
 
-## Sanity responsibilities
+## Open SixthGear CMS
 
-- Homepage hero, brands, about, categories, services, coffee, team, testimonials, location, and calls to action
-- Marketing announcements, popups, featured collections, and promo banners
-- Services and service-page content
-- About-page content
-- Rider stories and blog categories
-- Collection hero content
+Use the environment that matches your task.
 
-## Main code paths
+<CodeGroup>
 
-| Path | Purpose |
-| --- | --- |
-| `sanity.config.ts` | Studio title, base path, plugins and schema |
-| `sanity/env.ts` | Project, dataset and API-version configuration |
-| `sanity/schemaTypes/` | Document and object definitions |
-| `sanity/structure.ts` | Studio navigation and singleton documents |
-| `src/lib/cms/client.ts` | Frontend fetch helpers |
-| `src/lib/cms/queries.ts` | GROQ queries |
-| `src/app/api/revalidate-sanity/route.ts` | Webhook revalidation |
+```text Local development
+http://localhost:7000/studio
+```
+
+```text Production (live)
+https://www.sixthgearmoto.com/studio
+```
+
+</CodeGroup>
+
+| Environment | Use it for | Important rule |
+| --- | --- | --- |
+| Local development | Developer testing against the locally running storefront | The storefront must already be running on port `7000`. Local changes do not update the live website. |
+| Production | Approved content editing for the live SixthGear website | Confirm the account, document, and requested change before publishing. |
+
+<CardGroup cols={2}>
+  <Card title="Accept your CMS invitation" icon="user-check" href="/sanity/get-access">
+    Join the Sanity project using the exact account invited by the administrator.
+  </Card>
+
+  <Card title="Open SixthGear CMS" icon="panel-left-open" href="/sanity/open-cms">
+    Sign in, confirm the workspace, and resolve common access problems.
+  </Card>
+
+  <Card title="What you can manage" icon="list-checks" href="/sanity/content-coverage">
+    Check which website sections are ready for routine editing.
+  </Card>
+
+  <Card title="Edit and publish content" icon="file-pen-line" href="/sanity/edit-publish-content">
+    Follow the approved workflow from document selection through storefront verification.
+  </Card>
+</CardGroup>
+
+## What belongs in the CMS
+
+SixthGear CMS manages editorial website content such as homepage sections, page copy, service content, Rider Stories, marketing content, and collection presentation content when those sections are confirmed as connected.
 
 <Warning>
-Strapi still supplies content on active routes. Confirm a field's source before editing or migrating it.
+  A field appearing in Sanity does not automatically prove that it updates the storefront. Check [What you can manage in SixthGear CMS](/sanity/content-coverage) before editing.
 </Warning>
 
-## Common tasks
+## What belongs in Shopify
 
-- [Open SixthGear CMS](/sanity/open-cms)
-- [Edit and publish content](/sanity/edit-publish-content)
-- [Review content types](/sanity/content-types)
-- [Understand fields and validation](/sanity/fields-validation)
+Use Shopify for:
+
+- Product titles and descriptions
+- Product media and metafields
+- Variants, SKUs, prices, and inventory
+- Collections and sales-channel availability
+- Customers, orders, discounts, checkout, and payment-related records
+
+Do not duplicate Shopify commerce data in Sanity unless a documented CMS field is specifically intended for editorial presentation.
+
+## Main areas in Studio
+
+The exact navigation depends on the current schema and the user’s assigned role.
+
+| Area | Purpose |
+| --- | --- |
+| **Homepage Settings** | Homepage editorial sections that have been connected and verified |
+| **Marketing** | Announcement bars, popups, featured collections, and promo content under review |
+| **Services Page** | Services landing-page content |
+| **About Page** | About-page content, including **What We Offer** |
+| **Services** | Individual service pages and their page content |
+| **Blog** | Rider Story articles and categories |
+| **Collection Hero** | Editorial presentation content for selected Shopify collections |
+
+## Before editing
+
+<Steps>
+  <Step title="Confirm your access">
+    Sign in with the account approved for your role. Do not use another employee’s account.
+  </Step>
+  <Step title="Check content ownership">
+    Confirm that the requested information belongs in Sanity rather than Shopify or storefront code.
+  </Step>
+  <Step title="Check the coverage status">
+    Continue with routine editing only when the section is marked **Ready**. An **Under review** section requires administrator approval and direct verification.
+  </Step>
+  <Step title="Open the correct document">
+    Confirm the document title and section before changing any field. Homepage work must use the intended **Homepage Settings** document.
+  </Step>
+  <Step title="Publish and verify">
+    After publishing, open the affected live page and confirm the result on desktop and mobile.
+  </Step>
+</Steps>
+
+## Drafts, publishing, and live content
+
+A draft is an unpublished version of a Sanity document. Selecting **Publish** makes the current document version available to the storefront, but caching, fallback logic, or an incorrect document connection can prevent the expected change from appearing immediately.
+
+Do not publish a test change only to prove access. Open the document and review the available controls instead.
+
+## Current operating limits
+
+The CMS remains usable for sections marked **Ready**, but the documentation does not yet claim complete Sanity operations because:
+
+- Sanity Visual Editing still requires final live-update verification.
+- The canonical homepage document and duplicate homepage records still require final confirmation.
+- Some page, marketing, article, media, and collection workflows remain under review.
+
+<Check>
+  The CMS is being used correctly when the editor opens the intended document, changes only approved Sanity-owned content, publishes successfully, and confirms the expected result on the storefront.
+</Check>
