@@ -93,9 +93,9 @@
             "group": "Sixthgear CMS",
             "root": "sixthgear-cms/overview",
             "pages": [
+              "sanity/get-access",
               "sanity/overview",
               "sanity/open-cms",
-              "sanity/get-access",
               "sanity/content-types",
               "sanity/edit-publish-content",
               "sanity/fields-validation",
