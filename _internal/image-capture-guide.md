@@ -98,6 +98,107 @@ This file is excluded from publishing. Add an image to MDX only after the review
 - **Alt text:** "Sanity document editor with homepage fields, validation and Publish control."
 - **Light/dark versions:** No
 
+## SixthGear CMS invitation walkthrough
+
+### Invitation in the inbox
+
+- **Target page:** `sanity/get-access.mdx`
+- **Final filename:** `/images/sanity/access/01-invitation-inbox.png`
+- **Where to capture it:** The inbox for the account that received the Sanity invitation
+- **What to show:** The Sanity sender, invitation subject, and enough inbox context to identify the message
+- **What to hide:** Personal email addresses, unrelated messages, avatars, labels, and notifications
+- **Recommended crop:** The invitation row with limited surrounding inbox context
+- **Caption:** "Reserved screenshot: Inbox showing the Sanity project invitation"
+- **Alt text:** "Reserved screenshot location for an inbox with the Sanity project invitation highlighted"
+
+### Opened invitation email
+
+- **Target page:** `sanity/get-access.mdx`
+- **Final filename:** `/images/sanity/access/02-open-invitation-email.png`
+- **Where to capture it:** The opened email sent by Sanity
+- **What to show:** The Sanity sender, SixthGear project name, and **Accept invitation** button
+- **What to hide:** Personal inbox content, personal email addresses, other messages, avatars, and private browser information
+- **Recommended crop:** The sender, project invitation text, and **Accept invitation** button
+- **Caption:** "Reserved screenshot: Opened Sanity email with the SixthGear project invitation"
+- **Alt text:** "Reserved screenshot location for the opened Sanity invitation showing the project name and Accept invitation button"
+
+### Accept invitation email button
+
+- **Target page:** `sanity/get-access.mdx`
+- **Final filename:** `/images/sanity/access/03-accept-invitation-email-button.png`
+- **Where to capture it:** The invitation email immediately before selecting **Accept invitation**
+- **What to show:** The SixthGear project context and **Accept invitation** button
+- **What to hide:** Personal email addresses, unrelated messages, avatars, notifications, and private browser information
+- **Recommended crop:** The invitation text and **Accept invitation** control
+- **Caption:** "Reserved screenshot: Accept invitation button in the Sanity email"
+- **Alt text:** "Reserved screenshot location for the Accept invitation button inside the Sanity email"
+
+### Sanity account check
+
+- **Target page:** `sanity/get-access.mdx`
+- **Final filename:** `/images/sanity/access/04-check-sanity-account.png`
+- **Where to capture it:** The Sanity invitation page showing the current account
+- **What to show:** The current account, SixthGear project name, and **Switch accounts** option
+- **What to hide:** The full personal email where unnecessary, project ID, organization ID, account avatar, and private browser information
+- **Recommended crop:** The account summary, project name, and **Switch accounts** control
+- **Caption:** "Reserved screenshot: Sanity invitation screen showing the current account"
+- **Alt text:** "Reserved screenshot location for the Sanity invitation account check and Switch accounts option"
+
+### Sign-in method
+
+- **Target page:** `sanity/get-access.mdx`
+- **Final filename:** `/images/sanity/access/05-select-sign-in-method.png`
+- **Where to capture it:** The Sanity sign-in method selection page
+- **What to show:** The supported sign-in choices and the method used by the invited identity
+- **What to hide:** Personal email addresses, account avatars, browser profiles, and private browser information
+- **Recommended crop:** The sign-in controls and enough Sanity branding to identify the page
+- **Caption:** "Reserved screenshot: Sanity sign-in method selection"
+- **Alt text:** "Reserved screenshot location for choosing the Google or established Sanity sign-in method"
+
+### Invited account selection
+
+- **Target page:** `sanity/get-access.mdx`
+- **Final filename:** `/images/sanity/access/06-select-invited-account.png`
+- **Where to capture it:** The Google or authentication-provider account chooser
+- **What to show:** Only the invited account and **Use another account** option when needed
+- **What to hide:** Unrelated provider accounts, full personal email addresses where unnecessary, avatars, and private browser information
+- **Recommended crop:** The invited account choice and relevant continuation control
+- **Caption:** "Reserved screenshot: Account chooser with the invited identity selected"
+- **Alt text:** "Reserved screenshot location for selecting the exact account that received the SixthGear invitation"
+
+### Sign-in approval
+
+- **Target page:** `sanity/get-access.mdx`
+- **Final filename:** `/images/sanity/access/07-approve-google-sign-in.png`
+- **Where to capture it:** The Google or authentication-provider approval screen
+- **What to show:** The selected invited identity, Sanity sign-in request, and **Continue** or equivalent button
+- **What to hide:** Full personal email where unnecessary, unrelated accounts, recovery details, avatars, and private browser information
+- **Recommended crop:** The account confirmation and approval control
+- **Caption:** "Reserved screenshot: Authentication approval for the invited account"
+- **Alt text:** "Reserved screenshot location for approving Sanity sign-in with the invited account"
+
+### Final invitation acceptance
+
+- **Target page:** `sanity/get-access.mdx`
+- **Final filename:** `/images/sanity/access/08-final-accept-invitation.png`
+- **Where to capture it:** The final Sanity project invitation confirmation
+- **What to show:** The SixthGear project name, correct account context, and **Accept invitation** button
+- **What to hide:** Full personal email where unnecessary, project ID, organization ID, account avatar, and private browser information
+- **Recommended crop:** The project confirmation, account context, and final acceptance control
+- **Caption:** "Reserved screenshot: Final SixthGear project invitation confirmation"
+- **Alt text:** "Reserved screenshot location for the final Sanity project invitation acceptance screen"
+
+### First Studio view
+
+- **Target page:** `sanity/get-access.mdx`
+- **Final filename:** `/images/sanity/access/09-first-studio-view.png`
+- **Where to capture it:** SixthGear CMS immediately after successful invitation acceptance
+- **What to show:** The **Sixthgear CMS** title and expected content navigation
+- **What to hide:** Personal email addresses, account avatar, project ID, dataset ID, unpublished content, and private browser information
+- **Recommended crop:** The Studio title, navigation, and enough workspace context to confirm successful access
+- **Caption:** "Reserved screenshot: First successful view of SixthGear CMS"
+- **Alt text:** "Reserved screenshot location for the first successful SixthGear CMS view with content navigation visible"
+
 ## Vercel deployments
 
 - **Target page:** `deployment/deploy-through-vercel.mdx`

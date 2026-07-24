@@ -44,6 +44,21 @@
             "group": "Shopify administration",
             "root": "shopify/overview",
             "pages": [
+              {
+                "group": "Products",
+                "root": "shopify/products/overview",
+                "pages": [
+                  "shopify/products/add-product",
+                  "shopify/products/edit-product",
+                  "shopify/products/product-media",
+                  "shopify/products/variants-inventory",
+                  "shopify/products/organization-publishing",
+                  "shopify/products/product-seo",
+                  "shopify/products/product-metafields",
+                  "shopify/products/bulk-management",
+                  "shopify/products/troubleshooting"
+                ]
+              },
               "shopify/add-edit-products",
               "shopify/variants-inventory",
               "shopify/collections",
@@ -80,6 +95,7 @@
             "pages": [
               "sanity/overview",
               "sanity/open-cms",
+              "sanity/get-access",
               "sanity/content-types",
               "sanity/edit-publish-content",
               "sanity/fields-validation",

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title description">
+  <title id="title">Screenshot reserved</title>
+  <desc id="description">Placeholder for a future SixthGear CMS screenshot.</desc>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --background: #f8fafc;
+      --panel: #ffffff;
+      --border: #cbd5e1;
+      --icon: #64748b;
+      --heading: #1e293b;
+      --body: #64748b;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --background: #0f172a;
+        --panel: #111827;
+        --border: #334155;
+        --icon: #94a3b8;
+        --heading: #f1f5f9;
+        --body: #cbd5e1;
+      }
+    }
+    text { font-family: Poppins, Inter, ui-sans-serif, system-ui, sans-serif; }
+  </style>
+  <rect width="1280" height="720" fill="var(--background)" />
+  <rect x="24" y="24" width="1232" height="672" rx="24" fill="var(--panel)" stroke="var(--border)" stroke-width="2" />
+  <g transform="translate(640 286)" fill="none" stroke="var(--icon)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="-76" y="-48" width="152" height="104" rx="18" />
+    <path d="M-42 -48l14 -22h56l14 22" />
+    <circle cx="0" cy="4" r="31" />
+  </g>
+  <text x="640" y="408" fill="var(--heading)" font-size="38" font-weight="600" text-anchor="middle">Screenshot reserved</text>
+  <text x="640" y="458" fill="var(--body)" font-size="23" font-weight="400" text-anchor="middle">Replace with the actual SixthGear CMS screenshot</text>
+</svg>

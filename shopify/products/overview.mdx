@@ -1,0 +1,148 @@
+---
+title: Products overview
+description: Understand how SixthGear products are organized, published, and displayed on the headless storefront.
+icon: boxes-stacked
+---
+
+{/* DOCUMENTATION STATUS
+Detailed instructions will be written after the Shopify Products audit is approved.
+Do not publish unverified store settings on this page.
+*/}
+
+## What Products controls
+
+Shopify is the source of truth for products, variants, prices, inventory, and product availability. Product changes belong in Shopify Admin.
+
+The headless Next.js storefront reads product data through Shopify APIs. Editing Horizon theme files does not update the live SixthGear storefront.
+
+## Open Products
+
+{/* Component: CodeGroup */}
+<CodeGroup>
+
+```text Products List
+https://sixthgearmoto.myshopify.com/admin/products
+```
+
+```text Add New Product
+https://sixthgearmoto.myshopify.com/admin/products/new
+```
+
+</CodeGroup>
+
+## Product workflow
+
+{/* Component: Steps */}
+<Steps>
+  {/* Component: Step */}
+  <Step title="Create or locate the product">
+    Open an existing product or begin a new product record.
+  </Step>
+
+  {/* Component: Step */}
+  <Step title="Complete the core product information">
+    Add the approved title, description, and product details.
+  </Step>
+
+  {/* Component: Step */}
+  <Step title="Upload and arrange media">
+    Add product media and place it in the intended display order.
+  </Step>
+
+  {/* Component: Step */}
+  <Step title="Configure variants, prices, and inventory">
+    Set the product's options, variant values, pricing, and availability.
+  </Step>
+
+  {/* Component: Step */}
+  <Step title="Add organization fields and metafields">
+    Complete the verified fields used to classify and display the product.
+  </Step>
+
+  {/* Component: Step */}
+  <Step title="Choose status and sales-channel availability">
+    Review the product status and the channels where it is published.
+  </Step>
+
+  {/* Component: Step */}
+  <Step title="Save the product">
+    Save the record after reviewing the product configuration.
+  </Step>
+
+  {/* Component: Step */}
+  <Step title="Verify it on the live SixthGear storefront">
+    Confirm the product page, media, options, price, and availability behave as expected.
+  </Step>
+</Steps>
+
+## Products guide
+
+{/* Component: CardGroup */}
+<CardGroup cols={3}>
+  {/* Component: Card */}
+  <Card title="Add a product" icon="square-plus" href="./add-product">
+    Create and verify a complete Shopify product.
+  </Card>
+
+  {/* Component: Card */}
+  <Card title="Edit a product" icon="pen-to-square" href="./edit-product">
+    Update a product without disrupting storefront behavior.
+  </Card>
+
+  {/* Component: Card */}
+  <Card title="Product media" icon="images" href="./product-media">
+    Prepare and maintain product images, video, and alternative text.
+  </Card>
+
+  {/* Component: Card */}
+  <Card title="Variants, pricing, and inventory" icon="layer-group" href="./variants-inventory">
+    Manage options, SKUs, pricing, and availability.
+  </Card>
+
+  {/* Component: Card */}
+  <Card title="Organization and sales channels" icon="share-nodes" href="./organization-publishing">
+    Classify products and control where they are available.
+  </Card>
+
+  {/* Component: Card */}
+  <Card title="SEO and URL handles" icon="magnifying-glass" href="./product-seo">
+    Maintain search listings, handles, and redirects.
+  </Card>
+
+  {/* Component: Card */}
+  <Card title="Product metafields" icon="brackets-curly" href="./product-metafields">
+    Review custom, standard, and app-managed product data.
+  </Card>
+
+  {/* Component: Card */}
+  <Card title="Bulk edit and import" icon="file-csv" href="./bulk-management">
+    Safely update multiple products.
+  </Card>
+
+  {/* Component: Card */}
+  <Card title="Product troubleshooting" icon="wrench" href="./troubleshooting">
+    Diagnose publishing, inventory, media, and visibility issues.
+  </Card>
+</CardGroup>
+
+## Important publishing rule
+
+{/* Component: Warning */}
+<Warning>
+  An **Active** product may still be missing from the storefront when it is unavailable to the required sales channel. Verify both the product status and publishing availability. The exact headless sales channel required by the production storefront must be confirmed in Shopify Admin before the detailed publishing guide is finalized.
+</Warning>
+
+## Products workspace
+
+{/* Component: Frame */}
+<Frame caption="Reserved screenshot: Shopify Admin Products workspace">
+  <img src="/images/placeholders/screenshot-reserved.svg" alt="Reserved screenshot placeholder for the Shopify Products workspace." />
+</Frame>
+
+{/* REPLACE SCREENSHOT
+Final file: /images/shopify/products/products-list.png
+Capture: Shopify Admin → Products
+Show: Product list, status, inventory summary, vendor, and product type where visible
+Hide: Personal account information, customer information, notifications, and unrelated browser content
+Crop: Main Products workspace only
+*/}
