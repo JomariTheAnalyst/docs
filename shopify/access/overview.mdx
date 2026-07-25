@@ -1,0 +1,242 @@
+---
+title: "How to access Shopify Admin"
+description: "Accept a Shopify invitation, sign in to the SixthGear store, and confirm the correct store and permissions."
+icon: "log-in"
+---
+
+This guide covers the complete first-time access process for the SixthGear Shopify Admin, from receiving an invitation to confirming the correct store and assigned permissions.
+
+{/* Component: Warning */}
+
+<Warning>
+  The store is currently documented as using the Shopify Basic plan. Shopify Basic and Starter stores cannot add additional admin users. Before sending an invitation, confirm the current plan and whether the store can add another user. When user invitations are unavailable, use the approved business owner account only for authorized owner-level work.
+</Warning>
+
+## Store access details
+
+| Item | Current record |
+| --- | --- |
+| Store name | SixthgearMoto |
+| Shopify domain | `sixthgearmoto.myshopify.com` |
+| Business owner account | `first2sixthgear@gmail.com` |
+| MFA custodian | Jomari Roco |
+| Backup MFA custodian | Flordeliza Taib |
+| Current plan | Shopify Basic — verify before inviting another admin user |
+
+## Receive and accept an invitation
+
+{/* Component: Steps */}
+
+<Steps>
+  <Step title="The administrator sends the invitation">
+    An authorized Shopify administrator opens **Settings → Users**, selects **Add users**, enters the recipient's email address, assigns the approved role, and sends the invitation.
+  </Step>
+  <Step title="Open the Shopify invitation email">
+    Open the invitation sent to the approved email address. Check **Spam**, **Junk**, and **Promotions** if it does not arrive in the main inbox.
+  </Step>
+  <Step title="Accept the invitation within seven days">
+    Select **Accept invite**. Shopify invitations expire after seven days. Ask the administrator to resend the invitation when the link has expired.
+  </Step>
+  <Step title="Sign in or create a Shopify account">
+    Sign in using the exact email address that received the invitation. Create a Shopify account when the email is not yet connected to one.
+  </Step>
+  <Step title="Complete account security">
+    Complete any email verification or two-step authentication requested by Shopify. Use the recipient's own security method for a named account.
+  </Step>
+  <Step title="Confirm the store opens">
+    The SixthgearMoto Shopify Admin should open after the invitation is accepted. Do not make changes until the store and permissions have been checked.
+  </Step>
+</Steps>
+
+{/* Component: Note */}
+
+<Note>
+  Do not forward a Shopify invitation. The invited email address becomes the identity connected to the assigned store role.
+</Note>
+
+## Sign in after first access
+
+Use the store-specific address whenever possible.
+
+{/* Component: CodeGroup */}
+
+<CodeGroup>
+
+```text SixthgearMoto Admin
+https://sixthgearmoto.myshopify.com/admin
+```
+
+```text Shopify account login
+https://accounts.shopify.com/login
+```
+
+</CodeGroup>
+
+{/* Component: Steps */}
+
+<Steps>
+  <Step title="Open the store-specific admin address">
+    Open the SixthgearMoto Admin URL shown above.
+  </Step>
+  <Step title="Enter the approved Shopify account">
+    Sign in with the email address connected to the named user or approved business owner account.
+  </Step>
+  <Step title="Complete two-step authentication">
+    Complete the security request attached to that Shopify account. For the business owner account, coordinate MFA with Jomari Roco.
+  </Step>
+  <Step title="Confirm the dashboard">
+    Wait for the Shopify Admin home dashboard to load before continuing.
+  </Step>
+</Steps>
+
+{/* Component: Tip */}
+
+<Tip>
+  Bookmark the store-specific admin address. It reduces the chance of opening another Shopify store connected to the same account.
+</Tip>
+
+## Confirm the correct store
+
+Shopify accounts can be connected to more than one store.
+
+{/* Component: Steps */}
+
+<Steps>
+  <Step title="Check the store name">
+    Confirm that the store selector or top-left account area shows **SixthgearMoto**.
+  </Step>
+  <Step title="Check the browser address">
+    Confirm that the address starts with the SixthGear Shopify domain shown below.
+
+    {/* Component: CodeGroup */}
+
+    <CodeGroup>
+
+    ```text Expected store domain
+    https://sixthgearmoto.myshopify.com/admin
+    ```
+
+    </CodeGroup>
+  </Step>
+  <Step title="Switch stores when necessary">
+    Use Shopify's store switcher when another store opens. Return to the SixthgearMoto store before viewing or changing any business data.
+  </Step>
+</Steps>
+
+{/* Component: Warning */}
+
+<Warning>
+  Stop when the wrong store is open. Product deletion, discount changes, user changes, and some app actions can affect the wrong business immediately.
+</Warning>
+
+## Confirm your permissions
+
+Shopify access is controlled by assigned roles and permissions. The store owner has ownership-level authority. Other users receive one or more roles created or assigned by an authorized administrator.
+
+{/* Component: CardGroup */}
+
+<CardGroup cols={2}>
+  <Card title="Store owner" icon="crown">
+    Controls store ownership and the highest-level account responsibilities. Ownership is held by one store owner at a time.
+  </Card>
+
+  <Card title="Administrator or staff user" icon="user-cog">
+    Receives only the roles and permissions assigned for products, orders, customers, settings, apps, or other approved work.
+  </Card>
+</CardGroup>
+
+{/* Component: Steps */}
+
+<Steps>
+  <Step title="Review the left navigation">
+    Confirm that the sections required for the approved task are visible.
+  </Step>
+  <Step title="Open the required section without changing data">
+    Open **Products**, **Collections**, **Orders**, or another approved section and confirm that the expected controls are available.
+  </Step>
+  <Step title="Request missing access">
+    Ask the store owner or a user administrator to review the assigned role when an approved section or action is unavailable.
+  </Step>
+</Steps>
+
+{/* Component: CodeGroup */}
+
+<CodeGroup>
+
+```text Shopify user settings
+https://sixthgearmoto.myshopify.com/admin/settings/users
+```
+
+</CodeGroup>
+
+{/* Component: Info */}
+
+<Info>
+  User administrators can manage users only when their assigned role includes the required user-management permissions. Do not assume that every administrator can change another user's access.
+</Info>
+
+## Business owner account access
+
+When a named user cannot be added because of the current Shopify plan or an emergency owner-level task is required, follow the controlled account process.
+
+{/* Component: Steps */}
+
+<Steps>
+  <Step title="Confirm owner-level access is required">
+    Use the business owner account only for approved ownership, billing, security, recovery, user administration, or emergency work.
+  </Step>
+  <Step title="Open the SixthgearMoto Admin">
+    Use the store-specific admin address shown in this guide.
+  </Step>
+  <Step title="Sign in with the business account">
+    Enter `first2sixthgear@gmail.com` and retrieve the password through the approved secure process. Do not place the password in this documentation or send it through chat.
+  </Step>
+  <Step title="Complete MFA">
+    Contact Jomari Roco after Shopify requests MFA. State the platform, your name, and the approximate request time before approval.
+  </Step>
+  <Step title="End the session safely">
+    Sign out after the approved task and do not save the owner password on a personal or shared browser.
+  </Step>
+</Steps>
+
+## Troubleshooting
+
+| Problem | Likely cause | What to do |
+| --- | --- | --- |
+| Invitation not received | Wrong email, spam filtering, or invitation not sent | Check Spam, Junk, and Promotions. Ask the administrator to confirm the exact email and pending invitation. |
+| Invitation expired | More than seven days passed | Ask an authorized administrator to resend the invitation from **Settings → Users**. |
+| Add users is unavailable | The plan does not support additional admin users or the current user lacks permission | Confirm the current Shopify plan and the signed-in user's role. Use the controlled owner-account process only when approved. |
+| A section is missing | The assigned role does not include it | Ask the store owner or user administrator to review the role. |
+| Wrong store opened | The account is connected to multiple stores | Use the store-specific SixthgearMoto Admin URL and the store switcher. |
+| Password forgotten | The Shopify account password is unavailable | Use Shopify's account recovery flow for the affected named account. |
+| Two-step authentication unavailable | The authenticator, phone, passkey, or recovery code cannot be used | Use the account's approved recovery method. For the business owner account, contact the documented MFA and recovery custodians. |
+
+{/* Component: CodeGroup */}
+
+<CodeGroup>
+
+```text Shopify Support
+https://help.shopify.com/en/support
+```
+
+```text Shopify account lookup
+https://accounts.shopify.com/lookup
+```
+
+</CodeGroup>
+
+## Access completion checklist
+
+- [ ] The invited email address is correct
+- [ ] The invitation was accepted within seven days
+- [ ] The SixthgearMoto store opens
+- [ ] The browser address shows the correct Shopify domain
+- [ ] The required sections and actions are available
+- [ ] Two-step authentication or recovery responsibility is confirmed
+- [ ] No password, backup code, or MFA secret was stored in Mintlify
+
+{/* Component: Check */}
+
+<Check>
+  Shopify access is complete when the approved user can open the correct SixthgearMoto store and perform only the tasks allowed by the assigned role.
+</Check>

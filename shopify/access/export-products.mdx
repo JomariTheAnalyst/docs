@@ -1,0 +1,202 @@
+---
+title: "Export Shopify products"
+description: "Export SixthGear product data from Shopify as CSV, store the approved file securely, and share the current download location."
+icon: "file-down"
+---
+
+Use this guide to create a current product export from Shopify and place it in the approved restricted storage location for management review or operational handoff.
+
+{/* Component: Warning */}
+
+<Warning>
+  Shopify exports product data as CSV. It does not create a native `.xlsx` workbook. Choose the CSV option formatted for spreadsheet programs when the file will be opened in Microsoft Excel, Apple Numbers, or Google Sheets.
+</Warning>
+
+## Open the product list
+
+{/* Component: CodeGroup */}
+
+<CodeGroup>
+
+```text SixthgearMoto products
+https://sixthgearmoto.myshopify.com/admin/products
+```
+
+</CodeGroup>
+
+## Choose what to export
+
+Shopify can export:
+
+- The current page of products
+- Selected products
+- Products matching the current search or filter
+- All products
+
+Choose the smallest scope that satisfies the request. Use **All products** only for a complete master export.
+
+## Export the products
+
+{/* Component: Steps */}
+
+<Steps>
+  <Step title="Open Products">
+    Sign in to the SixthgearMoto Shopify Admin and open **Products**.
+  </Step>
+  <Step title="Prepare the export scope">
+    Apply the required search or filters, or select the specific products to export. Leave the full list unfiltered for a complete product export.
+  </Step>
+  <Step title="Select Export">
+    Select **Export** from the Products page.
+  </Step>
+  <Step title="Choose the product scope">
+    Select the current page, selected products, matching products, or all products according to the approved request.
+  </Step>
+  <Step title="Choose the CSV format">
+    Select **CSV for Excel, Numbers, or other spreadsheet programs** for normal business use. Use the plain CSV option only when another system specifically requires it.
+  </Step>
+  <Step title="Start the export">
+    Select **Export products**. Shopify downloads smaller exports in the browser and may send larger exports to the email address connected to the signed-in Shopify account.
+  </Step>
+  <Step title="Retrieve the file">
+    Download the CSV from the browser or from the Shopify export email. Confirm that the file name and export time match the request.
+  </Step>
+</Steps>
+
+{/* Component: Note */}
+
+<Note>
+  A Shopify email download link can expire and is tied to the export process. Do not use that temporary email link as the permanent documentation download address.
+</Note>
+
+## Review the exported file
+
+Open a copy of the CSV in a spreadsheet application and confirm:
+
+- The expected products are included
+- Product handles and titles are present
+- Variant rows are present where applicable
+- SKUs, prices, and inventory-related fields are included when exported by Shopify
+- Image URLs and product status fields appear as expected
+- No rows were accidentally excluded by a search or filter
+
+Do not change the original export before storing it. Create a separate working copy for analysis or cleanup.
+
+## File naming
+
+Use a clear date-based name:
+
+```text
+sixthgear-shopify-products-YYYY-MM-DD.csv
+```
+
+Example:
+
+```text
+sixthgear-shopify-products-2026-07-25.csv
+```
+
+For a filtered export, add the scope:
+
+```text
+sixthgear-shopify-products-active-2026-07-25.csv
+```
+
+## Store the export securely
+
+The master product export must be stored in the approved restricted company folder, not committed to the documentation repository.
+
+Recommended record:
+
+| Item | Required value |
+| --- | --- |
+| Storage provider | Approved company Google Drive, SharePoint, or equivalent restricted storage |
+| Folder | SixthGear → Shopify → Product Exports |
+| File name | Date-based CSV name |
+| Access | Management and approved operations staff only |
+| Uploaded by | Name of the person who created the export |
+| Export date | Date and time from Shopify |
+| Scope | All products, selected products, or filtered products |
+
+{/* Component: Warning */}
+
+<Warning>
+  Do not place the CSV in GitHub or the Mintlify repository. Product exports may contain internal SKUs, pricing data, inventory settings, product status, and operational metadata.
+</Warning>
+
+## Current download link
+
+A permanent download link has not been added because no approved restricted-storage file URL was provided.
+
+After uploading the verified CSV, replace the placeholder below with a company-controlled link that requires approved access.
+
+{/* Component: CodeGroup */}
+
+<CodeGroup>
+
+```text Latest approved product export
+[ADD VERIFIED RESTRICTED-STORAGE URL]
+```
+
+</CodeGroup>
+
+Record the file details beside the link:
+
+| Item | Current value |
+| --- | --- |
+| File name | To add after export |
+| Exported from | SixthgearMoto Shopify Admin |
+| Export scope | To verify |
+| Export date | To verify |
+| Uploaded by | To verify |
+| Storage permissions checked | To verify |
+
+## Share the export
+
+{/* Component: Steps */}
+
+<Steps>
+  <Step title="Upload the unchanged original CSV">
+    Upload the original Shopify export to the approved restricted folder.
+  </Step>
+  <Step title="Set access permissions">
+    Grant access only to the approved recipients. Do not enable public access or anyone-with-the-link access unless company policy explicitly permits it.
+  </Step>
+  <Step title="Copy the restricted link">
+    Copy the stable file link from the approved storage provider.
+  </Step>
+  <Step title="Update this page">
+    Replace the placeholder under **Current download link** and complete the file-detail table.
+  </Step>
+  <Step title="Test the link">
+    Confirm that an approved recipient can open the file and that an unauthorized account cannot access it.
+  </Step>
+</Steps>
+
+## Export troubleshooting
+
+| Problem | Likely cause | What to do |
+| --- | --- | --- |
+| Export button is unavailable | The assigned role lacks product export permission | Ask the store owner or user administrator to review the role. |
+| Export contains too few products | A search, filter, selection, or current-page scope was active | Return to Products, clear filters, and export the correct scope. |
+| File opens incorrectly in Excel | The plain CSV format or wrong character encoding was used | Export again using the spreadsheet-program CSV option. |
+| Export email did not arrive | Large export is still processing, wrong Shopify account email, or filtering | Check Spam and Junk, confirm the signed-in account, and repeat only after confirming the first export failed. |
+| Image files are not embedded | Shopify exports image URLs rather than the image files themselves | Keep the URLs in the CSV. Downloading all media requires a separate approved process. |
+| Download link no longer works | The Shopify email link expired | Create a new export and store the file in approved restricted storage. |
+
+## Completion checklist
+
+- [ ] The correct SixthgearMoto store was open
+- [ ] The export scope was confirmed
+- [ ] The spreadsheet-compatible CSV option was selected
+- [ ] The original CSV was preserved unchanged
+- [ ] The file name contains the export date
+- [ ] The file was uploaded to restricted company storage
+- [ ] The storage permissions were tested
+- [ ] The stable download link and file details were added to this page
+
+{/* Component: Check */}
+
+<Check>
+  The export handoff is complete when the verified CSV is stored in approved restricted storage and the documentation links to that stable file without exposing product data publicly.
+</Check>

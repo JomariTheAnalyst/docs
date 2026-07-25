@@ -59,6 +59,14 @@
                   "shopify/products/troubleshooting"
                 ]
               },
+              {
+                "group": "Shopify access and exports",
+                "icon": "key-round",
+                "pages": [
+                  "shopify/access/overview",
+                  "shopify/access/export-products"
+                ]
+              },
               "shopify/add-edit-products",
               "shopify/variants-inventory",
               "shopify/collections",
