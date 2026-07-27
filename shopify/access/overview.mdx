@@ -7,52 +7,105 @@ sidebarTitle: "Shopify Access"
 
 Use this page when management needs direct access to the SixthGear Shopify Admin.
 
-<Warning>
-  Never place the Shopify password, MFA code, recovery code, API token, or backup code in Mintlify. Store secrets only in the approved company password manager.
-</Warning>
+<Info>
+  The supplied account inventory lists `first2sixthgear@gmail.com` for Shopify. Stephanie Grace Lelina is the password and MFA custodian. Confirm the account and role inside Shopify before marking the handoff complete.
+</Info>
 
-## Access method
+## Shopify links
+
+<CodeGroup>
+
+```text Shopify sign in
+https://accounts.shopify.com/store-login
+```
+
+```text SixthGear Shopify store domain
+https://sixthgearmoto.myshopify.com/admin
+```
+
+</CodeGroup>
+
+## Access record
 
 | Item | SixthGear record |
 | --- | --- |
 | Platform | Shopify Admin |
 | Store | SixthGear Moto Shopify store |
-| Owner account | Company-controlled business account |
+| Store domain | `sixthgearmoto.myshopify.com` |
 | Sign-in email | `first2sixthgear@gmail.com` |
-| Password location | Approved password-manager item |
-| MFA custodian | Record in the Account Credentials Inventory |
-| Backup access | Named backup administrator, subject to verification |
-| Verification status | Confirm in Shopify Admin |
+| Handler in supplied inventory | Jomari |
+| Password custodian | Stephanie Grace Lelina |
+| MFA custodian | Stephanie Grace Lelina |
+| Management account | To verify |
+| Management role | To verify |
+| Backup administrator | To assign and verify |
+| Verification status | Pending management sign-in test |
 
-## Sign in
+<Warning>
+  Never place the Shopify password, MFA code, authenticator seed, recovery code, API token, or backup code in Mintlify.
+</Warning>
+
+## Sign in and verify access
 
 <Steps>
   <Step title="Open Shopify Admin">
-    Go to Shopify Admin and sign in with the approved company-controlled account.
+    Open the approved Shopify sign-in link and use the company-controlled account.
   </Step>
   <Step title="Complete MFA">
-    Use the approved MFA method. Do not request or share a one-time code through the documentation portal.
+    Coordinate with Stephanie Grace Lelina through the approved company process. Do not place a one-time code in chat, email documentation, or Mintlify.
   </Step>
   <Step title="Confirm the store">
-    Check the store name and domain before changing products, payments, users, or settings.
+    Verify that the store is SixthGear Moto before changing products, payments, users, billing, or settings.
   </Step>
-  <Step title="Verify your permissions">
-    Open **Settings → Users** and confirm that management has the approved owner or administrator role.
+  <Step title="Verify the management role">
+    Open **Settings → Users** and confirm that your boss has the approved permissions.
+  </Step>
+  <Step title="Test the required areas">
+    Confirm access to **Products**, **Orders**, **Customers**, **Settings**, and **Users** according to the assigned role.
   </Step>
 </Steps>
 
 ## Management verification checklist
 
-- The correct Shopify store opens.
-- The company controls the owner email.
-- Management can view **Products**, **Orders**, **Customers**, **Settings**, and **Users** as approved.
-- MFA ownership and backup access are recorded.
+- The correct store opens.
+- The company controls the sign-in email.
+- Management can access the approved Shopify areas.
+- Stephanie Grace Lelina is recorded as password and MFA custodian.
+- A backup administrator is assigned.
 - Recovery methods are company-controlled and current.
-- No former employee has unnecessary access.
+- Former staff do not retain unnecessary access.
 
-## Related access
+## Handoff record
 
-- [Export Products](/shopify/access/export-products)
-- [Executive Access Handoff](/accounts-and-access/executive-handoff)
-- [Account Directory](/accounts-and-access/account-directory)
-- [Website Platform Access](/accounts-and-access/platform-access)
+| Field | Record |
+| --- | --- |
+| Management account | To record |
+| Role | To record |
+| Store opened successfully | Yes / No |
+| Required areas opened | Yes / No |
+| Password custodian confirmed | Yes / No |
+| MFA custodian confirmed | Yes / No |
+| Backup administrator assigned | Yes / No |
+| Verified by | To record |
+| Verification date | To record |
+| Follow-up actions | To record |
+
+## Related documentation
+
+<CardGroup cols={2}>
+  <Card title="Export Products" icon="file-down" href="/shopify/export-products">
+    Export the current Shopify product catalog to CSV.
+  </Card>
+
+  <Card title="Executive Access Handoff" icon="clipboard-check" href="/accounts-and-access/executive-handoff">
+    Return to the management acceptance checklist.
+  </Card>
+
+  <Card title="Credentials Inventory" icon="table-properties" href="/accounts-and-access/account-credentials-inventory">
+    Review the supplied account, password-custodian, and MFA-custodian records.
+  </Card>
+
+  <Card title="Shopify Admin Overview" icon="layout-dashboard" href="/shopify/overview">
+    Review the main Shopify administration areas.
+  </Card>
+</CardGroup>

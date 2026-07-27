@@ -5,58 +5,106 @@ icon: "github"
 sidebarTitle: "Source Code Access"
 ---
 
-Use this page when management needs direct access to the SixthGear source-code repository.
+Use this page when management or an approved developer needs access to the SixthGear storefront source code.
 
-<Warning>
-  Never place GitHub passwords, personal access tokens, SSH private keys, deploy keys, recovery codes, or repository secrets in Mintlify.
-</Warning>
+<Info>
+  The repository supplied for the SixthGear storefront is `JomariTheAnalyst/sixthgear-shopify`. The `main` branch is the repository source of truth.
+</Info>
 
-## Repository access record
+## Repository link
+
+<CodeGroup>
+
+```text GitHub repository
+https://github.com/JomariTheAnalyst/sixthgear-shopify.git
+```
+
+```bash Clone with HTTPS
+git clone https://github.com/JomariTheAnalyst/sixthgear-shopify.git
+```
+
+</CodeGroup>
+
+## Access record
 
 | Item | SixthGear record |
 | --- | --- |
 | Platform | GitHub |
-| Repository | SixthGear storefront repository |
-| Source-of-truth branch | `main` |
-| Repository owner or organization | To verify |
-| Management access level | To approve |
-| Developer access level | To approve |
-| MFA requirement | Required for privileged access |
-| Recovery owner | To assign and verify |
-| Verification status | Pending dashboard verification |
+| Repository | `JomariTheAnalyst/sixthgear-shopify` |
+| Default source-of-truth branch | `main` |
+| Repository owner shown in URL | `JomariTheAnalyst` |
+| Management GitHub account | To verify |
+| Management role | To verify |
+| Primary technical administrator | Jomari |
+| Password custodian | Stephanie Grace Lelina |
+| MFA custodian | Stephanie Grace Lelina |
+| Backup administrator | To assign and verify |
+| Repository ownership transfer plan | To verify |
 
-## Grant access
+<Warning>
+  Do not place GitHub passwords, personal access tokens, SSH private keys, recovery codes, deploy keys, or signing keys in Mintlify.
+</Warning>
+
+## Grant management access
 
 <Steps>
-  <Step title="Confirm the GitHub owner">
-    Verify which GitHub user or organization owns the repository. Do not rely only on a local Git remote name.
+  <Step title="Confirm the management GitHub account">
+    Use a named account controlled by the approved person. Do not share one developer login between multiple people.
   </Step>
-  <Step title="Use a named account">
-    Invite the manager or developer through their own approved GitHub account. Do not share one person's GitHub login.
-  </Step>
-  <Step title="Assign the minimum role">
-    Give management read access unless they need repository administration. Give developers only the role required for their work.
+  <Step title="Invite the account">
+    The repository owner opens **Settings → Collaborators and teams** and sends an invitation with the approved role.
   </Step>
   <Step title="Accept the invitation">
-    The invited person must accept the repository or organization invitation before it expires.
+    Management signs in to GitHub and accepts the repository invitation.
   </Step>
-  <Step title="Verify the repository and branch">
-    Confirm that the correct repository opens and that `main` is visible as the source-of-truth branch.
+  <Step title="Verify the repository">
+    Open `sixthgear-shopify` and confirm that the `main` branch is visible.
+  </Step>
+  <Step title="Verify the role">
+    Confirm whether the account can only view code or can also manage settings, members, branches, and security controls.
   </Step>
 </Steps>
 
 ## Management verification checklist
 
-- Management can open the repository.
-- The repository owner or organization is recorded.
-- `main` is confirmed as the source-of-truth branch.
-- Branch protection and merge permissions are reviewed.
-- At least one approved backup administrator exists.
-- Former contributors no longer have unnecessary access.
-- Vercel deployment ownership is documented separately.
+- The correct repository opens.
+- The `main` branch is visible.
+- Management's role matches the approved responsibility.
+- At least one approved backup administrator is assigned.
+- Repository ownership will remain under company control if the current developer leaves.
+- Branch protection and merge authority are reviewed.
+- Vercel deployment access is documented separately because GitHub access alone does not provide production control.
 
-## Related pages
+## Handoff record
 
-- [Source code overview](/website/source-code-overview)
-- [Deployment overview](/deployment/deployment-overview)
-- [Executive Access Handoff](/accounts-and-access/executive-handoff)
+| Field | Record |
+| --- | --- |
+| Management account invited | Yes / No |
+| Invitation accepted | Yes / No |
+| `main` branch opened | Yes / No |
+| Role verified | Yes / No |
+| Backup administrator assigned | Yes / No |
+| Ownership and recovery reviewed | Yes / No |
+| Verified by | To record |
+| Verification date | To record |
+| Follow-up actions | To record |
+
+## Related documentation
+
+<CardGroup cols={2}>
+  <Card title="Executive Access Handoff" icon="clipboard-check" href="/accounts-and-access/executive-handoff">
+    Return to the management acceptance checklist.
+  </Card>
+
+  <Card title="Credentials Inventory" icon="table-properties" href="/accounts-and-access/account-credentials-inventory">
+    Review password and MFA responsibility without exposing secret values.
+  </Card>
+
+  <Card title="Source code overview" icon="folder-code" href="/website/source-code-overview">
+    Review the repository architecture and important source paths.
+  </Card>
+
+  <Card title="Deployment" icon="rocket" href="/deployment/deployment-overview">
+    Review how GitHub changes move to Vercel production.
+  </Card>
+</CardGroup>
