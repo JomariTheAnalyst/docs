@@ -1,14 +1,29 @@
 ---
-title: Shopify Admin Overview
-description: Everything you need to know to navigate the SixthgearMoto Shopify Admin.
-icon: layout-dashboard
+title: "Shopify Admin Overview"
+description: "Everything you need to know to navigate the SixthgearMoto Shopify Admin."
+icon: "layout-dashboard"
 ---
+
+## Start with access
+
+{/* Component: CardGroup */}
+
+<CardGroup cols={2}>
+  <Card title="How to access Shopify Admin" icon="log-in" href="/shopify/access/overview">
+    Accept an invitation, sign in to the correct SixthgearMoto store, and confirm your assigned permissions.
+  </Card>
+
+  <Card title="Export Shopify products" icon="file-down" href="/shopify/access/export-products">
+    Create a product CSV, store it securely, and maintain the current restricted download link.
+  </Card>
+</CardGroup>
 
 ## How to access the admin
 
-The Shopify Admin is where you manage everything — products, orders, collections, apps, and settings.
+The Shopify Admin is where authorized users manage products, orders, collections, apps, and store settings.
 
 {/* Component: CodeGroup */}
+
 <CodeGroup>
 
 ```text Admin URL
@@ -22,8 +37,9 @@ https://accounts.shopify.com/store/sixthgearmoto/login
 </CodeGroup>
 
 {/* Component: Note */}
+
 <Note>
-You need a Shopify user account to sign in. Contact the store owner if you do not have access. User access is managed under **Settings → Users**.
+  You need a Shopify user account to sign in. Contact the store owner if you do not have access. User access is managed under **Settings → Users**.
 </Note>
 
 ## Store snapshot
@@ -31,6 +47,7 @@ You need a Shopify user account to sign in. Contact the store owner if you do no
 Quick reference for the current Shopify store configuration.
 
 {/* Component: CardGroup */}
+
 <CardGroup cols={3}>
   <Card title="Plan">
     Shopify Basic
@@ -41,7 +58,7 @@ Quick reference for the current Shopify store configuration.
   </Card>
 
   <Card title="Timezone">
-    Asia/Singapore — UTC+8
+    Asia/Singapore — UTC\+8
   </Card>
 
   <Card title="Products">
@@ -78,6 +95,7 @@ The left sidebar is the main Shopify navigation. Each section below includes its
 View, process, and fulfill customer orders.
 
 {/* Component: CodeGroup */}
+
 <CodeGroup>
 
 ```text Orders
@@ -91,6 +109,7 @@ https://sixthgearmoto.myshopify.com/admin/orders
 Create manual orders on behalf of customers.
 
 {/* Component: CodeGroup */}
+
 <CodeGroup>
 
 ```text Draft Orders
@@ -104,6 +123,7 @@ https://sixthgearmoto.myshopify.com/admin/draft_orders
 Add and update products, variants, inventory settings, media, tags, and metafields.
 
 {/* Component: CodeGroup */}
+
 <CodeGroup>
 
 ```text Products
@@ -117,6 +137,7 @@ https://sixthgearmoto.myshopify.com/admin/products
 Group products and manage the collection data used by the headless storefront, including supported collection metafields.
 
 {/* Component: CodeGroup */}
+
 <CodeGroup>
 
 ```text Collections
@@ -130,6 +151,7 @@ https://sixthgearmoto.myshopify.com/admin/collections
 View customer profiles, contact details, account information, and order history.
 
 {/* Component: CodeGroup */}
+
 <CodeGroup>
 
 ```text Customers
@@ -143,6 +165,7 @@ https://sixthgearmoto.myshopify.com/admin/customers
 Review sales reports, traffic information, store activity, and conversion metrics.
 
 {/* Component: CodeGroup */}
+
 <CodeGroup>
 
 ```text Analytics
@@ -156,6 +179,7 @@ https://sixthgearmoto.myshopify.com/admin/analytics
 Manage Shopify marketing campaigns, automations, and supported campaign tracking.
 
 {/* Component: CodeGroup */}
+
 <CodeGroup>
 
 ```text Marketing
@@ -169,6 +193,7 @@ https://sixthgearmoto.myshopify.com/admin/marketing
 Create and manage discount codes and automatic discounts.
 
 {/* Component: CodeGroup */}
+
 <CodeGroup>
 
 ```text Discounts
@@ -182,6 +207,7 @@ https://sixthgearmoto.myshopify.com/admin/discounts
 Manage the Horizon theme used for Shopify preview and fallback. Theme changes do not update the live Next.js storefront.
 
 {/* Component: CodeGroup */}
+
 <CodeGroup>
 
 ```text Themes
@@ -195,6 +221,7 @@ https://sixthgearmoto.myshopify.com/admin/themes
 Manage pages belonging to the Shopify-hosted storefront. These pages do not automatically control the current headless Next.js pages.
 
 {/* Component: CodeGroup */}
+
 <CodeGroup>
 
 ```text Pages
@@ -208,6 +235,7 @@ https://sixthgearmoto.myshopify.com/admin/pages
 Manage Shopify-hosted blog posts. SixthGear Rider Stories are currently managed through Sanity CMS, not this section.
 
 {/* Component: CodeGroup */}
+
 <CodeGroup>
 
 ```text Blog Posts
@@ -221,6 +249,7 @@ https://sixthgearmoto.myshopify.com/admin/articles
 Manage Shopify theme menus. The current headless storefront navigation is not confirmed to read these menus.
 
 {/* Component: CodeGroup */}
+
 <CodeGroup>
 
 ```text Navigation
@@ -234,6 +263,7 @@ https://sixthgearmoto.myshopify.com/admin/menus
 Manage SEO and access settings for the Shopify-hosted storefront. Headless storefront metadata is managed separately in the Next.js application.
 
 {/* Component: CodeGroup */}
+
 <CodeGroup>
 
 ```text Online Store Preferences
@@ -247,6 +277,7 @@ https://sixthgearmoto.myshopify.com/admin/online_store/preferences
 Review installed apps and open the settings provided by each app.
 
 {/* Component: CodeGroup */}
+
 <CodeGroup>
 
 ```text Apps
@@ -260,6 +291,7 @@ https://sixthgearmoto.myshopify.com/admin/apps
 Manage payments, shipping, taxes, locations, users, notifications, checkout settings, and other store configuration.
 
 {/* Component: CodeGroup */}
+
 <CodeGroup>
 
 ```text Settings
@@ -273,6 +305,7 @@ https://sixthgearmoto.myshopify.com/admin/settings
 SixthgearMoto publishes and manages products through the following Shopify sales channels.
 
 {/* Component: CardGroup */}
+
 <CardGroup cols={2}>
   <Card title="Online Store">
     Shopify-hosted storefront used for theme preview and fallback.
@@ -300,21 +333,24 @@ SixthgearMoto publishes and manages products through the following Shopify sales
 </CardGroup>
 
 {/* Component: Warning */}
+
 <Warning>
-When adding a product, publish it to the sales channels where it must appear. A product that is unavailable to a channel will not appear through that channel.
+  When adding a product, publish it to the sales channels where it must appear. A product that is unavailable to a channel will not appear through that channel.
 </Warning>
 
 ## Headless setup
 
 {/* Component: Info */}
+
 <Info>
-- The live storefront is a Next.js application that reads commerce data from Shopify through the Storefront API.
-- The Horizon theme is used for Shopify preview and fallback only. It is not the live SixthGear website.
-- Product, collection, inventory, and supported metafield changes become available to the live website after the Next.js application fetches updated Shopify data.
-- Edit commerce data in Shopify Admin. Do not edit Horizon theme files expecting them to update the live headless storefront.
+  - The live storefront is a Next.js application that reads commerce data from Shopify through the Storefront API.
+  - The Horizon theme is used for Shopify preview and fallback only. It is not the live SixthGear website.
+  - Product, collection, inventory, and supported metafield changes become available to the live website after the Next.js application fetches updated Shopify data.
+  - Edit commerce data in Shopify Admin. Do not edit Horizon theme files expecting them to update the live headless storefront.
 </Info>
 
 {/* Component: CodeGroup */}
+
 <CodeGroup>
 
 ```text Storefront API Endpoint
@@ -328,6 +364,7 @@ https://sixthgearmoto.myshopify.com/api/2025-10/graphql.json
 There are 2 Shopify user accounts associated with this store.
 
 {/* Component: CardGroup */}
+
 <CardGroup cols={2}>
   <Card title="Store owner or administrator">
     Full or broad access to store configuration, billing, users, apps, and commerce operations, depending on the assigned role.
@@ -339,6 +376,7 @@ There are 2 Shopify user accounts associated with this store.
 </CardGroup>
 
 {/* Component: CodeGroup */}
+
 <CodeGroup>
 
 ```text Shopify Settings
@@ -348,6 +386,7 @@ https://sixthgearmoto.myshopify.com/admin/settings
 </CodeGroup>
 
 {/* Component: Tip */}
+
 <Tip>
-If a section is unavailable, review the assigned role under **Settings → Users** or ask the store owner to update the user's access.
+  If a section is unavailable, review the assigned role under **Settings → Users** or ask the store owner to update the user's access.
 </Tip>
