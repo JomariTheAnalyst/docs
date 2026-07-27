@@ -31,6 +31,9 @@
         "icon": "play",
         "pages": [
           "index",
+          "introduction",
+          "initial-setup/overview",
+          "operations/overview",
           {
             "group": "Management Decision",
             "icon": "scale",
@@ -40,10 +43,7 @@
               "pos-decision/payments-philippines",
               "pos-decision/pilot-decision-record"
             ]
-          },
-          "introduction",
-          "initial-setup/overview",
-          "operations/overview"
+          }
         ]
       },
       {
