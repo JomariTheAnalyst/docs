@@ -42,7 +42,8 @@
               "pos-decision/hardware-philippines",
               "pos-decision/payments-philippines",
               "pos-decision/pilot-decision-record"
-            ]
+            ],
+            "expanded": true
           }
         ]
       },
