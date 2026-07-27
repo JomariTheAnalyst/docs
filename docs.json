@@ -49,7 +49,8 @@
               "pos-decision/pilot-decision-record"
             ]
           }
-        ]
+        ],
+        "hidden": true
       },
       {
         "tab": "Shopify",
@@ -109,9 +110,9 @@
             "root": "sixthgear-cms/overview",
             "pages": [
               "sanity/overview",
+              "sanity/content-coverage",
               "sanity/get-access",
               "sanity/open-cms",
-              "sanity/content-coverage",
               "sanity/edit-publish-content",
               "sanity/content-types",
               "sanity/fields-validation",
