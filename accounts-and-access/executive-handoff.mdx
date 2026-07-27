@@ -1,0 +1,66 @@
+---
+title: "Executive Access Handoff"
+description: "Management checklist for Shopify, SixthGear CMS, source code, product CSV, and the account credentials inventory."
+icon: "clipboard-check"
+mode: "wide"
+sidebarTitle: "Executive Access Handoff"
+---
+
+Use this page during the SixthGear management turnover. It links to the detailed procedures without exposing passwords or security secrets.
+
+<Info>
+  This is the main documentation package requested by management: Shopify access, SixthGear CMS access, source-code access, a current Shopify product CSV, and an account credentials inventory.
+</Info>
+
+## Executive handoff checklist
+
+| Deliverable | Detailed guide | Owner account or system | Evidence required | Status |
+| --- | --- | --- | --- | --- |
+| Shopify access | [Shopify Access](/shopify/access/overview) | Company-controlled Shopify account | Successful sign-in, correct store, approved role, MFA and recovery ownership | Pending verification |
+| SixthGear CMS access | [Accept your SixthGear CMS invitation](/sanity/get-access) and [Open SixthGear CMS](/sanity/open-cms) | Approved Sanity account or invitation | Successful sign-in, correct project, correct workspace, approved role | Pending verification |
+| Source-code access | [Source Code Access](/accounts-and-access/source-code-access) | Named GitHub account | Repository invitation accepted, correct repository, `main` visible, role verified | Pending verification |
+| Shopify products CSV | [Export Products](/shopify/export-products) | Shopify product catalog | Current dated CSV stored in controlled company storage and opened successfully | Pending export |
+| Account credentials inventory | [Account Directory](/accounts-and-access/account-directory), [Email Directory](/accounts-and-access/email-directory), and [Website Platform Access](/accounts-and-access/platform-access) | Company account inventory | Platform, account email, owner, role, password-manager location, MFA custodian, backup owner, recovery method, and verification date | In progress |
+
+## What the credentials inventory records
+
+The inventory records responsibility and access information. It does not store the actual secret.
+
+| Field | What to record |
+| --- | --- |
+| Platform | Shopify, Sanity, GitHub, Vercel, Mintlify, domain provider, email, social media, or another approved service |
+| Account identifier | Company-controlled email address or named account |
+| Business owner | Person accountable for the platform |
+| Access role | Owner, administrator, editor, developer, billing, or viewer |
+| Password location | Approved password-manager vault and item name only |
+| MFA custodian | Person or approved device responsible for MFA |
+| Backup owner | Authorized backup person |
+| Recovery method | Company-controlled recovery email, phone, or platform recovery process |
+| Signed-in devices | Approved company devices only |
+| Verification date | Date the access was tested |
+| Status | Verified, pending, restricted, or remove access |
+
+<Warning>
+  Do not record passwords, tokens, MFA seeds, one-time codes, recovery codes, private keys, bank details, or API credentials in this page or any other Mintlify document.
+</Warning>
+
+## Management acceptance
+
+Complete this record after every item above is demonstrated to management.
+
+| Acceptance field | Record |
+| --- | --- |
+| Handoff date | To record |
+| Presented by | To record |
+| Accepted by | To record |
+| Shopify access verified | Yes / No |
+| SixthGear CMS access verified | Yes / No |
+| Source-code access verified | Yes / No |
+| Product CSV received and opened | Yes / No |
+| Credentials inventory reviewed | Yes / No |
+| Missing access or follow-up actions | To record |
+| Final acceptance | Pending / Accepted with actions / Accepted |
+
+## Handoff completion rule
+
+The turnover is complete only when management can independently open the approved platforms, locate the product export, identify each access owner, and recover access through company-controlled methods.

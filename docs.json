@@ -48,11 +48,6 @@
         ]
       },
       {
-        "tab": "POS Decision",
-        "icon": "scale",
-        "hidden": false
-      },
-      {
         "tab": "Shopify",
         "icon": "shopping-bag",
         "groups": [
@@ -60,6 +55,8 @@
             "group": "Shopify administration",
             "root": "shopify/overview",
             "pages": [
+              "shopify/access/overview",
+              "shopify/access/export-products",
               {
                 "group": "Products",
                 "root": "shopify/products/overview",
@@ -82,7 +79,8 @@
               "shopify/metafields",
               "shopify/bulk-import",
               "shopify/discounts-campaigns",
-              "shopify/apps"
+              "shopify/apps",
+              "shopify/export-products"
             ]
           },
           {
@@ -97,7 +95,8 @@
               "shopify/shopify-vs-loyverse/philippines-payments-and-compliance",
               "shopify/shopify-vs-loyverse/hardware-recommendations",
               "shopify/shopify-vs-loyverse/final-recommendation"
-            ]
+            ],
+            "hidden": true
           }
         ]
       },
@@ -172,7 +171,9 @@
               "accounts-and-access/social-media-accounts",
               "accounts-and-access/email-directory",
               "accounts-and-access/platform-access",
-              "accounts-and-access/device-directory"
+              "accounts-and-access/device-directory",
+              "accounts-and-access/source-code-access",
+              "accounts-and-access/executive-handoff"
             ]
           }
         ]
