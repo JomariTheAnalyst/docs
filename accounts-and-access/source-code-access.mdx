@@ -1,0 +1,62 @@
+---
+title: "Source Code Access"
+description: "Give approved management or developers access to the SixthGear GitHub repository and verify branch and recovery ownership."
+icon: "github"
+sidebarTitle: "Source Code Access"
+---
+
+Use this page when management needs direct access to the SixthGear source-code repository.
+
+<Warning>
+  Never place GitHub passwords, personal access tokens, SSH private keys, deploy keys, recovery codes, or repository secrets in Mintlify.
+</Warning>
+
+## Repository access record
+
+| Item | SixthGear record |
+| --- | --- |
+| Platform | GitHub |
+| Repository | SixthGear storefront repository |
+| Source-of-truth branch | `main` |
+| Repository owner or organization | To verify |
+| Management access level | To approve |
+| Developer access level | To approve |
+| MFA requirement | Required for privileged access |
+| Recovery owner | To assign and verify |
+| Verification status | Pending dashboard verification |
+
+## Grant access
+
+<Steps>
+  <Step title="Confirm the GitHub owner">
+    Verify which GitHub user or organization owns the repository. Do not rely only on a local Git remote name.
+  </Step>
+  <Step title="Use a named account">
+    Invite the manager or developer through their own approved GitHub account. Do not share one person's GitHub login.
+  </Step>
+  <Step title="Assign the minimum role">
+    Give management read access unless they need repository administration. Give developers only the role required for their work.
+  </Step>
+  <Step title="Accept the invitation">
+    The invited person must accept the repository or organization invitation before it expires.
+  </Step>
+  <Step title="Verify the repository and branch">
+    Confirm that the correct repository opens and that `main` is visible as the source-of-truth branch.
+  </Step>
+</Steps>
+
+## Management verification checklist
+
+- Management can open the repository.
+- The repository owner or organization is recorded.
+- `main` is confirmed as the source-of-truth branch.
+- Branch protection and merge permissions are reviewed.
+- At least one approved backup administrator exists.
+- Former contributors no longer have unnecessary access.
+- Vercel deployment ownership is documented separately.
+
+## Related pages
+
+- [Source code overview](/website/source-code-overview)
+- [Deployment overview](/deployment/deployment-overview)
+- [Executive Access Handoff](/accounts-and-access/executive-handoff)

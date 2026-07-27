@@ -1,0 +1,58 @@
+---
+title: "Shopify Access"
+description: "Sign in to the correct SixthGear Shopify store, confirm your role, and verify owner-level access without exposing credentials."
+icon: "log-in"
+sidebarTitle: "Shopify Access"
+---
+
+Use this page when management needs direct access to the SixthGear Shopify Admin.
+
+<Warning>
+  Never place the Shopify password, MFA code, recovery code, API token, or backup code in Mintlify. Store secrets only in the approved company password manager.
+</Warning>
+
+## Access method
+
+| Item | SixthGear record |
+| --- | --- |
+| Platform | Shopify Admin |
+| Store | SixthGear Moto Shopify store |
+| Owner account | Company-controlled business account |
+| Sign-in email | `first2sixthgear@gmail.com` |
+| Password location | Approved password-manager item |
+| MFA custodian | Record in the Account Credentials Inventory |
+| Backup access | Named backup administrator, subject to verification |
+| Verification status | Confirm in Shopify Admin |
+
+## Sign in
+
+<Steps>
+  <Step title="Open Shopify Admin">
+    Go to Shopify Admin and sign in with the approved company-controlled account.
+  </Step>
+  <Step title="Complete MFA">
+    Use the approved MFA method. Do not request or share a one-time code through the documentation portal.
+  </Step>
+  <Step title="Confirm the store">
+    Check the store name and domain before changing products, payments, users, or settings.
+  </Step>
+  <Step title="Verify your permissions">
+    Open **Settings → Users** and confirm that management has the approved owner or administrator role.
+  </Step>
+</Steps>
+
+## Management verification checklist
+
+- The correct Shopify store opens.
+- The company controls the owner email.
+- Management can view **Products**, **Orders**, **Customers**, **Settings**, and **Users** as approved.
+- MFA ownership and backup access are recorded.
+- Recovery methods are company-controlled and current.
+- No former employee has unnecessary access.
+
+## Related access
+
+- [Export Products](/shopify/access/export-products)
+- [Executive Access Handoff](/accounts-and-access/executive-handoff)
+- [Account Directory](/accounts-and-access/account-directory)
+- [Website Platform Access](/accounts-and-access/platform-access)
