@@ -106,6 +106,10 @@ Loyverse is mainly a POS, inventory, customer, and back-office platform. A separ
 
 ## Philippine payment reality
 
+<Card title="Philippine payment providers and Maya Terminal" icon="credit-card" href="/pos-decision/payments-philippines">
+  Compare Maya, PayMongo, Xendit, and eGovPay, review published transaction rates, and prepare the Maya Business application.
+</Card>
+
 Shopify POS can still be used in the Philippines for product selection, inventory, customer records, cash sales, order creation, and receipt printing.
 
 The important operational question is card processing. Before approving a full rollout, management must confirm whether the preferred card reader and payment provider can integrate directly with the current Shopify setup in the Philippines. When direct integration is not available, staff must process the card payment on the bank or payment-provider terminal, then record the result in Shopify POS using the approved payment method.
@@ -131,13 +135,24 @@ The safest approach is to purchase one supported receipt printer first, then tes
 | Model | Shopify status | Connection | Key specifications | Philippine price snapshot | Where to buy | Recommendation |
 | --- | --- | --- | --- | --: | --- | --- |
 | **Epson TM-m30III C31CK50342** | Officially supported model family | Wi-Fi, Bluetooth 5.0, USB, Ethernet | Up to 300 mm/s, 80 mm paper, auto-cutter, tablet charging and data support | **₱18,050** | Netcodex Philippines | **Best overall pilot choice** because it provides several connection options and is locally listed as in stock. |
-| **Epson TM-m30III C31CK50301** | Model family supported, but this Ethernet-only variant requires confirmation before purchase | USB and Ethernet | Up to 250 mm/s, 80 mm paper, compact body, auto-cutter | **₱14,550** | Netcodex Philippines | Lower-cost option, but do not purchase until the exact Shopify POS connection method is confirmed. |
+| **Epson TM-m30III C31CK50301** | **Not supported in this Ethernet-only variant** | USB and Ethernet | Up to 250 mm/s, 80 mm paper, compact body, auto-cutter | **₱14,550** | Netcodex Philippines | Do not purchase for Shopify POS. Shopify excludes the Ethernet-only TM-m30III variant. |
 | **Star TSP143III LAN** | Officially supported model family | Ethernet LAN | Up to 250 mm/s, 203 dpi, auto-cutter | **₱24,950** | Asianic Philippines | Strong fixed-counter alternative when a wired network connection is preferred. |
-| **Epson TM-T88 series** | Shopify-supported printer series | Depends on exact model | High-volume receipt printer family | **Price to verify by exact model** | Authorized Epson or POS reseller | Consider only for a busy high-volume counter after confirming the exact model number. |
+| **Epson TM-T88IV, V, VI, or VII** | Officially supported series | Ethernet or USB through POS Hub | High-volume receipt printer family | **Price to verify by exact model** | Authorized Epson or POS reseller | Consider for a busy counter after confirming the exact model number. |
+| **Epson TM-m30II** | Officially supported | Bluetooth, Ethernet, or USB | Compact 80 mm receipt printer | **Request local quotation** | Verified Epson or POS reseller | Good alternative when the exact interface and warranty are confirmed. |
+| **Star TSP143IIIBI2** | Officially supported | Bluetooth | Compact thermal receipt printer | **Request local quotation** | Verified third-party seller | Use when Bluetooth is required and the older model is locally available. |
+| **Star TSP143IIIW** | Officially supported | Wi-Fi | Compact thermal receipt printer | **Request local quotation** | Verified third-party seller | Consider after confirming local stock and network support. |
+| **Star TSP143IV UE** | Officially supported | Ethernet | Current Star fixed-counter model | **Request local quotation** | Verified third-party seller | Modern wired alternative. |
+| **Star mC-Print3** | Officially supported | Model-dependent wired interfaces | Compact 80 mm receipt printer | **Request local quotation** | Verified third-party seller | Consider only after confirming the exact model and interface. |
 
 <Warning>
   Do not buy based only on the product name. Confirm the exact manufacturer model number and connection variant. Shopify may support one variant while another variant of the same printer family has different limitations.
 </Warning>
+
+### Shopify-supported POS terminal format
+
+Shopify does not currently provide an approved all-in-one POS computer for Philippine merchants. Shopify POS should run on a supported iPad or Android tablet, then connect to separately supported printers, scanners, and cash drawers.
+
+Shopify's own POS Terminal and integrated card-reader hardware are limited to supported Shopify Payments countries, so they are not the recommended Philippine setup.
 
 ### Recommended tablet and scanner
 
@@ -145,7 +160,7 @@ The safest approach is to purchase one supported receipt printer first, then tes
 | --- | --- | --- | --: | --- |
 | **Current iPad, generation 5 or newer** | Requires a supported iPadOS version | Reliable Shopify POS support and broad accessory compatibility | Use existing device or obtain current retailer quotation | Best option when an existing compatible iPad is available. |
 | **Android tablet** | Official Android 10 or newer with Google Play Services and Google Mobile Services | Choose at least 4 GB RAM, stable Wi-Fi, USB-C, and current security updates | **Approximately ₱9,000 to ₱20,000**, depending on brand and storage | Good lower-cost option, but the exact model must be tested before purchase. |
-| **Existing iMin device** | Not approved until tested | Exact model, Android version, Google services, built-in printer, and Shopify POS installation must be confirmed | Existing asset | Test first. Do not assume compatibility because it runs Android. |
+| **Existing iMin device** | **Not Shopify-supported** | Shopify Retail Support confirmed that unlisted all-in-one devices and unsupported built-in printers cannot be manually configured or guaranteed to work with Shopify POS | Existing asset | Do not use it for the Shopify POS pilot. Keep it for Loyverse unless Shopify later adds the exact model to its supported hardware list. |
 | **Zebra DS2208** | Officially supported scanner | Wired USB, scans 1D and 2D barcodes | **Approximately ₱6,700 to ₱9,700**, plus possible shipping or import charges | Recommended fixed-counter scanner when a local warranty and correct USB setup are confirmed. |
 | **Tablet camera** | Built into the Shopify POS device | Can scan supported barcodes without a separate scanner | No additional hardware cost | Use during the pilot to delay scanner purchase. |
 
