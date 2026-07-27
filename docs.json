@@ -31,6 +31,18 @@
         "icon": "play",
         "pages": [
           "index",
+          {
+            "group": "Management Access",
+            "icon": "key-round",
+            "pages": [
+              "start-here/executive-access-handoff",
+              "start-here/shopify-access",
+              "start-here/sixthgear-cms-access",
+              "start-here/source-code-access",
+              "start-here/export-products",
+              "start-here/credentials-inventory"
+            ]
+          },
           "introduction",
           "initial-setup/overview",
           "operations/overview",
@@ -166,6 +178,8 @@
             "group": "Accounts & Access",
             "root": "accounts-and-access/overview",
             "pages": [
+              "accounts-and-access/executive-handoff",
+              "accounts-and-access/account-credentials-inventory",
               "accounts-and-access/business-owner-account",
               "accounts-and-access/account-directory",
               "accounts-and-access/social-media-accounts",

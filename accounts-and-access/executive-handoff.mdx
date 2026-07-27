@@ -6,47 +6,77 @@ mode: "wide"
 sidebarTitle: "Executive Access Handoff"
 ---
 
-Use this page during the SixthGear management turnover. It links to the detailed procedures without exposing passwords or security secrets.
+Use this page during the SixthGear management turnover meeting. Each item links to the detailed guide in its permanent documentation section.
 
 <Info>
-  This is the main documentation package requested by management: Shopify access, SixthGear CMS access, source-code access, a current Shopify product CSV, and an account credentials inventory.
+  This is the main package requested by management: Shopify access, SixthGear CMS access, source-code access, a current Shopify product CSV, and the account credentials inventory.
 </Info>
+
+## Management handoff package
+
+<CardGroup cols={2}>
+  <Card title="Shopify Access" icon="log-in" href="/shopify/access/overview">
+    Sign in to the correct store, confirm the management role, and verify recovery ownership.
+  </Card>
+
+  <Card title="SixthGear CMS Access" icon="panels-top-left" href="/sanity/get-access">
+    Accept the Sanity invitation and confirm access to the correct SixthGear CMS project.
+  </Card>
+
+  <Card title="Source Code Access" icon="github" href="/accounts-and-access/source-code-access">
+    Open the GitHub repository and confirm access to the `main` branch.
+  </Card>
+
+  <Card title="Export Products" icon="file-down" href="/shopify/export-products">
+    Export the complete product catalog and hand over the verified CSV.
+  </Card>
+
+  <Card title="Credentials Inventory" icon="table-properties" href="/accounts-and-access/account-credentials-inventory">
+    Review every supplied device, account, subscription, handler, password custodian, and MFA custodian.
+  </Card>
+</CardGroup>
 
 ## Executive handoff checklist
 
-| Deliverable | Detailed guide | Owner account or system | Evidence required | Status |
-| --- | --- | --- | --- | --- |
-| Shopify access | [Shopify Access](/shopify/access/overview) | Company-controlled Shopify account | Successful sign-in, correct store, approved role, MFA and recovery ownership | Pending verification |
-| SixthGear CMS access | [Accept your SixthGear CMS invitation](/sanity/get-access) and [Open SixthGear CMS](/sanity/open-cms) | Approved Sanity account or invitation | Successful sign-in, correct project, correct workspace, approved role | Pending verification |
-| Source-code access | [Source Code Access](/accounts-and-access/source-code-access) | Named GitHub account | Repository invitation accepted, correct repository, `main` visible, role verified | Pending verification |
-| Shopify products CSV | [Export Products](/shopify/export-products) | Shopify product catalog | Current dated CSV stored in controlled company storage and opened successfully | Pending export |
-| Account credentials inventory | [Account Directory](/accounts-and-access/account-directory), [Email Directory](/accounts-and-access/email-directory), and [Website Platform Access](/accounts-and-access/platform-access) | Company account inventory | Platform, account email, owner, role, password-manager location, MFA custodian, backup owner, recovery method, and verification date | In progress |
-
-## What the credentials inventory records
-
-The inventory records responsibility and access information. It does not store the actual secret.
-
-| Field | What to record |
-| --- | --- |
-| Platform | Shopify, Sanity, GitHub, Vercel, Mintlify, domain provider, email, social media, or another approved service |
-| Account identifier | Company-controlled email address or named account |
-| Business owner | Person accountable for the platform |
-| Access role | Owner, administrator, editor, developer, billing, or viewer |
-| Password location | Approved password-manager vault and item name only |
-| MFA custodian | Person or approved device responsible for MFA |
-| Backup owner | Authorized backup person |
-| Recovery method | Company-controlled recovery email, phone, or platform recovery process |
-| Signed-in devices | Approved company devices only |
-| Verification date | Date the access was tested |
-| Status | Verified, pending, restricted, or remove access |
+| Deliverable | Responsible system | Evidence required | Password custodian | MFA custodian | Status |
+| --- | --- | --- | --- | --- | --- |
+| Shopify access | Shopify Admin | Successful sign-in, correct store, approved role, recovery ownership | Stephanie Grace Lelina | Stephanie Grace Lelina | Pending verification |
+| SixthGear CMS access | Sanity | Successful sign-in, correct project, correct workspace, approved role | Stephanie Grace Lelina | Stephanie Grace Lelina | Pending verification |
+| Source-code access | GitHub | Invitation accepted, correct repository opened, `main` visible, role verified | Stephanie Grace Lelina | Stephanie Grace Lelina | Pending verification |
+| Shopify products CSV | Shopify product catalog | Current dated CSV stored in controlled company storage and opened successfully | Stephanie Grace Lelina | Stephanie Grace Lelina | Pending export |
+| Account credentials inventory | Company access inventory | All supplied CSV rows reviewed, handlers confirmed, password and MFA custody accepted | Stephanie Grace Lelina | Stephanie Grace Lelina | Ready for review |
 
 <Warning>
-  Do not record passwords, tokens, MFA seeds, one-time codes, recovery codes, private keys, bank details, or API credentials in this page or any other Mintlify document.
+  This handoff records responsibility, access, and verification. It must never contain actual passwords, tokens, MFA seeds, one-time codes, recovery codes, private keys, or full payment-card details.
 </Warning>
 
-## Management acceptance
+## Meeting procedure
 
-Complete this record after every item above is demonstrated to management.
+<Steps>
+  <Step title="Review the credentials inventory">
+    Confirm that the supplied devices, social platforms, email accounts, business platforms, subscriptions, handlers, phone numbers, and masked payment reference are accurate.
+  </Step>
+  <Step title="Confirm password and MFA custody">
+    Confirm that Stephanie Grace Lelina is responsible for password and MFA custody, and document the approved backup process.
+  </Step>
+  <Step title="Test Shopify access">
+    Ask management to open the correct store and confirm the approved access areas.
+  </Step>
+  <Step title="Test SixthGear CMS access">
+    Open the correct Sanity project and confirm the assigned role.
+  </Step>
+  <Step title="Test source-code access">
+    Open the SixthGear GitHub repository and confirm that `main` is visible.
+  </Step>
+  <Step title="Open the product CSV">
+    Confirm that management can access and open the latest verified export from controlled company storage.
+  </Step>
+  <Step title="Record gaps and acceptance">
+    List missing invitations, insufficient roles, unavailable recovery methods, or missing backup administrators before signing off.
+  </Step>
+</Steps>
+
+## Management acceptance record
 
 | Acceptance field | Record |
 | --- | --- |
@@ -58,9 +88,12 @@ Complete this record after every item above is demonstrated to management.
 | Source-code access verified | Yes / No |
 | Product CSV received and opened | Yes / No |
 | Credentials inventory reviewed | Yes / No |
+| Password custodian accepted | Yes / No |
+| MFA custodian accepted | Yes / No |
+| Backup access confirmed | Yes / No |
 | Missing access or follow-up actions | To record |
 | Final acceptance | Pending / Accepted with actions / Accepted |
 
-## Handoff completion rule
+## Completion rule
 
-The turnover is complete only when management can independently open the approved platforms, locate the product export, identify each access owner, and recover access through company-controlled methods.
+The handoff is complete only when management can independently open the approved systems, locate the product export, identify the responsible people, and use company-controlled recovery methods.

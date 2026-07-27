@@ -5,10 +5,27 @@ icon: "file-down"
 sidebarTitle: "Export Products"
 ---
 
-Use this procedure when management needs a current copy of the SixthGear product catalog in CSV format.
+Use this procedure when management needs a current copy of the SixthGear Shopify product catalog in CSV format.
+
+## Shopify link
+
+<CodeGroup>
+
+```text Shopify Admin
+https://sixthgearmoto.myshopify.com/admin
+```
+
+</CodeGroup>
+
+## Before you export
+
+- Confirm that you are signed in to the correct SixthGear Shopify store.
+- Use **All products** for the executive handoff unless management approves a smaller scope.
+- Use a company-controlled device and approved storage location.
+- Record the export date and person who completed the export.
 
 <Warning>
-  Product CSV files can contain operational catalog data. Do not upload the export to a public link, personal drive, public repository, or Mintlify.
+  A product CSV can contain operational catalog data. Do not upload the export to Mintlify, a public repository, a public link, or a personal drive.
 </Warning>
 
 ## Export the product CSV
@@ -17,20 +34,23 @@ Use this procedure when management needs a current copy of the SixthGear product
   <Step title="Open Products">
     In Shopify Admin, open **Products**.
   </Step>
-  <Step title="Choose the export scope">
-    Select **Export**. Choose **All products** for a full management handoff unless a smaller scope was approved.
+  <Step title="Select Export">
+    Select **Export** from the Products page.
   </Step>
-  <Step title="Choose the CSV format">
-    Use the CSV format intended for spreadsheet programs when management will review the file in Excel.
+  <Step title="Choose the scope">
+    Select **All products** for the complete management handoff. Use selected products or the current page only when that narrower scope is approved.
+  </Step>
+  <Step title="Choose the file format">
+    Select the CSV format intended for spreadsheet programs when management will open the file in Excel.
   </Step>
   <Step title="Request the export">
-    Confirm the export. Shopify may download the file immediately or email a download link to the signed-in account.
+    Confirm the export. Shopify may download the file or send the export to the signed-in account.
   </Step>
   <Step title="Open and verify the file">
-    Open the CSV in Excel. Confirm that product titles, handles, variants, prices, SKUs, inventory fields, status, and publication fields appear as expected.
+    Open the CSV and confirm that product titles, handles, variants, prices, SKUs, inventory fields, status, and publication fields are present.
   </Step>
   <Step title="Store the approved copy">
-    Save the verified export in the controlled company storage location using the approved file-naming convention.
+    Save the file in controlled company storage and record the exact location without publishing an unrestricted download link.
   </Step>
 </Steps>
 
@@ -40,11 +60,13 @@ Use this procedure when management needs a current copy of the SixthGear product
 | --- | --- |
 | Export date | To record |
 | Exported by | To record |
-| Store | SixthGear Shopify store |
-| Scope | All products / selected products / filtered view |
+| Shopify store | SixthGear Moto Shopify store |
+| Export scope | All products / selected products / current page |
 | File name | To record |
-| Controlled storage location | To record without exposing a public download URL |
+| Product count at export | To record |
+| Controlled storage location | To record |
 | Reviewed by | To record |
+| File opened successfully | Yes / No |
 | Verification status | Pending / Verified |
 
 ## Recommended file name
@@ -58,10 +80,26 @@ sixthgear-shopify-products-YYYY-MM-DD.csv
 - Management can access the controlled storage location.
 - The CSV opens without corrupt columns or character issues.
 - The export scope and date are recorded.
-- No public or unrestricted link was created.
-- The file remains a reference copy. Shopify remains the live source of truth.
+- The file is not exposed through a public link.
+- Shopify remains the live product source of truth.
+- The CSV is understood as a dated reference and recovery asset.
 
-## Related access
+## Related documentation
 
-- [Shopify Access](/shopify/access/overview)
-- [Executive Access Handoff](/accounts-and-access/executive-handoff)
+<CardGroup cols={2}>
+  <Card title="Shopify Access" icon="log-in" href="/shopify/access/overview">
+    Verify management access before exporting products.
+  </Card>
+
+  <Card title="Executive Access Handoff" icon="clipboard-check" href="/accounts-and-access/executive-handoff">
+    Record receipt and acceptance of the product CSV.
+  </Card>
+
+  <Card title="Credentials Inventory" icon="table-properties" href="/accounts-and-access/account-credentials-inventory">
+    Review the Shopify handler, password custodian, and MFA custodian.
+  </Card>
+
+  <Card title="Bulk edit and import" icon="file-csv" href="/shopify/products/bulk-management">
+    Review the controlled CSV workflow before re-importing product data.
+  </Card>
+</CardGroup>
