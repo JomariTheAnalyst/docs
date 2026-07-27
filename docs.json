@@ -109,8 +109,8 @@
             "root": "sixthgear-cms/overview",
             "pages": [
               "sanity/overview",
-              "sanity/content-coverage",
               "sanity/get-access",
+              "sanity/content-coverage",
               "sanity/open-cms",
               "sanity/edit-publish-content",
               "sanity/content-types",
