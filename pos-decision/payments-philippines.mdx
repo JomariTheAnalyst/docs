@@ -1,0 +1,240 @@
+---
+title: "Philippine payment providers and Maya Terminal"
+description: "Compare Maya, PayMongo, Xendit, and eGovPay for Shopify, then prepare the Maya Business and terminal application."
+icon: "credit-card"
+mode: "wide"
+---
+
+This page separates two decisions that are often confused:
+
+1. **Online checkout:** the payment gateway customers use on the SixthGear website.
+2. **In-store payment:** the external terminal or QR method used at the physical counter.
+
+<Info>
+  **Recommended direction:** Request a formal Maya Business quotation for both Maya Checkout and Maya Terminal. Use the Maya Terminal as an external payment terminal during the Shopify POS pilot, then compare the final contracted rates and settlement process with PayMongo and Xendit before changing the live online gateway.
+</Info>
+
+## Important Shopify fee rule
+
+Shopify Payments is not available for Philippine in-person processing. Online orders paid through a third-party gateway can therefore have two separate costs:
+
+- The payment provider's processing fee
+- Shopify's third-party transaction fee based on the Shopify plan
+
+| Shopify plan | Third-party transaction fee for online orders |
+| --- | --: |
+| Basic | 2% |
+| Grow | 1% |
+| Advanced | 0.6% |
+| Plus | 0.2%, subject to the current contract |
+
+Shopify does not apply this third-party transaction fee to Shopify POS orders or manual payment methods. When a Maya Terminal payment is processed separately and recorded in Shopify POS using an approved custom payment method, the Maya merchant charge still applies, but the online third-party gateway fee does not.
+
+## Provider comparison for online Shopify checkout
+
+Rates below are published starting rates as of July 2026. They can change through volume pricing, taxes, merchant category, risk assessment, contract terms, and future provider updates.
+
+| Provider | Shopify integration | Cards | GCash | Maya wallet | QR Ph | Online banking | Important note |
+| --- | --- | --: | --: | --: | --: | --: | --- |
+| **Maya Checkout** | Official Maya Shopify plugin | 3.50% \+ ₱10 | 2.00% | Maya QR at 1.50% | 1.50% | Availability depends on the activated Maya methods | Strong option when SixthGear also wants Maya Terminal and one provider relationship. |
+| **PayMongo** | Official Shopify plugin | 3.125% \+ ₱13.39 local; 4.02% \+ ₱13.39 international | 2.23% | 1.79% | 1.34% | 0.71% or ₱13.39 | Published rates are exclusive of VAT. Broad Philippine checkout coverage. |
+| **Xendit** | Official Shopify integration | Current calculator: 3.20% \+ ₱10 local | 2.30% | General PH support lists Maya at 1.80%, but the current Shopify channel list must be confirmed | 1.40% or ₱15 | Usually 1.00% or a minimum charge, depending on channel | VAT is additional. Xendit announced pricing-policy changes during 2026, so obtain a current written quote. |
+| **eGovPay** | No verified Shopify plugin for SixthGear | No public retail rate verified | No public retail rate verified | No public retail rate verified | No public retail rate verified | Government-focused gateway | Designed around agencies and government collections. Do not select it for SixthGear without written confirmation that a private retail corporation is eligible and Shopify is supported. |
+
+<Warning>
+  Do not compare only the gateway percentage. For online Shopify orders, add the Shopify third-party transaction fee to the provider's fee. On the Basic plan, a Maya Checkout card payment can have a rough planning cost of **5.50% \+ ₱10** before VAT, withholding tax, refunds, chargebacks, or contract adjustments.
+</Warning>
+
+## Maya Terminal published starting rates
+
+Maya Terminal and Maya Terminal Lite publish the same starting merchant discount rates. SixthGear's final rate must be written in the merchant agreement.
+
+| Payment method | Published starting rate |
+| --- | --: |
+| Visa and Mastercard | 3.50% MDR |
+| BancNet | 3.50% MDR |
+| JCB and American Express | 3.50% MDR |
+| Maya QR | 1.50% MDR |
+| QR Ph | 1.50% MDR |
+| GCash | 2.00% MDR |
+| WeChat Pay | 1.75% MDR |
+| ShopeePay | 1.85% MDR |
+| Maya Terminal subscription | ₱949 per month |
+
+<Note>
+  Maya states that terminal pricing can be customized for payment volume and product combinations. Treat the rates above as planning figures until Maya issues SixthGear's merchant agreement and terminal quotation.
+</Note>
+
+## How the Maya Terminal works with Shopify POS
+
+The Maya Terminal should be treated as an **external payment terminal**, not a Shopify-integrated card reader.
+
+<Steps>
+  <Step title="Build the order in Shopify POS">
+    Add the products and confirm the total on the Shopify POS tablet.
+  </Step>
+  <Step title="Process the payment on Maya Terminal">
+    Enter or send the same amount to the Maya Terminal. The customer pays by card or an enabled QR or wallet method.
+  </Step>
+  <Step title="Confirm the Maya approval">
+    Check the approved status, amount, reference number, and payment method on the terminal. Do not rely only on a customer screenshot.
+  </Step>
+  <Step title="Record the Shopify POS payment">
+    Select the approved custom payment type, such as **Maya Terminal - Card** or **Maya Terminal - QR**, and complete the Shopify order.
+  </Step>
+  <Step title="Reconcile daily">
+    Compare the Shopify POS payment-type total with the Maya settlement and transaction report. Investigate every difference before closing the day.
+  </Step>
+</Steps>
+
+<Warning>
+  Shopify does not automatically receive the Maya terminal's authorization, settlement, refund, or chargeback details. Staff must prevent duplicate amounts, incorrect payment types, and orders marked paid before the Maya transaction is approved.
+</Warning>
+
+## Maya Business application requirements
+
+Maya directs merchants to obtain the final checklist from a Maya Relationship Manager. For SixthGear Moto Supply Corp., prepare the following corporate records before applying.
+
+### Company and registration documents
+
+- SEC Certificate of Incorporation or registration
+- Articles of Incorporation and current by-laws, when requested
+- Latest General Information Sheet
+- Current business or mayor's permit
+- BIR Certificate of Registration, Form 2303
+- Company Tax Identification Number
+- Current registered business address and store address
+- Business website and official company contact information
+
+### Authorized representative and ownership records
+
+- Government-issued valid ID of each required signatory
+- Authorized representative and Ultimate Beneficial Owner information
+- Selfie or liveness verification with the required valid ID
+- Notarized board resolution or secretary's certificate authorizing the signatory and Maya application
+- Corporate secretary, president, treasurer, and contact-person details when requested
+
+### Settlement, tax, and operating records
+
+- Company bank account details
+- Bank certificate or recent bank statement of account
+- Sample invoice or receipt used by the business
+- Latest audited financial statements when requested
+- Updated BIR 2303 and a BIR-stamped sworn declaration when applicable for withholding-tax treatment
+- Estimated monthly payment volume, average transaction value, and preferred payment methods
+- Store photos, product information, or other due-diligence evidence when requested
+
+### Maya forms and agreements
+
+Maya may also require its current versions of the following:
+
+- Merchant application or agreement
+- Merchant definition and due-diligence forms
+- Confidentiality or data-processing documents
+- Terminal request and deployment details
+- Merchant settlement account instructions
+- PCI DSS or security documents when the selected integration requires them
+
+<Info>
+  The final Maya checklist can be broader than this page. Do not submit expired permits, outdated GIS records, personal bank accounts, or unsigned corporate authorizations.
+</Info>
+
+## Maya application and pilot process
+
+<Steps>
+  <Step title="Contact Maya Business sales">
+    Request onboarding for **Maya Checkout for Shopify** and **Maya Terminal**. State that SixthGear is a Philippine corporation operating an online Shopify store and a physical motorcycle retail shop.
+  </Step>
+  <Step title="Request a written commercial proposal">
+    Ask for the terminal model, monthly fee, exact MDR per card and QR method, settlement schedule, withholding-tax treatment, replacement policy, installation fee, warranty, contract period, and early-termination terms.
+  </Step>
+  <Step title="Submit the corporate requirements">
+    Use current company records and the authorized signatory approved by the board or corporate secretary.
+  </Step>
+  <Step title="Complete merchant accreditation">
+    Answer Maya's business, product, volume, risk, ownership, and settlement questions. Supply additional documents only through Maya's approved channel.
+  </Step>
+  <Step title="Configure online checkout separately">
+    After approval, install the official Maya Shopify plugin, configure the production credentials, enable only approved payment methods, and perform a real low-value production test.
+  </Step>
+  <Step title="Configure the terminal pilot">
+    Create separate Shopify POS custom payment types for Maya card and Maya QR transactions. Train staff to complete the terminal approval before marking the Shopify order paid.
+  </Step>
+  <Step title="Review the first settlements">
+    Compare gross sales, MDR, taxes, withholding, refunds, terminal reports, Shopify orders, and the actual bank deposit.
+  </Step>
+</Steps>
+
+## Questions to send Maya before signing
+
+- What exact Maya Terminal model will SixthGear receive?
+- Is the device purchase, rental, deposit, or monthly subscription?
+- Is the published ₱949 monthly terminal fee the final SixthGear rate?
+- What MDR applies to Visa, Mastercard, BancNet, JCB, Amex, GCash, Maya QR, QR Ph, and ShopeePay?
+- Are the rates VAT-inclusive or VAT-exclusive?
+- What withholding tax will be deducted from settlement, and what documents can qualify the business for an exemption?
+- What is the normal settlement schedule for cards and QR payments?
+- Are settlement or bank-transfer fees charged?
+- What are the refund, void, chargeback, and retrieval-request fees?
+- Does the terminal support ECR integration, and is Shopify POS included in that support?
+- What happens when the terminal has no internet connection?
+- What are the replacement time, warranty, support hours, and backup-terminal policy?
+- Is there a minimum monthly transaction volume or contract lock-in?
+
+## Recommended payment decision
+
+<Check>
+  Use Maya Terminal for the one-counter Shopify POS pilot after SixthGear receives and approves the written merchant quotation. For online checkout, compare the **total cost after Shopify's third-party fee**, payment-method coverage, settlement speed, refund handling, and reconciliation before replacing the current provider.
+</Check>
+
+Maya is the practical first candidate because SixthGear plans to use a Maya terminal and Maya provides an official Shopify plugin. PayMongo remains a strong online alternative when lower published Philippine rates and broad local payment coverage are more important. Xendit remains viable, but its exact 2026 pricing and Shopify payment-channel availability must be reconfirmed. eGovPay is not recommended for this private retail use case without formal eligibility confirmation.
+
+## Official reference links
+
+<CodeGroup>
+
+```text Maya Business pricing
+https://www.maya.ph/business/pricing
+```
+
+```text Maya Terminal
+https://www.maya.ph/business/terminal
+```
+
+```text Maya Shopify integration
+https://developers.maya.ph/docs/shopify
+```
+
+```text Maya Business terms
+https://www.maya.ph/business/terms-conditions
+```
+
+```text Maya merchant and tax updates
+https://www.maya.ph/business/withholdingtaxupdates
+```
+
+```text PayMongo pricing
+https://www.paymongo.com/pricing
+```
+
+```text PayMongo Shopify plugins
+https://www.paymongo.com/products/accept-payments/plugins
+```
+
+```text Xendit Philippines pricing calculator
+https://www.xendit.co/en-ph/pricing-calculator-ph/
+```
+
+```text Xendit Shopify integration
+https://docs.xendit.co/docs/shopify
+```
+
+```text eGovPay
+https://egovpay.gov.ph/
+```
+
+```text Shopify third-party payment fees
+https://help.shopify.com/en/manual/payments/third-party-providers
+```
+
+</CodeGroup>
