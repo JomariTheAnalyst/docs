@@ -1,0 +1,132 @@
+---
+title: "Pilot and decision record"
+description: "Run the Shopify POS pilot, compare it with Loyverse, and record the final management decision."
+icon: "clipboard-check"
+---
+
+Use this page to collect the evidence management needs before retiring either Shopify or Loyverse.
+
+## Pilot scope
+
+| Item | Required record |
+| --- | --- |
+| Pilot counter | Store location and counter number |
+| Pilot period | Start date and end date |
+| Shopify plan | Current plan and whether POS Lite or POS Pro is used |
+| POS device | Exact tablet or iMin model and operating-system version |
+| Receipt printer | Exact manufacturer model and interface variant |
+| Scanner | Camera, USB scanner, or wireless scanner model |
+| Cash drawer | Exact model and printer connection |
+| Payment terminal | Provider, model, and payment-recording method |
+| Pilot owner | Person responsible for daily checks |
+| Management approver | Person authorized to approve migration or rejection |
+
+## Required test cases
+
+<Steps>
+  <Step title="Complete a normal cash sale">
+    Confirm product lookup, stock deduction, receipt printing, drawer opening, and cash reporting.
+  </Step>
+  <Step title="Complete an external card sale">
+    Process the payment through the approved terminal, record it in Shopify POS, and verify reconciliation.
+  </Step>
+  <Step title="Sell a product with variants">
+    Confirm the correct size, color, SKU, price, and stock location are selected.
+  </Step>
+  <Step title="Apply an approved discount">
+    Check authorization, receipt presentation, reporting, and the final paid amount.
+  </Step>
+  <Step title="Process a return or exchange">
+    Verify stock restoration, refund recording, replacement-item deduction, and receipt history.
+  </Step>
+  <Step title="Test a temporary internet problem">
+    Record what continues to work, what stops, and what must be reconciled after connectivity returns.
+  </Step>
+  <Step title="Complete end-of-day reconciliation">
+    Compare cash, terminal totals, Shopify POS records, Loyverse records during the parallel period, and physical variances.
+  </Step>
+</Steps>
+
+## Daily comparison table
+
+| Measure | Shopify POS result | Loyverse result | Difference or issue | Action owner |
+| --- | --- | --- | --- | --- |
+| Average checkout time |  |  |  |  |
+| Receipt failures |  |  |  |  |
+| Scanner failures |  |  |  |  |
+| Inventory differences |  |  |  |  |
+| Card reconciliation time |  |  |  |  |
+| Cash variance |  |  |  |  |
+| Return or exchange issues |  |  |  |  |
+| Staff support requests |  |  |  |  |
+
+## Decision scorecard
+
+Score each item from `1` to `5`, where `1` is unacceptable and `5` is ready for normal operations.
+
+| Decision area | Score | Evidence |
+| --- | --: | --- |
+| Transaction speed |  |  |
+| Inventory accuracy |  |  |
+| Receipt reliability |  |  |
+| Card-payment workflow |  |  |
+| Cash reconciliation |  |  |
+| Returns and exchanges |  |  |
+| Staff ease of use |  |  |
+| Reporting quality |  |  |
+| Hardware stability |  |  |
+| Total operating cost |  |  |
+
+## Final decision options
+
+### Approve full Shopify POS migration
+
+Choose this only when the pilot proves that Shopify provides reliable store operations, acceptable payment handling, accurate inventory, and a justified total cost.
+
+Required follow-up:
+
+- Approve hardware quantities and budget
+- Configure staff roles and locations
+- Migrate open operational records
+- Train all users
+- Set a Loyverse cutoff date
+- Export and archive Loyverse records
+- Run final stock reconciliation
+- Keep a rollback plan for the first production week
+
+### Keep Shopify online and retain Loyverse POS
+
+Choose this when Loyverse remains better for physical-store operations or current hardware, while Shopify continues as the ecommerce engine.
+
+Required follow-up:
+
+- Define the system of record for product fields and inventory
+- Approve a synchronization tool or manual process
+- Assign owners for sync failures and stock differences
+- Document returns, transfers, and end-of-day reconciliation
+- Review integration cost and reliability regularly
+
+### Stop the Shopify POS pilot
+
+Choose this when the pilot does not meet operational, hardware, payment, or cost requirements.
+
+Stopping the pilot does not mean removing Shopify from the online store.
+
+## Approval record
+
+| Field | Management entry |
+| --- | --- |
+| Final decision |  |
+| Decision date |  |
+| Approved by |  |
+| Business reason |  |
+| Approved budget |  |
+| Migration or improvement owner |  |
+| Target implementation date |  |
+| Loyverse status after decision |  |
+| Shopify status after decision |  |
+| Next review date |  |
+
+<Warning>
+  Do not cancel Shopify or Loyverse until exports, access, recovery, financial records, and rollback requirements have been completed and approved.
+</Warning>
