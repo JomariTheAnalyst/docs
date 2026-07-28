@@ -34,9 +34,8 @@
           "initial-setup/overview",
           "operations/overview",
           {
-            "group": "Management Decision",
+            "group": "For Management",
             "icon": "scale",
-            "expanded": false,
             "pages": [
               "pos-decision/overview",
               "pos-decision/POS-decision",
@@ -46,9 +45,8 @@
             ]
           },
           {
-            "group": "Management Access",
+            "group": "Access Control",
             "icon": "key-round",
-            "expanded": false,
             "pages": [
               "start-here/executive-handoff",
               "start-here/credentials",
@@ -59,14 +57,13 @@
             ]
           },
           {
-            "group": "Project Progress",
+            "group": "Website Progress",
             "icon": "chart-no-axes-combined",
             "pages": [
               "project-progress/overview",
               "project-progress/latest-changes",
               "project-progress/left-to-do"
-            ],
-            "expanded": false
+            ]
           }
         ]
       },
