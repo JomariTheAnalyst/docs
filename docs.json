@@ -34,6 +34,16 @@
           "initial-setup/overview",
           "operations/overview",
           {
+            "group": "Project Progress",
+            "icon": "chart-no-axes-combined",
+            "expanded": false,
+            "pages": [
+              "project-progress/overview",
+              "project-progress/latest-changes",
+              "project-progress/left-to-do"
+            ]
+          },
+          {
             "group": "Management Access",
             "icon": "key-round",
             "expanded": false,

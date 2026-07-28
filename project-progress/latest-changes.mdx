@@ -1,0 +1,143 @@
+---
+title: "Latest Changes"
+description: "Management-friendly changelog of visible SixthGear website improvements, their business value, verification status, and required evidence."
+icon: "history"
+mode: "wide"
+sidebarTitle: "Latest Changes"
+---
+
+This page records meaningful website and ownership improvements. It does not treat every code commit as a business-facing change.
+
+<Info>
+  **Evidence rule:** Items marked **awaiting verification** are implemented in code but still need a real browser, Studio, or production check before they are presented as fully complete.
+</Info>
+
+## Homepage content management expanded
+
+**Status:** Completed, awaiting verification<br />**Audit evidence:** 2026-07-25 commit `d80b130`
+
+The main homepage editorial sections now have Sanity schemas, queries, storefront consumers, and fallback protection. This gives staff a CMS path for managing approved homepage content without moving Shopify product ownership into Sanity.
+
+Covered areas include the Hero, About Us, Product Categories, Services, Satisfied Customers, Franchise, Client Testimonials, Rider Stories, Store Location, CTA Banner, Coffee Showcase, Marquee, Brands We Support, and Our Team.
+
+<Frame caption="Reserved evidence: Homepage CMS-managed sections">
+  ![Reserved screenshot showing the SixthGear homepage CMS-managed sections](/images/placeholders/screenshot-reserved.svg)
+</Frame>
+
+**Video to add:** Edit and publish one approved field, then show the related storefront section updating.
+
+## Sanity Visual Editing foundation added
+
+**Status:** Completed, awaiting live verification<br />**Audit evidence:** 2026-07-25 commit `d80b130`
+
+Sanity Studio now includes Presentation support, protected Draft Mode routes, editing markers, live-data configuration, and safe redirect handling. Automated tests confirm the token and draft configuration, but a real editing session has not yet proven automatic preview updates.
+
+<Frame caption="Reserved evidence: Sanity Visual Editing">
+  ![Reserved screenshot showing the Sanity Presentation workspace with a selected field](/images/placeholders/screenshot-reserved.svg)
+</Frame>
+
+**Video to add:** Select the homepage Hero in Visual Editing, change its text, and show the embedded preview updating without a manual refresh.
+
+## Marketing content connected
+
+**Status:** Completed, awaiting verification<br />**Audit evidence:** 2026-07-25 commit `d80b130`
+
+The storefront now supports announcement messages, popup campaigns, promotional banners, positioned marketing content, and scheduled featured collections. Shopify remains the owner of collection products, while Sanity controls the marketing presentation.
+
+<Frame caption="Reserved evidence: Active marketing placement">
+  ![Reserved screenshot showing an announcement, popup, promotional banner, or featured collection](/images/placeholders/screenshot-reserved.svg)
+</Frame>
+
+**Video to add:** Activate one approved campaign, show its placement, then disable or expire it.
+
+## Popup service booking introduced
+
+**Status:** Completed, awaiting desktop and mobile verification<br />**Audit evidence:** 2026-07-25 commit `d80b130`
+
+Booking calls to action now open the Cal.com scheduler from navigation, contact, service listings, service details, and service-gallery entry points. A direct Cal.com address remains in the booking anchors for basic no-JavaScript fallback.
+
+<Frame caption="Reserved evidence: Cal.com booking modal">
+  ![Reserved screenshot showing the Cal.com booking modal over the SixthGear website](/images/placeholders/screenshot-reserved.svg)
+</Frame>
+
+**Video to add:** Open, close, and reopen booking from every supported entry point on desktop and mobile.
+
+<Warning>
+  The current code does not yet prove a successful fallback when JavaScript starts but the Cal.com embed fails. That failure mode remains in the task list.
+</Warning>
+
+## Smooth scrolling and interface coordination added
+
+**Status:** Completed, awaiting cross-device verification<br />**Audit evidence:** 2026-07-25 commit `d80b130`
+
+Lenis smooth scrolling, route progress, GSAP marquee behavior, and modal scroll locking were added to the localized storefront. Studio remains outside the main Lenis layout so CMS interaction is not intentionally wrapped by storefront smooth scrolling.
+
+<Frame caption="Reserved evidence: Storefront animation and overlay behavior">
+  ![Reserved screenshot showing the animated marquee or an open overlay with the page locked behind it](/images/placeholders/screenshot-reserved.svg)
+</Frame>
+
+**Video to add:** Scroll through localized routes and test the cart, mobile menu, quick shop, filters, service panel, and booking modal.
+
+## About and Services CMS repairs prepared
+
+**Status:** Completed in the working tree, but uncommitted
+
+The About page now supports independent source decisions for Hero, Why Choose Us, Story, Space, Values, CEO Quote, and CTA. The Services page now supports independent controls for Hero, Expertise, Brands, Service Grid, Process, Gallery, and CTA.
+
+This is an important improvement because one incomplete CMS section no longer needs to control the source choice for the whole page. The work passes unit tests, TypeScript, production build, and Sanity schema validation, but it must be reviewed and committed before it can be treated as deployable.
+
+<Frame caption="Reserved evidence: About page CMS sections">
+  ![Reserved screenshot showing independently controlled About page sections](/images/placeholders/screenshot-reserved.svg)
+</Frame>
+
+<Frame caption="Reserved evidence: Services page CMS sections">
+  ![Reserved screenshot showing independently controlled Services page sections](/images/placeholders/screenshot-reserved.svg)
+</Frame>
+
+**Videos to add:** Toggle and edit every section independently, then confirm that adjacent sections keep their intended source.
+
+## Singleton safeguards prepared
+
+**Status:** Completed in the working tree, awaiting commit and Studio verification
+
+The Sanity configuration now filters global creation and removes the Duplicate action for canonical singleton document types. This reduces the chance of creating more Homepage, About, Services, or Marketing duplicates.
+
+<Frame caption="Reserved evidence: Sanity singleton restrictions">
+  ![Reserved screenshot showing the Studio Create menu and a singleton action menu without Duplicate](/images/placeholders/screenshot-reserved.svg)
+</Frame>
+
+**Video to add:** Attempt to create or duplicate every protected singleton type and confirm that the action is unavailable.
+
+## Management access and handoff documentation added
+
+**Status:** Ready for management review
+
+The documentation now gives management direct guidance for Shopify access, SixthGear CMS access, GitHub source-code access, Shopify product CSV export, the account credentials inventory, and the executive handoff checklist.
+
+<Frame caption="Reserved evidence: Management Access documentation">
+  ![Reserved screenshot showing the Management Access section in Mintlify](/images/placeholders/screenshot-reserved.svg)
+</Frame>
+
+## Curator.io Facebook feed planned
+
+**Status:** Planned
+
+Management wants approved SixthGear Facebook posts to appear automatically on the website through Curator.io. This will reduce duplicate posting work and keep the storefront connected to current social activity.
+
+The implementation still needs a confirmed Facebook source, moderation rules, feed design, page placement, mobile behavior, loading fallback, and privacy review.
+
+<Frame caption="Reserved evidence: Curator.io social feed">
+  ![Reserved screenshot showing the future Facebook post feed on the SixthGear website](/images/placeholders/screenshot-reserved.svg)
+</Frame>
+
+**Video to add after implementation:** Publish or approve a Facebook post, synchronize it through Curator.io, and show it appearing correctly on desktop and mobile.
+
+## Status definitions
+
+| Status | Meaning |
+| --- | --- |
+| Completed and verified | Code, content, and visible behavior were checked successfully. |
+| Completed, awaiting verification | The implementation exists but still needs browser, Studio, or production evidence. |
+| Partially completed | Some required behavior still depends on fallback content or unfinished integration. |
+| Blocked | Work cannot continue until an access, content, configuration, or ownership issue is resolved. |
+| Planned | Approved direction, but implementation has not been completed. |

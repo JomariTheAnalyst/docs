@@ -1,0 +1,132 @@
+---
+title: "Left to Do"
+description: "Prioritized SixthGear website backlog covering urgent fixes, verification, Curator.io social-feed work, ownership, and management decisions."
+icon: "list-todo"
+mode: "wide"
+sidebarTitle: "Left to Do"
+---
+
+This page shows the remaining work in management order. It separates urgent risks from later improvements so the team can focus on what protects deployment, content ownership, and business continuity first.
+
+## Priority guide
+
+| Priority | Meaning |
+| --- | --- |
+| P0 | Must be resolved before safe deployment, ownership, or production operation |
+| P1 | Important implementation or verification work needed for reliable use |
+| P2 | Operational cleanup or improvement after core risks are controlled |
+| P3 | Evidence, presentation, or later enhancement |
+
+## P0 — Resolve before the next production release
+
+| Work item | Why it matters | Current status | Next action | Evidence required |
+| --- | --- | --- | --- | --- |
+| Commit the About and Services repairs | Uncommitted work cannot be reliably reviewed, deployed, or rolled back | Implemented but uncommitted | Separate implementation files from audit files, review the diff, then create a clean commit | Clean Git status, commit hash, reviewed diff |
+| Repair GitHub Actions package-manager usage | CI currently calls `npm ci` even though the repository intentionally uses pnpm and has no `package-lock.json` | Blocked | Configure pnpm in the workflow and install with the frozen pnpm lockfile | Successful pull-request CI run |
+| Resolve duplicate Homepage documents | Staff may edit the wrong document and approved content may be split across records | Blocked | Compare the records in Sanity, approve the canonical content, migrate deliberately, then remove the duplicate | Before-and-after content comparison and Sanity history |
+| Confirm Vercel production ownership | Management needs deployment, rollback, domain, and environment control | Not verified | Record the Vercel team, project, production branch, domains, environment scopes, and rollback owner | Redacted Vercel screenshots and completed ownership record |
+
+## P1 — Verify and complete the main website workflows
+
+| Work item | Why it matters | Current status | Next action | Evidence required |
+| --- | --- | --- | --- | --- |
+| Run reliable desktop and mobile browser tests | Most visible changes do not yet have trustworthy runtime proof | Planned | Install the approved Chromium runtime and run the current smoke tests | Passing report, screenshots, and short recordings |
+| Verify Sanity live preview | Editors need to know that draft changes update correctly in Presentation | Awaiting verification | Edit the Hero in a real Studio session and observe the embedded preview | One uninterrupted screen recording |
+| Publish and verify About content | Passing code does not prove approved content exists in the live CMS | Planned | Review all seven sections, complete approved fields, publish, and compare the storefront | CMS and storefront captures |
+| Publish and verify Services content | The new section controls still need real content and runtime proof | Planned | Review all seven sections, publish approved content, and test every section | CMS and storefront captures |
+| Create and verify individual service documents | Service pages still rely on local fallback content | Partially completed | Create one pilot service document, verify its slug page, then migrate the remaining services | Studio, desktop, mobile, and metadata proof |
+| Validate Cal.com failure behavior | A failed embed after JavaScript starts may result in no visible action | Partially completed | Simulate blocked-script or offline behavior and implement the approved fallback | Failure-mode recording |
+| Expand Sanity webhook verification | Published updates must refresh Homepage, About, Services, service slugs, Rider Stories, and marketing routes | Partially completed | Trigger authenticated webhook deliveries and record update times | Webhook logs and timed storefront proof |
+| Verify singleton restrictions in Studio | Automated tests do not prove that staff see the intended Create and action menus | Awaiting verification | Open Studio and test creation and duplication restrictions | Screenshots and screen recording |
+
+## P1 — Add the Curator.io Facebook feed
+
+**Goal:** Display approved SixthGear Facebook posts on the website using Curator.io so current social content can appear without being manually copied into the storefront.
+
+<Info>
+  Curator.io is the selected social media aggregator. This task should synchronize approved posts only; it should not expose private Facebook activity or make Facebook the source of product, pricing, or official policy information.
+</Info>
+
+### Decisions required before implementation
+
+| Decision | What management must approve |
+| --- | --- |
+| Facebook source | Confirm the exact SixthGear Facebook Page source in Curator.io. Page mentions should not be mixed in unless intentionally approved. |
+| Moderation | Choose automatic publishing or manual approval inside Curator.io. Manual approval is safer for the first release. |
+| Website placement | Choose the homepage location and whether a separate Social Feed page is also needed. |
+| Content types | Decide whether to show images, videos, Reels, text posts, or only selected formats supported by the feed. |
+| Feed size | Approve the number of visible posts and whether a load-more action is allowed. |
+| Branding | Approve card style, spacing, captions, dates, and the link back to Facebook. |
+| Empty and error state | Approve what visitors see when Curator.io is unavailable or has no approved posts. |
+| Privacy and tracking | Review any third-party cookies, scripts, analytics, or consent requirements introduced by the embed. |
+
+### Implementation checklist
+
+- [ ] Confirm the correct Facebook Page in Curator.io.
+- [ ] Configure moderation and approval rules.
+- [ ] Create the approved Curator.io feed.
+- [ ] Decide whether the embed code or feed identifier belongs in Sanity, environment configuration, or a controlled website setting.
+- [ ] Add a reusable social-feed component to the storefront.
+- [ ] Place the feed in the approved homepage section.
+- [ ] Preserve the current design, spacing, animations, and responsive behavior.
+- [ ] Add loading, empty, and error states.
+- [ ] Ensure the page remains usable when the third-party script is blocked.
+- [ ] Confirm that the feed does not delay critical storefront content.
+- [ ] Test approved Facebook image and video posts.
+- [ ] Test desktop, tablet, and mobile layouts.
+- [ ] Review accessibility for links, captions, focus order, and media labels.
+- [ ] Review privacy and cookie-consent impact.
+- [ ] Record the Curator.io owner account, handler, password custodian, MFA custodian, subscription, and renewal details in the credentials inventory.
+- [ ] Capture screenshots and a synchronization video.
+
+<Frame caption="Reserved evidence: Curator.io feed on desktop">
+  ![Reserved screenshot showing the Curator.io Facebook feed on the desktop homepage](/images/placeholders/screenshot-reserved.svg)
+</Frame>
+
+<Frame caption="Reserved evidence: Curator.io feed on mobile">
+  ![Reserved screenshot showing the Curator.io Facebook feed on the mobile homepage](/images/placeholders/screenshot-reserved.svg)
+</Frame>
+
+## P2 — Clarify content and platform ownership
+
+| Work item | Why it matters | Recommended next action |
+| --- | --- | --- |
+| Decide Collection Hero ownership | The Sanity schema and query exist, but collection routes currently use Shopify content | Either connect Sanity to the routes or retire the unused schema |
+| Decide Rider Story placeholder policy | Homepage and detail routes can still display local placeholder stories | Approve real content migration or hide placeholders until publication |
+| Decide First Gear coffee-menu ownership | Active routes use Strapi-named fetchers that currently fall back to local content | Choose local data, Sanity, or another approved CMS source |
+| Remove misleading Strapi and Payload names | Legacy naming makes the live data model difficult to understand | Inventory active imports and rename or retire them after the migration boundary is approved |
+| Align checkout tests with hosted Shopify checkout | Legacy Stripe and COD tests do not represent the current customer journey | Replace them with cart-to-hosted-checkout assertions |
+| Verify Upstash production behavior | Fail-open behavior can hide configuration or service outages | Confirm caching, invalidation, rate limiting, and alerting in the real environment |
+
+## P2 — Complete business and operations documentation
+
+- [ ] Finish the live Shopify, CMS, GitHub, and product CSV handoff checks.
+- [ ] Confirm a backup administrator for every critical platform.
+- [ ] Document Vercel access and emergency rollback.
+- [ ] Complete the Maya and POS hardware quotation records.
+- [ ] Build daily, weekly, and monthly Operations procedures.
+- [ ] Document account offboarding and device removal.
+- [ ] Add Curator.io to the Account Credentials Inventory after the company account is confirmed.
+
+## P3 — Capture management evidence
+
+Add approved screenshots and short videos for:
+
+- Homepage CMS sections
+- Sanity Visual Editing
+- Marketing placements
+- Cal.com booking
+- Lenis and overlay behavior
+- About CMS sections
+- Services CMS sections
+- Singleton restrictions
+- Curator.io Facebook synchronization
+- Management access and handoff
+
+<Warning>
+  Hide passwords, tokens, customer records, order information, private dashboard identifiers, browser account details, and unapproved content before adding any image or video to Mintlify.
+</Warning>
+
+## Current completion rule
+
+A task can move out of **Left to Do** only when the implementation is committed, the intended content or configuration exists, the visible behavior is verified, and the required evidence or ownership record is available.

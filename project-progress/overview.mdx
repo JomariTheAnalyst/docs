@@ -1,0 +1,97 @@
+---
+title: "Progress Overview"
+description: "Management summary of completed work, current risks, verification status, and the next priorities for the SixthGear website."
+icon: "gauge"
+mode: "wide"
+sidebarTitle: "Overview"
+---
+
+Use this page for a quick management view of what has been completed, what still needs proof, and which work should happen next.
+
+<Info>
+  **Current stage:** Active development and verification. The storefront builds successfully and contains substantial Shopify, Sanity CMS, booking, marketing, and animation work. Several important changes still need to be committed, browser-tested, and verified in the live services.
+</Info>
+
+## Current project position
+
+| Area | Current position | Management meaning |
+| --- | --- | --- |
+| Shopify commerce | Implemented in the storefront | Shopify remains the source for products, collections, carts, customer accounts, orders, and hosted checkout. |
+| Homepage CMS | Implemented, awaiting browser and content verification | Most editorial homepage sections have Sanity schemas, queries, and storefront consumers. |
+| About page CMS | Implemented but uncommitted | Automated checks pass, but the work must be reviewed, committed, and tested before deployment. |
+| Services page CMS | Implemented but uncommitted | Independent CMS controls exist, but the work is not yet deployable. |
+| Sanity Visual Editing | Foundation implemented; live workflow unverified | Draft Mode, Presentation, editing markers, and live configuration exist. A real editing session still needs to be recorded. |
+| Cal.com booking | Implemented, awaiting desktop and mobile verification | Booking entry points open the Cal.com modal, but failure handling and final responsive behavior still need testing. |
+| Social media feed | Planned | Curator.io will be used to display approved Facebook posts on the website. |
+| Browser testing | Not reliably verified | The stored Playwright run failed because Chromium was missing, not because the storefront was proven broken. |
+| Continuous integration | Blocked | GitHub Actions still uses `npm ci` even though pnpm is now the project package manager. |
+| Vercel ownership | Not verified | The repository shows Vercel intent, but not the production project owner, production branch, domains, or rollback authority. |
+| Management access | Ready for live verification | Shopify, CMS, source code, product CSV, and credentials handoff guides are available. |
+
+## Validation completed
+
+| Check | Result |
+| --- | --- |
+| Unit tests | 76 passed, 0 failed |
+| TypeScript | Passed |
+| Production build | Passed; 47 static pages generated |
+| Sanity schema | Passed; 0 errors and 0 warnings |
+| Browser tests | Not verified because the stored run lacked a Chromium executable |
+| Sanity published content | Not verified during the audit because authenticated Studio access was unavailable |
+| Production deployment | Not verified |
+
+## What has changed so far
+
+<CardGroup cols={2}>
+  <Card title="Homepage CMS expanded" icon="panels-top-left" href="/project-progress/latest-changes#homepage-content-management-expanded">
+    Most homepage editorial sections now have a Sanity-to-storefront path with fallback protection.
+  </Card>
+
+  <Card title="Visual Editing foundation" icon="mouse-pointer-click" href="/project-progress/latest-changes#sanity-visual-editing-foundation-added">
+    Draft Mode, Presentation, live fetching, and edit targeting have been implemented.
+  </Card>
+
+  <Card title="Popup service booking" icon="calendar-days" href="/project-progress/latest-changes#popup-service-booking-introduced">
+    Cal.com booking is connected to the main website entry points.
+  </Card>
+
+  <Card title="Marketing placements" icon="megaphone" href="/project-progress/latest-changes#marketing-content-connected">
+    Announcements, popups, promotional banners, and featured collections are supported.
+  </Card>
+
+  <Card title="About and Services repairs" icon="blocks" href="/project-progress/latest-changes#about-and-services-cms-repairs-prepared">
+    Independent CMS section controls are prepared but remain uncommitted.
+  </Card>
+
+  <Card title="Management handoff" icon="clipboard-check" href="/accounts-and-access/executive-handoff">
+    Access, source code, product export, and credentials documentation is available for review.
+  </Card>
+</CardGroup>
+
+## Immediate priorities
+
+1. Review and commit the About and Services CMS repairs.
+2. Repair GitHub Actions so the project uses pnpm in CI.
+3. Resolve the duplicate Homepage documents safely in Sanity.
+4. Confirm Vercel production ownership and rollback access.
+5. Run dependable desktop and mobile browser tests.
+6. Verify Sanity live preview and Visual Editing in a real Studio session.
+7. Implement and verify the Curator.io Facebook feed.
+8. Capture screenshots and short videos proving each visible change.
+
+## Management decisions still needed
+
+| Decision | Why management input is needed |
+| --- | --- |
+| Canonical Homepage content | The approved business content must be selected before duplicate migration. |
+| About and Services content | Copy, media, toggles, and publication order require approval. |
+| Individual service ownership | Decide whether service pages become fully Sanity-owned or continue using local fallback data. |
+| Rider Story placeholders | Decide whether placeholders remain visible until real stories are published. |
+| Collection Hero ownership | Choose Shopify or Sanity as the content owner. |
+| Curator.io display rules | Approve which Facebook Page feed is shown, whether posts require moderation, and where the feed appears. |
+| Cal.com failure behavior | Choose direct navigation, a visible retry, or contact fallback if the embed fails. |
+| Production ownership | Confirm who controls Vercel deployment, rollback, domains, and environment settings. |
+
+## Evidence standard
+
+A feature is only marked **completed and verified** after its code, content, and visible behavior have been checked. Screenshots and videos will be added to [Latest Changes](/project-progress/latest-changes) as evidence becomes available.
