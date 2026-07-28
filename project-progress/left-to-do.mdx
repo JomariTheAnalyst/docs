@@ -6,127 +6,196 @@ mode: "wide"
 sidebarTitle: "Left to Do"
 ---
 
-This page shows the remaining work in management order. It separates urgent risks from later improvements so the team can focus on what protects deployment, content ownership, and business continuity first.
+This page shows the remaining work in the order management wants it completed. The goal is to finish the website content, connect the remaining business tools, and complete only the testing and setup needed for a safe release.
 
-## Priority guide
+## 1. Replace placeholder and sample images with real SixthGear images
 
-| Priority | Meaning |
+**Status:** To do
+
+Several website sections and documentation pages still use placeholder, stock, or temporary images. These should be replaced with approved SixthGear photos so the website reflects the real business, team, products, services, store, and customer experience.
+
+### Images to prepare
+
+- Store exterior and interior
+- Workshop and service area
+- Team members
+- Products and motorcycle accessories
+- Service process
+- Customer and rider stories
+- Coffee and lounge area
+- Brands supported by SixthGear
+- Booking and service-related images
+- Approved marketing and promotional images
+
+### Completion checklist
+
+- [ ] Create a list of every placeholder or sample image still shown on the website.
+- [ ] Assign the correct real image for each section.
+- [ ] Confirm that every image is approved for website use.
+- [ ] Prepare desktop and mobile image sizes.
+- [ ] Add clear alternative text for accessibility.
+- [ ] Compress images so pages remain fast.
+- [ ] Replace the placeholders in SixthGear CMS or the website.
+- [ ] Check image quality, cropping, and loading on desktop and mobile.
+
+<Frame caption="Reserved evidence: Real SixthGear images on the website">
+  ![Reserved screenshot showing the final approved SixthGear website images](/images/placeholders/screenshot-reserved.svg)
+</Frame>
+
+## 2. Complete the Curator.io Facebook feed
+
+**Status:** To do
+
+Management wants approved SixthGear Facebook posts to appear on the website through Curator.io. This will keep the website connected to current social activity without manually copying every post.
+
+### Decisions to confirm
+
+| Decision | What needs to be agreed |
 | --- | --- |
-| P0 | Must be resolved before safe deployment, ownership, or production operation |
-| P1 | Important implementation or verification work needed for reliable use |
-| P2 | Operational cleanup or improvement after core risks are controlled |
-| P3 | Evidence, presentation, or later enhancement |
+| Facebook source | Confirm the official SixthGear Facebook Page used in Curator.io. |
+| Page mentions | Keep Page Mentions excluded unless management specifically wants them. |
+| Approval process | Use manual approval first so only suitable posts appear on the website. |
+| Website location | Confirm where the social feed appears on the homepage. |
+| Post types | Confirm whether images, videos, Reels, and text posts are included. |
+| Number of posts | Confirm how many posts visitors see before using a load-more option. |
+| Appearance | Match the existing website design and spacing. |
+| Error message | Decide what visitors see when Curator.io is temporarily unavailable. |
 
-## P0 — Resolve before the next production release
+### Completion checklist
 
-| Work item | Why it matters | Current status | Next action | Evidence required |
-| --- | --- | --- | --- | --- |
-| Commit the About and Services repairs | Uncommitted work cannot be reliably reviewed, deployed, or rolled back | Implemented but uncommitted | Separate implementation files from audit files, review the diff, then create a clean commit | Clean Git status, commit hash, reviewed diff |
-| Repair GitHub Actions package-manager usage | CI currently calls `npm ci` even though the repository intentionally uses pnpm and has no `package-lock.json` | Blocked | Configure pnpm in the workflow and install with the frozen pnpm lockfile | Successful pull-request CI run |
-| Resolve duplicate Homepage documents | Staff may edit the wrong document and approved content may be split across records | Blocked | Compare the records in Sanity, approve the canonical content, migrate deliberately, then remove the duplicate | Before-and-after content comparison and Sanity history |
-| Confirm Vercel production ownership | Management needs deployment, rollback, domain, and environment control | Not verified | Record the Vercel team, project, production branch, domains, environment scopes, and rollback owner | Redacted Vercel screenshots and completed ownership record |
-
-## P1 — Verify and complete the main website workflows
-
-| Work item | Why it matters | Current status | Next action | Evidence required |
-| --- | --- | --- | --- | --- |
-| Run reliable desktop and mobile browser tests | Most visible changes do not yet have trustworthy runtime proof | Planned | Install the approved Chromium runtime and run the current smoke tests | Passing report, screenshots, and short recordings |
-| Verify Sanity live preview | Editors need to know that draft changes update correctly in Presentation | Awaiting verification | Edit the Hero in a real Studio session and observe the embedded preview | One uninterrupted screen recording |
-| Publish and verify About content | Passing code does not prove approved content exists in the live CMS | Planned | Review all seven sections, complete approved fields, publish, and compare the storefront | CMS and storefront captures |
-| Publish and verify Services content | The new section controls still need real content and runtime proof | Planned | Review all seven sections, publish approved content, and test every section | CMS and storefront captures |
-| Create and verify individual service documents | Service pages still rely on local fallback content | Partially completed | Create one pilot service document, verify its slug page, then migrate the remaining services | Studio, desktop, mobile, and metadata proof |
-| Validate Cal.com failure behavior | A failed embed after JavaScript starts may result in no visible action | Partially completed | Simulate blocked-script or offline behavior and implement the approved fallback | Failure-mode recording |
-| Expand Sanity webhook verification | Published updates must refresh Homepage, About, Services, service slugs, Rider Stories, and marketing routes | Partially completed | Trigger authenticated webhook deliveries and record update times | Webhook logs and timed storefront proof |
-| Verify singleton restrictions in Studio | Automated tests do not prove that staff see the intended Create and action menus | Awaiting verification | Open Studio and test creation and duplication restrictions | Screenshots and screen recording |
-
-## P1 — Add the Curator.io Facebook feed
-
-**Goal:** Display approved SixthGear Facebook posts on the website using Curator.io so current social content can appear without being manually copied into the storefront.
-
-<Info>
-  Curator.io is the selected social media aggregator. This task should synchronize approved posts only; it should not expose private Facebook activity or make Facebook the source of product, pricing, or official policy information.
-</Info>
-
-### Decisions required before implementation
-
-| Decision | What management must approve |
-| --- | --- |
-| Facebook source | Confirm the exact SixthGear Facebook Page source in Curator.io. Page mentions should not be mixed in unless intentionally approved. |
-| Moderation | Choose automatic publishing or manual approval inside Curator.io. Manual approval is safer for the first release. |
-| Website placement | Choose the homepage location and whether a separate Social Feed page is also needed. |
-| Content types | Decide whether to show images, videos, Reels, text posts, or only selected formats supported by the feed. |
-| Feed size | Approve the number of visible posts and whether a load-more action is allowed. |
-| Branding | Approve card style, spacing, captions, dates, and the link back to Facebook. |
-| Empty and error state | Approve what visitors see when Curator.io is unavailable or has no approved posts. |
-| Privacy and tracking | Review any third-party cookies, scripts, analytics, or consent requirements introduced by the embed. |
-
-### Implementation checklist
-
-- [ ] Confirm the correct Facebook Page in Curator.io.
-- [ ] Configure moderation and approval rules.
-- [ ] Create the approved Curator.io feed.
-- [ ] Decide whether the embed code or feed identifier belongs in Sanity, environment configuration, or a controlled website setting.
-- [ ] Add a reusable social-feed component to the storefront.
-- [ ] Place the feed in the approved homepage section.
-- [ ] Preserve the current design, spacing, animations, and responsive behavior.
-- [ ] Add loading, empty, and error states.
-- [ ] Ensure the page remains usable when the third-party script is blocked.
-- [ ] Confirm that the feed does not delay critical storefront content.
-- [ ] Test approved Facebook image and video posts.
+- [ ] Confirm the correct Facebook Page source.
+- [ ] Set the Curator.io approval and moderation rules.
+- [ ] Create the final feed.
+- [ ] Add the feed to the approved homepage location.
+- [ ] Match the current website design.
+- [ ] Add a loading message and a simple unavailable state.
+- [ ] Make sure the rest of the page still works if Curator.io does not load.
+- [ ] Test image, video, and text posts.
 - [ ] Test desktop, tablet, and mobile layouts.
-- [ ] Review accessibility for links, captions, focus order, and media labels.
-- [ ] Review privacy and cookie-consent impact.
-- [ ] Record the Curator.io owner account, handler, password custodian, MFA custodian, subscription, and renewal details in the credentials inventory.
-- [ ] Capture screenshots and a synchronization video.
+- [ ] Add Curator.io account ownership, password responsibility, MFA responsibility, and subscription details to the Credentials Inventory.
+- [ ] Capture final screenshots and a short synchronization video.
 
 <Frame caption="Reserved evidence: Curator.io feed on desktop">
-  ![Reserved screenshot showing the Curator.io Facebook feed on the desktop homepage](/images/placeholders/screenshot-reserved.svg)
+  ![Reserved screenshot showing the Curator.io Facebook feed on desktop](/images/placeholders/screenshot-reserved.svg)
 </Frame>
 
 <Frame caption="Reserved evidence: Curator.io feed on mobile">
-  ![Reserved screenshot showing the Curator.io Facebook feed on the mobile homepage](/images/placeholders/screenshot-reserved.svg)
+  ![Reserved screenshot showing the Curator.io Facebook feed on mobile](/images/placeholders/screenshot-reserved.svg)
 </Frame>
 
-## P2 — Clarify content and platform ownership
+## 3. Move the remaining homepage content into SixthGear CMS
 
-| Work item | Why it matters | Recommended next action |
-| --- | --- | --- |
-| Decide Collection Hero ownership | The Sanity schema and query exist, but collection routes currently use Shopify content | Either connect Sanity to the routes or retire the unused schema |
-| Decide Rider Story placeholder policy | Homepage and detail routes can still display local placeholder stories | Approve real content migration or hide placeholders until publication |
-| Decide First Gear coffee-menu ownership | Active routes use Strapi-named fetchers that currently fall back to local content | Choose local data, Sanity, or another approved CMS source |
-| Remove misleading Strapi and Payload names | Legacy naming makes the live data model difficult to understand | Inventory active imports and rename or retire them after the migration boundary is approved |
-| Align checkout tests with hosted Shopify checkout | Legacy Stripe and COD tests do not represent the current customer journey | Replace them with cart-to-hosted-checkout assertions |
-| Verify Upstash production behavior | Fail-open behavior can hide configuration or service outages | Confirm caching, invalidation, rate limiting, and alerting in the real environment |
+**Status:** Partially complete
 
-## P2 — Complete business and operations documentation
+Most homepage sections are connected to SixthGear CMS, but some can still display built-in website content when the CMS information is missing or incomplete.
 
-- [ ] Finish the live Shopify, CMS, GitHub, and product CSV handoff checks.
-- [ ] Confirm a backup administrator for every critical platform.
-- [ ] Document Vercel access and emergency rollback.
-- [ ] Complete the Maya and POS hardware quotation records.
-- [ ] Build daily, weekly, and monthly Operations procedures.
-- [ ] Document account offboarding and device removal.
-- [ ] Add Curator.io to the Account Credentials Inventory after the company account is confirmed.
+The goal is to place all approved homepage text, images, lists, links, and promotional content into SixthGear CMS so staff do not need to rely on hidden backup content inside the website.
 
-## P3 — Capture management evidence
+### Sections to review
 
-Add approved screenshots and short videos for:
+- Hero
+- About Us
+- Product Categories
+- Services
+- Satisfied Customers
+- Franchise
+- Client Testimonials
+- Rider Stories
+- Store Location
+- CTA Banner
+- Coffee Showcase
+- Marquee
+- Brands We Support
+- Our Team
 
-- Homepage CMS sections
-- Sanity Visual Editing
-- Marketing placements
-- Cal.com booking
-- Lenis and overlay behavior
-- About CMS sections
-- Services CMS sections
-- Singleton restrictions
-- Curator.io Facebook synchronization
-- Management access and handoff
+### Completion checklist
+
+- [ ] Review every homepage section in SixthGear CMS.
+- [ ] Copy the approved website content into the correct CMS fields.
+- [ ] Upload the approved real images.
+- [ ] Confirm buttons and links.
+- [ ] Confirm the order of lists, cards, and testimonials.
+- [ ] Publish each completed section.
+- [ ] Check the desktop and mobile website.
+- [ ] Remove or reduce the use of hidden backup content after the CMS content is confirmed.
+- [ ] Record which system owns each type of content.
 
 <Warning>
-  Hide passwords, tokens, customer records, order information, private dashboard identifiers, browser account details, and unapproved content before adding any image or video to Mintlify.
+  Backup content should only remain where it is needed for safe error handling. It should not be the normal source for approved homepage content.
 </Warning>
 
-## Current completion rule
+<Frame caption="Reserved evidence: Complete homepage content in SixthGear CMS">
+  ![Reserved screenshot showing the completed homepage content inside SixthGear CMS](/images/placeholders/screenshot-reserved.svg)
+</Frame>
 
-A task can move out of **Left to Do** only when the implementation is committed, the intended content or configuration exists, the visible behavior is verified, and the required evidence or ownership record is available.
+## 4. Integrate the approved payment provider
+
+**Status:** Waiting for quotation, pilot, and final approval
+
+Maya is only conditionally recommended. Management has approved quotation and pilot work only. A full online or physical-store rollout is not yet approved.
+
+The next step is to obtain the final written quotation, compare the total cost, and run the controlled payment pilot described in the [Payment Providers](/pos-decision/payments-philippines) and [Pilot & Approval](/pos-decision/pilot-decision-record) pages.
+
+### Completion checklist
+
+- [ ] Receive the written Maya quotation.
+- [ ] Confirm online card, wallet, Maya, GCash, and QR Ph rates.
+- [ ] Confirm VAT treatment and settlement charges.
+- [ ] Confirm terminal rental, deposit, installation, and support terms.
+- [ ] Compare the contracted Maya cost with PayMongo and Xendit.
+- [ ] Confirm management approval for the pilot budget.
+- [ ] Configure the approved online test setup.
+- [ ] Configure one physical-store pilot counter.
+- [ ] Complete card and QR test transactions.
+- [ ] Complete refund testing.
+- [ ] Confirm settlement within the quoted schedule.
+- [ ] Confirm that Finance can identify gross sales, fees, VAT, and net settlement.
+- [ ] Achieve ₱0.00 unexplained reconciliation variance.
+- [ ] Record the final management decision before rollout.
+
+<Frame caption="Reserved evidence: Payment-provider pilot">
+  ![Reserved screenshot showing the approved online or physical-store payment pilot](/images/placeholders/screenshot-reserved.svg)
+</Frame>
+
+## 5. Complete the minimum testing and release checks
+
+**Status:** To do
+
+Only the checks needed to protect the customer experience, content updates, payments, and management access should be completed before release.
+
+### Website checks
+
+- [ ] Open the homepage, About page, Services page, contact page, and main service pages.
+- [ ] Check desktop and mobile layouts.
+- [ ] Confirm menus, buttons, links, forms, cart, and checkout handoff.
+- [ ] Confirm Cal.com booking opens and closes correctly.
+- [ ] Confirm Curator.io does not break the page when unavailable.
+- [ ] Confirm the final real images load correctly.
+
+### SixthGear CMS checks
+
+- [ ] Update and publish one homepage field.
+- [ ] Update and publish one About section.
+- [ ] Update and publish one Services section.
+- [ ] Confirm the correct website page updates.
+- [ ] Confirm staff cannot accidentally create duplicate main documents.
+
+### Payment checks
+
+- [ ] Complete the approved online payment tests.
+- [ ] Complete the approved physical-store card and QR tests.
+- [ ] Complete the refund test.
+- [ ] Confirm Finance reconciliation and settlement.
+
+### Ownership and handoff checks
+
+- [ ] Confirm management access to Shopify.
+- [ ] Confirm management access to SixthGear CMS.
+- [ ] Confirm access to the GitHub source code.
+- [ ] Confirm access to the Shopify product CSV.
+- [ ] Confirm Vercel ownership and rollback access.
+- [ ] Confirm a backup administrator for every critical system.
+
+## Completion rule
+
+A task can be marked complete only when the approved content or integration is available, the result is checked on the website, the responsible person is known, and management has received the required evidence.
