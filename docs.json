@@ -63,42 +63,28 @@
       {
         "tab": "Shopify",
         "icon": "shopping-bag",
-        "groups": [
+        "pages": [
           {
-            "group": "Shopify administration",
-            "root": "shopify/overview",
+            "group": "Products",
+            "root": "shopify/products/overview",
             "pages": [
-              "shopify/access/overview",
-              {
-                "group": "Products",
-                "root": "shopify/products/overview",
-                "pages": [
-                  "shopify/export-products",
-                  "shopify/products/add-product",
-                  "shopify/products/edit-product",
-                  "shopify/products/product-media",
-                  "shopify/products/variants-inventory",
-                  "shopify/products/organization-publishing",
-                  "shopify/products/product-seo",
-                  "shopify/products/product-metafields",
-                  "shopify/products/bulk-management",
-                  "shopify/products/troubleshooting"
-                ]
-              },
-              "shopify/add-edit-products",
-              "shopify/variants-inventory",
-              "shopify/collections",
-              "shopify/product-tags",
-              "shopify/metafields",
-              "shopify/bulk-import",
-              "shopify/discounts-campaigns",
-              "shopify/apps"
+              "shopify/export-products",
+              "shopify/products/add-product",
+              "shopify/products/edit-product",
+              "shopify/products/product-media",
+              "shopify/products/variants-inventory",
+              "shopify/products/organization-publishing",
+              "shopify/products/product-seo",
+              "shopify/products/product-metafields",
+              "shopify/products/bulk-management",
+              "shopify/products/troubleshooting"
             ]
           },
           {
             "group": "Shopify vs Loyverse",
-            "root": "shopify/shopify-vs-loyverse/overview",
+            "hidden": true,
             "expanded": false,
+            "root": "shopify/shopify-vs-loyverse/overview",
             "pages": [
               "shopify/shopify-vs-loyverse/sixthgear-requirements",
               "shopify/shopify-vs-loyverse/platform-capabilities",
@@ -107,8 +93,21 @@
               "shopify/shopify-vs-loyverse/philippines-payments-and-compliance",
               "shopify/shopify-vs-loyverse/hardware-recommendations",
               "shopify/shopify-vs-loyverse/final-recommendation"
-            ],
-            "hidden": true
+            ]
+          },
+          {
+            "group": "Shopify administration",
+            "root": "shopify/overview",
+            "pages": [
+              "shopify/access/overview",
+              "shopify/variants-inventory",
+              "shopify/collections",
+              "shopify/product-tags",
+              "shopify/metafields",
+              "shopify/bulk-import",
+              "shopify/discounts-campaigns",
+              "shopify/apps"
+            ]
           }
         ]
       },
