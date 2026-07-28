@@ -6,32 +6,41 @@ mode: "wide"
 sidebarTitle: "Payments"
 ---
 
-This page records the payment-provider comparison used for the SixthGear POS and online-payment decision.
+This page records the payment-provider comparison used for the SixthGear online checkout and physical-store payment decision.
 
-<Info>
-  **Selected direction:** proceed with Maya for the written quotation and one-counter Shopify POS pilot. PayMongo, Xendit, and eGovPay remain on this page for comparison only, in case management changes the provider later.
-</Info>
+## Management Decision Snapshot
+
+<Warning>
+  **Maya is only conditionally recommended.** Management approval is limited to obtaining a written quotation and running a controlled online and physical-store pilot. A full rollout is **not approved**, and Maya's price advantage has **not been proven** because its final contracted rates, VAT treatment, QR Ph pricing, settlement charges, and other commercial terms remain unconfirmed.
+</Warning>
+
+| Decision area | Current management position |
+| --- | --- |
+| Online Shopify payments | Request a Maya Checkout quotation and compare the total contracted cost against PayMongo and Xendit before changing the live gateway. |
+| Physical-store payments | Pilot Maya Terminal at one counter as an external terminal recorded through approved Shopify POS custom payment types. |
+| One provider for both | Potentially simpler vendor management, support, settlement reporting, and escalation, but only if both channels meet cost, reliability, and reconciliation requirements. |
+| Full rollout | Not approved. Requires a signed quotation, successful pilot, finance reconciliation, and management sign-off. |
 
 ## Rate status and limits
 
-**Public rates verified:** July 27, 2026
+**Public rates verified:** July 28, 2026
 
-The tables below use each provider's current public pricing pages. They are not SixthGear's final contracted rates.
+The tables below use public provider pages and planning assumptions. They are not SixthGear's contracted rates.
 
 - A merchant quotation can differ because of payment volume, merchant category, risk review, taxes, settlement terms, and negotiated discounts.
-- A percentage charge is calculated against the payment amount unless the provider states a fixed or minimum fee.
-- PayMongo publishes its rates as exclusive of VAT.
-- Xendit's calculator displays VAT as a separate charge.
-- Maya's public pricing page does not clearly state whether every listed rack rate includes or excludes VAT. Confirm this in writing.
-- eGovPay does not publish a retail merchant rate table suitable for this comparison.
+- PayMongo publishes its standard rates as exclusive of VAT.
+- Xendit's pricing calculator displays VAT as a separate charge.
+- Maya's public pages do not clearly establish the VAT treatment of every rack rate.
+- Shopify may charge its own third-party transaction fee in addition to the payment provider's fee.
+- Any tax added by Shopify to its own billing invoice is not included in the examples below and must be verified from the actual Shopify bill.
 
 <Warning>
-  Do not copy these public rates into a budget or approval record as final charges. Attach the provider's written quotation and record its issue date, validity period, VAT treatment, settlement fees, refund fees, and chargeback fees.
+  Treat every calculation below as an **example only**. Do not use it as SixthGear's approved budget, actual Shopify plan, actual sales forecast, or provider quotation.
 </Warning>
 
 ## Shopify fee added to online gateway payments
 
-When SixthGear uses a third-party payment provider for online Shopify checkout, Shopify can charge a separate third-party transaction fee in addition to the provider's processing fee.
+When a third-party provider processes an online Shopify payment, Shopify can charge a separate third-party transaction fee.
 
 | Shopify plan | Shopify third-party transaction fee |
 | --- | --: |
@@ -40,16 +49,58 @@ When SixthGear uses a third-party payment provider for online Shopify checkout, 
 | Advanced | 0.60% |
 | Plus | 0.20%, subject to the current Plus contract |
 
-Shopify states that this fee does not apply to Shopify POS orders or approved manual payment methods. A Maya Terminal transaction recorded through a Shopify POS custom payment type still incurs Maya's merchant charge, but it is not an online gateway transaction.
+The examples on this page use **Shopify Basic at 2.00% only as a planning assumption**. This does not confirm SixthGear's actual plan.
+
+Shopify states that third-party transaction fees apply to third-party and alternate online gateways. Shopify POS transactions and approved manual payment methods are treated differently. A payment processed separately through Maya Terminal and recorded as a Shopify POS custom payment type still incurs Maya's merchant charge, but it is not an online gateway payment.
+
+## Example: one ₱5,000 online card payment
+
+**Assumptions:** local card, ₱5,000 order, Shopify Basic third-party fee of 2%, and the published provider rates shown on this page.
+
+| Provider | Provider fee before VAT | Shopify Basic fee | VAT treatment used in example | Example total payment cost | Effective cost |
+| --- | --: | --: | --- | --: | --: |
+| Maya Checkout | ₱185.00 | ₱100.00 | Public VAT treatment is unclear; no provider VAT added | **₱285.00 plus any applicable provider VAT** | **5.70% plus VAT effect** |
+| PayMongo | ₱169.64 | ₱100.00 | 12% VAT applied to the published provider fee: ₱20.36 | **₱290.00** | **5.80%** |
+| Xendit | ₱170.00 | ₱100.00 | 12% VAT applied to the published provider fee: ₱20.40 | **₱290.40** | **5.81%** |
+
+<Info>
+  Maya's row is not directly comparable until Maya confirms whether VAT is included in or added to the quoted fee. Xendit's row uses the current public calculator and excludes the additional announced fees taking effect from September, October, and December 2026.
+</Info>
+
+## Example: ₱1,000,000 monthly online sales
+
+### Example assumptions
+
+| Assumption | Example value |
+| --- | --: |
+| Monthly online sales | ₱1,000,000 |
+| Number of orders | 200 |
+| Average order value | ₱5,000 |
+| Card share | 50%: ₱500,000 and 100 orders |
+| GCash share | 30%: ₱300,000 and 60 orders |
+| Maya share | 10%: ₱100,000 and 20 orders |
+| QR Ph share | 10%: ₱100,000 and 20 orders |
+| Shopify planning assumption | Basic third-party fee of 2%: ₱20,000 |
+
+### Example monthly comparison
+
+| Provider | Card fee | GCash fee | Maya fee | QR Ph fee | Provider subtotal | Provider VAT used | Shopify fee | Example total | Effective cost |
+| --- | --: | --: | --: | --: | --: | --: | --: | --: | --: |
+| Maya Checkout | ₱18,500.00 | ₱6,000.00 | ₱1,500.00 | ₱1,500.00 | ₱27,500.00 | Not added; public treatment unclear | ₱20,000.00 | **₱47,500.00 plus any applicable provider VAT** | **4.75% plus VAT effect** |
+| PayMongo | ₱16,964.00 | ₱6,690.00 | ₱1,790.00 | ₱1,340.00 | ₱26,784.00 | ₱3,214.08 | ₱20,000.00 | **₱49,998.08** | **5.00%** |
+| Xendit | ₱17,000.00 | ₱6,900.00 | ₱1,800.00 | ₱1,400.00 | ₱27,100.00 | ₱3,252.00 | ₱20,000.00 | **₱50,352.00** | **5.04%** |
+
+<Warning>
+  The Maya QR Ph component uses the 1.50% figure shown on Maya's pricing and Checkout pages only for this example. Maya's other official QR Ph content shows conflicting rates. The Xendit example excludes its revised Philippine payment-method pricing, processing fees, failed-attempt charges, refund charges, dispute fees, monthly minimum, and Shopify Partner Fee once those become effective.
+</Warning>
 
 ## Provider summary
 
-| Provider | Cards | E-wallets and QR | Bank methods | In-store option | SixthGear status |
+| Provider | Online cards | E-wallets and QR | Bank methods | In-store option | SixthGear status |
 | --- | --- | --- | --- | --- | --- |
-| **Maya** | Yes | Maya, GCash, QR Ph, ShopeePay, WeChat Pay | Public Checkout pricing does not list a standard online-bank rate | Maya Terminal and Terminal Lite | **Selected for quotation and pilot** |
-| **PayMongo** | Yes | GCash, Maya, GrabPay, ShopeePay, QR Ph | Direct online banking | QR Ph | Comparison only |
-| **Xendit** | Yes | GCash, Maya, GrabPay, ShopeePay, QR Ph | Direct debit and other channels | QR and over-the-counter channels | Comparison only; pricing changes announced |
-| **eGovPay** | Advertises cards | Advertises GCash, Maya, ShopeePay, and GrabPay | Advertises online bank transfers | Government collection gateway | Comparison only; not selected for private retail |
+| **Maya** | Yes | Maya, GCash, QR Ph, ShopeePay, WeChat Pay | Public Checkout pricing does not list a standard online-bank rate | Maya Terminal and Terminal Lite | **Quotation and pilot only** |
+| **PayMongo** | Yes | GCash, Maya, GrabPay, ShopeePay, QR Ph | Direct online banking | QR Ph | Online comparison option |
+| **Xendit** | Yes | GCash, Maya, GrabPay, ShopeePay, QR Ph | Direct debit and other channels | QR and over-the-counter channels | Comparison only; major pricing changes announced |
 
 ## Published per-transaction charges
 
@@ -62,7 +113,7 @@ Shopify states that this fee does not apply to Shopify POS orders or approved ma
     | Visa and Mastercard | 3.50% MDR \+ ₱10 | Online Checkout rack rate |
     | JCB and American Express | 3.50% MDR \+ ₱10 | Online Checkout rack rate |
     | Maya | 1.50% | Listed as Maya on the Checkout page |
-    | QR Ph | 1.50% | Listed on Maya's main Checkout and pricing pages |
+    | QR Ph | 1.50% | Listed on Maya's main pricing and Checkout pages |
     | GCash | 2.00% | Online Checkout rack rate |
     | WeChat Pay | 1.75% | Online Checkout rack rate |
     | ShopeePay | 1.85% | Online Checkout rack rate |
@@ -82,12 +133,12 @@ Shopify states that this fee does not apply to Shopify POS orders or approved ma
     | ShopeePay | 1.85% MDR |
 
     <Warning>
-      Maya's official pages currently conflict on QR Ph pricing. Its main pricing and Checkout pages show 1.50%, while the QR Ph FAQ states different online and offline percentages. SixthGear must use the QR Ph rate written in Maya's signed commercial proposal, not either public page by itself.
+      **Do not approve Maya QR Ph pricing from the website alone.** Maya's official materials currently show three different figures: **1.25%** for offline QR Ph in its FAQ, **1.50%** on its main pricing, Checkout, Terminal, and static-QR tables, and **1.60%** for online QR Ph in the FAQ. The QR Ph FAQ also contains wording that can be read as applying 1.60% more broadly. The signed SixthGear quotation must state the exact online and in-store QR Ph rate, VAT treatment, and effective date.
     </Warning>
 
-    A Maya article states that Maya Terminal has been offered at **₱949 per month**, but the current pricing table does not present that subscription as a guaranteed SixthGear rate. Request the exact terminal model, rental or subscription charge, deposit, installation fee, replacement terms, and contract period.
+    A Maya article has stated a **₱949 monthly terminal fee**, but the current pricing table does not guarantee that amount for SixthGear. Request the exact terminal model, rental or subscription charge, deposit, installation fee, replacement terms, and contract period.
 
-    **Use for SixthGear:** Maya is the selected provider for the written quotation because it can cover both online Shopify checkout and an external in-store terminal relationship.
+    **Use for SixthGear:** conditionally recommended for quotation and pilot because Maya can potentially support both Shopify Checkout and an external physical-store terminal. This is not approval for rollout.
   </Tab>
   <Tab title="PayMongo" icon="wallet-cards">
     PayMongo states that its standard published rates are **exclusive of VAT**.
@@ -106,12 +157,12 @@ Shopify states that this fee does not apply to Shopify POS orders or approved ma
     | BillEase buy now, pay later | 1.34% |
     | Setup fee | Free |
 
-    **Use for SixthGear:** comparison only. PayMongo remains a practical backup for online checkout when management prioritizes broad Philippine payment coverage and published pay-as-you-go pricing.
+    **Use for SixthGear:** comparison option for online checkout. It remains relevant when management prioritizes broad Philippine payment coverage and clearly published pay-as-you-go pricing.
   </Tab>
   <Tab title="Xendit" icon="arrow-left-right">
-    The following values come from Xendit's Philippine pricing calculator as verified on July 27, 2026. The calculator shows VAT separately.
+    The figures below are the Philippine pricing-calculator snapshot previously verified on July 27, 2026. Xendit's announced policy changes mean these figures must be rechecked before contracting.
 
-    | Payment method | Current published charge per transaction |
+    | Payment method | Published calculator charge per transaction |
     | --- | --: |
     | Local cards | 3.20% \+ ₱10 |
     | Internationally issued cards charged in PHP | 4.20% \+ ₱10 |
@@ -128,46 +179,91 @@ Shopify states that this fee does not apply to Shopify POS orders or approved ma
     | ECPay | 1.50% |
     | BillEase | 1.50% |
 
-    <Warning>
-      Xendit announced revised payment-method fees effective **August 1, 2026** and a separate processing fee effective **October 1, 2026**. Its public pricing table already displays a Philippine processing fee for several channels. Recheck Xendit's current invoice rules and obtain a written quotation before using this table after either effective date.
-    </Warning>
+    ### Announced Xendit pricing changes
 
-    The same policy also announces processing charges on refunds, retention of original payment charges for refunds, a card chargeback-dispute fee, and a maintenance fee for certain legacy API users.
-
-    **Use for SixthGear:** comparison only. Do not recommend Xendit from this table until its post-August and post-October 2026 charges are confirmed in writing.
-  </Tab>
-  <Tab title="eGovPay" icon="landmark">
-    | Area | Public information available |
+    | Effective date | Announced change |
     | --- | --- |
-    | Credit and debit cards | Advertised as supported; no public per-transaction retail rate verified |
-    | E-wallets | GCash, Maya, ShopeePay, and GrabPay are advertised; no public rate table verified |
-    | Online bank transfers | Advertised as supported; no public rate table verified |
-    | Shopify integration | No verified SixthGear-ready Shopify payment-provider integration |
-    | Intended users | Government agencies and government collections |
-    | SixthGear eligibility | Not verified |
+    | **September 1, 2026** | Revised payment-acceptance and payout charges take effect for merchants contracted to Xendit Philippines Inc. |
+    | **October 1, 2026** | A processing fee applies to payment acceptance, payout, and refund attempts. It may also apply to **failed payment attempts**. |
+    | **October 1, 2026** | Refunds incur an additional processing fee, while the original payment-method fee and original processing fee are retained. |
+    | **October 1, 2026** | Card disputes incur a **USD 25 chargeback dispute fee**, regardless of outcome. |
+    | **October 1, 2026** | A **USD 50 monthly minimum fee**, or local-currency equivalent, can apply to dormant accounts or accounts with a monthly invoice below the threshold. |
+    | **October 1, 2026** | A **USD 250 monthly maintenance fee**, or local-currency equivalent, applies to merchants still using specified legacy APIs. |
+    | **December 1, 2026** | Shopify integrations incur a **0.50% Shopify Partner Fee** based on total transaction volume per transaction. |
 
     <Warning>
-      eGovPay describes itself as a secured government payment gateway for agencies. Do not treat it as a normal private-retail alternative unless eGovPay confirms in writing that SixthGear Moto Supply Corp. is eligible, provides a Shopify-compatible integration, and issues a complete commercial rate sheet.
+      Do not use the calculator snapshot as a complete post-September Xendit cost. Obtain a written quotation that combines the revised payment-method charge, VAT, processing fee, refund treatment, dispute fee, minimum-account fee, any legacy-API fee, and the 0.50% Shopify Partner Fee.
     </Warning>
 
-    **Use for SixthGear:** comparison only and not recommended for the current private-retail payment decision.
+    **Use for SixthGear:** comparison only. Xendit's total cost cannot be fairly ranked until all applicable post-September, October, and December charges are confirmed.
   </Tab>
 </Tabs>
 
-## Why Maya is the selected direction
+## Excluded Option: eGovPay
 
-Maya is not selected only because of its public percentage rates. The intended advantage is one commercial relationship for:
+| Area | Public information available |
+| --- | --- |
+| Intended users | Government agencies and government collections |
+| Cards and wallets | Advertised as supported, but no public private-retail rate table was verified |
+| Online bank transfers | Advertised as supported, but no suitable retail commercial rate was verified |
+| Shopify integration | No verified SixthGear-ready Shopify payment-provider integration |
+| SixthGear eligibility | Not verified |
 
-- Maya Checkout on the Shopify website
-- Maya Terminal for card, wallet, and QR payments at the physical counter
-- Merchant settlement and transaction reporting
-- A controlled Shopify POS pilot using external custom payment types
+<Warning>
+  eGovPay is excluded from the primary retail comparison. Do not reconsider it unless eGovPay confirms in writing that SixthGear Moto Supply Corp. is eligible, provides a Shopify-compatible integration, and issues a complete private-retail commercial proposal.
+</Warning>
 
-The final approval still depends on Maya's written commercial proposal and the pilot reconciliation results.
+## Decision by payment channel
+
+### Online Shopify payments
+
+Maya Checkout is approved only for quotation and controlled testing. Before changing the live online gateway, management must compare:
+
+- Provider charge by payment method
+- VAT treatment
+- Shopify third-party transaction fee
+- Plugin or partner fees
+- Refund and dispute costs
+- Failed-attempt charges
+- Settlement schedule and bank-transfer charges
+- Reconciliation reports and support process
+
+PayMongo remains a valid online comparison. Xendit must be recalculated using its effective September, October, and December pricing.
+
+### Physical-store payments
+
+Maya Terminal is approved only for a one-counter pilot. It will operate as an **external payment terminal**, not a Shopify-integrated Philippine card reader.
+
+Staff must complete the terminal authorization before marking the Shopify POS order paid. Shopify will not automatically receive Maya's authorization, settlement, refund, or chargeback details.
+
+### Potential benefit of one provider
+
+Using Maya for both channels could provide:
+
+- One commercial relationship
+- Fewer support and escalation contacts
+- More consistent settlement reporting
+- Easier comparison of online and physical-store fees
+- Potential combined-volume pricing
+
+These are possible operational benefits, not proven savings. A single provider should not be selected if its contracted total cost, availability, support, or reconciliation is weaker than using separate providers.
+
+## Measurable pilot pass criteria
+
+The payment pilot passes only when every required condition below is supported by evidence.
+
+| Pilot measure | Pass condition | Required evidence |
+| --- | --- | --- |
+| Card transactions | 100% of the approved card test cases are authorized for the correct amount, recorded once in Shopify POS, and matched to a provider reference | Shopify orders, terminal records, receipts, and reconciliation sheet |
+| QR transactions | 100% of the approved Maya QR and QR Ph test cases are confirmed through the provider record, not a customer screenshot, and recorded once in Shopify POS | Provider dashboard or terminal confirmation and Shopify order |
+| Refund testing | The approved full-refund test completes correctly; partial-refund behavior is also tested when the contracted service supports it | Original sale, refund reference, Shopify record, and settlement impact |
+| Reconciliation variance | **₱0.00 unexplained variance** between Shopify, provider records, fees, refunds, and the bank settlement | Signed daily reconciliation |
+| Settlement timing | The net settlement reaches the approved bank account within the schedule stated in the written quotation | Provider settlement report and bank credit date |
+| Finance visibility | Finance can identify and reproduce **gross sales, provider fees, VAT, other deductions, and net settlement** for every test batch | Downloadable report, provider invoice, and finance worksheet |
+| Duplicate and missing records | No payment is recorded twice, and no approved transaction is missing from Shopify or provider reporting | Exception report showing zero unresolved items |
+| Operational acceptance | Store Operations and Finance can complete the workflow without relying on undocumented steps | Signed pilot feedback and approval record |
 
 ## Maya Terminal workflow with Shopify POS
-
-The Maya Terminal is treated as an external payment terminal. Shopify POS does not automatically receive the terminal's authorization, refund, settlement, or chargeback details.
 
 <Steps>
   <Step title="Create the order in Shopify POS">
@@ -177,7 +273,7 @@ The Maya Terminal is treated as an external payment terminal. Shopify POS does n
     Enter the amount and let the customer pay through an approved card, QR, or wallet method.
   </Step>
   <Step title="Verify the Maya approval">
-    Confirm the approved status, exact amount, reference number, and payment method. Do not rely on a customer screenshot.
+    Confirm the approved status, exact amount, reference number, and payment method. Do not rely only on a customer screenshot.
   </Step>
   <Step title="Record the Shopify POS payment">
     Select the matching approved custom payment type, such as **Maya Terminal - Card** or **Maya Terminal - QR**.
@@ -186,6 +282,16 @@ The Maya Terminal is treated as an external payment terminal. Shopify POS does n
     Compare Shopify POS payment-type totals with Maya's transaction and settlement reports. Investigate every difference before closing the day.
   </Step>
 </Steps>
+
+## Ownership and responsibilities
+
+| Role | Decision and operating responsibility |
+| --- | --- |
+| Management | Approve the pilot scope, quotation, budget, risk acceptance, and final provider decision. Do not approve rollout without the completed pilot record. |
+| Finance | Validate provider fees, VAT, withholding, refunds, disputes, settlement timing, bank deposits, and ₱0.00 unexplained variance. |
+| IT / E-commerce | Validate Shopify integration, credentials handling, webhooks or plugins, test environment, security, error handling, and technical support escalation. |
+| Store Operations | Run counter transactions, verify terminal approval, use the correct Shopify POS payment type, retain required references, and complete daily closing checks. |
+| Shopify administrator | Configure the approved gateway or custom payment methods, control user permissions, verify order records, and preserve the existing checkout and POS setup until final approval. |
 
 ## Written quotation required from Maya
 
@@ -229,8 +335,10 @@ Do not mark Maya as fully approved until the following evidence is attached or l
 - Completed rate comparison using contracted charges
 - Management-approved pilot budget
 - Maya merchant agreement review
-- First live transaction test
-- First settlement reconciliation
+- Successful online and physical-store test transactions
+- Refund test evidence
+- First settlement reconciliation with ₱0.00 unexplained variance
+- Finance confirmation of gross sales, fees, VAT, and net settlement
 - Pilot decision recorded in [Pilot & Approval](/pos-decision/pilot-decision-record)
 
 ## Official references
@@ -246,5 +354,5 @@ Do not mark Maya as fully approved until the following evidence is attached or l
 - [Xendit pricing policy](https://help.xendit.co/hc/en-us/articles/59516240127129-Xendit-Pricing-Policy)
 - [Xendit Shopify integration](https://docs.xendit.co/docs/shopify)
 - [eGovPay](https://egovpay.gov.ph/)
-- [Shopify third-party transaction fees](https://help.shopify.com/en/manual/your-account/manage-billing/billing-charges/types-of-charges/third-party-charges/third-party-transaction-fees)
+- [Shopify third-party transaction fees](https://help.shopify.com/en/manual/payments/third-party-providers)
 - [Shopify Philippines pricing](https://www.shopify.com/ph/pricing)
