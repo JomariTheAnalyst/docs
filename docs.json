@@ -34,13 +34,15 @@
           "initial-setup/overview",
           "operations/overview",
           {
-            "group": "Project Progress",
-            "icon": "chart-no-axes-combined",
+            "group": "Management Decision",
+            "icon": "scale",
             "expanded": false,
             "pages": [
-              "project-progress/overview",
-              "project-progress/latest-changes",
-              "project-progress/left-to-do"
+              "pos-decision/overview",
+              "pos-decision/POS-decision",
+              "pos-decision/hardware-philippines",
+              "pos-decision/payments-philippines",
+              "pos-decision/pilot-decision-record"
             ]
           },
           {
@@ -57,14 +59,12 @@
             ]
           },
           {
-            "group": "Management Decision",
-            "icon": "scale",
+            "group": "Project Progress",
+            "icon": "chart-no-axes-combined",
             "pages": [
-              "pos-decision/overview",
-              "pos-decision/POS-decision",
-              "pos-decision/hardware-philippines",
-              "pos-decision/payments-philippines",
-              "pos-decision/pilot-decision-record"
+              "project-progress/overview",
+              "project-progress/latest-changes",
+              "project-progress/left-to-do"
             ],
             "expanded": false
           }
