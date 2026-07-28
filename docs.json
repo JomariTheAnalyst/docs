@@ -30,9 +30,13 @@
         "tab": "Start Here",
         "icon": "play",
         "pages": [
+          "introduction",
+          "initial-setup/overview",
+          "operations/overview",
           {
             "group": "Management Access",
             "icon": "key-round",
+            "expanded": true,
             "pages": [
               "start-here/executive-access-handoff",
               "start-here/credentials-inventory",
@@ -42,9 +46,6 @@
               "start-here/export-products"
             ]
           },
-          "introduction",
-          "initial-setup/overview",
-          "operations/overview",
           {
             "group": "Management Decision",
             "icon": "scale",
@@ -68,11 +69,11 @@
             "root": "shopify/overview",
             "pages": [
               "shopify/access/overview",
-              "shopify/access/export-products",
               {
                 "group": "Products",
                 "root": "shopify/products/overview",
                 "pages": [
+                  "shopify/export-products",
                   "shopify/products/add-product",
                   "shopify/products/edit-product",
                   "shopify/products/product-media",
@@ -91,8 +92,7 @@
               "shopify/metafields",
               "shopify/bulk-import",
               "shopify/discounts-campaigns",
-              "shopify/apps",
-              "shopify/export-products"
+              "shopify/apps"
             ]
           },
           {
