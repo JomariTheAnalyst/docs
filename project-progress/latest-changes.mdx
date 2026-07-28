@@ -6,138 +6,176 @@ mode: "wide"
 sidebarTitle: "Latest Changes"
 ---
 
-This page records meaningful website and ownership improvements. It does not treat every code commit as a business-facing change.
+This page shows the newest website improvements first. It focuses on what changed, why it matters to the business, and what still needs to be checked before each item is considered fully complete.
 
 <Info>
-  **Evidence rule:** Items marked **awaiting verification** are implemented in code but still need a real browser, Studio, or production check before they are presented as fully complete.
+  **Current reporting rule:** A change may already be prepared in the website but still require final publishing, testing, or approval before it is shown as fully complete.
 </Info>
+
+## About and Services pages repaired
+
+**Status:** Most recent work — prepared and awaiting final release
+
+The About and Services pages were rewired so each section can be managed separately through SixthGear CMS. This gives the team better control and prevents one incomplete section from affecting the entire page.
+
+The About page now supports separate control for:
+
+- Hero
+- Why Choose Us
+- Our Story
+- Our Space
+- Company Values
+- CEO Quote
+- Call to Action
+
+The Services page now supports separate control for:
+
+- Hero
+- Expertise
+- Supported Brands
+- Service List
+- Service Process
+- Gallery
+- Call to Action
+
+The work has passed the available system checks, but it still needs to be finalized, published, and checked on desktop and mobile before it is described as fully released.
+
+<Frame caption="Reserved evidence: Updated About page">
+  ![Reserved screenshot showing the updated About page](/images/placeholders/screenshot-reserved.svg)
+</Frame>
+
+<Frame caption="Reserved evidence: Updated Services page">
+  ![Reserved screenshot showing the updated Services page](/images/placeholders/screenshot-reserved.svg)
+</Frame>
+
+**Video to add:** Show an About or Services section being updated in SixthGear CMS, then confirm the result on the website.
+
+## Cal.com service booking added
+
+**Status:** Added, awaiting final desktop and mobile verification
+
+Customers can now open the Cal.com service-booking form from the main navigation, contact page, Services page, and individual service pages.
+
+This gives customers a clearer way to request a service schedule without leaving the main website experience.
+
+<Frame caption="Reserved evidence: Cal.com booking on desktop">
+  ![Reserved screenshot showing the Cal.com booking form on desktop](/images/placeholders/screenshot-reserved.svg)
+</Frame>
+
+<Frame caption="Reserved evidence: Cal.com booking on mobile">
+  ![Reserved screenshot showing the Cal.com booking form on mobile](/images/placeholders/screenshot-reserved.svg)
+</Frame>
+
+**Video to add:** Open and close the booking form from every available booking button on desktop and mobile.
 
 ## Homepage content management expanded
 
-**Status:** Completed, awaiting verification<br />**Audit evidence:** 2026-07-25 commit `d80b130`
+**Status:** Added, with some sections still using backup website content
 
-The main homepage editorial sections now have Sanity schemas, queries, storefront consumers, and fallback protection. This gives staff a CMS path for managing approved homepage content without moving Shopify product ownership into Sanity.
+Most major homepage sections can now receive content from SixthGear CMS. This makes future text, image, and promotional updates easier for the team.
 
-Covered areas include the Hero, About Us, Product Categories, Services, Satisfied Customers, Franchise, Client Testimonials, Rider Stories, Store Location, CTA Banner, Coffee Showcase, Marquee, Brands We Support, and Our Team.
+The connected areas include:
 
-<Frame caption="Reserved evidence: Homepage CMS-managed sections">
-  ![Reserved screenshot showing the SixthGear homepage CMS-managed sections](/images/placeholders/screenshot-reserved.svg)
+- Hero
+- About Us
+- Product Categories
+- Services
+- Satisfied Customers
+- Franchise
+- Client Testimonials
+- Rider Stories
+- Store Location
+- CTA Banner
+- Coffee Showcase
+- Marquee
+- Brands We Support
+- Our Team
+
+Some homepage sections can still show built-in backup content when the CMS content is missing or incomplete. Moving all approved homepage content into SixthGear CMS is listed as an important next task.
+
+<Frame caption="Reserved evidence: Homepage sections managed in SixthGear CMS">
+  ![Reserved screenshot showing the CMS-managed homepage sections](/images/placeholders/screenshot-reserved.svg)
 </Frame>
 
-**Video to add:** Edit and publish one approved field, then show the related storefront section updating.
+**Video to add:** Update one homepage section in SixthGear CMS and confirm the published result on the website.
 
-## Sanity Visual Editing foundation added
+## SixthGear CMS preview prepared
 
-**Status:** Completed, awaiting live verification<br />**Audit evidence:** 2026-07-25 commit `d80b130`
+**Status:** Prepared, awaiting a live editing demonstration
 
-Sanity Studio now includes Presentation support, protected Draft Mode routes, editing markers, live-data configuration, and safe redirect handling. Automated tests confirm the token and draft configuration, but a real editing session has not yet proven automatic preview updates.
+The CMS now has a website preview experience intended to let editors see where content appears while they are working.
 
-<Frame caption="Reserved evidence: Sanity Visual Editing">
-  ![Reserved screenshot showing the Sanity Presentation workspace with a selected field](/images/placeholders/screenshot-reserved.svg)
+The setup is present, but the team still needs to record a real editing session to confirm that the preview updates smoothly and opens the correct section.
+
+<Frame caption="Reserved evidence: SixthGear CMS website preview">
+  ![Reserved screenshot showing the website preview inside SixthGear CMS](/images/placeholders/screenshot-reserved.svg)
 </Frame>
 
-**Video to add:** Select the homepage Hero in Visual Editing, change its text, and show the embedded preview updating without a manual refresh.
+**Video to add:** Select the homepage Hero, change the text, and show the preview updating.
 
-## Marketing content connected
+## Marketing content controls added
 
-**Status:** Completed, awaiting verification<br />**Audit evidence:** 2026-07-25 commit `d80b130`
+**Status:** Added, awaiting live campaign verification
 
-The storefront now supports announcement messages, popup campaigns, promotional banners, positioned marketing content, and scheduled featured collections. Shopify remains the owner of collection products, while Sanity controls the marketing presentation.
+The website can now support announcement messages, popup campaigns, promotional banners, and featured collections managed through SixthGear CMS.
 
-<Frame caption="Reserved evidence: Active marketing placement">
-  ![Reserved screenshot showing an announcement, popup, promotional banner, or featured collection](/images/placeholders/screenshot-reserved.svg)
+This gives the team more control over temporary campaigns without changing the product information stored in Shopify.
+
+<Frame caption="Reserved evidence: Website marketing placement">
+  ![Reserved screenshot showing an announcement, popup, banner, or featured collection](/images/placeholders/screenshot-reserved.svg)
 </Frame>
 
-**Video to add:** Activate one approved campaign, show its placement, then disable or expire it.
+**Video to add:** Activate one approved campaign, show where it appears, then turn it off.
 
-## Popup service booking introduced
+## Website movement and navigation improved
 
-**Status:** Completed, awaiting desktop and mobile verification<br />**Audit evidence:** 2026-07-25 commit `d80b130`
+**Status:** Added, awaiting final device testing
 
-Booking calls to action now open the Cal.com scheduler from navigation, contact, service listings, service details, and service-gallery entry points. A direct Cal.com address remains in the booking anchors for basic no-JavaScript fallback.
+Smooth scrolling, page-transition feedback, moving text, and better page behavior while menus or popups are open were added to the storefront.
 
-<Frame caption="Reserved evidence: Cal.com booking modal">
-  ![Reserved screenshot showing the Cal.com booking modal over the SixthGear website](/images/placeholders/screenshot-reserved.svg)
+These changes are intended to make the website feel smoother and more polished. Final checks are still needed on desktop, tablet, and mobile.
+
+<Frame caption="Reserved evidence: Updated website movement and navigation">
+  ![Reserved screenshot showing the improved website movement or an open menu](/images/placeholders/screenshot-reserved.svg)
 </Frame>
 
-**Video to add:** Open, close, and reopen booking from every supported entry point on desktop and mobile.
+**Video to add:** Navigate through the main pages and test the menu, cart, quick view, filters, and booking form.
 
-<Warning>
-  The current code does not yet prove a successful fallback when JavaScript starts but the Cal.com embed fails. That failure mode remains in the task list.
-</Warning>
+## CMS duplicate-document protection prepared
 
-## Smooth scrolling and interface coordination added
+**Status:** Prepared, awaiting final confirmation inside SixthGear CMS
 
-**Status:** Completed, awaiting cross-device verification<br />**Audit evidence:** 2026-07-25 commit `d80b130`
+Protection was added to reduce the chance of creating duplicate main documents such as Homepage, About, Services, and Marketing.
 
-Lenis smooth scrolling, route progress, GSAP marquee behavior, and modal scroll locking were added to the localized storefront. Studio remains outside the main Lenis layout so CMS interaction is not intentionally wrapped by storefront smooth scrolling.
+This is important because staff should always edit the correct main document instead of creating another version by mistake.
 
-<Frame caption="Reserved evidence: Storefront animation and overlay behavior">
-  ![Reserved screenshot showing the animated marquee or an open overlay with the page locked behind it](/images/placeholders/screenshot-reserved.svg)
+<Frame caption="Reserved evidence: Protected CMS document options">
+  ![Reserved screenshot showing the protected CMS document options](/images/placeholders/screenshot-reserved.svg)
 </Frame>
-
-**Video to add:** Scroll through localized routes and test the cart, mobile menu, quick shop, filters, service panel, and booking modal.
-
-## About and Services CMS repairs prepared
-
-**Status:** Completed in the working tree, but uncommitted
-
-The About page now supports independent source decisions for Hero, Why Choose Us, Story, Space, Values, CEO Quote, and CTA. The Services page now supports independent controls for Hero, Expertise, Brands, Service Grid, Process, Gallery, and CTA.
-
-This is an important improvement because one incomplete CMS section no longer needs to control the source choice for the whole page. The work passes unit tests, TypeScript, production build, and Sanity schema validation, but it must be reviewed and committed before it can be treated as deployable.
-
-<Frame caption="Reserved evidence: About page CMS sections">
-  ![Reserved screenshot showing independently controlled About page sections](/images/placeholders/screenshot-reserved.svg)
-</Frame>
-
-<Frame caption="Reserved evidence: Services page CMS sections">
-  ![Reserved screenshot showing independently controlled Services page sections](/images/placeholders/screenshot-reserved.svg)
-</Frame>
-
-**Videos to add:** Toggle and edit every section independently, then confirm that adjacent sections keep their intended source.
-
-## Singleton safeguards prepared
-
-**Status:** Completed in the working tree, awaiting commit and Studio verification
-
-The Sanity configuration now filters global creation and removes the Duplicate action for canonical singleton document types. This reduces the chance of creating more Homepage, About, Services, or Marketing duplicates.
-
-<Frame caption="Reserved evidence: Sanity singleton restrictions">
-  ![Reserved screenshot showing the Studio Create menu and a singleton action menu without Duplicate](/images/placeholders/screenshot-reserved.svg)
-</Frame>
-
-**Video to add:** Attempt to create or duplicate every protected singleton type and confirm that the action is unavailable.
 
 ## Management access and handoff documentation added
 
 **Status:** Ready for management review
 
-The documentation now gives management direct guidance for Shopify access, SixthGear CMS access, GitHub source-code access, Shopify product CSV export, the account credentials inventory, and the executive handoff checklist.
+The documentation now includes clear access and handoff guidance for:
+
+- Shopify
+- SixthGear CMS
+- Website source code
+- Product CSV file
+- Account credentials inventory
+- Executive handoff checklist
 
 <Frame caption="Reserved evidence: Management Access documentation">
-  ![Reserved screenshot showing the Management Access section in Mintlify](/images/placeholders/screenshot-reserved.svg)
+  ![Reserved screenshot showing the Management Access section](/images/placeholders/screenshot-reserved.svg)
 </Frame>
 
-## Curator.io Facebook feed planned
-
-**Status:** Planned
-
-Management wants approved SixthGear Facebook posts to appear automatically on the website through Curator.io. This will reduce duplicate posting work and keep the storefront connected to current social activity.
-
-The implementation still needs a confirmed Facebook source, moderation rules, feed design, page placement, mobile behavior, loading fallback, and privacy review.
-
-<Frame caption="Reserved evidence: Curator.io social feed">
-  ![Reserved screenshot showing the future Facebook post feed on the SixthGear website](/images/placeholders/screenshot-reserved.svg)
-</Frame>
-
-**Video to add after implementation:** Publish or approve a Facebook post, synchronize it through Curator.io, and show it appearing correctly on desktop and mobile.
-
-## Status definitions
+## Status guide
 
 | Status | Meaning |
 | --- | --- |
-| Completed and verified | Code, content, and visible behavior were checked successfully. |
-| Completed, awaiting verification | The implementation exists but still needs browser, Studio, or production evidence. |
-| Partially completed | Some required behavior still depends on fallback content or unfinished integration. |
-| Blocked | Work cannot continue until an access, content, configuration, or ownership issue is resolved. |
-| Planned | Approved direction, but implementation has not been completed. |
+| Complete and checked | The change is available and its result has been confirmed. |
+| Added, awaiting verification | The change is prepared but still needs a final website or CMS check. |
+| Prepared, awaiting final release | The work exists but still needs to be finalized and published. |
+| Partially complete | Some content or behavior still depends on backup website content. |
+| Planned | The work has been approved as a direction but has not yet been added. |

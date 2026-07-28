@@ -5,7 +5,23 @@ icon: "file-down"
 sidebarTitle: "Export Products"
 ---
 
-Use this procedure when management needs a current copy of the SixthGear Shopify product catalog in CSV format.
+Use this page when management needs the current SixthGear product list or when an updated Shopify product export must be created.
+
+## Current product CSV
+
+[Open the SixthGear product CSV in Google Drive](https://drive.google.com/file/d/15jRTA_Q41eBIoKkbwuayPXUFwMMUNR-W/view?usp=drive_link)
+
+<Info>
+  Access to the file depends on the sharing permissions set in Google Drive. Keep the file limited to approved company users.
+</Info>
+
+A **CSV** is a simple spreadsheet-style file used to store information in rows and columns. The file extension is **`.csv`**, which means **Comma-Separated Values**. It can be opened in Microsoft Excel, Google Sheets, and other spreadsheet applications.
+
+The SixthGear product CSV is a dated copy of the product information exported from Shopify. It may include product titles, descriptions, handles, variants, prices, SKUs, inventory fields, publication details, and other Shopify product columns.
+
+<Warning>
+  The CSV is a reference and recovery file. Shopify remains the live source of truth for current products, prices, variants, and inventory. Do not edit the CSV and assume the live store has changed.
+</Warning>
 
 ## Shopify link
 
@@ -17,16 +33,23 @@ https://sixthgearmoto.myshopify.com/admin
 
 </CodeGroup>
 
+## When to create a new export
+
+Create a new product CSV when:
+
+- Management requests an updated product list.
+- A major product or pricing update has been completed.
+- A migration, audit, or recovery copy is needed.
+- The current Google Drive copy is no longer up to date.
+- A controlled bulk review is planned.
+
 ## Before you export
 
 - Confirm that you are signed in to the correct SixthGear Shopify store.
-- Use **All products** for the executive handoff unless management approves a smaller scope.
-- Use a company-controlled device and approved storage location.
-- Record the export date and person who completed the export.
-
-<Warning>
-  A product CSV can contain operational catalog data. Do not upload the export to Mintlify, a public repository, a public link, or a personal drive.
-</Warning>
+- Use **All products** for a complete management copy unless a smaller scope is approved.
+- Use a company-controlled device.
+- Record the export date and the person who completed it.
+- Save the approved file in the controlled SixthGear Google Drive location.
 
 ## Export the product CSV
 
@@ -38,19 +61,19 @@ https://sixthgearmoto.myshopify.com/admin
     Select **Export** from the Products page.
   </Step>
   <Step title="Choose the scope">
-    Select **All products** for the complete management handoff. Use selected products or the current page only when that narrower scope is approved.
+    Select **All products** for the complete management handoff. Use selected products or the current page only when that smaller scope is approved.
   </Step>
   <Step title="Choose the file format">
-    Select the CSV format intended for spreadsheet programs when management will open the file in Excel.
+    Select the CSV format intended for spreadsheet programs when management will open the file in Excel or Google Sheets.
   </Step>
   <Step title="Request the export">
-    Confirm the export. Shopify may download the file or send the export to the signed-in account.
+    Confirm the export. Shopify may download the file or send it to the signed-in account.
   </Step>
-  <Step title="Open and verify the file">
-    Open the CSV and confirm that product titles, handles, variants, prices, SKUs, inventory fields, status, and publication fields are present.
+  <Step title="Open and check the file">
+    Confirm that the CSV opens correctly and includes the expected product titles, variants, prices, SKUs, inventory information, and publication fields.
   </Step>
   <Step title="Store the approved copy">
-    Save the file in controlled company storage and record the exact location without publishing an unrestricted download link.
+    Upload the checked file to the controlled Google Drive location and update the handoff record below.
   </Step>
 </Steps>
 
@@ -58,13 +81,13 @@ https://sixthgearmoto.myshopify.com/admin
 
 | Field | Record |
 | --- | --- |
+| Current file location | [SixthGear product CSV in Google Drive](https://drive.google.com/file/d/15jRTA_Q41eBIoKkbwuayPXUFwMMUNR-W/view?usp=drive_link) |
 | Export date | To record |
 | Exported by | To record |
 | Shopify store | SixthGear Moto Shopify store |
 | Export scope | All products / selected products / current page |
 | File name | To record |
 | Product count at export | To record |
-| Controlled storage location | To record |
 | Reviewed by | To record |
 | File opened successfully | Yes / No |
 | Verification status | Pending / Verified |
@@ -77,29 +100,29 @@ sixthgear-shopify-products-YYYY-MM-DD.csv
 
 ## Verify the handoff
 
-- Management can access the controlled storage location.
-- The CSV opens without corrupt columns or character issues.
-- The export scope and date are recorded.
-- The file is not exposed through a public link.
-- Shopify remains the live product source of truth.
-- The CSV is understood as a dated reference and recovery asset.
+- Management can open the Google Drive link.
+- The CSV opens without broken columns or unreadable characters.
+- The export date and scope are recorded.
+- Sharing is limited to approved company users.
+- Shopify is understood as the live source of truth.
+- The CSV is understood as a dated reference, audit, and recovery copy.
 
 ## Related documentation
 
 <CardGroup cols={2}>
   <Card title="Shopify Access" icon="log-in" href="/shopify/access/overview">
-    Verify management access before exporting products.
+    Verify management access before creating a new product export.
   </Card>
 
   <Card title="Executive Access Handoff" icon="clipboard-check" href="/accounts-and-access/executive-handoff">
-    Record receipt and acceptance of the product CSV.
+    Record management receipt and access to the product CSV.
   </Card>
 
   <Card title="Credentials Inventory" icon="table-properties" href="/accounts-and-access/account-credentials-inventory">
-    Review the Shopify handler, password custodian, and MFA custodian.
+    Review Shopify account and access responsibility.
   </Card>
 
   <Card title="Bulk edit and import" icon="file-csv" href="/shopify/products/bulk-management">
-    Review the controlled CSV workflow before re-importing product data.
+    Review the controlled CSV workflow before changing products through a bulk file.
   </Card>
 </CardGroup>
