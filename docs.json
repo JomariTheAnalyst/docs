@@ -50,7 +50,7 @@
             "pages": [
               "start-here/executive-handoff",
               "start-here/credentials",
-              "start-here/shopify-access",
+              "shopify-access/overview",
               "start-here/cms-access",
               "start-here/source-code",
               "start-here/product-csv"
@@ -72,6 +72,20 @@
         "icon": "shopping-bag",
         "pages": [
           {
+            "group": "Shopify administration",
+            "root": "shopify/overview",
+            "pages": [
+              "shopify/access/overview",
+              "shopify/variants-inventory",
+              "shopify/collections",
+              "shopify/product-tags",
+              "shopify/metafields",
+              "shopify/bulk-import",
+              "shopify/discounts-campaigns",
+              "shopify/apps"
+            ]
+          },
+          {
             "group": "Products",
             "root": "shopify/products/overview",
             "pages": [
@@ -79,12 +93,12 @@
               "shopify/products/add-product",
               "shopify/products/edit-product",
               "shopify/products/product-media",
+              "shopify/products/troubleshooting",
               "shopify/products/variants-inventory",
               "shopify/products/organization-publishing",
               "shopify/products/product-seo",
               "shopify/products/product-metafields",
-              "shopify/products/bulk-management",
-              "shopify/products/troubleshooting"
+              "shopify/products/bulk-management"
             ]
           },
           {
@@ -100,20 +114,6 @@
               "shopify/shopify-vs-loyverse/philippines-payments-and-compliance",
               "shopify/shopify-vs-loyverse/hardware-recommendations",
               "shopify/shopify-vs-loyverse/final-recommendation"
-            ]
-          },
-          {
-            "group": "Shopify administration",
-            "root": "shopify/overview",
-            "pages": [
-              "shopify/access/overview",
-              "shopify/variants-inventory",
-              "shopify/collections",
-              "shopify/product-tags",
-              "shopify/metafields",
-              "shopify/bulk-import",
-              "shopify/discounts-campaigns",
-              "shopify/apps"
             ]
           }
         ]
