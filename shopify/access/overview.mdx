@@ -45,6 +45,85 @@ https://sixthgearmoto.myshopify.com/admin
   Never place the Shopify password, MFA code, authenticator seed, recovery code, API token, or backup code in Mintlify.
 </Warning>
 
+## Request and invite a named user
+
+Use an individual company email when a separate Shopify user can be created.
+
+<Steps>
+  <Step title="Confirm the required work">
+    Record the person's business responsibility and the Shopify tasks they need to complete.
+  </Step>
+  <Step title="Select the minimum required role">
+    Choose an existing role or approved custom role that provides only the permissions needed for the recorded work.
+  </Step>
+  <Step title="Send the Shopify invitation">
+    An authorized Shopify user administrator opens **Settings → Users**, enters the approved company email, assigns the approved role or roles, and sends the invitation.
+  </Step>
+  <Step title="Accept the invitation">
+    The recipient opens the Shopify invitation, signs in with their own Shopify account, and confirms that the invitation belongs to the SixthGear store.
+  </Step>
+  <Step title="Configure MFA">
+    The recipient enables and controls MFA for their own named account through an approved method. Recovery codes must be kept in approved secure storage and never copied into Mintlify.
+  </Step>
+  <Step title="Verify and record access">
+    Confirm the user status, assigned roles, required Shopify areas, and MFA setup. Record the completed handoff below.
+  </Step>
+</Steps>
+
+## MFA responsibilities
+
+| Access type | Required control |
+| --- | --- |
+| Named Shopify user | The user completes MFA through their own registered method and securely stores their own recovery information. |
+| Company-controlled account | The assigned MFA custodian verifies the person, store, purpose, and request time before approving the sign-in. |
+| Backup recovery | A company-approved backup recovery route must be documented outside Mintlify before the access handoff is considered complete. |
+| Unexpected MFA request | Deny or ignore the request, notify the responsible administrator, and review account activity. |
+
+<Warning>
+  Do not send one-time codes, recovery codes, authenticator screenshots, or approval links through chat, ordinary email, or Mintlify.
+</Warning>
+
+## Password and access custody
+
+| Responsibility | Meaning |
+| --- | --- |
+| Password custodian | Maintains the approved password-manager record for the company-controlled account. This does not automatically authorize sharing or retrieving the password. |
+| Password access approver | Authorizes emergency or owner-level password retrieval according to the approved company process. |
+| MFA custodian | Verifies and approves MFA requests for the company-controlled account. The custodian does not act as the MFA provider for named users. |
+| Shopify user administrator | Sends invitations, assigns approved roles, reviews user status, and removes access when instructed. |
+| Handler in supplied inventory | Identifies the person associated with the supplied record. It does not by itself authorize password retrieval, role changes, or Shopify administration. |
+
+## Choose the minimum required role
+
+| Business responsibility | Access that may be required | Keep restricted unless separately approved |
+| --- | --- | --- |
+| Management oversight | Dashboard, analytics, reports, and order visibility | Users, apps, domains, billing, and payment settings |
+| Product management | Products, collections, inventory, and files | Billing, users, and payment settings |
+| Customer service | Orders, customers, and approved refund actions | Customer exports, users, apps, and billing |
+| Finance | Approved billing, payout, payment, and financial-report areas | Products, apps, domains, and user administration when not required |
+| Shopify administration | User invitations, role assignment, store settings, and approved security work | Ownership-level actions outside the approved task |
+
+<Note>
+  A user can receive more than one role. Review the combined permissions before approval because permissions from assigned roles accumulate.
+</Note>
+
+## Sensitive permissions
+
+The following permissions require explicit approval because they can affect company ownership, money, customer information, integrations, or store availability:
+
+- Users and role management
+- Billing, plans, payouts, and finance
+- Payment-provider and checkout settings
+- App installation and removal
+- Domains and primary-store settings
+- Customer-data exports
+- Discounts and gift cards
+- Ownership transfer, store pause, or deactivation
+
+<Warning>
+  Do not grant a broad role only to make setup faster. Record the business reason and approving authority before assigning sensitive permissions.
+</Warning>
+
 ## Sign in and verify access
 
 <Steps>
@@ -75,20 +154,68 @@ https://sixthgearmoto.myshopify.com/admin
 - Recovery methods are company-controlled and current.
 - Former staff do not retain unnecessary access.
 
+## Invitation and access status verification
+
+| Verification item | Required record |
+| --- | --- |
+| Invitation sent | Yes / No and date |
+| Invitation accepted | Yes / No and date |
+| User status | Pending, active, suspended, or removed |
+| Approved company email | Record the invited business email |
+| Assigned role or roles | Record every role because permissions accumulate |
+| Required Shopify areas | Record only the approved work areas |
+| MFA configured | Yes / No |
+| Sensitive permissions approved | Yes / No / Not applicable |
+| Access test completed | Yes / No |
+| Outstanding issue | Record any missing permission, wrong store, or unresolved invitation problem |
+
 ## Handoff record
 
 | Field | Record |
 | --- | --- |
 | Management account | To record |
 | Role | To record |
+| Invitation status | To record |
+| User status | To record |
 | Store opened successfully | Yes / No |
 | Required areas opened | Yes / No |
+| MFA configured | Yes / No |
+| Sensitive permissions approved | Yes / No / Not applicable |
 | Password custodian confirmed | Yes / No |
 | MFA custodian confirmed | Yes / No |
 | Backup administrator assigned | Yes / No |
 | Verified by | To record |
 | Verification date | To record |
 | Follow-up actions | To record |
+
+## Remove or suspend access
+
+Use this process when a person changes role, leaves the company, no longer needs Shopify, or may have unauthorized access.
+
+<Steps>
+  <Step title="Confirm the removal authority">
+    Obtain instruction from management or the authorized Shopify user administrator before changing access.
+  </Step>
+  <Step title="Review open responsibilities">
+    Transfer unfinished orders, customer cases, product work, reports, approvals, and other assigned responsibilities.
+  </Step>
+  <Step title="Suspend or remove the Shopify user">
+    Open **Settings → Users** and suspend or remove the named user according to the approved instruction.
+  </Step>
+  <Step title="Remove related access">
+    Remove access to approved password-manager records, connected apps, shared devices, documentation, and other systems associated with the person's Shopify responsibilities.
+  </Step>
+  <Step title="Review sensitive activity">
+    Check recent user activity, role changes, app changes, exports, billing, payment settings, and other sensitive actions when risk or exposure is suspected.
+  </Step>
+  <Step title="Confirm completion">
+    Verify that the person can no longer open the SixthGear Shopify store and record the removal date, approver, and any follow-up action.
+  </Step>
+</Steps>
+
+<Check>
+  Access removal is complete when the user is no longer active, business responsibilities have been transferred, related access has been removed, and the action is recorded.
+</Check>
 
 ## Related documentation
 
