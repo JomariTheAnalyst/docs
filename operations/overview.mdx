@@ -1,13 +1,84 @@
 ---
 title: "Operations"
-description: "Planned recurring procedures for operating and reviewing the Sixthgear ecommerce platform."
+description: "Start here for the regular checks and safe working steps that keep SixthGear products, content, payments, access, and the live website accurate."
 icon: "clipboard-check"
 ---
 
-This section will collect recurring operational procedures that cross Shopify, the CMS, the storefront, and supporting services.
+Use this page as the starting point for the regular work needed to keep the SixthGear website, store information, and customer-facing systems accurate and available.
 
-<Note>
-This section is planned. Future guidance will define verified schedules, owners, approvals, checks, records, and escalation paths for each recurring task.
-</Note>
+<Info>
+  Make changes in the system that owns the information. Use Shopify for products, prices, inventory, customers, orders, discounts, and checkout. Use SixthGear CMS for approved website content. Use the website and deployment guides for code and release work.
+</Info>
 
-Until those procedures are reviewed, use the approved business process and record gaps for the documentation owner.
+## Main operating areas
+
+<CardGroup cols={2}>
+  <Card title="Shopify Admin" icon="shopping-bag" href="/shopify/overview">
+    Manage products, collections, prices, inventory, orders, customers, discounts, and store settings.
+  </Card>
+
+  <Card title="SixthGear CMS" icon="panels-top-left" href="/sanity/overview">
+    Update approved website content and confirm the result on the live storefront.
+  </Card>
+
+  <Card title="Deployment" icon="rocket" href="/deployment/deployment-overview">
+    Review how approved website changes move from source code to the live site.
+  </Card>
+
+  <Card title="Troubleshooting" icon="wrench" href="/troubleshooting/overview">
+    Start here when the website, Shopify, CMS, deployment, or another service is not working as expected.
+  </Card>
+</CardGroup>
+
+## Before making a change
+
+<Steps>
+  <Step title="Confirm the request">
+    Make sure the requested change is approved and that the expected result is clear.
+  </Step>
+  <Step title="Choose the correct system">
+    Edit commerce information in Shopify, approved website content in SixthGear CMS, and code only through the reviewed development process.
+  </Step>
+  <Step title="Check the current information">
+    Review the existing product, page, order, setting, or content before changing it so important details are not removed by mistake.
+  </Step>
+  <Step title="Protect customer and company information">
+    Do not copy passwords, payment details, customer records, recovery information, or secret keys into screenshots, chat, or documentation.
+  </Step>
+</Steps>
+
+## After making a change
+
+- Confirm that the correct record was updated.
+- Check the live result on desktop and mobile when the change affects the website.
+- Confirm that prices, stock, product options, links, and contact details are still correct.
+- Record any issue that needs follow-up.
+- Tell the responsible person when the change affects sales, payments, inventory, customer service, or website availability.
+
+## Regular checks
+
+| Area | What to review |
+| --- | --- |
+| Products and inventory | Correct title, price, SKU, variant, stock, and sales-channel availability |
+| Orders and customer requests | New orders, failed actions, refunds, returns, and requests needing follow-up |
+| Website content | Incorrect text, broken links, missing images, outdated store details, and unpublished changes |
+| Payments | Failed payments, duplicate records, refunds, provider reports, and unexplained differences |
+| Access | Former staff, unnecessary permissions, pending invitations, and unexpected sign-in or MFA requests |
+| Website health | Important pages, product pages, cart, checkout handoff, contact form, and mobile display |
+
+## When something goes wrong
+
+1. Stop making additional changes if they could make the problem worse.
+2. Record what happened, when it started, and which system or page is affected.
+3. Keep screenshots free of customer details, passwords, and other private information.
+4. Use the relevant troubleshooting guide.
+5. Inform the responsible administrator when sales, payments, inventory, customer information, or the live website may be affected.
+6. After the issue is fixed, confirm the result and record any follow-up action.
+
+<Warning>
+  Do not change payment settings, domains, users, billing, apps, live code, or company ownership settings without the required approval.
+</Warning>
+
+<Check>
+  Operations are complete when the approved work is finished, the live result is checked, important records still match, and any remaining issue has a clear owner.
+</Check>
