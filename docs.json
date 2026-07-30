@@ -33,6 +33,7 @@
           "introduction",
           "initial-setup/overview",
           "operations/overview",
+          "operations/commerce-data-ownership",
           {
             "group": "For Management",
             "icon": "scale",
