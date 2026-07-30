@@ -35,9 +35,10 @@
           "operations/overview",
           {
             "group": "For Management",
+            "Expanded": false,
             "icon": "scale",
             "pages": [
-              "pos-decision/overview",
+              "pos-decision/overview",  
               "pos-decision/POS-decision",
               "pos-decision/hardware-philippines",
               "pos-decision/payments-philippines",
@@ -46,6 +47,7 @@
           },
           {
             "group": "Access Control",
+            "Expanded": true,
             "icon": "key-round",
             "pages": [
               "start-here/executive-handoff",
@@ -58,6 +60,7 @@
           },
           {
             "group": "Website Progress",
+            "Expanded": true,
             "icon": "chart-no-axes-combined",
             "pages": [
               "project-progress/overview",
