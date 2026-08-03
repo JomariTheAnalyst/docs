@@ -1,0 +1,165 @@
+---
+title: "Commerce Data Ownership"
+description: "Know where SixthGear products, prices, stock, orders, payments, website content, and code must be updated and which record to trust when systems do not match."
+icon: "database"
+sidebarTitle: "Data Ownership"
+---
+
+Use this page before changing products, prices, stock, orders, payments, website content, or website code.
+
+A **source of truth** is the company system that holds the official record. Other systems may show or copy the same information, but staff must correct the official system first when records do not match.
+
+<Info>
+  **Main rule:** Make each change in the system that owns the information. Do not update several systems separately unless an approved process requires it.
+</Info>
+
+## Current ownership summary
+
+| Business information | Current official record | Responsible role | Rule when records do not match |
+| --- | --- | --- | --- |
+| Products, variants, SKUs, barcodes, prices, product media, metafields, collections, and online availability | Shopify | Ecommerce or product administrator | Correct Shopify first, then confirm the live storefront shows the update. |
+| Online inventory and online product availability | Shopify | Inventory owner | Check Shopify location stock, adjustments, reservations, and recent orders before making another change. |
+| Customers, online orders, discounts, carts, and hosted checkout | Shopify | Ecommerce or customer-service team | Use the Shopify order or customer record as the main commerce record. |
+| Approved homepage, service, About, Rider Story, marketing, and collection presentation content | SixthGear CMS (Sanity) when the section is confirmed as connected | Content editor or CMS administrator | Correct the approved Sanity document and verify the live page after publishing. |
+| Website content still supplied by active Strapi routes | Strapi until the content is migrated and verified | Website administrator | Confirm the active source before editing. Do not remove or copy the content into Sanity without an approved migration. |
+| Website layout, page behavior, forms, integrations, and code-controlled fallback content | GitHub source code | Developer | Correct the reviewed source code and release it through the approved deployment process. |
+| Current physical-store sale record while Loyverse remains active | Loyverse | Store Operations | Use the Loyverse sale record for the current counter transaction and match it to the payment record and daily closing report. |
+| Shopify POS pilot transactions | Shopify POS pilot record | Pilot owner and Store Operations | Keep pilot records clearly identified and follow the approved comparison method so one sale is not counted twice. |
+| Card, QR, or wallet payment approval | Payment-provider terminal or provider report | Store Operations and Finance | The provider-approved amount and reference prove whether the payment succeeded. A customer screenshot alone is not enough. |
+| Provider fees, refunds, and net settlement | Provider settlement report and company bank record | Finance | Match the provider report to the bank credit and explain every difference. |
+| Live website version | Vercel deployment connected to the approved GitHub branch | Developer or deployment administrator | Confirm the active deployment and live domain before deciding which code version is running. |
+
+<Warning>
+  **Physical-store inventory does not yet have one final approved owner across Shopify and Loyverse.** Until management completes the POS pilot and approves the future setup, use physical stock counts and the approved reconciliation process to resolve differences. Do not silently copy one stock number into the other system.
+</Warning>
+
+## Product and catalog rules
+
+Use Shopify for the main product record.
+
+| Product information | Where to update it | Important check |
+| --- | --- | --- |
+| Product title and description | Shopify | Confirm the live product page after saving. |
+| Product images and videos | Shopify | Check order, quality, alternative text, and storefront display. |
+| Variant options | Shopify | Confirm the correct size, color, SKU, price, and stock for every variant. |
+| SKU and barcode | Shopify | Keep each identifier consistent and avoid accidental duplicates. |
+| Price and compare-at price | Shopify | Confirm the correct currency and approval before changing a live price. |
+| Inventory | Shopify for online availability; current store records follow the approved POS process | Record the reason for manual stock adjustments. |
+| Tags and collections | Shopify | Confirm the correct collection, filter, and sales-channel result. |
+| Product metafields | Shopify | Change only fields used by the approved storefront process. |
+| Sales-channel availability | Shopify | Confirm the product is available to the intended headless storefront or sales channel. |
+
+<Warning>
+  Do not create a separate product price, SKU, or inventory value in SixthGear CMS. The CMS may provide supporting presentation content, but Shopify remains the commerce record.
+</Warning>
+
+## Website content rules
+
+| Content type | Where it belongs | Important rule |
+| --- | --- | --- |
+| Homepage and marketing sections connected to Sanity | SixthGear CMS | Publish the approved document and verify desktop and mobile. |
+| Service and About page content connected to Sanity | SixthGear CMS | Confirm the correct document before editing. |
+| Rider Stories and article content connected to Sanity | SixthGear CMS | Keep titles, dates, images, links, and categories complete. |
+| Collection presentation content connected to Sanity | SixthGear CMS | Do not replace the Shopify collection record. |
+| Remaining active Strapi content | Strapi | Treat it as temporary but active until migration is completed. |
+| Page layout, forms, navigation behavior, and fallback text | GitHub source code | Use the reviewed code and deployment process. |
+| Shopify-hosted theme pages | Shopify theme only | Do not expect theme changes to update the live Next.js storefront. |
+
+<Note>
+  The live website can display information from Shopify, Sanity, Strapi, and source code on the same page. Confirm which system supplies the exact field before editing it.
+</Note>
+
+## Sales, payment, and refund rules
+
+### Online orders
+
+- Shopify is the main record for the online order, customer, items, discounts, fulfillment, and refund history.
+- The payment provider or Shopify payment record confirms payment status.
+- Do not create another real order only to correct a reporting difference.
+
+### Current in-store sales
+
+- Loyverse remains the current store-sale record while it is the active POS.
+- The payment terminal or provider report confirms external card, QR, or wallet approval.
+- The cash count and daily closing report confirm cash handling.
+- During a Shopify POS pilot, clearly separate pilot evidence from the live Loyverse record so revenue and stock are not counted twice.
+
+### Returns and refunds
+
+- Confirm where the original sale was recorded before processing a return or refund.
+- Record the refund in the system that holds the original sale.
+- Confirm the provider refund when money is returned through an external payment provider.
+- Restore stock only once and record the reason.
+- Finance must confirm the effect on fees and settlement.
+
+## When systems do not match
+
+<Steps>
+  <Step title="Stop extra changes">
+    Do not keep adjusting both systems while the cause is unknown. Additional changes can hide the original problem.
+  </Step>
+  <Step title="Identify the exact record">
+    Record the product, SKU, order, payment reference, date, amount, location, and systems affected.
+  </Step>
+  <Step title="Check the official source">
+    Use the ownership tables above to identify which system holds the official record. When physical-store inventory is involved, include a physical count.
+  </Step>
+  <Step title="Check recent activity">
+    Review sales, returns, refunds, transfers, manual adjustments, imports, sync activity, and staff actions that may explain the difference.
+  </Step>
+  <Step title="Correct the approved record first">
+    Change only the official record or follow the approved reconciliation process. Do not guess or copy a value only to make the screens look equal.
+  </Step>
+  <Step title="Verify the connected result">
+    Confirm the storefront, POS, payment report, inventory, and financial record now show the expected result.
+  </Step>
+  <Step title="Record the cause and action">
+    Keep a short record of what was wrong, what was corrected, who approved it, and whether follow-up work is required.
+  </Step>
+</Steps>
+
+## Responsibility summary
+
+| Role | Main responsibility |
+| --- | --- |
+| Management | Approve the business system, major ownership changes, exceptions, and final POS direction. |
+| Ecommerce or product administrator | Maintain Shopify product, price, collection, online inventory, and sales-channel records. |
+| Store Operations | Record in-store sales correctly, protect counter records, and report stock or payment differences. |
+| Content editor or CMS administrator | Maintain approved website content in the correct Sanity or active Strapi source. |
+| Finance | Reconcile payments, refunds, fees, settlement, and bank records. |
+| Developer | Maintain website code, integrations, deployments, and code-controlled content. |
+| Documentation owner | Update this page when ownership, systems, or operating rules change. |
+
+## Management decision still required
+
+Management must use the Shopify POS pilot to decide the future owner of physical-store inventory and in-store sales.
+
+The final decision must state whether SixthGear will:
+
+1. Use Shopify as the main online and physical-store commerce system,
+2. Keep Shopify online and Loyverse for in-store sales with an approved sync or manual process, or
+3. Stop the Shopify POS pilot and keep the current store process.
+
+<Check>
+  This control is working when staff know where to make each change, duplicate records are avoided, differences are investigated instead of hidden, and management can trace products, stock, orders, payments, content, and code to an approved system.
+</Check>
+
+## Related guides
+
+<CardGroup cols={2}>
+  <Card title="Operations" icon="clipboard-check" href="/operations/overview">
+    Review the regular checks and safe working steps for SixthGear systems.
+  </Card>
+
+  <Card title="Shopify Admin" icon="shopping-bag" href="/shopify/overview">
+    Manage the main commerce records used by the online storefront.
+  </Card>
+
+  <Card title="SixthGear CMS" icon="panels-top-left" href="/sanity/overview">
+    Review which website content belongs in Sanity and which content remains elsewhere.
+  </Card>
+
+  <Card title="Pilot & Approval" icon="clipboard-check" href="/pos-decision/pilot-decision-record">
+    Record the evidence and final management decision for Shopify POS and Loyverse.
+  </Card>
+</CardGroup>
