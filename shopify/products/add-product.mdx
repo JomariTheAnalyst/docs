@@ -1,10 +1,127 @@
 ---
-title: Add a product
-description: Add a complete product to Shopify and verify that it appears correctly on the SixthGear storefront.
-icon: square-plus
+title: "Add a product"
+description: "Add a complete product to Shopify and verify that it appears correctly on the SixthGear storefront."
+icon: "square-plus"
 ---
 
-{/* DOCUMENTATION STATUS
-Detailed instructions will be written after the Shopify Products audit is approved.
-Do not publish unverified store settings on this page.
-*/}
+Use this guide when adding a new product to the SixthGear Shopify store.
+
+The product is complete when its information, images, variants, price, stock, organization, sales channels, and live storefront page have been checked.
+
+<Info>
+  Go to **Shopify Admin → Products → Add product**.
+</Info>
+
+## Before you begin
+
+Prepare the approved product information before opening Shopify:
+
+- Product name and brand
+- Product description
+- Product images
+- Product category or type
+- Price and compare-at price, when used
+- SKU and barcode
+- Available sizes, colors, or other options
+- Starting stock for each variant
+- Weight or shipping details
+- Tags and collection membership
+- Approved sales channels
+
+<Warning>
+  Shopify is the main record for product titles, descriptions, prices, variants, SKUs, barcodes, inventory, collections, and sales-channel availability. Do not create a second product price or stock value in SixthGear CMS.
+</Warning>
+
+## Add the product
+
+<Steps>
+  <Step title="Open the correct store">
+    Sign in to Shopify and confirm that the SixthGear Moto store is open before making changes.
+  </Step>
+  <Step title="Open Add product">
+    Go to **Products** and select **Add product**.
+  </Step>
+  <Step title="Enter the title and description">
+    Use the approved product name. Write a clear description that explains what the product is, its main features, fitment or use, and any important customer information.
+  </Step>
+  <Step title="Add and arrange product images">
+    Upload clear product images. Place the strongest main image first because Shopify uses the first media item as the featured image in several areas.
+  </Step>
+  <Step title="Set the product category and organization">
+    Add the correct product category, vendor or brand, product type, tags, and collections. Follow the existing SixthGear naming and tag rules.
+  </Step>
+  <Step title="Enter the approved price">
+    Add the selling price. Use a compare-at price only when it represents an approved original price or promotion. Do not guess the cost or selling price.
+  </Step>
+  <Step title="Add variants when needed">
+    Add options such as size, color, style, or finish. Review every option combination before saving.
+  </Step>
+  <Step title="Complete each SKU and barcode">
+    Enter the correct SKU and barcode for every variant. Do not reuse another product's SKU or barcode.
+  </Step>
+  <Step title="Set inventory and location">
+    Turn on inventory tracking when required, select the correct location, and enter the approved starting stock for each variant.
+  </Step>
+  <Step title="Add shipping information">
+    Confirm whether the item is physical and add the correct weight or other required shipping details.
+  </Step>
+  <Step title="Choose sales channels">
+    In the publishing area, select only the approved channels. The product must be available to the SixthGear headless storefront channel for it to appear on the live website.
+  </Step>
+  <Step title="Review the search listing and handle">
+    Check the search title, description, and URL handle. Do not change a handle after publication without checking links and redirects.
+  </Step>
+  <Step title="Save as Draft until complete">
+    Keep the product as **Draft** while required information is missing. Set it to **Active** only after the product is approved and ready for customers.
+  </Step>
+  <Step title="Verify the live product page">
+    Open the live SixthGear storefront and check the product on desktop and mobile. Confirm the title, images, price, variants, stock message, collections, and purchase flow.
+  </Step>
+</Steps>
+
+## Important SixthGear rules
+
+- Do not copy another product and leave its SKU, barcode, images, tags, collections, or metafields unchanged.
+- Every variant must have the correct price, SKU, barcode, and stock.
+- Do not publish an incomplete product only to test whether access works.
+- Do not assume that the Shopify theme preview is the live website. Check the live Next.js storefront.
+- Do not change payment, billing, user, app, or domain settings while adding a product.
+- Record the reason for any manual inventory adjustment.
+
+## Final check
+
+- [ ] Product title is correct
+- [ ] Description is complete and customer-friendly
+- [ ] Main image and supporting images are correct
+- [ ] Price is approved
+- [ ] Compare-at price is valid, when used
+- [ ] Every variant has the correct SKU and barcode
+- [ ] Inventory is assigned to the correct location
+- [ ] Tags and collections are correct
+- [ ] Required sales channels are selected
+- [ ] Product status is correct
+- [ ] Live product page works on desktop and mobile
+
+<Check>
+  The task is complete when the product is accurate in Shopify and the live SixthGear storefront shows the expected product, price, options, images, and availability.
+</Check>
+
+## Related guides
+
+<CardGroup cols={2}>
+  <Card title="Variants, pricing, and inventory" icon="layer-group" href="/shopify/products/variants-inventory">
+    Complete options, SKUs, prices, and stock for each variant.
+  </Card>
+
+  <Card title="Product media" icon="images" href="/shopify/products/product-media">
+    Prepare, upload, arrange, and describe product images.
+  </Card>
+
+  <Card title="Organization and sales channels" icon="share-nodes" href="/shopify/products/organization-publishing">
+    Add tags, collections, product status, and storefront availability.
+  </Card>
+
+  <Card title="Product troubleshooting" icon="wrench" href="/shopify/products/troubleshooting">
+    Check why a product does not appear or displays incorrect information.
+  </Card>
+</CardGroup>
