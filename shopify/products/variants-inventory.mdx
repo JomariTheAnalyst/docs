@@ -2,10 +2,84 @@
 title: "Variants, pricing, and inventory"
 description: "Manage product options, SKUs, prices, stock, and location-level inventory."
 icon: "layer-group"
-hidden: true
 ---
 
-{/* DOCUMENTATION STATUS
-  Detailed instructions will be written after the Shopify Products audit is approved.
-  Do not publish unverified store settings on this page.
-  */}
+Use this guide when a product has different sizes, colors, finishes, or other options, or when staff need to update its price or stock.
+
+<Info>
+  Go to **Shopify Admin → Products**, open the product, then review the **Variants** and **Inventory** areas.
+</Info>
+
+## What each variant needs
+
+Each sellable variant should have the correct:
+
+- Option values, such as size and color
+- Price and compare-at price, when used
+- SKU
+- Barcode, when available
+- Inventory quantity
+- Inventory location
+- Variant image, when the appearance is different
+- Weight or shipping information, when required
+
+## Add or update variants
+
+<Steps>
+  <Step title="Confirm the approved options">
+    List the actual sizes, colors, styles, or finishes before creating combinations. Avoid slightly different spellings for the same option.
+  </Step>
+  <Step title="Open the product variants">
+    In the product record, open the option or variant controls and confirm the current combinations.
+  </Step>
+  <Step title="Add or edit option values">
+    Enter clear option names and values. Review the combinations Shopify creates before saving.
+  </Step>
+  <Step title="Complete every variant record">
+    Check the price, SKU, barcode, image, weight, and stock for every variant. Do not leave copied information from another option.
+  </Step>
+  <Step title="Set the correct inventory location">
+    Confirm which SixthGear location holds the stock. Enter only an approved quantity supported by the physical count or stock record.
+  </Step>
+  <Step title="Save and test the product selector">
+    Open the live product page and select every option. Confirm that the image, price, availability, and add-to-cart result match the selected variant.
+  </Step>
+</Steps>
+
+## Pricing rules
+
+- Confirm the approved selling price before editing.
+- Check every variant when prices differ by size, model, or option.
+- Use a compare-at price only when it is valid and approved.
+- Do not use the compare-at field to create a false discount.
+- Do not change a live price only to correct an unrelated display problem.
+
+## Inventory adjustment rules
+
+| Situation | Required action |
+| --- | --- |
+| New stock received | Confirm the item, variant, quantity, and location before adding stock |
+| Physical count is lower | Check recent sales, returns, transfers, and earlier adjustments before reducing stock |
+| Physical count is higher | Confirm that receiving or a return was not missed before increasing stock |
+| Damaged or missing item | Record the approved reason and responsible person |
+| Customer return | Restore stock only when the item can be sold again and only once |
+| Shopify and Loyverse differ | Follow the approved reconciliation process; do not copy a number only to make them match |
+
+<Warning>
+  Physical-store inventory ownership between Shopify and Loyverse is still subject to the approved POS process. Review [Commerce Data Ownership](/operations/commerce-data-ownership) before correcting a cross-system difference.
+</Warning>
+
+## Final check
+
+- [ ] Option names and values are consistent
+- [ ] All variant combinations are valid
+- [ ] Every variant has the correct price
+- [ ] SKUs and barcodes are correct and not duplicated
+- [ ] Inventory is assigned to the correct location
+- [ ] Variant images are correct
+- [ ] Live option selection was tested
+- [ ] Any manual stock adjustment has a recorded reason
+
+<Check>
+  The task is complete when customers can select the correct option and Shopify shows the approved price, identifier, image, and available stock for that exact variant.
+</Check>

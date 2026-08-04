@@ -2,10 +2,83 @@
 title: "Organization and sales channels"
 description: "Organize products and control where they are available for sale."
 icon: "share-nodes"
-hidden: true
 ---
 
-{/* DOCUMENTATION STATUS
-  Detailed instructions will be written after the Shopify Products audit is approved.
-  Do not publish unverified store settings on this page.
-  */}
+Use this guide to organize a product and control whether it appears on the SixthGear storefront and other approved sales channels.
+
+<Info>
+  Open **Shopify Admin → Products**, select the product, then review its **Product organization**, **Status**, and **Publishing** settings.
+</Info>
+
+## Product organization
+
+| Field | How SixthGear uses it |
+| --- | --- |
+| Category | Helps classify the product using Shopify's product categories |
+| Product type | Groups similar products for internal management |
+| Vendor | Records the approved brand or supplier name |
+| Collections | Places the product in customer-facing or internal groups |
+| Tags | Supports filters, search, automatic collections, and internal organization |
+
+## Organize and publish the product
+
+<Steps>
+  <Step title="Confirm the product is complete">
+    Check the title, description, images, variants, price, SKU, barcode, and inventory before publishing.
+  </Step>
+  <Step title="Set the category and type">
+    Choose the closest approved category and use the existing SixthGear product-type wording where possible.
+  </Step>
+  <Step title="Set the vendor or brand">
+    Use the approved brand name consistently. Avoid creating a second spelling or version of an existing vendor.
+  </Step>
+  <Step title="Add approved tags">
+    Use existing tags with the same spelling and format. Tags may affect filters and automatic collections.
+  </Step>
+  <Step title="Add collections">
+    Add the product to the correct manual collections or confirm that it meets the rules of the intended automatic collections.
+  </Step>
+  <Step title="Choose the product status">
+    Use **Draft** while work is incomplete, **Active** when approved for sale, and **Archived** only when the product should no longer be used as an active record.
+  </Step>
+  <Step title="Choose sales channels">
+    Select the approved channels in the publishing area. Confirm that the SixthGear headless storefront channel is included when the product must appear on the live website.
+  </Step>
+  <Step title="Verify the live result">
+    Check the product page, collection pages, filters, search, and mobile display on the live SixthGear storefront.
+  </Step>
+</Steps>
+
+## Product status guide
+
+| Status | Use it when |
+| --- | --- |
+| Draft | The product is incomplete, waiting for information, or not yet approved |
+| Active | The product is complete and approved for its selected sales channels |
+| Archived | The product is no longer active but its record should be retained |
+
+<Warning>
+  Active status alone does not guarantee that a product appears on the live website. The correct sales channel, inventory, collection rules, and storefront data must also be available.
+</Warning>
+
+## Before changing tags or collections
+
+- Check whether an existing tag already has the same meaning.
+- Check whether an automatic collection uses the tag.
+- Check whether filters depend on the tag spelling.
+- Do not rename `brand-*` collection handles without an approved storefront change.
+- Do not remove a product from a collection until its customer-facing effect is understood.
+
+## Final check
+
+- [ ] Category and product type are correct
+- [ ] Vendor or brand spelling is consistent
+- [ ] Tags use approved wording
+- [ ] Collections are correct
+- [ ] Product status is intended
+- [ ] Required sales channels are selected
+- [ ] Product appears in the correct live pages and filters
+
+<Check>
+  The task is complete when the product is organized consistently and appears only in the approved sales channels, collections, and storefront areas.
+</Check>

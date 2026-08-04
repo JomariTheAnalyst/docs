@@ -79,6 +79,7 @@
               "shopify/access/overview",
               "shopify/variants-inventory",
               "shopify/collections",
+              "shopify/collections/add-collection",
               "shopify/product-tags",
               "shopify/metafields",
               "shopify/bulk-import",

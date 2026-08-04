@@ -1,0 +1,119 @@
+---
+title: "Add a collection"
+description: "Create a Shopify collection, add the correct products or rules, protect SixthGear handles, and verify the live collection page."
+icon: "folder-plus"
+sidebarTitle: "Add a collection"
+---
+
+Use this guide when SixthGear needs a new product collection in Shopify.
+
+<Info>
+  Go to **Shopify Admin → Products → Collections → Create collection**.
+</Info>
+
+## Before creating a collection
+
+- Confirm why the collection is needed.
+- Search existing collections to avoid creating a duplicate.
+- Prepare the approved title, description, image, products or conditions, and handle.
+- Decide whether the collection should be manual or automatic.
+- Confirm whether website presentation content is also needed in SixthGear CMS.
+
+## Choose the collection type
+
+| Type | Use it when |
+| --- | --- |
+| Manual | Staff must choose each product individually |
+| Automatic | Products should enter or leave based on stable conditions such as tag, vendor, type, price, or stock |
+
+<Warning>
+  The collection type cannot be treated casually after products and storefront links depend on it. Choose the type before building the collection and review the expected members.
+</Warning>
+
+## Create the collection
+
+<Steps>
+  <Step title="Open Create collection">
+    In Shopify Admin, go to **Products → Collections** and select **Create collection**.
+  </Step>
+  <Step title="Enter the approved title and description">
+    Use a clear customer-facing title. Add a useful description when the collection page needs an introduction.
+  </Step>
+  <Step title="Add the collection image">
+    Upload the approved image and confirm that it represents the products in the collection.
+  </Step>
+  <Step title="Choose manual or automatic membership">
+    For a manual collection, add the approved products. For an automatic collection, create clear conditions using product information that staff will maintain consistently.
+  </Step>
+  <Step title="Review the products or conditions">
+    Check which products are included and excluded before saving. Make sure automatic conditions do not pull unrelated items into the collection.
+  </Step>
+  <Step title="Protect the collection handle">
+    Review the search listing and URL handle. Use the approved SixthGear naming rule and do not change protected handles without coordinating the related website change.
+  </Step>
+  <Step title="Choose sales channels">
+    Make the collection available to the approved sales channels, including the headless storefront channel when it must appear on the live website.
+  </Step>
+  <Step title="Complete supported collection content">
+    Add approved Shopify metafields or connected SixthGear CMS content when the collection requires an introduction, buying guide, fitment details, FAQs, or related collections.
+  </Step>
+  <Step title="Save and verify the live page">
+    Open the live collection page and check the title, image, products, sorting, filters, links, supporting content, and mobile display.
+  </Step>
+</Steps>
+
+## SixthGear collection rules
+
+| Rule | Why it matters |
+| --- | --- |
+| Keep `all-products` unchanged | It supports the default store collection behavior |
+| Use approved `brand-*` handles for brand collections | The storefront uses this prefix for brand collection behavior |
+| Avoid duplicate brand collections | Duplicate names and handles confuse staff, filters, links, and SEO |
+| Keep tags consistent for automatic collections | Small spelling differences can add or remove the wrong products |
+| Confirm First Gear collection handling | These collections may be treated separately from the main store menus |
+| Coordinate handle changes | Collection routes and website links use the handle |
+
+## Collection content ownership
+
+- Shopify owns the collection title, handle, membership, conditions, commerce data, and sales-channel availability.
+- SixthGear CMS may own approved presentation content connected to the collection page.
+- Website code controls the page layout, filters, and behavior.
+
+Review [Commerce Data Ownership](/operations/commerce-data-ownership) when the correct editing system is unclear.
+
+## Final check
+
+- [ ] A duplicate collection does not already exist
+- [ ] Title and description are approved
+- [ ] Correct manual or automatic type is used
+- [ ] Products or conditions are correct
+- [ ] Handle follows the SixthGear rule
+- [ ] Collection image is correct
+- [ ] Required sales channels are selected
+- [ ] Supporting metafields or CMS content are complete when needed
+- [ ] Live collection page works on desktop and mobile
+- [ ] Products, sorting, filters, and links work correctly
+
+<Check>
+  The task is complete when the collection includes the intended products, follows the SixthGear handle rules, and works correctly on the live storefront.
+</Check>
+
+## Related guides
+
+<CardGroup cols={2}>
+  <Card title="Understand collections" icon="layout-grid" href="/shopify/collections">
+    Review SixthGear collection behavior and protected handle conventions.
+  </Card>
+
+  <Card title="Manage product tags" icon="tags" href="/shopify/product-tags">
+    Keep automatic collection conditions and storefront filters consistent.
+  </Card>
+
+  <Card title="Manage metafields" icon="brackets" href="/shopify/metafields">
+    Review the supported collection presentation fields.
+  </Card>
+
+  <Card title="SixthGear CMS" icon="panels-top-left" href="/sanity/overview">
+    Add approved editorial collection content when the page is connected to Sanity.
+  </Card>
+</CardGroup>

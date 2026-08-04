@@ -4,7 +4,77 @@ description: "Update an existing product without disrupting pricing, inventory, 
 icon: "credit-card"
 ---
 
-{/* DOCUMENTATION STATUS
-  Detailed instructions will be written after the Shopify Products audit is approved.
-  Do not publish unverified store settings on this page.
-  */}
+Use this guide when changing an existing SixthGear product in Shopify.
+
+<Info>
+  Go to **Shopify Admin → Products**, then open the product you need to update.
+</Info>
+
+## Before editing
+
+- Confirm the requested change and who approved it.
+- Open the correct product and variant.
+- Review the current title, price, stock, images, tags, collections, and sales channels.
+- Check whether the product already has customer orders or active links.
+
+<Warning>
+  Do not edit another product because it looks similar. Confirm the title, SKU, barcode, and product URL before saving.
+</Warning>
+
+## Edit the product safely
+
+<Steps>
+  <Step title="Open the correct product">
+    In Shopify Admin, go to **Products**, search by title, SKU, or barcode, and open the correct record.
+  </Step>
+  <Step title="Change only the approved fields">
+    Update the requested title, description, image, price, variant, stock, tag, collection, or sales-channel setting. Avoid unrelated changes.
+  </Step>
+  <Step title="Review variants before saving">
+    When editing size, color, price, SKU, barcode, or stock, check every affected variant. Do not assume one change applies correctly to all variants.
+  </Step>
+  <Step title="Protect the product URL">
+    Do not change the URL handle unless the new handle is approved and links or redirects have been checked.
+  </Step>
+  <Step title="Save and review Shopify">
+    Save the product and confirm the updated values in Shopify before leaving the page.
+  </Step>
+  <Step title="Verify the live storefront">
+    Open the product on the live SixthGear website. Check desktop and mobile, including title, price, images, variants, stock, collection links, and add-to-cart behavior.
+  </Step>
+</Steps>
+
+## Changes that need extra care
+
+| Change | Main risk | Required check |
+| --- | --- | --- |
+| Product title | Confusing customers or staff | Confirm the approved name and live page |
+| Price | Incorrect customer charge | Confirm approval and every variant price |
+| SKU or barcode | Inventory and scanning errors | Confirm the identifier is unique and correct |
+| Variant option | Broken combinations or wrong stock | Check all affected variants |
+| Inventory | Overselling or missing stock | Confirm location, reason, and actual count |
+| Product status | Product disappears or publishes early | Confirm Draft, Active, or Archived is intended |
+| Sales channels | Product missing from the website | Confirm the correct storefront channel |
+| URL handle | Broken links | Confirm redirects and live links |
+
+## Do not do these
+
+- Do not overwrite another variant's SKU or barcode.
+- Do not reduce stock only to make two systems appear equal.
+- Do not remove a product from a channel without checking where it is sold.
+- Do not archive a product only because it is temporarily out of stock.
+- Do not delete product media before confirming it is no longer used.
+
+## Final check
+
+- [ ] Correct product was edited
+- [ ] Only approved fields changed
+- [ ] Variant details remain correct
+- [ ] Price and inventory were checked
+- [ ] Product status and sales channels are correct
+- [ ] Live page works on desktop and mobile
+- [ ] Any problem or follow-up is recorded
+
+<Check>
+  The task is complete when Shopify and the live storefront show the approved change without affecting unrelated product information.
+</Check>
