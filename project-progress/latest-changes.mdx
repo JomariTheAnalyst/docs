@@ -1,7 +1,6 @@
 ---
 title: "Latest Changes"
 description: "Management-friendly changelog of visible SixthGear website improvements, their business value, verification status, and required evidence."
-icon: "history"
 mode: "wide"
 sidebarTitle: "Latest Changes"
 ---
@@ -11,6 +10,173 @@ This page shows the newest website improvements first. It focuses on what change
 <Info>
   **Current reporting rule:** A change may already be prepared in the website but still require final publishing, testing, or approval before it is shown as fully complete.
 </Info>
+
+## Shop by Brands automated and redesigned
+
+**Status:** Added in the current storefront work — final production and device verification still required
+
+The homepage **Shop by Brands** section now loads Shopify collections automatically when their normalized handles begin with `brand-`. The section no longer depends on the custom featured-collection metafield and is no longer limited to four cards.
+
+The collections are sorted alphabetically using their Shopify collection titles. Collections without an image remain visible and use a neutral placeholder instead of disappearing from the section.
+
+The presentation was also updated:
+
+- Brand cards use a consistent `4:5` image ratio.
+- The carousel supports horizontal dragging.
+- GSAP provides the movement and image parallax effect.
+- The section can show all matching brand collections instead of a fixed group of four.
+
+<Frame caption="Before: Previous Shop by Brands layout">
+  ![Reserved screenshot showing the previous Shop by Brands layout before the automatic Shopify collection and carousel update](/images/placeholders/screenshot-reserved.svg)
+</Frame>
+
+<Frame caption="After: Automated Shop by Brands carousel">
+  ![Reserved screenshot showing the updated Shop by Brands section with Shopify brand collections, placeholder handling, and the GSAP carousel](/images/placeholders/screenshot-reserved.svg)
+</Frame>
+
+**Video to add:** Drag the carousel in both directions, confirm that more than four brands appear, and show a collection using the neutral placeholder image.
+
+## Social media marquee redesigned
+
+**Status:** Added in the current storefront work — final visual and link verification still required
+
+The social media marquee below the brand section was redesigned with a white background, larger typography, and two continuous text rows moving at different speeds.
+
+The marquee uses the **National 2 Condensed** and **National 2 Compressed ExtraBold** fonts. The social platform names are interactive and respond to hover, while the upper and lower rows maintain coordinated movement.
+
+Instagram, TikTok, and Facebook use the links provided through the homepage CTA banner. The remaining social links continue to use the website's approved source data.
+
+<Frame caption="Before: Previous homepage marquee">
+  ![Reserved screenshot showing the previous homepage marquee before the social media redesign](/images/placeholders/screenshot-reserved.svg)
+</Frame>
+
+<Frame caption="After: Two-row social media marquee">
+  ![Reserved screenshot showing the redesigned two-row social media marquee with interactive platform labels](/images/placeholders/screenshot-reserved.svg)
+</Frame>
+
+**Video to add:** Show both marquee rows moving, hover over each platform label, and open the linked social channel in a new tab.
+
+## SixthGear visual branding updated
+
+**Status:** Added in the current storefront work — final browser and responsive-navigation verification still required
+
+The website now uses the new SixthGear logo artwork for the browser favicon. The navigation bar also uses the new **SixthGear Moto** plain-text logo instead of the previous text-based branding.
+
+Responsive navigation and mobile-menu usage were updated so the new branding remains consistent across supported screen sizes.
+
+<Frame caption="Before: Previous favicon and navigation branding">
+  ![Reserved screenshot showing the previous browser favicon and navigation branding](/images/placeholders/screenshot-reserved.svg)
+</Frame>
+
+<Frame caption="After: New SixthGear favicon and navigation logo">
+  ![Reserved screenshot showing the new SixthGear favicon and SixthGear Moto navigation logo](/images/placeholders/screenshot-reserved.svg)
+</Frame>
+
+**Video to add:** Open the homepage on desktop and mobile, then show the browser tab, main navigation, and mobile menu branding.
+
+## Featured video section added
+
+**Status:** Added in the current storefront work — final content, playback, and production verification still required
+
+A responsive featured-video section was added underneath the homepage marquee. Its default content uses the SixthGear trailer hosted on Cloudinary.
+
+The section includes:
+
+- A centered play and pause button
+- An overlay title
+- A description
+- A call-to-action button
+- Responsive sizing for desktop and mobile
+
+The main play and pause icon uses GSAP MorphSVG to animate between both states. After playback begins, the icon, title, description, and controls fade away after approximately one second.
+
+The controls return when:
+
+- The video is paused
+- The user moves or hovers over the player
+- A control receives keyboard focus
+
+<Frame caption="Reserved evidence: Featured video section on the homepage">
+  ![Reserved screenshot showing the responsive featured-video section with its title, description, play button, and call to action](/images/placeholders/screenshot-reserved.svg)
+</Frame>
+
+## Custom video controls added
+
+**Status:** Added in the current storefront work — final cross-browser and mobile verification still required
+
+The featured-video section now uses a custom black control bar based on the approved design reference.
+
+It includes:
+
+- Play and pause
+- Mute and unmute
+- Elapsed time
+- Draggable progress slider
+- Remaining time
+- Fullscreen
+
+The controls support regular hosted videos and YouTube videos. Playback state is synchronized so the visible controls remain aligned with the active video source.
+
+<Frame caption="Reserved evidence: Custom featured-video controls">
+  ![Reserved screenshot showing the custom black video control bar with playback, audio, time, progress, and fullscreen controls](/images/placeholders/screenshot-reserved.svg)
+</Frame>
+
+**Video to add:** Play, pause, mute, seek, and enter fullscreen using both a hosted video and a YouTube video.
+
+## Featured video connected to SixthGear CMS
+
+**Status:** Added in the current storefront work — final CMS publishing demonstration still required
+
+The complete featured-video section is now connected to SixthGear CMS. Editors can control whether the section is shown and whether it uses CMS-managed content.
+
+Editors can provide video content by:
+
+- Uploading a video directly to Sanity
+- Entering an approved Cloudinary URL
+- Entering a supported YouTube URL
+
+Supported YouTube formats include standard watch links, shortened links, Shorts, live videos, embed links, and privacy-enhanced YouTube links.
+
+Editors can also configure:
+
+- Poster image
+- Video title
+- Description
+- Accessibility label
+- Starting mute state
+- Looping behavior
+- Call-to-action label
+- Call-to-action link
+
+Internal and external CTA links are supported.
+
+A content-selection layer validates the CMS data before rendering it. Invalid, incomplete, or unavailable CMS video content falls back to the original SixthGear Cloudinary trailer so the section does not break or disappear unexpectedly.
+
+The section also supports Sanity visual editing.
+
+<Frame caption="Reserved evidence: Featured-video settings in SixthGear CMS">
+  ![Reserved screenshot showing the featured-video CMS fields for source, poster, text, playback, accessibility, and call-to-action settings](/images/placeholders/screenshot-reserved.svg)
+</Frame>
+
+**Video to add:** Change the featured-video source and CTA in SixthGear CMS, publish the document, and verify the result on the homepage.
+
+## Featured-video accessibility and tests expanded
+
+**Status:** Automated coverage added — final production evidence still required
+
+The player includes descriptive labels, keyboard-focus behavior, responsive sizing, fullscreen support, reduced-motion handling, GSAP animation cleanup, and controlled playback synchronization for native and YouTube sources.
+
+Automated tests were added or updated for:
+
+- Homepage placement
+- Sanity schema and CMS-driven content
+- Direct Sanity video uploads
+- Cloudinary and YouTube handling
+- Fallback behavior
+- GSAP MorphSVG animation
+- Hover and control visibility
+- Custom controls
+- Accessibility behavior
 
 ## About and Services pages repaired
 
