@@ -104,6 +104,13 @@
             ]
           },
           {
+            "group": "Orders",
+            "icon": "package-check",
+            "pages": [
+              "shopify/orders/process-order"
+            ]
+          },
+          {
             "group": "Shopify vs Loyverse",
             "hidden": true,
             "expanded": false,
