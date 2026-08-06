@@ -107,7 +107,8 @@
             "group": "Orders",
             "icon": "package-check",
             "pages": [
-              "shopify/orders/process-order"
+              "shopify/orders/process-order",
+              "shopify/orders/returns-refunds-exchanges"
             ]
           },
           {
