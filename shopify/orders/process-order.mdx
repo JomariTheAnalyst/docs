@@ -1,0 +1,239 @@
+---
+title: "Process and fulfill an order"
+description: "Review payment, prepare the correct items, fulfill shipping or pickup orders, and verify that the Shopify order is complete."
+icon: "package-check"
+sidebarTitle: "Process an order"
+---
+
+Use this guide when a customer order appears in Shopify and staff need to prepare, release, ship, or complete it.
+
+<Info>
+  Go to **Shopify Admin → Orders**, then open the correct order.
+</Info>
+
+<Warning>
+  Do not release, ship, or mark an order fulfilled until the payment status and the correct items have been checked. For normal prepaid orders, wait until the payment status is **Paid** unless management has approved a different written process.
+</Warning>
+
+## Before processing the order
+
+Check the following before touching the products:
+
+- Correct SixthGear Shopify store is open
+- Correct order number and customer
+- Payment status is clear
+- Order is not cancelled
+- Shopify does not show an unresolved risk warning
+- Product, variant, quantity, and price are correct
+- Delivery, shipping, or pickup method is clear
+- Customer address and contact details are complete when needed
+- Customer notes or delivery instructions have been reviewed
+- Required stock is available at the assigned location
+
+## Understand the main statuses
+
+### Payment status
+
+| Status | What it means | Staff action |
+| --- | --- | --- |
+| **Paid** | Payment has been captured or the order was correctly marked paid | Continue with the order checks |
+| **Pending** | The payment provider is still processing the payment | Wait and check the provider record; do not release the order |
+| **Authorized** | Payment was approved but has not yet been captured | Ask the authorized person to follow the approved payment-capture process |
+| **Unpaid** | Full payment has not been received | Do not fulfill or release the order |
+| **Partially paid** | Only part of the total has been received | Stop and ask the responsible person to review the balance |
+| **Refunded** | The full payment was returned | Do not process as a normal paid order |
+| **Partially refunded** | Part of the payment was returned | Confirm which items and amount remain valid before continuing |
+
+### Fulfillment status
+
+| Status | What it means |
+| --- | --- |
+| **Unfulfilled** | The items have not yet been released, shipped, or completed |
+| **In progress** | Staff have started preparing the order |
+| **Partially fulfilled** | Only some items or quantities have been completed |
+| **Fulfilled** | All required items have been released, shipped, picked up, or completed |
+| **On hold** | Fulfillment must not continue until the hold is released |
+
+<Note>
+  **Paid** and **Fulfilled** are not the same. Paid means the money is confirmed. Fulfilled means the products were released, shipped, picked up, or completed.
+</Note>
+
+## Process a normal paid order
+
+<Steps>
+  <Step title="Open the correct order">
+    In **Orders**, search by order number or customer name. Confirm the order number before continuing.
+  </Step>
+  <Step title="Review payment and warnings">
+    Confirm the payment status is **Paid** for a normal prepaid order. Review the order timeline and any risk, payment, cancellation, or hold messages.
+  </Step>
+  <Step title="Check the products">
+    Confirm each product, variant, size, color, model, quantity, and price against the order.
+  </Step>
+  <Step title="Check the delivery method">
+    Confirm whether the order is for shipping, local delivery, or pickup. Follow only the method selected on the order.
+  </Step>
+  <Step title="Pick the correct items">
+    Take the products from the assigned location. Match each item to the order and inspect it for damage, missing parts, or incorrect packaging.
+  </Step>
+  <Step title="Pack and label the order">
+    Pack the products safely. Use the approved SixthGear packing, receipt, and courier process.
+  </Step>
+  <Step title="Mark only prepared items as fulfilled">
+    In the **Unfulfilled** or **In progress** section, select **Mark as fulfilled**. Confirm the exact items and quantities before completing the action.
+  </Step>
+  <Step title="Add tracking when shipping">
+    Enter the correct tracking number and carrier when available. Confirm the tracking number belongs to this customer and package.
+  </Step>
+  <Step title="Send the correct notification">
+    Keep the customer notification selected when the approved process requires Shopify to send shipment details. Review the email address before continuing.
+  </Step>
+  <Step title="Verify the final order status">
+    Reopen the order and confirm the payment, fulfillment, items, quantities, tracking, timeline, and remaining work are correct.
+  </Step>
+</Steps>
+
+## Partial fulfillment
+
+Use partial fulfillment only when some items are ready and the customer or approved process allows separate release or delivery.
+
+<Steps>
+  <Step title="Confirm which items are ready">
+    Check the exact products and quantities that can be released now.
+  </Step>
+  <Step title="Confirm the remaining plan">
+    Record why the other items are delayed and who will follow up with the customer.
+  </Step>
+  <Step title="Fulfill only the ready quantities">
+    Select **Mark as fulfilled**, then enter only the quantities included in this shipment or release.
+  </Step>
+  <Step title="Add the correct tracking details">
+    Add tracking only for the package being sent now.
+  </Step>
+  <Step title="Review the remaining items">
+    Confirm the order shows **Partially fulfilled** and the unfinished items remain visible for follow-up.
+  </Step>
+</Steps>
+
+<Warning>
+  Do not mark the whole order fulfilled when one or more items are still waiting for stock, customer approval, preparation, or delivery.
+</Warning>
+
+## Pickup orders
+
+Use this section only when pickup in store is enabled and the customer selected pickup during checkout.
+
+<Steps>
+  <Step title="Check payment and pickup location">
+    Confirm the payment status, selected pickup location, customer, products, and quantities.
+  </Step>
+  <Step title="Prepare and label the order">
+    Pick, inspect, and safely hold the products under the correct order number.
+  </Step>
+  <Step title="Mark the order ready for pickup">
+    After every pickup item is ready, use **Ready for pickup** and confirm the customer notification.
+  </Step>
+  <Step title="Verify the person collecting">
+    Ask for the order number and follow the approved SixthGear customer or authorized-receiver verification process.
+  </Step>
+  <Step title="Release the correct items">
+    Match the products and quantities to the order before handing them over.
+  </Step>
+  <Step title="Mark the order picked up">
+    After the customer receives the items, select **Mark as picked up** and confirm the order is fulfilled.
+  </Step>
+</Steps>
+
+<Warning>
+  Do not hand over an order based only on a customer name. Confirm the order number and follow the approved pickup verification process.
+</Warning>
+
+## Local delivery orders
+
+Use this section only when Shopify local delivery is enabled for the order.
+
+1. Review the delivery address, contact details, and customer instructions.
+2. Pick and pack the correct items.
+3. Use **Prepare delivery** and mark the order **Ready for delivery** when it is ready to leave.
+4. Follow the approved SixthGear local delivery process.
+5. After delivery is confirmed, select **Mark as delivered**.
+6. Recheck that the order is fulfilled and no items remain open.
+
+## Payment is pending or unclear
+
+When the customer says they paid but Shopify does not show **Paid**:
+
+1. Do not immediately ask the customer to pay again.
+2. Do not mark the order paid without authority.
+3. Check the order timeline and approved payment-provider record.
+4. Record the amount, payment method, time, and available reference.
+5. Ask the responsible payment or Shopify administrator to review it.
+6. Keep the order unfulfilled until payment is confirmed or an approved exception is given.
+
+A screenshot from the customer alone is not enough proof that SixthGear received the payment.
+
+## Cancelled or stopped orders
+
+- Do not prepare or release a cancelled order.
+- Check whether payment was captured and whether a refund or further action is required.
+- Confirm whether inventory was restored.
+- Keep the order record and timeline intact.
+- Do not delete or change information only to hide the cancellation.
+- Escalate any order that was cancelled after packing, shipping, or customer pickup preparation began.
+
+## Staff boundaries
+
+Do not perform these actions without the required approval:
+
+- Mark an unpaid order as paid
+- Capture an authorized payment
+- Cancel an order
+- Issue a refund
+- Change a paid order's price, items, discount, or shipping charge
+- Change customer information without a valid reason
+- Release an order with unclear payment
+- Ignore a Shopify risk warning or fulfillment hold
+- Fulfill items that were not actually prepared
+- Change payment, checkout, shipping, app, user, or billing settings
+
+## Final order check
+
+- [ ] Correct order number and customer
+- [ ] Payment status confirmed
+- [ ] No unresolved cancellation, risk warning, or hold
+- [ ] Correct products and variants
+- [ ] Correct quantities
+- [ ] Items inspected before release
+- [ ] Delivery, shipping, or pickup method followed
+- [ ] Tracking is correct when used
+- [ ] Only prepared items were fulfilled
+- [ ] Customer notification was handled correctly
+- [ ] Remaining items or follow-up actions are recorded
+
+<Check>
+  The task is complete when the customer receives the correct items, Shopify shows the correct payment and fulfillment status, and no unfinished item or follow-up is hidden.
+</Check>
+
+## Related guides
+
+<CardGroup cols={2}>
+  <Card title="Returns, refunds, and exchanges" icon="rotate-ccw" href="/shopify/orders/returns-refunds-exchanges">
+    Handle returned items, approved refunds, restocking, and exchanges safely.
+  </Card>
+
+  <Card title="Commerce Data Ownership" icon="database" href="/operations/commerce-data-ownership">
+    Confirm which system owns the order, payment, stock, and settlement records.
+  </Card>
+
+  <Card title="Shopify troubleshooting" icon="shopping-cart" href="/troubleshooting/shopify">
+    Check order, stock, cart, checkout, and Shopify problems.
+  </Card>
+
+  <Card title="Shopify Access" icon="log-in" href="/shopify/access/overview">
+    Confirm that the staff member has the approved Shopify role.
+  </Card>
+
+  <Card title="Operations" icon="clipboard-check" href="/operations/overview">
+    Return to the staff task starting point.
+  </Card>
+</CardGroup>
