@@ -8,6 +8,10 @@
     "light": "#F16D34",
     "dark": "#F16D34"
   },
+  "logo": {
+    "light": "/images/brand/sixthgear-moto-logo-light.png",
+    "dark": "/images/brand/sixthgear-moto-logo-dark.png"
+  },
   "favicon": "/images/brand/favicon.png",
   "appearance": {
     "default": "system"
