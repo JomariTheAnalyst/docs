@@ -1,0 +1,78 @@
+---
+title: "When things go wrong at the counter"
+sidebarTitle: "When things go wrong"
+description: "What to do right away when the internet, printer, tablet, Shopify, power, card terminal, or QR PH stops working, and what happens after."
+icon: "triangle-alert"
+---
+
+{/* Offline facts on this page come from Shopify Help Center: "Shopify POS offline features" and "Offline checkout on Shopify POS" (help.shopify.com/en/manual/sell-in-person/shopify-pos/selling-offline), read on 2026-09-24. Screen labels for the offline banner and the sync button are not confirmed. Check them on the tablet, then remove this comment. */}
+
+{/* This page is written for the trial period, when every sale also goes into Loyverse. Update the "Right now" column when Loyverse is removed. */}
+
+## The one rule when the internet is down
+
+<Warning>
+  Do not log out of Shopify POS and do not turn off the tablet while it is offline. Sales made offline are saved only on the tablet until it reconnects. Logging out or turning it off can lose them.
+</Warning>
+
+## Right now, and after
+
+| Problem | What you do right now | What happens after |
+| --- | --- | --- |
+| No internet or Wi-Fi is down | Keep selling. Shopify POS keeps working offline if it was already logged in. Record every sale in Loyverse as usual. See [what works offline](#what-works-offline) | When the internet is back, the offline sales upload to Shopify on their own. The supervisor checks at closing that the day's Shopify total includes them |
+| The receipt printer is not printing | Check that it has paper and that the red light is not blinking. Close the paper cover. Keep selling: during the trial the customer gets the Loyverse receipt | If it still does not print, tell your supervisor. The supervisor checks the printer settings and contacts Shopify support if needed |
+| The tablet is dead | Plug it in. Keep selling in Loyverse. Write down the sales made while the tablet was off | When the tablet is back on, tell your supervisor which sales are not in Shopify yet. See [Open and close the register](/at-the-counter/open-and-close-register) |
+| The tablet is lost or stolen | Tell your supervisor right away. Keep selling in Loyverse | The owner removes the tablet's access to Shopify and changes staff PINs if needed |
+| You cannot log in to the tablet | Check you are typing your own PIN. If it still fails, call your supervisor. Keep selling in Loyverse | The supervisor checks your PIN or logs in for you |
+| Shopify is down, but the power and internet work | Keep selling in Loyverse. Tell your supervisor | The supervisor checks Shopify's status page and decides when to enter the missed sales in Shopify |
+| Power outage | Keep selling in Loyverse if its device still has battery. Take **Cash** only unless the card terminal and the store's QR PH phone still work. Keep the tablet on and logged in | When power is back, check the tablet, the printer, and the Wi-Fi. Tell your supervisor which sales are not in Shopify yet |
+| The card terminal is not working | Ask the customer to pay by cash or QR PH. Do not record a card payment you did not see approved | Tell your supervisor. The supervisor contacts the bank |
+| QR PH is not working | Ask the customer to pay by cash or card. Never accept a screenshot as proof of payment | Tell your supervisor. The supervisor checks the store's QR PH app |
+
+{/* Not confirmed: whether a staff PIN login works while offline, whether the bank's card terminal runs on battery, and whether the Wi-Fi printer keeps printing when the router is off. The printer supports Bluetooth, and Shopify says Bluetooth printers print offline. Confirm how the tablet connects to the printer. */}
+
+{/* Not confirmed: how the owner removes a lost tablet from Shopify (for example a device list under Settings > Point of Sale). Check the path in Shopify admin before adding steps. */}
+
+<Frame caption="Screenshot needed: the offline banner in Shopify POS. Save as images/at-the-counter/when-things-go-wrong-1.png">
+  <img src="/images/placeholders/screenshot-reserved.svg" alt="Placeholder for a screenshot of the offline banner in Shopify POS" />
+</Frame>
+
+## What works offline
+
+| Works offline | Does not work offline |
+| --- | --- |
+| Selling products that were already on the tablet | Logging in for the first time, because the app must load the products |
+| **Cash**, **QR PH**, **Card Terminal**, and **Care of Boss** | Adding new products |
+| Discounts entered by hand at checkout | Looking up, adding, or editing a customer |
+| Printing receipts on a printer that stays connected | Discount codes and automatic discounts |
+| Scanning barcodes | Returns, exchanges, and voids |
+|  | Online orders: shipping or store pickup |
+|  | Updating stock in Shopify admin and on the website, until the tablet reconnects |
+
+Shopify asks for the customer's phone number or email for a sale made offline.
+
+{/* Shopify's offline checkout page says staff must collect a phone number or an email for offline sales. Check on the tablet whether this is required or optional before telling staff to always ask. */}
+
+<Info>
+  **QR PH** and **Card Terminal** still work in Shopify offline, because Shopify only records them. The money still has to arrive. Check the store's QR PH app or wait for the approved card slip, as usual.
+</Info>
+
+## After the internet is back
+
+<Steps>
+  <Step title="Keep the tablet on">
+    The offline sales upload by themselves. Do not log out.
+  </Step>
+  <Step title="Tell your supervisor how long you were offline">
+    Say roughly when it started and ended.
+  </Step>
+  <Step title="The supervisor checks at closing">
+    The day's Shopify total should include the offline sales and match Loyverse. See [Daily closing checks](/reports-and-management/closing-checks).
+  </Step>
+</Steps>
+
+## Related pages
+
+- [Take payment](/at-the-counter/take-payment)
+- [Open and close the register](/at-the-counter/open-and-close-register)
+- [Using Loyverse and Shopify together](/at-the-counter/loyverse-and-shopify)
