@@ -31,27 +31,202 @@
   "navigation": {
     "tabs": [
       {
-        "tab": "Start Here",
-        "icon": "play",
-        "pages": [
-          "introduction",
-          "initial-setup/overview",
-          "operations/overview",
-          "operations/commerce-data-ownership",
+        "tab": "Staff guide",
+        "icon": "book-open",
+        "anchors": [
           {
-            "group": "Access Control",
-            "icon": "key-round",
+            "anchor": "Start here",
+            "icon": "play",
             "pages": [
-              "start-here/executive-handoff",
-              "start-here/credentials",
-              "shopify-access/overview",
-              "start-here/cms-access",
-              "start-here/source-code",
-              "start-here/product-csv"
+              "introduction"
             ]
           },
           {
-            "group": "Website Progress",
+            "anchor": "At the counter",
+            "icon": "store",
+            "groups": [
+              {
+                "group": "Getting started",
+                "pages": [
+                  "at-the-counter/overview",
+                  "at-the-counter/loyverse-and-shopify"
+                ]
+              },
+              {
+                "group": "Daily routine",
+                "pages": [
+                  "at-the-counter/open-and-close-register"
+                ]
+              },
+              {
+                "group": "Selling",
+                "pages": [
+                  "at-the-counter/ring-up-a-sale",
+                  "at-the-counter/services-carwash-hauling",
+                  "at-the-counter/cafe-orders",
+                  "at-the-counter/discounts",
+                  "at-the-counter/take-payment"
+                ]
+              },
+              {
+                "group": "For supervisors",
+                "hidden": true,
+                "pages": [
+                  "at-the-counter/refunds-and-returns"
+                ]
+              }
+            ]
+          },
+          {
+            "anchor": "Online orders",
+            "icon": "globe",
+            "pages": [
+              "online-orders/overview",
+              "online-orders/check-new-orders",
+              "online-orders/prepare-an-order",
+              "online-orders/complete-an-order",
+              "online-orders/customer-questions"
+            ]
+          },
+          {
+            "anchor": "Products & stock",
+            "icon": "package",
+            "groups": [
+              {
+                "group": "Getting started",
+                "pages": [
+                  "products-and-stock/overview"
+                ]
+              },
+              {
+                "group": "Add products",
+                "pages": [
+                  "shopify/products/add-product",
+                  "products-and-stock/add-counter-item"
+                ]
+              },
+              {
+                "group": "Stock and prices",
+                "pages": [
+                  "products-and-stock/receive-a-delivery",
+                  "products-and-stock/count-and-correct-stock",
+                  "products-and-stock/change-a-price"
+                ]
+              },
+              {
+                "group": "Shopify admin",
+                "pages": [
+                  "shopify/overview",
+                  "shopify/products/overview",
+                  "shopify/products/edit-product",
+                  "shopify/products/product-media",
+                  "shopify/products/variants-inventory",
+                  "shopify/variants-inventory",
+                  "shopify/products/organization-publishing",
+                  "shopify/collections",
+                  "shopify/collections/add-collection",
+                  "shopify/product-tags",
+                  "shopify/discounts-campaigns"
+                ]
+              }
+            ]
+          },
+          {
+            "anchor": "Website content",
+            "icon": "panels-top-left",
+            "groups": [
+              {
+                "group": "Getting started",
+                "pages": [
+                  "website-content/overview",
+                  "website-content/open-the-cms",
+                  "website-content/edit-and-publish",
+                  "website-content/when-changes-show"
+                ]
+              },
+              {
+                "group": "Pages you can change",
+                "pages": [
+                  "website-content/home-page",
+                  "website-content/services",
+                  "website-content/about",
+                  "website-content/rider-stories",
+                  "website-content/popups-and-promo-banners"
+                ]
+              },
+              {
+                "group": "Ask the web team",
+                "pages": [
+                  "website-content/web-team-only"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Management",
+        "icon": "briefcase",
+        "anchors": [
+          {
+            "anchor": "Reports & checks",
+            "icon": "chart-column",
+            "pages": [
+              "reports-and-management/overview",
+              "reports-and-management/sales-reports",
+              "reports-and-management/closing-checks",
+              "operations/overview"
+            ]
+          },
+          {
+            "anchor": "POS decision",
+            "icon": "scale",
+            "pages": [
+              "reports-and-management/pos-decision",
+              "reports-and-management/loyverse-checklist"
+            ]
+          },
+          {
+            "anchor": "Open decisions",
+            "icon": "list-todo",
+            "pages": [
+              "reports-and-management/open-decisions"
+            ]
+          },
+          {
+            "anchor": "Accounts & access",
+            "icon": "key-round",
+            "groups": [
+              {
+                "group": "Getting started",
+                "pages": [
+                  "accounts-and-access/overview",
+                  "initial-setup/overview",
+                  "accounts-and-access/executive-handoff"
+                ]
+              },
+              {
+                "group": "Accounts",
+                "pages": [
+                  "accounts-and-access/account-credentials-inventory",
+                  "accounts-and-access/business-owner-account",
+                  "accounts-and-access/social-media-accounts",
+                  "accounts-and-access/email-directory",
+                  "accounts-and-access/device-directory"
+                ]
+              },
+              {
+                "group": "Access",
+                "pages": [
+                  "accounts-and-access/platform-access",
+                  "shopify/access/overview",
+                  "accounts-and-access/source-code-access"
+                ]
+              }
+            ]
+          },
+          {
+            "anchor": "Project updates",
             "icon": "chart-no-axes-combined",
             "pages": [
               "project-progress/overview",
@@ -62,294 +237,77 @@
         ]
       },
       {
-        "tab": "At the Counter",
-        "icon": "store",
-        "groups": [
+        "tab": "Developers",
+        "icon": "code-xml",
+        "anchors": [
           {
-            "group": "Getting started",
-            "icon": "play",
-            "pages": [
-              "at-the-counter/overview",
-              "at-the-counter/loyverse-and-shopify"
+            "anchor": "Storefront",
+            "icon": "code-xml",
+            "groups": [
+              {
+                "group": "Architecture",
+                "pages": [
+                  "website/system-architecture",
+                  "website/source-code-overview",
+                  "website/local-development",
+                  "website/environment-variables",
+                  "website/testing"
+                ]
+              },
+              {
+                "group": "Integrations",
+                "pages": [
+                  "website/sanity-integration",
+                  "sanity/content-types",
+                  "sanity/fields-validation",
+                  "website/strapi-integration",
+                  "website/caching-revalidation"
+                ]
+              }
             ]
           },
           {
-            "group": "Daily routine",
-            "icon": "sunrise",
+            "anchor": "Shopify reference",
+            "icon": "shopping-bag",
             "pages": [
-              "at-the-counter/open-and-close-register"
-            ]
-          },
-          {
-            "group": "Selling",
-            "icon": "shopping-cart",
-            "pages": [
-              "at-the-counter/ring-up-a-sale",
-              "at-the-counter/services-carwash-hauling",
-              "at-the-counter/cafe-orders",
-              "at-the-counter/discounts",
-              "at-the-counter/take-payment"
-            ]
-          },
-          {
-            "group": "For supervisors",
-            "icon": "shield-check",
-            "pages": [
-              "at-the-counter/refunds-and-returns"
-            ],
-            "hidden": true
-          }
-        ]
-      },
-      {
-        "tab": "Products and Stock",
-        "icon": "package",
-        "groups": [
-          {
-            "group": "Start here",
-            "icon": "play",
-            "pages": [
-              "products-and-stock/overview"
-            ]
-          },
-          {
-            "group": "Add products",
-            "icon": "square-plus",
-            "pages": [
-              "shopify/products/add-product",
-              "products-and-stock/add-counter-item"
-            ]
-          },
-          {
-            "group": "Stock and prices",
-            "icon": "boxes",
-            "pages": [
-              "products-and-stock/receive-a-delivery",
-              "products-and-stock/count-and-correct-stock",
-              "products-and-stock/change-a-price"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "Online Orders",
-        "icon": "globe",
-        "groups": [
-          {
-            "group": "Start here",
-            "icon": "play",
-            "pages": [
-              "online-orders/overview"
-            ]
-          },
-          {
-            "group": "Daily work",
-            "icon": "package-check",
-            "pages": [
-              "online-orders/check-new-orders",
-              "online-orders/prepare-an-order",
-              "online-orders/complete-an-order",
-              "online-orders/customer-questions"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "Shopify",
-        "icon": "shopping-bag",
-        "pages": [
-          {
-            "group": "Shopify administration",
-            "root": "shopify/overview",
-            "pages": [
-              "shopify/access/overview",
-              "shopify/variants-inventory",
-              "shopify/collections",
-              "shopify/collections/add-collection",
-              "shopify/product-tags",
-              "shopify/metafields",
-              "shopify/bulk-import",
-              "shopify/discounts-campaigns",
-              "shopify/apps"
-            ]
-          },
-          {
-            "group": "Products",
-            "root": "shopify/products/overview",
-            "pages": [
-              "shopify/export-products",
-              "shopify/products/edit-product",
-              "shopify/products/product-media",
-              "shopify/products/troubleshooting",
-              "shopify/products/variants-inventory",
-              "shopify/products/organization-publishing",
-              "shopify/products/product-seo",
-              "shopify/products/product-metafields",
-              "shopify/products/bulk-management"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "Website Content",
-        "icon": "panels-top-left",
-        "groups": [
-          {
-            "group": "Start here",
-            "icon": "play",
-            "pages": [
-              "website-content/overview",
-              "website-content/open-the-cms",
-              "website-content/edit-and-publish",
-              "website-content/when-changes-show"
-            ]
-          },
-          {
-            "group": "Pages you can change",
-            "icon": "file-pen-line",
-            "pages": [
-              "website-content/home-page",
-              "website-content/services",
-              "website-content/about",
-              "website-content/rider-stories",
-              "website-content/popups-and-promo-banners"
-            ]
-          },
-          {
-            "group": "Ask the web team",
-            "icon": "code",
-            "pages": [
-              "website-content/web-team-only"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "Reports and Management",
-        "icon": "briefcase",
-        "groups": [
-          {
-            "group": "Start here",
-            "icon": "play",
-            "pages": [
-              "reports-and-management/overview"
-            ]
-          },
-          {
-            "group": "Daily and reports",
-            "icon": "chart-column",
-            "pages": [
-              "reports-and-management/sales-reports",
-              "reports-and-management/closing-checks"
-            ]
-          },
-          {
-            "group": "Decisions",
-            "icon": "scale",
-            "pages": [
-              "reports-and-management/pos-decision",
-              "reports-and-management/loyverse-checklist",
-              "reports-and-management/open-decisions"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "Storefront",
-        "icon": "code-2",
-        "groups": [
-          {
-            "group": "Storefront development",
-            "root": "storefront-development/overview",
-            "pages": [
-              "website/system-architecture",
-              "website/source-code-overview",
-              "website/local-development",
-              "website/environment-variables",
               "website/shopify-integration",
-              "website/sanity-integration",
-              "sanity/content-types",
-              "sanity/fields-validation",
-              "website/strapi-integration",
-              "website/caching-revalidation",
-              "website/testing"
+              "shopify/metafields",
+              "shopify/apps",
+              "shopify/bulk-import",
+              "shopify/export-products"
             ]
           },
           {
-            "group": "Deployment",
-            "root": "deployment/overview",
+            "anchor": "Deployment",
+            "icon": "rocket",
             "pages": [
               "deployment/deployment-overview",
               "deployment/deploy-through-vercel",
               "deployment/verify-deployment",
               "deployment/roll-back-deployment"
             ]
-          }
-        ]
-      },
-      {
-        "tab": "SEO & Growth",
-        "icon": "search-check",
-        "pages": [
-          "seo/overview"
-        ]
-      },
-      {
-        "tab": "Accounts & Access",
-        "icon": "key-round",
-        "groups": [
-          {
-            "group": "Accounts & Access",
-            "root": "accounts-and-access/overview",
-            "pages": [
-              "accounts-and-access/executive-handoff",
-              "accounts-and-access/account-credentials-inventory",
-              "accounts-and-access/business-owner-account",
-              "accounts-and-access/social-media-accounts",
-              "accounts-and-access/email-directory",
-              "accounts-and-access/platform-access",
-              "accounts-and-access/device-directory",
-              "accounts-and-access/source-code-access",
-              "accounts-and-access/executive-handoff"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "Resources",
-        "icon": "library",
-        "menu": [
-          {
-            "item": "Troubleshooting",
-            "icon": "wrench",
-            "pages": [
-              "troubleshooting/overview",
-              "troubleshooting/website",
-              "troubleshooting/shopify",
-              "troubleshooting/sanity",
-              "troubleshooting/deployment",
-              "troubleshooting/emergency-recovery"
-            ]
           },
           {
-            "item": "Glossary",
-            "icon": "book-a",
-            "pages": [
-              "reference/overview"
-            ]
-          },
-          {
-            "item": "Turnover & Maintenance",
-            "icon": "repeat-2",
-            "pages": [
-              "turnover-and-maintenance/overview"
-            ]
-          },
-          {
-            "item": "Documentation Updates",
-            "icon": "history",
-            "pages": [
-              "resources/documentation-updates"
+            "anchor": "Resources",
+            "icon": "library",
+            "groups": [
+              {
+                "group": "Reference",
+                "pages": [
+                  "operations/commerce-data-ownership",
+                  "resources/documentation-updates"
+                ]
+              },
+              {
+                "group": "Troubleshooting",
+                "pages": [
+                  "troubleshooting/website",
+                  "troubleshooting/shopify",
+                  "troubleshooting/sanity",
+                  "troubleshooting/deployment",
+                  "troubleshooting/emergency-recovery"
+                ]
+              }
             ]
           }
         ]

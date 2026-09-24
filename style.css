@@ -1,0 +1,4 @@
+/* Keep sidebar group headings in sentence case. The theme capitalizes them by default. */
+.sidebar-title {
+  text-transform: none;
+}

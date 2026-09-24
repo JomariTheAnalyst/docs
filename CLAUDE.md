@@ -56,7 +56,7 @@ Applies to the **At the Counter**, **Products and Stock**, and **Online Orders**
 - Motowash has no variants. Carwash variants are Carwash Small, Carwash Medium, Carwash Large, and Carwash XL.
 - Hauling destinations are variants. Destinations with a price range are set at the highest price, and a supervisor lowers it.
 
-**Discounts:** 10%, 15%, and 20% are approved by a supervisor. The executive discount is approved and set by the owner only. No other discounts are offered. Do not write about Senior Citizen or PWD discounts.
+**Discounts:** 10%, 15%, and 20% are approved by a supervisor. The executive discount is approved and set by the owner only. No other discounts are offered. Do not write about Senior Citizen or PWD discounts, except as an item on the Open decisions page.
 
 **Staff never use Custom sale.** It has no category and breaks the daily sales report.
 
