@@ -81,6 +81,13 @@
             ]
           },
           {
+            "group": "Daily routine",
+            "icon": "sunrise",
+            "pages": [
+              "at-the-counter/open-and-close-register"
+            ]
+          },
+          {
             "group": "Selling",
             "icon": "shopping-cart",
             "pages": [
