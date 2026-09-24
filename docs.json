@@ -91,7 +91,18 @@
             "group": "Selling",
             "icon": "shopping-cart",
             "pages": [
+              "at-the-counter/ring-up-a-sale",
+              "at-the-counter/services-carwash-hauling",
+              "at-the-counter/cafe-orders",
+              "at-the-counter/discounts",
               "at-the-counter/take-payment"
+            ]
+          },
+          {
+            "group": "For supervisors",
+            "icon": "shield-check",
+            "pages": [
+              "at-the-counter/refunds-and-returns"
             ]
           }
         ]
