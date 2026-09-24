@@ -77,6 +77,7 @@ Applies to the **At the Counter**, **Products and Stock**, and **Online Orders**
 - Who approves each discount (the current draft says a supervisor approves 10% to 20%).
 - The exact name of the website's sales channel.
 - Which courier ships online orders.
+- Refunds page: the Care of Boss row says 'Nothing to give back'. Update it when the refund process is decided.
 
 ## Never
 
