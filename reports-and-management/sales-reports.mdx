@@ -1,0 +1,106 @@
+---
+title: "Sales reports in Shopify"
+sidebarTitle: "Sales reports"
+description: "Open the two SixthGear saved sales reports in Shopify, change the date range, and export them to CSV."
+icon: "chart-column"
+---
+
+{/* Check the menu path Analytics > Reports, the date range control, and the ... > Export labels in Shopify admin, then remove this comment. */}
+
+SixthGear has two saved reports in Shopify. They show sales from the counter and the website together, unless you filter them.
+
+| Report | What it shows |
+| --- | --- |
+| **Sixthgear Sales Reporting** | Sales by business unit and report category |
+| **Sixthgear Sales by Product** | Sales for each product |
+
+Business unit and report category are two labels on every product. For the full list, see [Products and Stock](/products-and-stock/overview).
+
+## Open a report
+
+<Steps>
+  <Step title="Open Shopify admin">
+    Log in with your own account.
+  </Step>
+  <Step title="Click Analytics, then Reports">
+  </Step>
+  <Step title="Click the report name">
+    For example, **Sixthgear Sales Reporting**. The report opens with its last saved date range.
+  </Step>
+</Steps>
+
+<Frame caption="Screenshot needed: the Reports list in Shopify admin with the two SixthGear saved reports. Save as images/reports-and-management/sales-reports-1.png">
+  <img src="/images/placeholders/screenshot-reserved.svg" alt="Placeholder for a screenshot of the Reports list with the two SixthGear saved reports" />
+</Frame>
+
+## Change the date range
+
+<Steps>
+  <Step title="Click the date range at the top of the report">
+  </Step>
+  <Step title="Choose the dates">
+    Pick a ready-made range such as **Today** or **Last 7 days**, or choose a start and end date.
+  </Step>
+  <Step title="Apply the range">
+    The report updates. Check the dates shown at the top before you read the totals.
+  </Step>
+</Steps>
+
+## Export to CSV
+
+A CSV file opens in Excel or Google Sheets.
+
+<Steps>
+  <Step title="Set the date range first">
+    The export copies only what is on screen.
+  </Step>
+  <Step title="Click the ... button">
+  </Step>
+  <Step title="Click Export">
+    The file downloads to your computer.
+  </Step>
+</Steps>
+
+<Frame caption="Screenshot needed: the ... menu on a saved report with Export showing. Save as images/reports-and-management/sales-reports-2.png">
+  <img src="/images/placeholders/screenshot-reserved.svg" alt="Placeholder for a screenshot of the report menu with the Export option" />
+</Frame>
+
+<Warning>
+  Exported files contain sales data. Keep them on store computers or the store's shared drive. Do not send them to personal email or chat.
+</Warning>
+
+## What these reports cannot show
+
+The reports show the total for each category. They cannot split each category into Cash and Non-Cash. For that, use the payment totals in the [daily closing checks](/reports-and-management/closing-checks).
+
+A Google Sheet daily sales report that splits each category into Cash and Non-Cash is planned. It is not ready yet.
+
+{/* Planned: Google Sheet Daily Sales Report with Cash / Non-Cash per category. Document it here once it is built and approved. */}
+
+## For supervisors: custom queries
+
+<AccordionGroup>
+  <Accordion title="Sales by unit and category, last 90 days">
+    Use this to rebuild **Sixthgear Sales Reporting** for the last 90 days, with totals.
+
+    ```sql
+    FROM sales SHOW gross_sales, discounts, net_sales GROUP BY product.metafields.custom.sixthgear_business_unit, product.metafields.sixthgear.report_category WITH TOTALS SINCE -90d UNTIL today ORDER BY net_sales DESC
+    ```
+  </Accordion>
+  <Accordion title="Today's counter sales only">
+    Use this at closing to see only the sales made on the counter tablet today.
+
+    ```sql
+    FROM sales SHOW gross_sales, discounts, net_sales WHERE is_pos_sale = true GROUP BY product.metafields.custom.sixthgear_business_unit, product.metafields.sixthgear.report_category WITH TOTALS SINCE today UNTIL today
+    ```
+  </Accordion>
+</AccordionGroup>
+
+To run a query, open a new report in **Analytics** > **Reports**, open the query editor, paste the query, and run it. Do not save over the two SixthGear reports.
+
+{/* Check the label of the query editor in Shopify admin (for example "Edit query" or the code view of a new exploration), then remove this comment. */}
+
+## Related pages
+
+- [Daily closing checks](/reports-and-management/closing-checks)
+- [Take payment](/at-the-counter/take-payment)

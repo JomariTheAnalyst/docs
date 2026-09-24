@@ -35,17 +35,6 @@
           "operations/overview",
           "operations/commerce-data-ownership",
           {
-            "group": "For Management",
-            "icon": "scale",
-            "pages": [
-              "pos-decision/overview",
-              "pos-decision/POS-decision",
-              "pos-decision/hardware-philippines",
-              "pos-decision/payments-philippines",
-              "pos-decision/pilot-decision-record"
-            ]
-          },
-          {
             "group": "Access Control",
             "icon": "key-round",
             "pages": [
@@ -194,21 +183,6 @@
               "shopify/products/product-metafields",
               "shopify/products/bulk-management"
             ]
-          },
-          {
-            "group": "Shopify vs Loyverse",
-            "hidden": true,
-            "expanded": false,
-            "root": "shopify/shopify-vs-loyverse/overview",
-            "pages": [
-              "shopify/shopify-vs-loyverse/sixthgear-requirements",
-              "shopify/shopify-vs-loyverse/platform-capabilities",
-              "shopify/shopify-vs-loyverse/comparison-and-pros-cons",
-              "shopify/shopify-vs-loyverse/commerce-architecture",
-              "shopify/shopify-vs-loyverse/philippines-payments-and-compliance",
-              "shopify/shopify-vs-loyverse/hardware-recommendations",
-              "shopify/shopify-vs-loyverse/final-recommendation"
-            ]
           }
         ]
       },
@@ -242,6 +216,36 @@
             "icon": "code",
             "pages": [
               "website-content/web-team-only"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Reports and Management",
+        "icon": "briefcase",
+        "groups": [
+          {
+            "group": "Start here",
+            "icon": "play",
+            "pages": [
+              "reports-and-management/overview"
+            ]
+          },
+          {
+            "group": "Daily and reports",
+            "icon": "chart-column",
+            "pages": [
+              "reports-and-management/sales-reports",
+              "reports-and-management/closing-checks"
+            ]
+          },
+          {
+            "group": "Decisions",
+            "icon": "scale",
+            "pages": [
+              "reports-and-management/pos-decision",
+              "reports-and-management/loyverse-checklist",
+              "reports-and-management/open-decisions"
             ]
           }
         ]
@@ -365,21 +369,34 @@
     { "source": "/deployment/rollback-overview", "destination": "/deployment/roll-back-deployment" },
     { "source": "/recovery/emergency-response", "destination": "/troubleshooting/emergency-recovery" },
     { "source": "/recovery/access-recovery", "destination": "/troubleshooting/emergency-recovery" },
-    { "source": "/shopify/pos-platform-recommendation", "destination": "/shopify/shopify-vs-loyverse/overview" },
+    { "source": "/shopify/pos-platform-recommendation", "destination": "/reports-and-management/pos-decision" },
     { "source": "/accounts-and-access/credentials-and-password-manager", "destination": "/accounts-and-access/overview" },
     { "source": "/accounts-and-access/access-request", "destination": "/accounts-and-access/overview" },
     { "source": "/accounts-and-access/mfa-and-recovery", "destination": "/accounts-and-access/overview" },
     { "source": "/accounts-and-access/access-review-and-offboarding", "destination": "/accounts-and-access/overview" },
-    { "source": "/shopify/shopify-vs-loyverse/imin-hardware-assessment", "destination": "/shopify/shopify-vs-loyverse/hardware-recommendations" },
-    { "source": "/shopify/shopify-vs-loyverse/cost-and-risk-analysis", "destination": "/shopify/shopify-vs-loyverse/comparison-and-pros-cons" },
-    { "source": "/shopify/shopify-vs-loyverse/pilot-and-migration-plan", "destination": "/shopify/shopify-vs-loyverse/final-recommendation" },
-    { "source": "/shopify/shopify-vs-loyverse/decision-record", "destination": "/shopify/shopify-vs-loyverse/final-recommendation" },
+    { "source": "/shopify/shopify-vs-loyverse/imin-hardware-assessment", "destination": "/reports-and-management/pos-decision" },
+    { "source": "/shopify/shopify-vs-loyverse/cost-and-risk-analysis", "destination": "/reports-and-management/pos-decision" },
+    { "source": "/shopify/shopify-vs-loyverse/pilot-and-migration-plan", "destination": "/reports-and-management/pos-decision" },
+    { "source": "/shopify/shopify-vs-loyverse/decision-record", "destination": "/reports-and-management/pos-decision" },
     { "source": "/sixthgear-cms/overview", "destination": "/website-content/overview" },
     { "source": "/sanity/overview", "destination": "/website-content/overview" },
     { "source": "/sanity/content-coverage", "destination": "/website-content/overview" },
     { "source": "/sanity/get-access", "destination": "/website-content/open-the-cms" },
     { "source": "/sanity/open-cms", "destination": "/website-content/open-the-cms" },
     { "source": "/sanity/edit-publish-content", "destination": "/website-content/edit-and-publish" },
-    { "source": "/sanity/images-media", "destination": "/website-content/edit-and-publish" }
+    { "source": "/sanity/images-media", "destination": "/website-content/edit-and-publish" },
+    { "source": "/pos-decision/overview", "destination": "/reports-and-management/pos-decision" },
+    { "source": "/pos-decision/POS-decision", "destination": "/reports-and-management/pos-decision" },
+    { "source": "/pos-decision/hardware-philippines", "destination": "/reports-and-management/pos-decision" },
+    { "source": "/pos-decision/payments-philippines", "destination": "/reports-and-management/open-decisions" },
+    { "source": "/pos-decision/pilot-decision-record", "destination": "/reports-and-management/pos-decision" },
+    { "source": "/shopify/shopify-vs-loyverse/overview", "destination": "/reports-and-management/pos-decision" },
+    { "source": "/shopify/shopify-vs-loyverse/sixthgear-requirements", "destination": "/reports-and-management/loyverse-checklist" },
+    { "source": "/shopify/shopify-vs-loyverse/platform-capabilities", "destination": "/reports-and-management/loyverse-checklist" },
+    { "source": "/shopify/shopify-vs-loyverse/comparison-and-pros-cons", "destination": "/reports-and-management/pos-decision" },
+    { "source": "/shopify/shopify-vs-loyverse/commerce-architecture", "destination": "/reports-and-management/pos-decision" },
+    { "source": "/shopify/shopify-vs-loyverse/philippines-payments-and-compliance", "destination": "/reports-and-management/pos-decision" },
+    { "source": "/shopify/shopify-vs-loyverse/hardware-recommendations", "destination": "/reports-and-management/pos-decision" },
+    { "source": "/shopify/shopify-vs-loyverse/final-recommendation", "destination": "/reports-and-management/pos-decision" }
   ]
 }

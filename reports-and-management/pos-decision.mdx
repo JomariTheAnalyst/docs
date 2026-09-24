@@ -1,0 +1,72 @@
+---
+title: "The Shopify POS decision"
+sidebarTitle: "Shopify POS decision"
+description: "Why SixthGear is moving the counter to Shopify POS, how the trial with Loyverse works, when Loyverse can be removed, and the approved hardware."
+icon: "scale"
+---
+
+{/* Replaces the old decision pages: pos-decision/overview, POS-decision, hardware-philippines, payments-philippines, pilot-decision-record, and the hidden shopify/shopify-vs-loyverse pages. Options that were dropped (iMin, Maya Terminal, iPad, other printers, and seller prices) are not carried over. */}
+
+SixthGear is moving the counter from Loyverse to Shopify POS. The website already runs on Shopify, so one system can then hold the products, stock, and sales for both the counter and the website.
+
+## Why Shopify stays
+
+The SixthGear website depends on Shopify for products, collections, variants, stock, customer accounts, carts, orders, and checkout. Removing Shopify would mean rebuilding the website's shop, with development cost, testing, a risk to Google rankings, and possible lost online sales. Loyverse has no online store, cart, or checkout, so it cannot replace Shopify for the website.
+
+## The trial
+
+Shopify POS runs alongside Loyverse during a trial.
+
+- Every sale is recorded in both Loyverse and Shopify POS.
+- Loyverse is the official record, and the customer keeps the Loyverse receipt.
+- The supervisor compares the two every day. See [Daily closing checks](/reports-and-management/closing-checks).
+
+## When Loyverse can be removed
+
+Loyverse is removed only when all three are true:
+
+1. Staff know Shopify POS well.
+2. The daily totals in Loyverse and Shopify match.
+3. Every Loyverse feature the store uses is covered. See the [Loyverse to Shopify checklist](/reports-and-management/loyverse-checklist).
+
+Before Loyverse is switched off:
+
+- Export the Loyverse items, stock, customers, receipts, reports, staff settings, and store settings. Record the export date, what was exported, and where the files are kept.
+- Set a cutoff date and do a final stock count.
+- Keep a way to go back to Loyverse during the first week without it.
+
+<Warning>
+  Do not cancel the Loyverse subscription until the exports are done and checked, and the owner approves.
+</Warning>
+
+## Hardware
+
+| Item | Model | Notes |
+| --- | --- | --- |
+| Tablet | Samsung Galaxy Tab S10 series | Runs the Shopify POS app. Shopify POS needs Android 10 or newer with Google services |
+| Receipt printer | Epson TM-m30III, Wi-Fi + Bluetooth, model number **C31CK50342** | Uses 80mm paper. Has an automatic paper cutter |
+| Card terminal | The bank's card terminal | Charges the card. Shopify only records the payment as **Card Terminal** |
+
+<Warning>
+  When you buy a printer, check the exact model number. The Ethernet-only TM-m30III, model **C31CK50301**, does not work with Shopify POS.
+</Warning>
+
+### Why not Shopify's own card readers
+
+Shopify's card readers need Shopify Payments, and SixthGear does not use Shopify Payments. Shopify Payments is also not available for in-person sales in the Philippines. Counter payments are recorded with custom payment methods instead: **Cash**, **QR PH**, **Card Terminal**, and **Care of Boss**. Shopify gets no card approval or settlement details from the bank's terminal, which is why the supervisor checks the card slips at closing.
+
+### Cash drawer and barcodes
+
+- **Cash drawer:** if one is added, it plugs into the receipt printer and opens after a cash sale. Before buying, check with the seller that the cable and voltage match the TM-m30III. Not every drawer works.
+- **Barcodes:** the tablet camera can scan product barcodes. Scanning adds an item to the cart. It does not count stock.
+
+{/* No cash drawer or barcode scanner is in the approved hardware list. Add them to the table only if the owner approves a purchase. */}
+
+## Sources
+
+- [Shopify POS supported hardware](https://help.shopify.com/en/manual/sell-in-person/hardware/supported-hardware)
+- [Supported receipt printers](https://help.shopify.com/en/manual/sell-in-person/hardware/receipt-printers/supported-receipt-printers)
+- [Set up the Epson TM-m30III](https://help.shopify.com/en/manual/sell-in-person/hardware/receipt-printers/epsontmm30iii/setting-up)
+- [Shopify Payments for POS](https://help.shopify.com/en/manual/sell-in-person/getting-started/setup-payment-method/shopify-payments-pos)
+- [Custom payment methods](https://help.shopify.com/en/manual/sell-in-person/getting-started/setup-payment-method/custom-payment-methods)
+- [Shopify POS FAQ, device requirements](https://help.shopify.com/en/manual/sell-in-person/shopify-pos/faq)
