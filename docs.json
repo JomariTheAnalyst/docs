@@ -33,16 +33,16 @@
       {
         "tab": "Staff guide",
         "icon": "book-open",
-        "dropdowns": [
+        "anchors": [
           {
-            "dropdown": "Start here",
+            "anchor": "Start here",
             "icon": "play",
             "pages": [
               "introduction"
             ]
           },
           {
-            "dropdown": "At the counter",
+            "anchor": "At the counter",
             "icon": "store",
             "groups": [
               {
@@ -78,7 +78,7 @@
             ]
           },
           {
-            "dropdown": "Online orders",
+            "anchor": "Online orders",
             "icon": "globe",
             "pages": [
               "online-orders/overview",
@@ -89,7 +89,7 @@
             ]
           },
           {
-            "dropdown": "Products & stock",
+            "anchor": "Products & stock",
             "icon": "package",
             "groups": [
               {
@@ -132,7 +132,7 @@
             ]
           },
           {
-            "dropdown": "Website content",
+            "anchor": "Website content",
             "icon": "panels-top-left",
             "groups": [
               {
@@ -167,9 +167,9 @@
       {
         "tab": "Management",
         "icon": "briefcase",
-        "dropdowns": [
+        "anchors": [
           {
-            "dropdown": "Reports & checks",
+            "anchor": "Reports & checks",
             "icon": "chart-column",
             "pages": [
               "reports-and-management/overview",
@@ -179,7 +179,7 @@
             ]
           },
           {
-            "dropdown": "POS decision",
+            "anchor": "POS decision",
             "icon": "scale",
             "pages": [
               "reports-and-management/pos-decision",
@@ -187,14 +187,14 @@
             ]
           },
           {
-            "dropdown": "Open decisions",
+            "anchor": "Open decisions",
             "icon": "list-todo",
             "pages": [
               "reports-and-management/open-decisions"
             ]
           },
           {
-            "dropdown": "Accounts & access",
+            "anchor": "Accounts & access",
             "icon": "key-round",
             "groups": [
               {
@@ -226,7 +226,7 @@
             ]
           },
           {
-            "dropdown": "Project updates",
+            "anchor": "Project updates",
             "icon": "chart-no-axes-combined",
             "pages": [
               "project-progress/overview",
@@ -239,9 +239,9 @@
       {
         "tab": "Developers",
         "icon": "code-xml",
-        "dropdowns": [
+        "anchors": [
           {
-            "dropdown": "Storefront",
+            "anchor": "Storefront",
             "icon": "code-xml",
             "groups": [
               {
@@ -267,7 +267,7 @@
             ]
           },
           {
-            "dropdown": "Shopify reference",
+            "anchor": "Shopify reference",
             "icon": "shopping-bag",
             "pages": [
               "website/shopify-integration",
@@ -278,7 +278,7 @@
             ]
           },
           {
-            "dropdown": "Deployment",
+            "anchor": "Deployment",
             "icon": "rocket",
             "pages": [
               "deployment/deployment-overview",
@@ -288,7 +288,7 @@
             ]
           },
           {
-            "dropdown": "Resources",
+            "anchor": "Resources",
             "icon": "library",
             "groups": [
               {
