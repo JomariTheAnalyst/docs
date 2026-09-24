@@ -33,24 +33,16 @@
       {
         "tab": "Staff guide",
         "icon": "book-open",
-        "anchors": [
+        "dropdowns": [
           {
-            "anchor": "Start here",
+            "dropdown": "Start here",
             "icon": "play",
-            "groups": [
-              {
-                "group": "Start here",
-                "pages": [
-                  "introduction",
-                  "initial-setup/overview",
-                  "operations/overview",
-                  "operations/commerce-data-ownership"
-                ]
-              }
+            "pages": [
+              "introduction"
             ]
           },
           {
-            "anchor": "At the counter",
+            "dropdown": "At the counter",
             "icon": "store",
             "groups": [
               {
@@ -86,28 +78,18 @@
             ]
           },
           {
-            "anchor": "Online orders",
+            "dropdown": "Online orders",
             "icon": "globe",
-            "groups": [
-              {
-                "group": "Getting started",
-                "pages": [
-                  "online-orders/overview"
-                ]
-              },
-              {
-                "group": "Daily work",
-                "pages": [
-                  "online-orders/check-new-orders",
-                  "online-orders/prepare-an-order",
-                  "online-orders/complete-an-order",
-                  "online-orders/customer-questions"
-                ]
-              }
+            "pages": [
+              "online-orders/overview",
+              "online-orders/check-new-orders",
+              "online-orders/prepare-an-order",
+              "online-orders/complete-an-order",
+              "online-orders/customer-questions"
             ]
           },
           {
-            "anchor": "Products & stock",
+            "dropdown": "Products & stock",
             "icon": "package",
             "groups": [
               {
@@ -150,11 +132,11 @@
             ]
           },
           {
-            "anchor": "Website content",
+            "dropdown": "Website content",
             "icon": "panels-top-left",
             "groups": [
               {
-                "group": "Basics",
+                "group": "Getting started",
                 "pages": [
                   "website-content/overview",
                   "website-content/open-the-cms",
@@ -185,54 +167,41 @@
       {
         "tab": "Management",
         "icon": "briefcase",
-        "anchors": [
+        "dropdowns": [
           {
-            "anchor": "Reports & checks",
+            "dropdown": "Reports & checks",
             "icon": "chart-column",
-            "groups": [
-              {
-                "group": "Reports & checks",
-                "pages": [
-                  "reports-and-management/overview",
-                  "reports-and-management/sales-reports",
-                  "reports-and-management/closing-checks"
-                ]
-              }
+            "pages": [
+              "reports-and-management/overview",
+              "reports-and-management/sales-reports",
+              "reports-and-management/closing-checks",
+              "operations/overview"
             ]
           },
           {
-            "anchor": "POS decision",
+            "dropdown": "POS decision",
             "icon": "scale",
-            "groups": [
-              {
-                "group": "POS decision",
-                "pages": [
-                  "reports-and-management/pos-decision",
-                  "reports-and-management/loyverse-checklist"
-                ]
-              }
+            "pages": [
+              "reports-and-management/pos-decision",
+              "reports-and-management/loyverse-checklist"
             ]
           },
           {
-            "anchor": "Open decisions",
+            "dropdown": "Open decisions",
             "icon": "list-todo",
-            "groups": [
-              {
-                "group": "Open decisions",
-                "pages": [
-                  "reports-and-management/open-decisions"
-                ]
-              }
+            "pages": [
+              "reports-and-management/open-decisions"
             ]
           },
           {
-            "anchor": "Accounts & access",
+            "dropdown": "Accounts & access",
             "icon": "key-round",
             "groups": [
               {
-                "group": "Overview",
+                "group": "Getting started",
                 "pages": [
                   "accounts-and-access/overview",
+                  "initial-setup/overview",
                   "accounts-and-access/executive-handoff"
                 ]
               },
@@ -257,17 +226,12 @@
             ]
           },
           {
-            "anchor": "Project updates",
+            "dropdown": "Project updates",
             "icon": "chart-no-axes-combined",
-            "groups": [
-              {
-                "group": "Project updates",
-                "pages": [
-                  "project-progress/overview",
-                  "project-progress/latest-changes",
-                  "project-progress/left-to-do"
-                ]
-              }
+            "pages": [
+              "project-progress/overview",
+              "project-progress/latest-changes",
+              "project-progress/left-to-do"
             ]
           }
         ]
@@ -275,9 +239,9 @@
       {
         "tab": "Developers",
         "icon": "code-xml",
-        "anchors": [
+        "dropdowns": [
           {
-            "anchor": "Storefront",
+            "dropdown": "Storefront",
             "icon": "code-xml",
             "groups": [
               {
@@ -303,40 +267,37 @@
             ]
           },
           {
-            "anchor": "Shopify reference",
+            "dropdown": "Shopify reference",
             "icon": "shopping-bag",
-            "groups": [
-              {
-                "group": "Shopify reference",
-                "pages": [
-                  "website/shopify-integration",
-                  "shopify/metafields",
-                  "shopify/apps",
-                  "shopify/bulk-import",
-                  "shopify/export-products"
-                ]
-              }
+            "pages": [
+              "website/shopify-integration",
+              "shopify/metafields",
+              "shopify/apps",
+              "shopify/bulk-import",
+              "shopify/export-products"
             ]
           },
           {
-            "anchor": "Deployment",
+            "dropdown": "Deployment",
             "icon": "rocket",
-            "groups": [
-              {
-                "group": "Deployment",
-                "pages": [
-                  "deployment/deployment-overview",
-                  "deployment/deploy-through-vercel",
-                  "deployment/verify-deployment",
-                  "deployment/roll-back-deployment"
-                ]
-              }
+            "pages": [
+              "deployment/deployment-overview",
+              "deployment/deploy-through-vercel",
+              "deployment/verify-deployment",
+              "deployment/roll-back-deployment"
             ]
           },
           {
-            "anchor": "Resources",
+            "dropdown": "Resources",
             "icon": "library",
             "groups": [
+              {
+                "group": "Reference",
+                "pages": [
+                  "operations/commerce-data-ownership",
+                  "resources/documentation-updates"
+                ]
+              },
               {
                 "group": "Troubleshooting",
                 "pages": [
@@ -345,12 +306,6 @@
                   "troubleshooting/sanity",
                   "troubleshooting/deployment",
                   "troubleshooting/emergency-recovery"
-                ]
-              },
-              {
-                "group": "About these docs",
-                "pages": [
-                  "resources/documentation-updates"
                 ]
               }
             ]
