@@ -1,6 +1,6 @@
 ---
 title: "System architecture"
-description: "How the browser, Next.js storefront, Shopify, Sanity, Strapi, Redis, Vercel, and GitHub Actions connect."
+description: "How the browser, Next.js storefront, Shopify, Sanity, Redis, Vercel, and GitHub Actions connect."
 icon: "network"
 ---
 
@@ -13,7 +13,7 @@ flowchart TD
     Next --> Storefront[Shopify Storefront API]
     Next --> Checkout[Shopify hosted checkout]
     Next --> Sanity[Sanity CMS and Studio]
-    Next --> Strapi[Active Strapi content sources]
+    Next -.-> Strapi[Strapi code, disconnected]
     Next --> Redis[Upstash Redis]
     GitHub[GitHub and Actions] --> Vercel
     ShopifyHook[Shopify webhook] --> Next
@@ -35,10 +35,10 @@ flowchart TD
 | --- | --- | --- |
 | Products, variants, inventory, collections, cart, customers, orders | Shopify | `src/lib/shopify/`, `src/lib/data/` |
 | Homepage, marketing, services, about, rider stories and structured CMS records | Sanity | `sanity/`, `src/lib/cms/` |
-| Remaining homepage, preview, service, story, menu and coffee content | Strapi | `src/lib/strapi/` and active imports |
+| Remaining homepage, preview, service, story, menu and coffee content | Fallback content in code. Strapi is disconnected | `src/lib/strapi/` (returns no content) |
 | Shared catalog cache and rate limits | Upstash Redis | `src/lib/cache/redis.ts` |
 | Application runtime | Vercel | `vercel.json` and external project settings |
 
 <Warning>
-Do not remove Strapi configuration because Sanity exists. Active production-facing imports remain and must be migrated before removal.
+The Strapi code still exists in `src/lib/strapi/`, but it is disconnected and returns no content, so pages use fallback content. Removing the code is pending.
 </Warning>

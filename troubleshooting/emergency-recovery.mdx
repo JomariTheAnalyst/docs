@@ -14,13 +14,9 @@ Use the least destructive action first. Assign an incident lead and recorder onc
 - **Recovery:** Restore the known-good deployment or failed dependency.
 - **Verify:** Homepage, store, product, cart, checkout, CMS content, forms, and smoke tests.
 
-## Strapi content unavailable
+## Strapi
 
-- **Symptoms:** Missing services, navigation, preview, rider stories, coffee, sitemap, or homepage fallback content.
-- **Initial checks:** Active import path, Strapi host status, URL reachability, and authentication class.
-- **Containment:** Do not remove Strapi or overwrite content during the incident.
-- **Recovery:** Restore hosting/API access or use an already implemented approved fallback.
-- **Verify:** Every affected route family and content owner approval.
+The Strapi code still exists in `src/lib/strapi/`, but it is disconnected and returns no content, so pages use fallback content. Removing the code is pending. Strapi returning nothing is expected and is not an incident. If a page shows missing content, check the Sanity document and the fallback content in code.
 
 ## Redis unavailable
 

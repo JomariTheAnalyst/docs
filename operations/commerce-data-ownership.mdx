@@ -21,7 +21,7 @@ A **source of truth** is the company system that holds the official record. Othe
 | Online inventory and online product availability | Shopify | Inventory owner | Check Shopify location stock, adjustments, reservations, and recent orders before making another change. |
 | Customers, online orders, discounts, carts, and hosted checkout | Shopify | Ecommerce or customer-service team | Use the Shopify order or customer record as the main commerce record. |
 | Approved homepage, service, About, Rider Story, marketing, and collection presentation content | SixthGear CMS (Sanity) when the section is confirmed as connected | Content editor or CMS administrator | Correct the approved Sanity document and verify the live page after publishing. |
-| Website content still supplied by active Strapi routes | Strapi until the content is migrated and verified | Website administrator | Confirm the active source before editing. Do not remove or copy the content into Sanity without an approved migration. |
+| Website content that used to come from Strapi | Fallback content in GitHub source code | Developer | The Strapi code still exists in `src/lib/strapi/`, but it is disconnected and returns no content, so pages use fallback content. Removing the code is pending. |
 | Website layout, page behavior, forms, integrations, and code-controlled fallback content | GitHub source code | Developer | Correct the reviewed source code and release it through the approved deployment process. |
 | Current physical-store sale record while Loyverse remains active | Loyverse | Store Operations | Use the Loyverse sale record for the current counter transaction and match it to the payment record and daily closing report. |
 | Shopify POS pilot transactions | Shopify POS pilot record | Pilot owner and Store Operations | Keep pilot records clearly identified and follow the approved comparison method so one sale is not counted twice. |
@@ -61,12 +61,12 @@ Use Shopify for the main product record.
 | Service and About page content connected to Sanity | SixthGear CMS | Confirm the correct document before editing. |
 | Rider Stories and article content connected to Sanity | SixthGear CMS | Keep titles, dates, images, links, and categories complete. |
 | Collection presentation content connected to Sanity | SixthGear CMS | Do not replace the Shopify collection record. |
-| Remaining active Strapi content | Strapi | Treat it as temporary but active until migration is completed. |
+| Content that used to come from Strapi | GitHub source code (fallback content) | Strapi is disconnected and returns no content. Removing the Strapi code in `src/lib/strapi/` is pending. |
 | Page layout, forms, navigation behavior, and fallback text | GitHub source code | Use the reviewed code and deployment process. |
 | Shopify-hosted theme pages | Shopify theme only | Do not expect theme changes to update the live Next.js storefront. |
 
 <Note>
-  The live website can display information from Shopify, Sanity, Strapi, and source code on the same page. Confirm which system supplies the exact field before editing it.
+  The live website can display information from Shopify, Sanity, and source code on the same page. Confirm which system supplies the exact field before editing it.
 </Note>
 
 ## Sales, payment, and refund rules
@@ -125,7 +125,7 @@ Use Shopify for the main product record.
 | Management | Approve the business system, major ownership changes, exceptions, and final POS direction. |
 | Ecommerce or product administrator | Maintain Shopify product, price, collection, online inventory, and sales-channel records. |
 | Store Operations | Record in-store sales correctly, protect counter records, and report stock or payment differences. |
-| Content editor or CMS administrator | Maintain approved website content in the correct Sanity or active Strapi source. |
+| Content editor or CMS administrator | Maintain approved website content in SixthGear CMS (Sanity). |
 | Finance | Reconcile payments, refunds, fees, settlement, and bank records. |
 | Developer | Maintain website code, integrations, deployments, and code-controlled content. |
 | Documentation owner | Update this page when ownership, systems, or operating rules change. |

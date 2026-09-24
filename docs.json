@@ -349,9 +349,9 @@
     ]
   },
   "redirects": [
-    { "source": "/start-here/overview", "destination": "/" },
-    { "source": "/start-here/how-to-use-this-portal", "destination": "/" },
-    { "source": "/start-here/documentation-status", "destination": "/" },
+    { "source": "/start-here/overview", "destination": "/introduction" },
+    { "source": "/start-here/how-to-use-this-portal", "destination": "/introduction" },
+    { "source": "/start-here/documentation-status", "destination": "/introduction" },
     { "source": "/architecture/system-overview", "destination": "/website/system-architecture" },
     { "source": "/architecture/integrations", "destination": "/systems-and-access/third-party-services" },
     { "source": "/architecture/environments", "destination": "/website/environment-variables" },
@@ -366,13 +366,20 @@
     { "source": "/recovery/emergency-response", "destination": "/troubleshooting/emergency-recovery" },
     { "source": "/recovery/access-recovery", "destination": "/troubleshooting/emergency-recovery" },
     { "source": "/shopify/pos-platform-recommendation", "destination": "/shopify/shopify-vs-loyverse/overview" },
-    { "source": "/accounts-and-access/credentials-and-password-manager", "destination": "/accounts-and-access/account-directory" },
-    { "source": "/accounts-and-access/access-request", "destination": "/accounts-and-access/account-directory" },
-    { "source": "/accounts-and-access/mfa-and-recovery", "destination": "/accounts-and-access/account-directory" },
-    { "source": "/accounts-and-access/access-review-and-offboarding", "destination": "/accounts-and-access/account-directory" },
+    { "source": "/accounts-and-access/credentials-and-password-manager", "destination": "/accounts-and-access/overview" },
+    { "source": "/accounts-and-access/access-request", "destination": "/accounts-and-access/overview" },
+    { "source": "/accounts-and-access/mfa-and-recovery", "destination": "/accounts-and-access/overview" },
+    { "source": "/accounts-and-access/access-review-and-offboarding", "destination": "/accounts-and-access/overview" },
     { "source": "/shopify/shopify-vs-loyverse/imin-hardware-assessment", "destination": "/shopify/shopify-vs-loyverse/hardware-recommendations" },
     { "source": "/shopify/shopify-vs-loyverse/cost-and-risk-analysis", "destination": "/shopify/shopify-vs-loyverse/comparison-and-pros-cons" },
     { "source": "/shopify/shopify-vs-loyverse/pilot-and-migration-plan", "destination": "/shopify/shopify-vs-loyverse/final-recommendation" },
-    { "source": "/shopify/shopify-vs-loyverse/decision-record", "destination": "/shopify/shopify-vs-loyverse/final-recommendation" }
+    { "source": "/shopify/shopify-vs-loyverse/decision-record", "destination": "/shopify/shopify-vs-loyverse/final-recommendation" },
+    { "source": "/sixthgear-cms/overview", "destination": "/website-content/overview" },
+    { "source": "/sanity/overview", "destination": "/website-content/overview" },
+    { "source": "/sanity/content-coverage", "destination": "/website-content/overview" },
+    { "source": "/sanity/get-access", "destination": "/website-content/open-the-cms" },
+    { "source": "/sanity/open-cms", "destination": "/website-content/open-the-cms" },
+    { "source": "/sanity/edit-publish-content", "destination": "/website-content/edit-and-publish" },
+    { "source": "/sanity/images-media", "destination": "/website-content/edit-and-publish" }
   ]
 }

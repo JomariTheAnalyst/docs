@@ -32,9 +32,9 @@ Do not add environment values to this page. Store secret values in the approved 
 | `NEXT_PUBLIC_SANITY_DATASET` | Sanity dataset selection | Browser/build | No | Required by Sanity config |
 | `NEXT_PUBLIC_SANITY_API_VERSION` | Sanity API date | Browser/build | No | Source default exists |
 | `SANITY_WEBHOOK_SECRET` | Sanity revalidation authentication | Server | Yes | Used by `/api/revalidate-sanity` |
-| `STRAPI_URL` | Server Strapi base URL | Server | No, but sensitive topology | Active source reference; absent from `.env.example` |
-| `NEXT_PUBLIC_STRAPI_URL` | Public/fallback Strapi URL | Browser/build | No | Active source reference; absent from `.env.example` |
-| `STRAPI_TOKEN` | Strapi bearer access | Server | Yes | Active source reference; absent from `.env.example` |
+| `STRAPI_URL` | Server Strapi base URL | Server | No, but sensitive topology | Disconnected. Still read by `src/lib/strapi/`; removal pending |
+| `NEXT_PUBLIC_STRAPI_URL` | Public/fallback Strapi URL | Browser/build | No | Disconnected. Still read by `src/lib/strapi/`; removal pending |
+| `STRAPI_TOKEN` | Strapi bearer access | Server | Yes | Disconnected. Still read by `src/lib/strapi/`; removal pending |
 
 ## Website services
 

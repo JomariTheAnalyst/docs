@@ -1,12 +1,10 @@
 ---
 title: "Pop-ups and promo banners"
-description: "Show a pop-up, a promo banner, or a featured collection banner on the SixthGear home page."
+description: "Show a pop-up, a promo banner, a featured collection banner, or the announcement bar on the SixthGear website."
 icon: "megaphone"
 ---
 
 {/* Labels come from sanity/schemaTypes/popup-ad.ts, marketing.ts, promo-banner.ts, and featured-collection.ts in the storefront repo at commit 00d5d00. The choices in Homepage Position and Button Position are not listed here yet. Check all labels on the live CMS, then remove this comment. */}
-
-{/* Not covered: the Announcement Bar in Marketing. The website shows it, but it was not in the owner's list of CMS areas for staff. Confirm who manages it. */}
 
 Pop-ups and banners are for promotions and sales. They live in two places in the CMS:
 
@@ -16,6 +14,9 @@ Pop-ups and banners are for promotions and sales. They live in two places in the
 | Which pop-up is live | **Marketing**, field **Active Popup Campaign** |
 | Promo banners | **Marketing**, field **Promo Wide Banners** |
 | Featured collection banners | **Marketing**, field **Featured Collection Banners** |
+| The announcement bar | **Marketing**, field **Announcement Bar** |
+
+The person who manages pop-ups and promo banners also manages the announcement bar.
 
 Follow [Edit and publish a change](/website-content/edit-and-publish) for the general steps. Changes here show within about 1 minute.
 
@@ -127,9 +128,48 @@ A featured collection banner links to one Shopify collection.
   <img src="/images/placeholders/screenshot-reserved.svg" alt="Placeholder for a screenshot of a featured collection banner with its fields filled in" />
 </Frame>
 
+## Change the announcement bar
+
+The announcement bar is the thin strip of short messages at the very top of the website. The messages scroll one after another.
+
+<Steps>
+  <Step title="Click Marketing in the list on the left">
+  </Step>
+  <Step title="Open Announcement Bar">
+  </Step>
+  <Step title="Add a message, or click the one to change">
+    Open **Messages** to see them all.
+  </Step>
+  <Step title="Type the Message Text">
+    Keep it to 60 characters or fewer, for example "Free store pickup in about 4 hours."
+  </Step>
+  <Step title="Add a link if you need one">
+    Fill in **Link (optional)** with the page customers go to when they click the message.
+  </Step>
+  <Step title="Turn on Active for the message">
+  </Step>
+  <Step title="Check that Show Announcement Bar is on">
+  </Step>
+  <Step title="Click Publish">
+    Check the top of the website after about 1 minute.
+  </Step>
+</Steps>
+
+| Setting | What it does |
+| --- | --- |
+| **Show Announcement Bar** | Turns the whole bar on or off |
+| **Background Color** | Orange, Black, or White |
+| **Marquee Pace (seconds per message)** | How long each message stays. From 2 to 20 seconds |
+| **Active** on a message | Turn it off to hide one message without deleting it |
+
+<Frame caption="Screenshot needed: the Announcement Bar in the Marketing document with two messages. Save as images/website-content/popups-and-promo-banners-3.png">
+  <img src="/images/placeholders/screenshot-reserved.svg" alt="Placeholder for a screenshot of the Announcement Bar settings with two messages" />
+</Frame>
+
 ## Common problems
 
 | Problem | What to do |
 | --- | --- |
 | The pop-up does not show | Check that it is chosen in **Active Popup Campaign**, that **Enabled** is on, and that today is between the start and end dates |
 | A banner does not show | Check that **Active** is on and that you clicked **Publish** |
+| The announcement bar does not show | Check that **Show Announcement Bar** is on and that at least one message has **Active** on |

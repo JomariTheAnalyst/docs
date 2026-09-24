@@ -14,7 +14,7 @@ Do not change project or dataset identifiers until an authorized administrator c
 
 <Steps>
   <Step title="Confirm the source">
-    Verify the section comes from Sanity rather than active Strapi code or a local fallback.
+    Verify the section comes from Sanity rather than a local fallback. Strapi code in `src/lib/strapi/` is disconnected and returns no content, so those pages show fallback content.
   </Step>
   <Step title="Check the document">
     Confirm it is published, uses the expected singleton or slug, and passes schema validation.
