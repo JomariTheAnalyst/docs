@@ -4,21 +4,33 @@ description: "Choose the right payment method in Shopify POS for cash, QR PH, ca
 icon: "wallet"
 ---
 
-{/* Screen labels on this page follow the planned POS setup. Check each label on the tablet after the Point of Sale channel and payment methods are set up, then remove this comment. */}
+{/* The six buttons on Payment options were confirmed from a tablet screenshot on 2026-09-24: Cash, Card Terminal, Care of boss, QR PH, Split payment, Mark unpaid. Other labels on this page, such as the change screen, the cart note, and the split payment amount screen, are not yet checked on the tablet. */}
 
-After the items are in the cart, you tap **Checkout** and choose how the customer paid. Choosing the right payment method matters. The daily sales report uses it to sort every sale into Cash and Non-Cash, and the cash count at closing depends on it.
+## How payments work at SixthGear
 
-## The four payment methods
+Shopify never touches the money. Cash goes in the drawer. QR PH goes straight to the store's bank or e-wallet. Cards are charged on the bank's card terminal.
 
-| Payment method | Use it when | Counted as |
-| --- | --- | --- |
-| **Cash** | The customer pays with bills and coins | Cash |
-| **QR PH** | The customer scans the store's QR code with GCash, Maya, or their bank app | Non-Cash |
-| **Card Terminal** | The customer pays by credit or debit card on the bank's card terminal | Non-Cash |
-| **Care of Boss** | The owner is treating a guest and has approved it | Not counted as a sale |
+Shopify only records how each sale was paid. The daily sales report uses this to sort every sale into Cash and Non-Cash. At closing, your supervisor uses it to check the drawer, the card slips, and the QR payments.
 
-<Frame caption="Screenshot needed: the Checkout screen showing the four payment methods. Save as images/at-the-counter/take-payment-1.png">
-  <img src="/images/placeholders/screenshot-reserved.svg" alt="Placeholder for a screenshot of the Checkout screen with the four payment methods" />
+## The Payment options screen
+
+After you tap **Checkout**, you see a screen called **Payment options**. It has six buttons.
+
+| Button | What it means | Where the money goes | In the report |
+| --- | --- | --- | --- |
+| **Cash** | The customer pays with bills and coins | The cash drawer | Cash |
+| **Card Terminal** | The customer pays by credit or debit card on the bank's card terminal | The store's bank account, through the bank's terminal | Non-Cash |
+| **QR PH** | The customer scans the store's QR code with GCash, Maya, or their bank app | The store's bank or e-wallet account | Non-Cash |
+| **Care of Boss** | The owner is treating a guest and has approved it | No money is received | Not counted as income |
+| **Split payment** | Not a payment method. It lets one sale use two or more methods | Each part goes where its own method sends it | Each part is counted under its own method |
+| **Mark unpaid** | Finishes the sale with no money received. Staff never use it | No money is received. The customer still owes it | Shows as unpaid |
+
+{/* On the tablet, this button currently reads "Care of boss" with a small b. It will be renamed to "Care of Boss" in Shopify admin to match the report. Keep "Care of Boss" in the docs. */}
+
+{/* Not yet checked: how a Mark unpaid sale appears in the Sixthgear Sales Reporting report. */}
+
+<Frame caption="Screenshot needed: the Payment options screen showing all six buttons. Save as images/at-the-counter/take-payment-1.png">
+  <img src="/images/placeholders/screenshot-reserved.svg" alt="Placeholder for a screenshot of the Payment options screen with all six buttons" />
 </Frame>
 
 <Frame caption="Video needed: one cash sale and one split payment, from adding items to printing the receipt. Save as videos/at-the-counter/take-payment.mp4">
@@ -29,9 +41,9 @@ After the items are in the cart, you tap **Checkout** and choose how the custome
 
 <Steps>
   <Step title="Tap Checkout">
-    Check that the items and total are correct first.
+    Check that the items and total are correct first. You see **Payment options**.
   </Step>
-  <Step title="Tap Cash">
+  <Step title="On Payment options, tap Cash">
   </Step>
   <Step title="Enter the amount the customer gave you">
     Tap one of the suggested amounts or type the exact amount.
@@ -54,8 +66,10 @@ After the items are in the cart, you tap **Checkout** and choose how the custome
   <Step title="Check that the money arrived">
     Look at the store's payment app or phone and find the payment with the correct amount.
   </Step>
-  <Step title="Tap Checkout, then tap QR PH">
+  <Step title="Tap Checkout">
     Only do this after you have seen the payment arrive.
+  </Step>
+  <Step title="On Payment options, tap QR PH">
   </Step>
 </Steps>
 
@@ -72,7 +86,9 @@ After the items are in the cart, you tap **Checkout** and choose how the custome
   <Step title="Wait for the approved slip">
     If the terminal says the card was declined, do not continue. Ask the customer for another way to pay.
   </Step>
-  <Step title="Tap Checkout, then tap Card Terminal">
+  <Step title="Tap Checkout">
+  </Step>
+  <Step title="On Payment options, tap Card Terminal">
   </Step>
   <Step title="Keep the store's copy of the card slip">
     Put it with the day's papers for the end-of-day check.
@@ -93,9 +109,13 @@ Use this only when the owner treats a guest, for example coffee during a meeting
   <Step title="Add a note to the sale">
     In the cart, add a note with who approved it and the reason, for example "Approved by the owner, meeting guests."
   </Step>
-  <Step title="Tap Checkout, then tap Care of Boss">
+  <Step title="Tap Checkout">
+  </Step>
+  <Step title="On Payment options, tap Care of Boss">
   </Step>
 </Steps>
+
+The items still come out of stock. This is correct, because they were used. The sale is not counted as income.
 
 <Warning>
   Never use **Care of Boss** without the owner's approval. It removes the sale from the day's sales total.
@@ -103,20 +123,29 @@ Use this only when the owner treats a guest, for example coffee during a meeting
 
 ## Split payment
 
-Use a split payment when the customer pays with two methods, for example part cash and part QR PH.
+Use a split payment when the customer pays with two or more methods, for example part cash and part card.
+
+**Example:** the total is ₱37,400. The customer pays ₱20,000 in cash and the rest by card.
 
 <Steps>
   <Step title="Tap Checkout">
   </Step>
-  <Step title="Tap Split payment">
+  <Step title="On Payment options, tap Split payment">
   </Step>
-  <Step title="Enter the first amount and choose its payment method">
-    For example, enter 1,000 and tap **Cash**.
+  <Step title="Enter 20,000">
   </Step>
-  <Step title="Pay the rest with the second method">
-    The screen shows the amount still unpaid. Choose the second payment method, for example **QR PH**, and follow its steps above.
+  <Step title="Tap Cash">
+    The screen shows ₱17,400 still unpaid.
+  </Step>
+  <Step title="Charge ₱17,400 on the bank's card terminal">
+    Wait for the approved slip before you continue.
+  </Step>
+  <Step title="Tap Card Terminal">
+    The sale is complete.
   </Step>
 </Steps>
+
+In the daily sales report, this sale shows ₱20,000 as Cash and ₱17,400 as Non-Cash.
 
 <Frame caption="Screenshot needed: the split payment screen showing the amount still unpaid. Save as images/at-the-counter/take-payment-3.png">
   <img src="/images/placeholders/screenshot-reserved.svg" alt="Placeholder for a screenshot of the split payment screen" />
@@ -125,6 +154,16 @@ Use a split payment when the customer pays with two methods, for example part ca
 <Tip>
   If you do not see **Split payment**, it is turned off on this tablet. Ask your supervisor to turn it on.
 </Tip>
+
+## Mark unpaid
+
+**Mark unpaid** finishes a sale with no money received. The items leave stock, and the customer still owes the money.
+
+<Warning>
+  Never use **Mark unpaid**. If a customer cannot pay, call your supervisor.
+</Warning>
+
+{/* Pending decision: the owner still has to decide whether to hide the Mark unpaid button or keep it for owner-only pay-later sales. */}
 
 ## After payment
 
@@ -138,3 +177,4 @@ The receipt prints on the Epson printer. During the trial period, the customer k
 | You chose the wrong payment method | Do not refund or redo the sale yourself. Tell your supervisor right away |
 | The QR PH payment has not arrived | Wait and check again. Do not complete the sale until you see the payment |
 | The card terminal is not working | Ask the customer to pay by cash or QR PH, and tell your supervisor |
+| The customer cannot pay | Do not tap **Mark unpaid**. Call your supervisor |
