@@ -213,21 +213,35 @@
         ]
       },
       {
-        "tab": "Sixthgear CMS",
+        "tab": "Website Content",
         "icon": "panels-top-left",
         "groups": [
           {
-            "group": "Sixthgear CMS",
-            "root": "sixthgear-cms/overview",
+            "group": "Start here",
+            "icon": "play",
             "pages": [
-              "sanity/overview",
-              "sanity/get-access",
-              "sanity/content-coverage",
-              "sanity/open-cms",
-              "sanity/edit-publish-content",
-              "sanity/content-types",
-              "sanity/fields-validation",
-              "sanity/images-media"
+              "website-content/overview",
+              "website-content/open-the-cms",
+              "website-content/edit-and-publish",
+              "website-content/when-changes-show"
+            ]
+          },
+          {
+            "group": "Pages you can change",
+            "icon": "file-pen-line",
+            "pages": [
+              "website-content/home-page",
+              "website-content/services",
+              "website-content/about",
+              "website-content/rider-stories",
+              "website-content/popups-and-promo-banners"
+            ]
+          },
+          {
+            "group": "Ask the web team",
+            "icon": "code",
+            "pages": [
+              "website-content/web-team-only"
             ]
           }
         ]
@@ -246,6 +260,8 @@
               "website/environment-variables",
               "website/shopify-integration",
               "website/sanity-integration",
+              "sanity/content-types",
+              "sanity/fields-validation",
               "website/strapi-integration",
               "website/caching-revalidation",
               "website/testing"
