@@ -103,6 +103,37 @@
             "icon": "shield-check",
             "pages": [
               "at-the-counter/refunds-and-returns"
+            ],
+            "hidden": true
+          }
+        ]
+      },
+      {
+        "tab": "Products and Stock",
+        "icon": "package",
+        "groups": [
+          {
+            "group": "Start here",
+            "icon": "play",
+            "pages": [
+              "products-and-stock/overview"
+            ]
+          },
+          {
+            "group": "Add products",
+            "icon": "square-plus",
+            "pages": [
+              "shopify/products/add-product",
+              "products-and-stock/add-counter-item"
+            ]
+          },
+          {
+            "group": "Stock and prices",
+            "icon": "boxes",
+            "pages": [
+              "products-and-stock/receive-a-delivery",
+              "products-and-stock/count-and-correct-stock",
+              "products-and-stock/change-a-price"
             ]
           }
         ]
@@ -131,7 +162,6 @@
             "root": "shopify/products/overview",
             "pages": [
               "shopify/export-products",
-              "shopify/products/add-product",
               "shopify/products/edit-product",
               "shopify/products/product-media",
               "shopify/products/troubleshooting",

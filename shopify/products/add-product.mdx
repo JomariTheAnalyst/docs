@@ -1,127 +1,85 @@
 ---
-title: "Add a product"
-description: "Add a complete product to Shopify and verify that it appears correctly on the SixthGear storefront."
+title: "Add a website product"
+description: "Add a helmet, gear, part, or accessory that is sold on the website and at the counter."
 icon: "square-plus"
+sidebarTitle: "Add a website product"
 ---
 
-Use this guide when adding a new product to the SixthGear Shopify store.
+{/* Fill in the exact name of the website's sales channel once confirmed. Confirm whether the all-products collection adds products automatically; if it does, the collection step only needs a check. */}
 
-The product is complete when its information, images, variants, price, stock, organization, sales channels, and live storefront page have been checked.
+Use this page to add a product that is sold both on the website and at the counter, such as a helmet, riding gear, a part, or an accessory. For services, carwash, hauling, and café items, use [Add a counter-only item](/products-and-stock/add-counter-item) instead.
 
-<Info>
-  Go to **Shopify Admin → Products → Add product**.
-</Info>
+## Before you start
 
-## Before you begin
+Have this information ready:
 
-Prepare the approved product information before opening Shopify:
-
-- Product name and brand
-- Product description
-- Product images
-- Product category or type
-- Price and compare-at price, when used
-- SKU and barcode
-- Available sizes, colors, or other options
-- Starting stock for each variant
-- Weight or shipping details
-- Tags and collection membership
-- Approved sales channels
-
-<Warning>
-  Shopify is the main record for product titles, descriptions, prices, variants, SKUs, barcodes, inventory, collections, and sales-channel availability. Do not create a second product price or stock value in SixthGear CMS.
-</Warning>
+- Product name, brand, and a short description
+- Clear product photos
+- Price for each size or color, and the compare-at price if the item is on sale
+- SKU and barcode for each size or color
+- Stock count for each size or color
+- The business unit and report category. See [How products work](/products-and-stock/overview)
 
 ## Add the product
 
 <Steps>
-  <Step title="Open the correct store">
-    Sign in to Shopify and confirm that the SixthGear Moto store is open before making changes.
-  </Step>
   <Step title="Open Add product">
-    Go to **Products** and select **Add product**.
+    In Shopify admin, go to **Products** and click **Add product**.
   </Step>
   <Step title="Enter the title and description">
-    Use the approved product name. Write a clear description that explains what the product is, its main features, fitment or use, and any important customer information.
+    Use the full product name, for example "SHOEI GT-Air 3 Matte Black." Staff will search for this name on the counter tablet, so include the brand and model.
   </Step>
-  <Step title="Add and arrange product images">
-    Upload clear product images. Place the strongest main image first because Shopify uses the first media item as the featured image in several areas.
+  <Step title="Add the photos">
+    Upload clear photos. The first photo is the main one shown on the website, so put the best one first.
   </Step>
-  <Step title="Set the product category and organization">
-    Add the correct product category, vendor or brand, product type, tags, and collections. Follow the existing SixthGear naming and tag rules.
+  <Step title="Enter the price">
+    Enter the selling price. Only fill in **Compare-at price** if the item is really on sale. Never leave the price at ₱0, because the website cannot show a ₱0 price properly.
   </Step>
-  <Step title="Enter the approved price">
-    Add the selling price. Use a compare-at price only when it represents an approved original price or promotion. Do not guess the cost or selling price.
+  <Step title="Add sizes or colors">
+    If the item comes in sizes or colors, add them as options. Check the price, SKU, and barcode of every size or color. Do not copy the SKU or barcode of another product.
   </Step>
-  <Step title="Add variants when needed">
-    Add options such as size, color, style, or finish. Review every option combination before saving.
+  <Step title="Enter the stock">
+    Leave **Track quantity** on and enter how many of each size or color you have.
   </Step>
-  <Step title="Complete each SKU and barcode">
-    Enter the correct SKU and barcode for every variant. Do not reuse another product's SKU or barcode.
+  <Step title="Fill in the product organization">
+    Choose the **Product type** and **Vendor** from the spelling that already exists in Shopify. Add the product to the **All Products** collection and to its brand collection.
   </Step>
-  <Step title="Set inventory and location">
-    Turn on inventory tracking when required, select the correct location, and enter the approved starting stock for each variant.
+  <Step title="Fill in the two labels">
+    Scroll to the bottom of the page and fill in **Business unit** and **Report category**. For website products, the business unit is almost always `Retail`.
   </Step>
-  <Step title="Add shipping information">
-    Confirm whether the item is physical and add the correct weight or other required shipping details.
+  <Step title="Turn on both sales channels">
+    In **Sales channels**, turn on the website's sales channel and **Point of Sale**.
   </Step>
-  <Step title="Choose sales channels">
-    In the publishing area, select only the approved channels. The product must be available to the SixthGear headless storefront channel for it to appear on the live website.
-  </Step>
-  <Step title="Review the search listing and handle">
-    Check the search title, description, and URL handle. Do not change a handle after publication without checking links and redirects.
-  </Step>
-  <Step title="Save as Draft until complete">
-    Keep the product as **Draft** while required information is missing. Set it to **Active** only after the product is approved and ready for customers.
-  </Step>
-  <Step title="Verify the live product page">
-    Open the live SixthGear storefront and check the product on desktop and mobile. Confirm the title, images, price, variants, stock message, collections, and purchase flow.
+  <Step title="Set the status and save">
+    Set the status to **Active** when everything is correct, then click **Save**. If some details are still missing, keep it as **Draft** and finish it later.
   </Step>
 </Steps>
 
-## Important SixthGear rules
+<Frame caption="Video needed: adding a new helmet with two sizes, from Add product to Save. Save as videos/products-and-stock/add-product.mp4">
+  ![Placeholder for a video of adding a new website product in Shopify admin](/images/placeholders/screenshot-reserved.svg)
+</Frame>
 
-- Do not copy another product and leave its SKU, barcode, images, tags, collections, or metafields unchanged.
-- Every variant must have the correct price, SKU, barcode, and stock.
-- Do not publish an incomplete product only to test whether access works.
-- Do not assume that the Shopify theme preview is the live website. Check the live Next.js storefront.
-- Do not change payment, billing, user, app, or domain settings while adding a product.
-- Record the reason for any manual inventory adjustment.
+<Frame caption="Screenshot needed: a finished product page in Shopify admin showing price, stock, organization, and sales channels. Save as images/products-and-stock/add-product-1.png">
+  ![Placeholder for a screenshot of a finished product page in Shopify admin](/images/placeholders/screenshot-reserved.svg)
+</Frame>
 
-## Final check
+## Check that it worked
 
-- [ ] Product title is correct
-- [ ] Description is complete and customer-friendly
-- [ ] Main image and supporting images are correct
-- [ ] Price is approved
-- [ ] Compare-at price is valid, when used
-- [ ] Every variant has the correct SKU and barcode
-- [ ] Inventory is assigned to the correct location
-- [ ] Tags and collections are correct
-- [ ] Required sales channels are selected
-- [ ] Product status is correct
-- [ ] Live product page works on desktop and mobile
+1. Wait about 15 minutes, then search for the product on the website. Check the photo, price, and sizes.
+2. On the counter tablet, search for the product. Check that the price is the same.
+3. During the trial period, add the same product to Loyverse with the same price.
 
-<Check>
-  The task is complete when the product is accurate in Shopify and the live SixthGear storefront shows the expected product, price, options, images, and availability.
-</Check>
+## Common problems
 
-## Related guides
+| Problem | What to do |
+| --- | --- |
+| Shopify will not save the product | Check the **Business unit** and **Report category** spelling. They must match the list exactly |
+| The product is not on the website | Check that the status is **Active** and the website's sales channel is on. Wait 15 minutes and check again |
+| The product is not on the tablet | Check that **Point of Sale** is on in **Sales channels** |
+| The brand shows twice in the website filters | The **Vendor** was spelled differently from the existing one. Fix the spelling |
 
-<CardGroup cols={2}>
-  <Card title="Variants, pricing, and inventory" icon="layer-group" href="/shopify/products/variants-inventory">
-    Complete options, SKUs, prices, and stock for each variant.
-  </Card>
+## Related pages
 
-  <Card title="Product media" icon="images" href="/shopify/products/product-media">
-    Prepare, upload, arrange, and describe product images.
-  </Card>
-
-  <Card title="Organization and sales channels" icon="share-nodes" href="/shopify/products/organization-publishing">
-    Add tags, collections, product status, and storefront availability.
-  </Card>
-
-  <Card title="Product troubleshooting" icon="wrench" href="/shopify/products/troubleshooting">
-    Check why a product does not appear or displays incorrect information.
-  </Card>
-</CardGroup>
+- [How products work](/products-and-stock/overview)
+- [Product media](/shopify/products/product-media) for photo sizes and tips
+- [Variants, pricing, and inventory](/shopify/products/variants-inventory) for more on sizes and colors

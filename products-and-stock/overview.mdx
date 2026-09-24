@@ -1,0 +1,109 @@
+---
+title: "How products work"
+description: "How products, prices, and stock work in Shopify, the two labels every product needs, and the fields that change the website."
+icon: "package"
+---
+
+{/* Fill in the exact name of the website's sales channel once it is confirmed in Shopify admin under Settings > Apps and sales channels. Until then, pages say "the website's sales channel." */}
+
+This section is for the people who add and update products in Shopify admin. Shopify admin is the website where you manage the store, at the address that ends in `myshopify.com`. It is different from the Shopify POS app on the counter tablet.
+
+## One place for every product
+
+Shopify is the only place where products, prices, and stock are kept. The website and the counter tablet both read from it. When you change a price or the stock in Shopify, the website and the tablet both show the change.
+
+<Warning>
+  During the trial period, Loyverse still has its own copy of products and prices. If you change a price in Shopify, change it in Loyverse too, so both systems charge the same amount.
+</Warning>
+
+## Two kinds of products
+
+| Kind | Examples | Where it is sold |
+| --- | --- | --- |
+| Website products | Helmets, riding gear, parts, accessories | On the website and at the counter |
+| Counter-only items | Services, carwash, hauling, café drinks and food | At the counter only. Never on the website |
+
+The setting that decides this is called **Sales channels**. A website product has both the website's sales channel and **Point of Sale** turned on. A counter-only item has only **Point of Sale** turned on.
+
+<Frame caption="Screenshot needed: the Sales channels box on a product page in Shopify admin. Save as images/products-and-stock/how-products-work-1.png">
+  <img src="/images/placeholders/screenshot-reserved.svg" alt="Placeholder for a screenshot of the Sales channels box on a product page" />
+</Frame>
+
+## Every product needs two labels
+
+Every product has two labels at the bottom of its page in Shopify admin: **Business unit** and **Report category**. The daily sales report uses them to know where each sale belongs. A product without both labels shows up in the report as "Needs fixing."
+
+The labels only accept exact spelling. If you type something that is not on the list, Shopify will not save the product.
+
+| Business unit | Report categories |
+| --- | --- |
+| `Retail` | `Riding Gear Sales`, `Helmet Sales`, `Apparel Sales`, `Intercom & Other Accessories`, `Electronics and Auxiliary Lights Sales`, `Luggage Systems`, `Tires / Performance Parts`, `Lubricants / Consumables`, `Motorcycle Accessories Sales`, `Motorcycle Exhaust Sales`, `Other Retail Sales` |
+| `Service Department` | `PMS / Maintenance Labor`, `Installation Labor`, `Diagnostic Labor`, `Electrical Repairs`, `Tire Services`, `Performance Upgrades`, `Other Labor Revenue` |
+| `Carwash & Detailing` | `Motowash`, `Carwash`, `Motorcycle Detailing`, `Car Detailing`, `Ceramic / Coating Services`, `Engine Detailing`, `Other Detailing Services` |
+| `Sixth Gear Cafe` | `Coffee Sales`, `Non-Coffee Beverages`, `Food / Snacks`, `Merchandise`, `Other Cafe Revenue` |
+| `Bike Hauling & Towing` | `Local Hauling`, `Long Distance Hauling`, `Towing Services`, `Event Logistics`, `Other Hauling Revenue` |
+
+<Tip>
+  Write "Cafe" without the accent in the labels. The report adds the accent when it prints.
+</Tip>
+
+### Which category to choose for common items
+
+| Item | Category |
+| --- | --- |
+| Helmet visors, pinlocks, cheek pads | `Helmet Sales` |
+| Phone mounts and phone cases | `Intercom & Other Accessories` |
+| Lights, lenses, horns, batteries, navigation devices | `Electronics and Auxiliary Lights Sales` |
+| Balaclavas, arm protectors, shift pads, goggles | `Riding Gear Sales` |
+| Caps, shirts, socks, casual belts | `Apparel Sales` |
+| Cleaners, sprays, oils, gear sanitizers | `Lubricants / Consumables` |
+| Brake pads and tires | `Tires / Performance Parts` |
+
+<Frame caption="Screenshot needed: the Business unit and Report category fields at the bottom of a product page. Save as images/products-and-stock/how-products-work-2.png">
+  <img src="/images/placeholders/screenshot-reserved.svg" alt="Placeholder for a screenshot of the Business unit and Report category fields" />
+</Frame>
+
+## Fields that change what the website shows
+
+These fields matter for website products. Use the spelling that already exists in Shopify. A second spelling of the same brand or type shows up on the website as a separate filter.
+
+| Field | What it does on the website |
+| --- | --- |
+| **Vendor** | The brand. Used for filters and "You may like" suggestions |
+| **Product type** | Used for the filters on the shop page |
+| **Collections** | Groups products into pages, such as brand pages |
+| Tag `featured` | Shows the product in the Featured section of the home page |
+| Tags `hot-deal` and `new-arrival` | Show a badge on the product card |
+| **Compare-at price** | Shows the item as on sale, with the old price crossed out |
+
+## Product status
+
+| Status | Use it when |
+| --- | --- |
+| **Draft** | The product is not finished yet. Customers and staff cannot buy it |
+| **Active** | The product is finished and ready to sell |
+| **Archived** | The product is no longer sold. Its past sales history is kept |
+
+<Warning>
+  Never delete a product that has been sold before. Archive it instead, so past sales keep their details.
+</Warning>
+
+## Pages in this section
+
+<CardGroup cols={2}>
+  <Card title="Add a website product" icon="square-plus" href="/shopify/products/add-product">
+    Helmets, gear, parts, and accessories sold online and at the counter.
+  </Card>
+  <Card title="Add a counter-only item" icon="store" href="/products-and-stock/add-counter-item">
+    Services, carwash, hauling, and café items.
+  </Card>
+  <Card title="Receive a delivery" icon="truck" href="/products-and-stock/receive-a-delivery">
+    Add new stock when items arrive.
+  </Card>
+  <Card title="Count and correct stock" icon="clipboard-list" href="/products-and-stock/count-and-correct-stock">
+    Fix stock after a count, damage, or loss.
+  </Card>
+  <Card title="Change a price" icon="tag" href="/products-and-stock/change-a-price">
+    Update a price or put an item on sale.
+  </Card>
+</CardGroup>
