@@ -1,0 +1,76 @@
+---
+title: "How online orders work"
+sidebarTitle: "How online orders work"
+description: "What happens when a customer orders on the SixthGear website, and what the payment and fulfillment statuses mean."
+icon: "globe"
+---
+
+{/* Screen labels on this tab follow the current Shopify admin. Check each label in Shopify admin > Orders, then remove this comment. */}
+
+{/* To confirm: which payment provider the website uses, Xendit or Maya. */}
+
+{/* Pending decision: whether online orders are also entered in Loyverse during the trial period. */}
+
+Customers can order and pay on the SixthGear website. Each order then waits in Shopify for staff to prepare it. This page explains what you see on an order before you start working on it.
+
+## From the website to Shopify
+
+1. The customer chooses items on the website and pays at checkout.
+2. At checkout, the customer chooses how to get the order: shipping or store pickup.
+3. The order appears in Shopify admin under **Orders**.
+4. Staff prepare the order and mark it as done. Shopify never does this on its own.
+
+Every order has a number that starts with SG, for example **SG1001**. Use this number whenever you talk about an order, on the package, and with the customer.
+
+<Frame caption="Screenshot needed: the Orders list in Shopify admin with a few SG order numbers. Save as images/online-orders/overview-1.png">
+  <img src="/images/placeholders/screenshot-reserved.svg" alt="Placeholder for a screenshot of the Orders list in Shopify admin" />
+</Frame>
+
+## The two statuses on every order
+
+Each order shows two statuses. One is about the money. The other is about the items.
+
+| Status | What it means | What you do |
+| --- | --- | --- |
+| **Paid** | The customer's payment went through | You can prepare the order |
+| **Pending** | The payment has not gone through yet | Do not prepare the order. Call your supervisor |
+| **Unfulfilled** | The items have not been handed over yet | The order is waiting for you |
+| **Fulfilled** | The items were handed to the courier or the customer | Nothing left to do |
+
+<Info>
+  "Fulfilled" is Shopify's word for "done." An order is fulfilled when the items have left the store, with the courier or with the customer.
+</Info>
+
+## Shipping or store pickup
+
+The customer chooses one of these at checkout.
+
+| Delivery method | What it means |
+| --- | --- |
+| Shipping | A courier delivers the order anywhere in the Philippines. The customer pays the Standard shipping rate |
+| Store pickup | The customer collects the order at the store for free. It shows as **Shop location**. The customer is told it is ready in about 4 hours |
+
+{/* Courier not decided yet. Add the courier name once management chooses it. */}
+
+## Online orders use the same stock as the counter
+
+The website and the counter tablet share one stock count. When a customer orders online, the items come out of stock right away. When you sell at the counter, the website shows less stock too.
+
+This is why a delivery must be added to Shopify right away. See [Receive a delivery](/products-and-stock/receive-a-delivery).
+
+## Daily work
+
+<CardGroup cols={2}>
+  <Card title="Check new orders" icon="inbox" href="/online-orders/check-new-orders">
+    Find orders that are paid and waiting to be prepared.
+  </Card>
+  <Card title="Pick and pack an order" icon="package" href="/online-orders/prepare-an-order">
+    Print the packing slip, pick the items, and pack them.
+  </Card>
+  <Card title="Complete an order" icon="package-check" href="/online-orders/complete-an-order">
+    Hand the order to the courier or the customer, and mark it as done.
+  </Card>
+  <Card title="Answer questions about an order" icon="message-circle" href="/online-orders/customer-questions">
+    Find an order and tell the customer its status.
+  </Card>
+</CardGroup>

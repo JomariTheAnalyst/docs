@@ -139,6 +139,29 @@
         ]
       },
       {
+        "tab": "Online Orders",
+        "icon": "globe",
+        "groups": [
+          {
+            "group": "Start here",
+            "icon": "play",
+            "pages": [
+              "online-orders/overview"
+            ]
+          },
+          {
+            "group": "Daily work",
+            "icon": "package-check",
+            "pages": [
+              "online-orders/check-new-orders",
+              "online-orders/prepare-an-order",
+              "online-orders/complete-an-order",
+              "online-orders/customer-questions"
+            ]
+          }
+        ]
+      },
+      {
         "tab": "Shopify",
         "icon": "shopping-bag",
         "pages": [
