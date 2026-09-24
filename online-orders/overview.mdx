@@ -37,8 +37,21 @@ Each order shows two statuses. One is about the money. The other is about the it
 | **Unfulfilled** | The items have not been handed over yet | The order is waiting for you |
 | **Fulfilled** | The items were handed to the courier or the customer | Nothing left to do |
 
+You may also see other statuses. Do not prepare or hand over an order with any of these. Call your supervisor.
+
+| Status | What it means |
+| --- | --- |
+| **Authorized** | The payment was approved but the money has not been taken yet |
+| **Unpaid** | The customer has not paid |
+| **Partially paid** | The customer paid only part of the total |
+| **Refunded** or **Partially refunded** | Some or all of the money was given back |
+| **Partially fulfilled** | Only some of the items were handed over |
+| **On hold** | Shopify has stopped the order. Nobody may work on it until the hold is removed |
+
+{/* Moved from PR #20 (shopify/orders/process-order). Check these status names on real orders in Shopify admin, then remove this comment. */}
+
 <Info>
-  "Fulfilled" is Shopify's word for "done." An order is fulfilled when the items have left the store, with the courier or with the customer.
+  "Fulfilled" is Shopify's word for "done." An order is fulfilled when the items have left the store, with the courier or with the customer. Paid and Fulfilled are different: Paid is about the money, Fulfilled is about the items.
 </Info>
 
 ## Shipping or store pickup
