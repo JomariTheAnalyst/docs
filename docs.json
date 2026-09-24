@@ -49,6 +49,7 @@
                 "group": "Getting started",
                 "pages": [
                   "at-the-counter/overview",
+                  "pos/first-shift",
                   "at-the-counter/loyverse-and-shopify"
                 ]
               },
@@ -66,6 +67,12 @@
                   "at-the-counter/cafe-orders",
                   "at-the-counter/discounts",
                   "at-the-counter/take-payment"
+                ]
+              },
+              {
+                "group": "Help",
+                "pages": [
+                  "operations/when-things-go-wrong"
                 ]
               },
               {

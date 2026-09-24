@@ -56,7 +56,7 @@ Applies to the **At the Counter**, **Products and Stock**, and **Online Orders**
 - Motowash has no variants. Carwash variants are Carwash Small, Carwash Medium, Carwash Large, and Carwash XL.
 - Hauling destinations are variants. Destinations with a price range are set at the highest price, and a supervisor lowers it.
 
-**Discounts:** 10%, 15%, and 20% are approved by a supervisor. The executive discount is approved and set by the owner only. No other discounts are offered. Do not write about Senior Citizen or PWD discounts, except as an item on the Open decisions page.
+**Discounts:** 10%, 15%, and 20% are approved by a supervisor (provisional, owner to confirm). The executive discount is approved and set by the owner only. No other discounts are offered. Do not write about Senior Citizen or PWD discounts, except as an item on the Open decisions page.
 
 **Staff never use Custom sale.** It has no category and breaks the daily sales report.
 
@@ -69,11 +69,16 @@ Applies to the **At the Counter**, **Products and Stock**, and **Online Orders**
 - Delivery: shipping within the Philippines (Standard rate), or free store pickup at "Shop location", ready in about 4 hours.
 - Shopify inventory adjustment reasons: Correction, Count, Received, Return restock, Damaged, Theft or loss, Promotion or donation.
 
-**Reporting:** Shopify saved report "Sixthgear Sales Reporting" (by business unit and category). A Google Sheet Daily Sales Report with Cash / Non-Cash per category is planned.
+**Reporting:** Shopify saved report "Sixthgear Sales Reporting" (by business unit and category). A Google Sheet Daily Sales Report with Cash / Non-Cash per category is planned. Separately, daily cashflow logs already exist as Excel files covering the five business units. Do not document the Excel files as a procedure yet.
+
+**Opening:** the store opening is planned for around 22 November 2026. The date is not final. Pages say "before opening" and do not repeat the date.
 
 ## Pending decisions (do not document as final)
 
-- Refund, return, and exchange process. The page `at-the-counter/refunds-and-returns` is hidden until management decides.
+- Refund, return, and exchange process (BLOCKING, needed before opening; owner decides). The page `at-the-counter/refunds-and-returns` is hidden until it is decided.
+- How the five business units are separated in Shopify (BLOCKING). Do not assume the current structure.
+- Staff training: who runs it and when.
+- Daily cashflow Excel logs: keep separate or merge into the Daily Sales Report.
 - Who approves each discount (the current draft says a supervisor approves 10% to 20%).
 - The exact name of the website's sales channel.
 - Which courier ships online orders.
