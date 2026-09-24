@@ -69,6 +69,27 @@
         ]
       },
       {
+        "tab": "At the Counter",
+        "icon": "store",
+        "groups": [
+          {
+            "group": "Getting started",
+            "icon": "play",
+            "pages": [
+              "at-the-counter/overview",
+              "at-the-counter/loyverse-and-shopify"
+            ]
+          },
+          {
+            "group": "Selling",
+            "icon": "shopping-cart",
+            "pages": [
+              "at-the-counter/take-payment"
+            ]
+          }
+        ]
+      },
+      {
         "tab": "Shopify",
         "icon": "shopping-bag",
         "pages": [
