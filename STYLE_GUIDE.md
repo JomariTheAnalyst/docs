@@ -55,6 +55,8 @@ Pages under **At the Counter**, **Products and Stock**, and **Online Orders** ar
 - Use the same words the staff see on the screen, such as **Checkout**, **Cash**, and **QR PH**.
 - Keep each step to one action.
 - Say what the staff member should see after an important step, so they know it worked.
+- Do not use these words or phrases on any page: seamless, robust, leverage, streamline, empower, comprehensive, crucial, delve, elevate, unlock, harness, holistic, cutting-edge, game-changer, "in today's", "it's worth noting", "in summary", "in conclusion".
+- No opening paragraph that repeats the title, and no closing summary.
 
 ## Image and video placeholders
 

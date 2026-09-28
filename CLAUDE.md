@@ -71,7 +71,7 @@ Applies to the **At the Counter**, **Products and Stock**, and **Online Orders**
 
 **Reporting:** Shopify saved report "Sixthgear Sales Reporting" (by business unit and category). A Google Sheet Daily Sales Report with Cash / Non-Cash per category is planned. Separately, daily cashflow logs already exist as Excel files covering the five business units. Do not document the Excel files as a procedure yet.
 
-**Opening:** the store opening is planned for around 22 November 2026. The date is not final. Pages say "before opening" and do not repeat the date.
+**Opening:** the store opening is planned for around 22 November 2026. The date is not final. The date appears only here and on `launch/checklist` (marked "not final"). Every other page says "before opening" and links to `/launch/checklist`.
 
 ## Pending decisions (do not document as final)
 
@@ -79,6 +79,8 @@ Applies to the **At the Counter**, **Products and Stock**, and **Online Orders**
 - How the five business units are separated in Shopify (BLOCKING). Do not assume the current structure.
 - Staff training: who runs it and when.
 - Daily cashflow Excel logs: keep separate or merge into the Daily Sales Report.
+- POS Lite or POS Pro. The Shopify plan is Basic with one location, "Shop location" (Sidekick, September 2026). POS Pro status is not verified.
+- Which shipping and pickup emails Shopify sends customers.
 - Who approves each discount (the current draft says a supervisor approves 10% to 20%).
 - The exact name of the website's sales channel.
 - Which courier ships online orders.

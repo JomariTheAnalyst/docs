@@ -176,13 +176,39 @@
         "icon": "briefcase",
         "anchors": [
           {
+            "anchor": "Launch",
+            "icon": "rocket",
+            "pages": [
+              "launch/checklist"
+            ]
+          },
+          {
             "anchor": "Reports & checks",
             "icon": "chart-column",
-            "pages": [
-              "reports-and-management/overview",
-              "reports-and-management/sales-reports",
-              "reports-and-management/closing-checks",
-              "operations/overview"
+            "groups": [
+              {
+                "group": "Checks",
+                "pages": [
+                  "reports-and-management/overview",
+                  "reports-and-management/closing-checks",
+                  "reports-and-management/weekly-monthly-checks",
+                  "operations/overview"
+                ]
+              },
+              {
+                "group": "Reports",
+                "pages": [
+                  "reports-and-management/sales-reports",
+                  "reports-and-management/month-end"
+                ]
+              },
+              {
+                "group": "Controls",
+                "pages": [
+                  "reports-and-management/who-can-do-what",
+                  "reports-and-management/loss-risks"
+                ]
+              }
             ]
           },
           {
