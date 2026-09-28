@@ -50,11 +50,15 @@ Applies to the **At the Counter**, **Products and Stock**, and **Online Orders**
 
 **Trial period:** every sale is recorded in both Loyverse and Shopify POS. Loyverse is the official record, and the customer keeps the Loyverse receipt.
 
-**Services, carwash, and hauling:**
+**Services, carwash, café, and hauling (real menus in Shopify).** Name items and choices only. Never copy prices into the docs.
 
 - Services with changing prices: a ₱1 item, with the amount entered as the quantity.
-- Motowash has no variants. Carwash variants are Carwash Small, Carwash Medium, Carwash Large, and Carwash XL.
-- Hauling destinations are variants. Destinations with a price range are set at the highest price, and a supervisor lowers it.
+- Carwash and detailing: staff choose the package, then the size. Car sizes: S (Jazz, Vios), M (Altis, Civic, Tucson), L (Fortuner, Montero, Innova), XL (Land Cruiser, Raptor, Expedition), XXL (HiAce, Alphard, NV350). Motorcycle sizes: MC-S (below 200cc), MC-M (200 to 399cc), MC-L (400cc and up). Panel buffing is per panel and mags detailing is per mag: the quantity is the number of panels or mags. Jobs not on the chart use "Other Detailing" at ₱1 with the amount as the quantity.
+- Café (vendor Sixthgear Cafe): drinks use Hot 12oz, Hot 16oz, and Cold 16oz (only the sizes on the menu). Espresso drinks use Single or Double. Fruit frappes use Cream or Yogurt. One-size drinks have the size in the name, for example "Coffee Frappe (16oz)". Extra Shot Espresso and Oat Milk are separate add-on items.
+- Hauling: Local Hauling and Long Distance Hauling have one option per destination. Destinations with a price range are set at the highest price, and a supervisor lowers it. Towing Services, Event Logistics, and Other Hauling use ₱1 with the amount as the quantity.
+- Space Mission car freshener: 6 scents, sold under Carwash & Detailing.
+- Service Department items are not set up yet. Prices are pending.
+- Imports: overwrite imports can clear fields that are not in the file, including labels and product type. For changes to existing products, use the bulk editor. Always export a backup before any import.
 
 **Discounts:** 10%, 15%, and 20% are approved by a supervisor (provisional, owner to confirm). The executive discount is approved and set by the owner only. No other discounts are offered. Do not write about Senior Citizen or PWD discounts, except as an item on the Open decisions page.
 

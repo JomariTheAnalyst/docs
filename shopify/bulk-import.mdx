@@ -15,6 +15,21 @@ See: _internal/image-capture-guide.md
 Shopify product imports cannot be canceled after they start. Export a backup first and test a small file before a large import.
 </Warning>
 
+## Before you import
+
+<Warning>
+  An import can wipe product data. Read all four points before every import.
+</Warning>
+
+| Rule | Why |
+| --- | --- |
+| Export a backup first | It is the only way back if the import goes wrong. See [Export products](/shopify/export-products) |
+| Overwrite imports can clear fields that are not in the file | This includes the two labels, **Business unit** and **Report category**, and **Product type**. A product with a cleared label shows as "Needs fixing" in the daily sales report |
+| To change existing products, use the bulk editor instead | The bulk editor changes only the columns you edit. It does not clear the rest |
+| Test with 2 or 3 products first | Check those products in Shopify before importing the full file |
+
+After the import, check the counter-only items still show **Point of Sale** only. See [After any import](/products-and-stock/add-counter-item#after-any-import).
+
 ## Import products
 
 <Steps>
