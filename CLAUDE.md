@@ -25,12 +25,12 @@ Read and follow these two files first. They are the main rules for this repo.
 
 ## Writing rules for staff pages
 
-Applies to the **At the Counter**, **Products and Stock**, and **Online Orders** tabs.
+Applies to every section in the **Staff guide** tab: **At the counter**, **Products & stock**, **Online orders**, and **Website content**. It does not apply to the Developers tab.
 
 - Follow "Plain language for store staff" in `STYLE_GUIDE.md`. No em dashes. No jargon. One action per step.
-- Add a screenshot or video placeholder wherever one is needed, using the format and file naming in `STYLE_GUIDE.md`. Folders match the tab: `images/at-the-counter/`, `images/products-and-stock/`, `images/online-orders/`, and the same under `videos/`.
+- Add a screenshot or video placeholder wherever one is needed, using the format and file naming in `STYLE_GUIDE.md`. Folders match the section: `images/at-the-counter/`, `images/products-and-stock/`, `images/online-orders/`, `images/website-content/`, and the same under `videos/`.
 - Put anything not yet checked on the real screen, or still waiting for a decision, in a hidden MDX comment: `{/* ... */}`. Never present a guessed screen label as fact without that comment.
-- Until its name is confirmed, call the website's channel "the website's sales channel."
+- The website's sales channel is **Sixthgear Moto**.
 
 ## Business facts (decided)
 
@@ -53,8 +53,8 @@ Applies to the **At the Counter**, **Products and Stock**, and **Online Orders**
 **Services, carwash, café, and hauling (real menus in Shopify).** Name items and choices only. Never copy prices into the docs.
 
 - Services with changing prices: a ₱1 item, with the amount entered as the quantity.
-- Carwash and detailing: staff choose the package, then the size. Items and choices: Carwash and Motowash (Wash, Wash and Wax, MXM Wash and Wax, then car or motorcycle size); Car Detailing (Exterior Detailing, Interior Detailing, Man X Machine Detailing, then car size); Motorcycle Detailing (motorcycle size); Engine Detailing (car or motorcycle size); Engine Wash (car size); Hydrophobic Glass Coating and Watermark Removal (car size or Motorcycle); Bac to Zero (no choices); Panel Buffing or Detail (Buffing or Detail, then car size); Mags Detailing (15 to 16 inch, 17 to 18 inch, 19 to 21 inch); Headlight Restoration (Car or Motorcycle); Other Detailing (no choices). Car sizes: S (Jazz, Vios), M (Altis, Civic, Tucson), L (Fortuner, Montero, Innova), XL (Land Cruiser, Raptor, Expedition), XXL (HiAce, Alphard, NV350). Motorcycle sizes: MC-S (below 200cc), MC-M (200 to 399cc), MC-L (400cc and up). Panel buffing is per panel and mags detailing is per mag: the quantity is the number of panels or mags. Jobs not on the chart use "Other Detailing" at ₱1 with the amount as the quantity.
-- Café (vendor Sixthgear Cafe): drinks use Hot 12oz, Hot 16oz, and Cold 16oz (only the sizes on the menu). Espresso drinks use Single or Double. Fruit frappes use Cream or Yogurt. One-size drinks have the size in the name, for example "Coffee Frappe (16oz)". Extra Shot Espresso and Oat Milk are separate add-on items.
+- Carwash and detailing items follow the carwash menu page, `at-the-counter/services-carwash-hauling`. Do not repeat menus or prices here. Motowash is its own item for motorcycles. Panel buffing is per panel and mags detailing is per mag: the quantity is the number of panels or mags. Jobs not on the chart use "Other Detailing" at ₱1 with the amount as the quantity.
+- Café (vendor Sixthgear Cafe): drinks use Hot 12oz, Hot 16oz, and Cold 16oz (only the sizes on the menu). Espresso drinks use Single or Double. Fruit frappes use Cream or Yogurt. One-size drinks have the size in the name, for example "Coffee Frappe (16oz)". Extra Shot Espresso and Oat Milk are separate add-on items. Special requests such as less sugar or less ice go in the order note.
 - Hauling: Local Hauling and Long Distance Hauling have one option per destination. The destinations are listed on `at-the-counter/services-carwash-hauling`. Destinations with a price range are set at the highest price, and a supervisor lowers it. Towing Services, Event Logistics, and Other Hauling use ₱1 with the amount as the quantity.
 - Space Mission car freshener: 6 scents, sold under Carwash & Detailing.
 - Disinfectant and Mr. Cool: still sold, as carwash add-ons chosen by scent. The owner is deciding whether Mr. Cool moves from the café to Carwash & Detailing.
@@ -74,22 +74,13 @@ Applies to the **At the Counter**, **Products and Stock**, and **Online Orders**
 - Delivery: shipping within the Philippines (Standard rate), or free store pickup at "Shop location", ready in about 4 hours.
 - Shopify inventory adjustment reasons: Correction, Count, Received, Return restock, Damaged, Theft or loss, Promotion or donation.
 
-**Reporting:** Shopify saved report "Sixthgear Sales Reporting" (by business unit and category). A Google Sheet Daily Sales Report with Cash / Non-Cash per category is planned. Separately, daily cashflow logs already exist as Excel files covering the five business units. Do not document the Excel files as a procedure yet.
+**Reporting:** the Google Sheet Daily Sales Report (Cash / Non-Cash per category) is on hold. Until then, use the saved Shopify reports "Sixthgear Sales Reporting" (by business unit and category) and "Sixthgear Sales by Product". Separately, daily cashflow logs already exist as Excel files covering the five business units. Do not document the Excel files as a procedure yet.
 
 **Opening:** the store opening is planned for around 22 November 2026. The date is not final. The date appears only here and on `launch/checklist` (marked "not final"). Every other page says "before opening" and links to `/launch/checklist`.
 
-## Pending decisions (do not document as final)
+## Pending decisions
 
-- Refund, return, and exchange process (BLOCKING, needed before opening; owner decides). The page `at-the-counter/refunds-and-returns` is hidden until it is decided.
-- How the five business units are separated in Shopify (BLOCKING). Do not assume the current structure.
-- Staff training: who runs it and when.
-- Daily cashflow Excel logs: keep separate or merge into the Daily Sales Report.
-- POS Lite or POS Pro. The Shopify plan is Basic with one location, "Shop location" (Sidekick, September 2026). POS Pro status is not verified.
-- Which shipping and pickup emails Shopify sends customers.
-- Who approves each discount (the current draft says a supervisor approves 10% to 20%).
-- The exact name of the website's sales channel.
-- Which courier ships online orders.
-- Refunds page: the Care of Boss row says 'Nothing to give back'. Update it when the refund process is decided.
+The **Management > Open decisions** page (`reports-and-management/open-decisions`) is the only list of open decisions. Never write those items as final. The page `at-the-counter/refunds-and-returns` stays hidden until the refund process is decided.
 
 ## Never
 

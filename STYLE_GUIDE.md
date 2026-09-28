@@ -47,7 +47,7 @@ Use `<Steps>` for sequences, `<Warning>` for destructive or sensitive actions, `
 
 ## Plain language for store staff
 
-Pages under **At the Counter**, **Products and Stock**, and **Online Orders** are read by cashiers, baristas, and store staff. For these pages:
+Pages in every section of the **Staff guide** tab (**At the counter**, **Products & stock**, **Online orders**, and **Website content**) are read by cashiers, baristas, and store staff. These rules do not apply to the Developers tab. For these pages:
 
 - Write so a new staff member can follow the page on their first day.
 - Do not use em dashes. Use a period, a comma, or a colon instead.
