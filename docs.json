@@ -133,7 +133,8 @@
                   "shopify/collections",
                   "shopify/collections/add-collection",
                   "shopify/product-tags",
-                  "shopify/discounts-campaigns"
+                  "shopify/discounts-campaigns",
+                  "shopify/bulk-import"
                 ]
               }
             ]
@@ -306,7 +307,6 @@
               "website/shopify-integration",
               "shopify/metafields",
               "shopify/apps",
-              "shopify/bulk-import",
               "shopify/export-products"
             ]
           },
