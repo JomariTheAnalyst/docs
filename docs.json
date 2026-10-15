@@ -1,7 +1,7 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "luma",
-  "name": "Sixthgear",
+  "name": "Sixthgear Motorcycle",
   "description": "Private internal documentation for operating and maintaining the SixthGear website.",
   "colors": {
     "primary": "#92400E",
@@ -9,10 +9,13 @@
     "dark": "#F16D34"
   },
   "logo": {
-    "light": "/images/brand/sixthgear-moto-logo-light.png",
-    "dark": "/images/brand/sixthgear-moto-logo-dark.png"
+    "light": "/images/sixthgear-moto-logo-light.png",
+    "dark": "/images/sixthgear-moto-logo-dark.png"
   },
-  "favicon": "/images/brand/favicon.png",
+  "favicon": {
+    "light": "/images/favicon.png",
+    "dark": "/images/favicon.png"
+  },
   "appearance": {
     "default": "system"
   },
@@ -31,236 +34,38 @@
   "navigation": {
     "tabs": [
       {
-        "tab": "Staff guide",
-        "icon": "book-open",
-        "anchors": [
+        "tab": "Start Here",
+        "icon": "play",
+        "pages": [
+          "introduction",
+          "initial-setup/overview",
+          "operations/overview",
+          "operations/commerce-data-ownership",
           {
-            "anchor": "Start here",
-            "icon": "play",
-            "pages": [
-              "introduction"
-            ]
-          },
-          {
-            "anchor": "At the counter",
-            "icon": "store",
-            "groups": [
-              {
-                "group": "Getting started",
-                "pages": [
-                  "at-the-counter/overview",
-                  "pos/first-shift",
-                  "at-the-counter/loyverse-and-shopify"
-                ]
-              },
-              {
-                "group": "Daily routine",
-                "pages": [
-                  "at-the-counter/open-and-close-register"
-                ]
-              },
-              {
-                "group": "Selling",
-                "pages": [
-                  "at-the-counter/ring-up-a-sale",
-                  "at-the-counter/services-carwash-hauling",
-                  "at-the-counter/cafe-orders",
-                  "at-the-counter/discounts",
-                  "at-the-counter/take-payment"
-                ]
-              },
-              {
-                "group": "Help",
-                "pages": [
-                  "operations/when-things-go-wrong"
-                ]
-              },
-              {
-                "group": "For supervisors",
-                "hidden": true,
-                "pages": [
-                  "at-the-counter/refunds-and-returns"
-                ]
-              }
-            ]
-          },
-          {
-            "anchor": "Online orders",
-            "icon": "globe",
-            "pages": [
-              "online-orders/overview",
-              "online-orders/check-new-orders",
-              "online-orders/prepare-an-order",
-              "online-orders/complete-an-order",
-              "online-orders/customer-questions"
-            ]
-          },
-          {
-            "anchor": "Products & stock",
-            "icon": "package",
-            "groups": [
-              {
-                "group": "Getting started",
-                "pages": [
-                  "products-and-stock/overview"
-                ]
-              },
-              {
-                "group": "Add products",
-                "pages": [
-                  "shopify/products/add-product",
-                  "products-and-stock/add-counter-item"
-                ]
-              },
-              {
-                "group": "Stock and prices",
-                "pages": [
-                  "products-and-stock/receive-a-delivery",
-                  "products-and-stock/count-and-correct-stock",
-                  "products-and-stock/change-a-price"
-                ]
-              },
-              {
-                "group": "Shopify admin",
-                "pages": [
-                  "shopify/overview",
-                  "shopify/products/overview",
-                  "shopify/products/edit-product",
-                  "shopify/products/product-media",
-                  "shopify/products/variants-inventory",
-                  "shopify/variants-inventory",
-                  "shopify/products/organization-publishing",
-                  "shopify/collections",
-                  "shopify/collections/add-collection",
-                  "shopify/product-tags",
-                  "shopify/discounts-campaigns",
-                  "shopify/bulk-import"
-                ]
-              }
-            ]
-          },
-          {
-            "anchor": "Website content",
-            "icon": "panels-top-left",
-            "groups": [
-              {
-                "group": "Getting started",
-                "pages": [
-                  "website-content/overview",
-                  "website-content/open-the-cms",
-                  "website-content/edit-and-publish",
-                  "website-content/when-changes-show"
-                ]
-              },
-              {
-                "group": "Pages you can change",
-                "pages": [
-                  "website-content/home-page",
-                  "website-content/services",
-                  "website-content/about",
-                  "website-content/rider-stories",
-                  "website-content/popups-and-promo-banners"
-                ]
-              },
-              {
-                "group": "Ask the web team",
-                "pages": [
-                  "website-content/web-team-only"
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "Management",
-        "icon": "briefcase",
-        "anchors": [
-          {
-            "anchor": "Launch",
-            "icon": "rocket",
-            "pages": [
-              "launch/checklist"
-            ]
-          },
-          {
-            "anchor": "Reports & checks",
-            "icon": "chart-column",
-            "groups": [
-              {
-                "group": "Checks",
-                "pages": [
-                  "reports-and-management/overview",
-                  "reports-and-management/closing-checks",
-                  "reports-and-management/weekly-monthly-checks",
-                  "operations/overview"
-                ]
-              },
-              {
-                "group": "Reports",
-                "pages": [
-                  "reports-and-management/sales-reports",
-                  "reports-and-management/month-end"
-                ]
-              },
-              {
-                "group": "Controls",
-                "pages": [
-                  "reports-and-management/who-can-do-what",
-                  "reports-and-management/loss-risks"
-                ]
-              }
-            ]
-          },
-          {
-            "anchor": "POS decision",
+            "group": "For Management",
             "icon": "scale",
             "pages": [
-              "reports-and-management/pos-decision",
-              "reports-and-management/loyverse-checklist"
+              "pos-decision/overview",
+              "pos-decision/POS-decision",
+              "pos-decision/hardware-philippines",
+              "pos-decision/payments-philippines",
+              "pos-decision/pilot-decision-record"
             ]
           },
           {
-            "anchor": "Open decisions",
-            "icon": "list-todo",
-            "pages": [
-              "reports-and-management/open-decisions"
-            ]
-          },
-          {
-            "anchor": "Accounts & access",
+            "group": "Access Control",
             "icon": "key-round",
-            "groups": [
-              {
-                "group": "Getting started",
-                "pages": [
-                  "accounts-and-access/overview",
-                  "initial-setup/overview",
-                  "accounts-and-access/executive-handoff"
-                ]
-              },
-              {
-                "group": "Accounts",
-                "pages": [
-                  "accounts-and-access/account-credentials-inventory",
-                  "accounts-and-access/business-owner-account",
-                  "accounts-and-access/social-media-accounts",
-                  "accounts-and-access/email-directory",
-                  "accounts-and-access/device-directory"
-                ]
-              },
-              {
-                "group": "Access",
-                "pages": [
-                  "accounts-and-access/platform-access",
-                  "shopify/access/overview",
-                  "accounts-and-access/source-code-access"
-                ]
-              }
+            "pages": [
+              "start-here/executive-handoff",
+              "start-here/credentials",
+              "shopify-access/overview",
+              "start-here/cms-access",
+              "start-here/source-code",
+              "start-here/product-csv"
             ]
           },
           {
-            "anchor": "Project updates",
+            "group": "Website Progress",
             "icon": "chart-no-axes-combined",
             "pages": [
               "project-progress/overview",
@@ -271,76 +76,170 @@
         ]
       },
       {
-        "tab": "Developers",
-        "icon": "code-xml",
-        "anchors": [
+        "tab": "Shopify",
+        "icon": "shopping-bag",
+        "pages": [
           {
-            "anchor": "Storefront",
-            "icon": "code-xml",
-            "groups": [
-              {
-                "group": "Architecture",
-                "pages": [
-                  "website/system-architecture",
-                  "website/source-code-overview",
-                  "website/local-development",
-                  "website/environment-variables",
-                  "website/testing"
-                ]
-              },
-              {
-                "group": "Integrations",
-                "pages": [
-                  "website/sanity-integration",
-                  "sanity/content-types",
-                  "sanity/fields-validation",
-                  "website/strapi-integration",
-                  "website/caching-revalidation"
-                ]
-              }
-            ]
-          },
-          {
-            "anchor": "Shopify reference",
-            "icon": "shopping-bag",
+            "group": "Shopify administration",
+            "root": "shopify/overview",
             "pages": [
-              "website/shopify-integration",
+              "shopify/access/overview",
+              "shopify/variants-inventory",
+              "shopify/collections",
+              "shopify/product-tags",
               "shopify/metafields",
-              "shopify/apps",
-              "shopify/export-products"
+              "shopify/bulk-import",
+              "shopify/discounts-campaigns",
+              "shopify/apps"
             ]
           },
           {
-            "anchor": "Deployment",
-            "icon": "rocket",
+            "group": "Products",
+            "root": "shopify/products/overview",
+            "pages": [
+              "shopify/export-products",
+              "shopify/products/add-product",
+              "shopify/products/edit-product",
+              "shopify/products/product-media",
+              "shopify/products/troubleshooting",
+              "shopify/products/variants-inventory",
+              "shopify/products/organization-publishing",
+              "shopify/products/product-seo",
+              "shopify/products/product-metafields",
+              "shopify/products/bulk-management"
+            ]
+          },
+          {
+            "group": "Shopify vs Loyverse",
+            "hidden": true,
+            "expanded": false,
+            "root": "shopify/shopify-vs-loyverse/overview",
+            "pages": [
+              "shopify/shopify-vs-loyverse/sixthgear-requirements",
+              "shopify/shopify-vs-loyverse/platform-capabilities",
+              "shopify/shopify-vs-loyverse/comparison-and-pros-cons",
+              "shopify/shopify-vs-loyverse/commerce-architecture",
+              "shopify/shopify-vs-loyverse/philippines-payments-and-compliance",
+              "shopify/shopify-vs-loyverse/hardware-recommendations",
+              "shopify/shopify-vs-loyverse/final-recommendation"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Sixthgear CMS",
+        "icon": "panels-top-left",
+        "groups": [
+          {
+            "group": "Sixthgear CMS",
+            "root": "sixthgear-cms/overview",
+            "pages": [
+              "sanity/overview",
+              "sanity/get-access",
+              "sanity/content-coverage",
+              "sanity/open-cms",
+              "sanity/edit-publish-content",
+              "sanity/content-types",
+              "sanity/fields-validation",
+              "sanity/images-media"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Storefront",
+        "icon": "code-2",
+        "groups": [
+          {
+            "group": "Storefront development",
+            "root": "storefront-development/overview",
+            "pages": [
+              "website/system-architecture",
+              "website/source-code-overview",
+              "website/local-development",
+              "website/environment-variables",
+              "website/shopify-integration",
+              "website/sanity-integration",
+              "website/strapi-integration",
+              "website/caching-revalidation",
+              "website/testing"
+            ]
+          },
+          {
+            "group": "Deployment",
+            "root": "deployment/overview",
             "pages": [
               "deployment/deployment-overview",
               "deployment/deploy-through-vercel",
               "deployment/verify-deployment",
               "deployment/roll-back-deployment"
             ]
+          }
+        ]
+      },
+      {
+        "tab": "SEO & Growth",
+        "icon": "search-check",
+        "pages": [
+          "seo/overview"
+        ]
+      },
+      {
+        "tab": "Accounts & Access",
+        "icon": "key-round",
+        "groups": [
+          {
+            "group": "Accounts & Access",
+            "root": "accounts-and-access/overview",
+            "pages": [
+              "accounts-and-access/executive-handoff",
+              "accounts-and-access/account-credentials-inventory",
+              "accounts-and-access/business-owner-account",
+              "accounts-and-access/social-media-accounts",
+              "accounts-and-access/email-directory",
+              "accounts-and-access/platform-access",
+              "accounts-and-access/device-directory",
+              "accounts-and-access/source-code-access",
+              "accounts-and-access/executive-handoff"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Resources",
+        "icon": "library",
+        "menu": [
+          {
+            "item": "Troubleshooting",
+            "icon": "wrench",
+            "pages": [
+              "troubleshooting/overview",
+              "troubleshooting/website",
+              "troubleshooting/shopify",
+              "troubleshooting/sanity",
+              "troubleshooting/deployment",
+              "troubleshooting/emergency-recovery"
+            ]
           },
           {
-            "anchor": "Resources",
-            "icon": "library",
-            "groups": [
-              {
-                "group": "Reference",
-                "pages": [
-                  "operations/commerce-data-ownership",
-                  "resources/documentation-updates"
-                ]
-              },
-              {
-                "group": "Troubleshooting",
-                "pages": [
-                  "troubleshooting/website",
-                  "troubleshooting/shopify",
-                  "troubleshooting/sanity",
-                  "troubleshooting/deployment",
-                  "troubleshooting/emergency-recovery"
-                ]
-              }
+            "item": "Glossary",
+            "icon": "book-a",
+            "pages": [
+              "reference/overview"
+            ]
+          },
+          {
+            "item": "Turnover & Maintenance",
+            "icon": "repeat-2",
+            "pages": [
+              "turnover-and-maintenance/overview"
+            ]
+          },
+          {
+            "item": "Documentation Updates",
+            "icon": "history",
+            "pages": [
+              "resources/documentation-updates"
             ]
           }
         ]
@@ -348,9 +247,9 @@
     ]
   },
   "redirects": [
-    { "source": "/start-here/overview", "destination": "/introduction" },
-    { "source": "/start-here/how-to-use-this-portal", "destination": "/introduction" },
-    { "source": "/start-here/documentation-status", "destination": "/introduction" },
+    { "source": "/start-here/overview", "destination": "/" },
+    { "source": "/start-here/how-to-use-this-portal", "destination": "/" },
+    { "source": "/start-here/documentation-status", "destination": "/" },
     { "source": "/architecture/system-overview", "destination": "/website/system-architecture" },
     { "source": "/architecture/integrations", "destination": "/systems-and-access/third-party-services" },
     { "source": "/architecture/environments", "destination": "/website/environment-variables" },
@@ -364,34 +263,17 @@
     { "source": "/deployment/rollback-overview", "destination": "/deployment/roll-back-deployment" },
     { "source": "/recovery/emergency-response", "destination": "/troubleshooting/emergency-recovery" },
     { "source": "/recovery/access-recovery", "destination": "/troubleshooting/emergency-recovery" },
-    { "source": "/shopify/pos-platform-recommendation", "destination": "/reports-and-management/pos-decision" },
-    { "source": "/accounts-and-access/credentials-and-password-manager", "destination": "/accounts-and-access/overview" },
-    { "source": "/accounts-and-access/access-request", "destination": "/accounts-and-access/overview" },
-    { "source": "/accounts-and-access/mfa-and-recovery", "destination": "/accounts-and-access/overview" },
-    { "source": "/accounts-and-access/access-review-and-offboarding", "destination": "/accounts-and-access/overview" },
-    { "source": "/shopify/shopify-vs-loyverse/imin-hardware-assessment", "destination": "/reports-and-management/pos-decision" },
-    { "source": "/shopify/shopify-vs-loyverse/cost-and-risk-analysis", "destination": "/reports-and-management/pos-decision" },
-    { "source": "/shopify/shopify-vs-loyverse/pilot-and-migration-plan", "destination": "/reports-and-management/pos-decision" },
-    { "source": "/shopify/shopify-vs-loyverse/decision-record", "destination": "/reports-and-management/pos-decision" },
-    { "source": "/sixthgear-cms/overview", "destination": "/website-content/overview" },
-    { "source": "/sanity/overview", "destination": "/website-content/overview" },
-    { "source": "/sanity/content-coverage", "destination": "/website-content/overview" },
-    { "source": "/sanity/get-access", "destination": "/website-content/open-the-cms" },
-    { "source": "/sanity/open-cms", "destination": "/website-content/open-the-cms" },
-    { "source": "/sanity/edit-publish-content", "destination": "/website-content/edit-and-publish" },
-    { "source": "/sanity/images-media", "destination": "/website-content/edit-and-publish" },
-    { "source": "/pos-decision/overview", "destination": "/reports-and-management/pos-decision" },
-    { "source": "/pos-decision/POS-decision", "destination": "/reports-and-management/pos-decision" },
-    { "source": "/pos-decision/hardware-philippines", "destination": "/reports-and-management/pos-decision" },
-    { "source": "/pos-decision/payments-philippines", "destination": "/reports-and-management/open-decisions" },
-    { "source": "/pos-decision/pilot-decision-record", "destination": "/reports-and-management/pos-decision" },
-    { "source": "/shopify/shopify-vs-loyverse/overview", "destination": "/reports-and-management/pos-decision" },
-    { "source": "/shopify/shopify-vs-loyverse/sixthgear-requirements", "destination": "/reports-and-management/loyverse-checklist" },
-    { "source": "/shopify/shopify-vs-loyverse/platform-capabilities", "destination": "/reports-and-management/loyverse-checklist" },
-    { "source": "/shopify/shopify-vs-loyverse/comparison-and-pros-cons", "destination": "/reports-and-management/pos-decision" },
-    { "source": "/shopify/shopify-vs-loyverse/commerce-architecture", "destination": "/reports-and-management/pos-decision" },
-    { "source": "/shopify/shopify-vs-loyverse/philippines-payments-and-compliance", "destination": "/reports-and-management/pos-decision" },
-    { "source": "/shopify/shopify-vs-loyverse/hardware-recommendations", "destination": "/reports-and-management/pos-decision" },
-    { "source": "/shopify/shopify-vs-loyverse/final-recommendation", "destination": "/reports-and-management/pos-decision" }
+    { "source": "/shopify/pos-platform-recommendation", "destination": "/shopify/shopify-vs-loyverse/overview" },
+    { "source": "/accounts-and-access/credentials-and-password-manager", "destination": "/accounts-and-access/account-directory" },
+    { "source": "/accounts-and-access/access-request", "destination": "/accounts-and-access/account-directory" },
+    { "source": "/accounts-and-access/mfa-and-recovery", "destination": "/accounts-and-access/account-directory" },
+    { "source": "/accounts-and-access/access-review-and-offboarding", "destination": "/accounts-and-access/account-directory" },
+    { "source": "/shopify/shopify-vs-loyverse/imin-hardware-assessment", "destination": "/shopify/shopify-vs-loyverse/hardware-recommendations" },
+    { "source": "/shopify/shopify-vs-loyverse/cost-and-risk-analysis", "destination": "/shopify/shopify-vs-loyverse/comparison-and-pros-cons" },
+    { "source": "/shopify/shopify-vs-loyverse/pilot-and-migration-plan", "destination": "/shopify/shopify-vs-loyverse/final-recommendation" },
+    {
+      "source": "/shopify/shopify-vs-loyverse/decision-record",
+      "destination": "/shopify/shopify-vs-loyverse/final-recommendation"
+    }
   ]
 }
